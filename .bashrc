@@ -1,6 +1,9 @@
 #
 # ~/.bashrc
 #
+
+source /etc/profile
+
 cal
 #alsi
 echo
@@ -41,15 +44,14 @@ export GOBIN="$HOME/GO/bin"
 #export GOPKGS="$HOME/GO/pkg"
 export QTDIR=/usr/include/QtCore
 
-export PATH="/opt/android-sdk/platform-tools/:/usr/lib/colorgcc/bin/:$PATH:$HOME/GO/bin"    # As per usual colorgcc installation, leave unchanged (don't add ccache)
+export PATH="/opt/android-sdk/platform-tools:/usr/lib/colorgcc/bin:$PATH:$HOME/GO/bin"    # As per usual colorgcc installation, leave unchanged (don't add ccache)
 export CCACHE_PATH="/usr/bin"                 # Tell ccache to only use compilers here
 export CCACHE_DIR=/media/ccache             # Tell ccache to use this path to store its cache
 alias ls='ls --color=auto'
 alias perltidy='perltidy -l=120 -f -kbl=1 -bbb -bbc -bbs -b -ple -bt=2 -pt=2 -sbt=2 -bvt=0 -sbvt=1 -cti=1 -bar -lp -anl'
-alias rime="cat ~/Others/Cuvinte\\ -\\ rime/rime-all.txt | grep $@"
+alias rime="cat /media/Others/Cuvinte\\ -\\ rime/rime-all.txt | grep $@"
 alias percritic='perlcritic --statistics'
 alias mkpm='h2xs -A -a -b 5.10.1 -X --skip-exporter --skip-warnings --skip-ppport --skip-autoloader -n $@'
-source /etc/profile
 
 PS1='\[\e[0;37m\]\u\[\e[m\][\W]\[\e[m\]\[\e[0;37m\]% \[\e[m\]'
 
