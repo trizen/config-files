@@ -1,6 +1,14 @@
-#
-# ~/.bashrc
-#
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/swampyx/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
 
 source /etc/profile
 
@@ -54,14 +62,13 @@ alias rime="cat /media/Others/Cuvinte\\ -\\ rime/rime-all.txt | grep $@"
 alias percritic='perlcritic --statistics'
 alias mkpm='h2xs -A -a -b 5.10.1 -X --skip-exporter --skip-warnings --skip-ppport --skip-autoloader -n $@'
 
-PS1='\[\e[0;37m\]\u\[\e[m\][\W]\[\e[m\]\[\e[0;37m\]% \[\e[m\]'
 
-#source ~/perl5/perlbrew/etc/bashrc
-#source ~/perl5/perlbrew/etc/bashrc
+export PS1="[%d]: "
+
 alias perl='perl -W'
 export DBI_DRIVER='mysql'
 alias mkmodule='module-starter -mb --email=trizenx@gmail.com --author=Trizen $@'
-complete -cf kdesu time man killall info which su
+#complete -cf kdesu time man killall info which su
 
 export LESS_TERMCAP_mb=$'\E[01;33m' # begin blinking
 export LESS_TERMCAP_md=$'\E[01;33m' # begin bold

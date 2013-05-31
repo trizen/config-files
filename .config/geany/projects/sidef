@@ -24,7 +24,11 @@ long_line_column=130
 
 [files]
 current_page=0
-FILE_NAME_0=953;Perl;0;EUTF-8;0;1;1;%2Fmedia%2FPERL%2FScripturi%20Perl%2FSidef%2Flib%2FSidef%2FTypes%2FArray%2FArray.pm;0;4
+FILE_NAME_0=5663;Perl;0;EUTF-8;0;1;1;%2Fmedia%2FPERL%2FScripturi%20Perl%2FSidef%2Flib%2FSidef%2FTypes%2FArray%2FArray.pm;0;4
+FILE_NAME_1=2511;Perl;0;EUTF-8;0;1;1;%2Fmedia%2FPERL%2FScripturi%20Perl%2FSidef%2Flib%2FSidef%2FInit.pm;0;4
+FILE_NAME_2=1420;Perl;0;EUTF-8;0;1;1;%2Fmedia%2FPERL%2FScripturi%20Perl%2FSidef%2Flib%2FSidef%2FTypes%2FBlock%2FSwitch.pm;0;4
+FILE_NAME_3=97;Perl;0;EUTF-8;0;1;1;%2Fmedia%2FPERL%2FScripturi%20Perl%2FSidef%2Flib%2FSidef%2FParser.pm;0;4
+FILE_NAME_4=4313;Perl;0;EUTF-8;0;1;1;%2Fmedia%2FPERL%2FScripturi%20Perl%2FSidef%2Flib%2FSidef%2FExec.pm;0;4
 
 [VTE]
 last_dir=/home/swampyx
