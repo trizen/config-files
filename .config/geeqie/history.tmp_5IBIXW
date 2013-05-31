@@ -1,0 +1,37 @@
+#History lists
+
+[path_list]
+"/home/swampyx/.cache/.fr-2zxDss"
+"/home/swampyx/.cache/.fr-oeSQkF"
+"/home/swampyx/.cache/.fr-mjc0V1"
+"/home/swampyx/.cache/.fr-ueFM5t"
+"/home/swampyx/.cache/.fr-qn2032"
+"/home/swampyx/.cache/.fr-7rkVxI"
+"/home/swampyx/.cache/.fr-gy2wgt"
+"/home/swampyx/.cache/.fr-Pwp5Uj"
+"/home/swampyx/.cache/.fr-QYMOyo"
+"/home/swampyx/.cache/.fr-GpfWZ6"
+"/home/swampyx/.cache/.fr-3hK1RX"
+"/home/swampyx/.cache/.fr-WqBjwV"
+"/home/swampyx/.cache/.fr-APA0hZ"
+"/home/swampyx"
+"/home/swampyx/Googlecode"
+"/home/swampyx/Photos/Poze de la Ioana"
+
+[pan_view_options]
+"use_exif_date[INT]:0"
+"info_image_size[INT]:1"
+"info_includes_exif[INT]:1"
+
+[bookmarks]
+"Home[path]/home/swampyx"
+"Desktop[path]/home/swampyx/Desktop"
+"Collections[path]/home/swampyx/.local/share/geeqie/collections"
+
+[move_copy]
+"/media/disk/Poze/Andreea Raducanu"
+"/media/disk/Poze/Roxana"
+"/home/swampyx"
+"/home/swampyx/Photos/Altele"
+
+#end

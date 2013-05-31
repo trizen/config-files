@@ -1,0 +1,49 @@
+#
+# /home/swampyx/.nvidia-settings-rc
+#
+# Configuration file for nvidia-settings - the NVIDIA X Server Settings utility
+# Generated on Fri May 31 22:22:15 2013
+#
+
+# ConfigProperties:
+
+RcFileLocale = C
+ToolTips = Yes
+DisplayStatusBar = Yes
+SliderTextEntries = Yes
+IncludeDisplayNameInConfigFile = No
+ShowQuitDialog = Yes
+Timer = PowerMizer_Monitor_(GPU_0),Yes,1000
+Timer = Memory_Used_(GPU_0),Yes,3000
+
+# Attributes:
+
+0/CursorShadow=0
+0/CursorShadowAlpha=64
+0/CursorShadowRed=0
+0/CursorShadowGreen=0
+0/CursorShadowBlue=0
+0/CursorShadowXOffset=4
+0/CursorShadowYOffset=2
+0/SyncToVBlank=1
+0/LogAniso=0
+0/FSAA=0
+0/TextureSharpen=0
+0/TextureClamping=1
+0/FXAA=0
+0/AllowFlipping=1
+0/FSAAAppControlled=1
+0/LogAnisoAppControlled=1
+0/OpenGLImageSettings=3
+0/DigitalVibrance[CRT-0]=0
+0/ImageSharpening[CRT-0]=0
+0/XVideoSyncToDisplay=1
+ARCH:0[dpy:0]/RedBrightness=-0.266667
+ARCH:0[dpy:0]/GreenBrightness=-0.266667
+ARCH:0[dpy:0]/BlueBrightness=-0.266667
+ARCH:0[dpy:0]/RedContrast=-0.038095
+ARCH:0[dpy:0]/GreenContrast=-0.038095
+ARCH:0[dpy:0]/BlueContrast=-0.038095
+ARCH:0[dpy:0]/RedGamma=1.000000
+ARCH:0[dpy:0]/GreenGamma=1.000000
+ARCH:0[dpy:0]/BlueGamma=1.000000

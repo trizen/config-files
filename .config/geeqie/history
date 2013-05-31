@@ -1,0 +1,17 @@
+#History lists
+
+[path_list]
+
+[pan_view_options]
+"use_exif_date[INT]:0"
+"info_image_size[INT]:1"
+"info_includes_exif[INT]:1"
+
+[bookmarks]
+"Home[path]/home/swampyx"
+"Desktop[path]/home/swampyx/Desktop"
+"Collections[path]/home/swampyx/.local/share/geeqie/collections"
+
+[move_copy]
+
+#end

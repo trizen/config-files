@@ -1,0 +1,61 @@
+add Muzica
+clear
+D
+pride
+prai
+add Muzica/ROCK METAL/
+live-filter ynch Bages
+from l
+set pl_sort=artist album tracknumber title filename
+q
+add /home/swampyx/Muzica
+live-filter inux
+34pm
+add /home/swampyx/Muzica/ROCK METAL/System.Of.A.Down.Complete.Discography-FL/
+add /home/swampyx/Muzica/ROCK METAL/
+add /home/swampyx/Muzica/SteleVerzi/
+ls
+add Muzica/SteleVerzi/
+add Muzica/Steleverzi
+add Muzica/ROCK METAL
+set aaa_mode=artist
+set lib_sort=artist album tracknumber title filename
+set lib_sort=artist tracknumber title filename
+set lib_sort=artist title filename
+sort
+set smart_artist_sort=true
+set smart_artist_sort=false
+bind -f common ! push shell 
+bind -f browser i toggle show_hidden
+h
+filter 
+add
+set display_artist_sort_name=true
+set aaa_mode=title
+set pl_sort=title
+set lib_sort=title filename
+list
+add /home/swampyx/Muzica Classica
+add /home/swampyx/Muzica\ Classica
+add Muzica Classica/
+add Muzica/
+shuffle
+bind -f common M toggle play_library1`
+set color_win_fg=cyan
+set color_win_fg=lime
+set color_win_fg=yellow
+set color_win_fg=blue
+set color_win_fg=red
+set lib_sort=albumartist date album discnumber tracknumber title filename
+set pl_sort=1
+set pl_sort=true
+set play_sorted=true
+pause
+paouse
+pp
+p
+set color_win_fg red
+a Muzica\ Classica
+a Muzica
+add Muzica Classica/ Muzica/
+open

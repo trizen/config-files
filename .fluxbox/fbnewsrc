@@ -1,0 +1,14 @@
+Newsfile: ~/.fluxbox/news
+Logfile: ~/.fluxbox/fbnews.log
+
+Browser: "startmoz %s"
+Siteformat: "%s"
+
+Sleep: 120 
+
+[Sources]
+Cat: Computers
+http://freshmeat.net/backend/fm.rdf
+Cat: Misc 
+http://kuro5hin.org/backend.rdf
+
