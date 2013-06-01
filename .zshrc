@@ -181,7 +181,8 @@ confirm_wrapper() {
     local runcommand="$1"; shift
 
     if [ "${as_root}" = 'true' ] && [ "${USER}" != 'root' ]; then
-        runcommand="sudo ${runcommand}"
+        echo "You cannot execute command: $runcommand"
+        return 1;
     fi
     confirm "${runcommand}" "$@"
 }
