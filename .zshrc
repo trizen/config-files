@@ -63,7 +63,7 @@ alias percritic='perlcritic --statistics'
 alias mkpm='h2xs -A -a -b 5.10.1 -X --skip-exporter --skip-warnings --skip-ppport --skip-autoloader -n $@'
 
 
-export PS1="[%d]: "
+export PS1="%n[%~]: "
 
 alias perl='perl -W'
 export DBI_DRIVER='mysql'
