@@ -23,8 +23,8 @@ our $SCHEMA = [
     #             COMMAND                 LABEL                ICON
     {item => ["pcmanfm",                           'File Manager', 'file-manager']},
     {item => [$CONFIG->{terminal},                 'Terminal',     'terminal']},
-    {item => ["$CONFIG->{editor} ~/Desktop/aa.pl", "Test script",  "text-x-script"]},
-    {item => ["$CONFIG->{editor} /tmp/test.pl",    "TMP script",   "text-x-script"]},
+    {item => ["$CONFIG->{editor} /media/PERL/Scripturi\\ Perl/Sidef/bin/sidef", "Sidef script",  "text-x-script"]},
+    {item => ["$CONFIG->{editor} /tmp/test.pl",    "TEMP script",   "text-x-script"]},
 
    # {
    #  item => [

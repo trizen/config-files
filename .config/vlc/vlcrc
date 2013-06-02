@@ -3423,7 +3423,7 @@ ffmpeg-hw=1
 #audio=1
 
 # Default audio volume (integer)
-volume=281
+volume=448
 
 # Audio output volume step (integer)
 #volume-step=32
@@ -3498,7 +3498,7 @@ volume=281
 #overlay=1
 
 # Always on top (boolean)
-#video-on-top=0
+video-on-top=1
 
 # Enable wallpaper mode  (boolean)
 #video-wallpaper=0

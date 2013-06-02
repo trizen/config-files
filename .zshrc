@@ -8,7 +8,7 @@ SAVEHIST=1000
 
 emulate sh -c 'source /etc/profile'
 
-if [[ $USER != "root" ]]; then
+if [[ $(whoami) != "root" ]]; then
     cal
     echo
 fi
