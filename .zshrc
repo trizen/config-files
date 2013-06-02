@@ -81,8 +81,8 @@ export GOPATH="$HOME/GO"
 export GOBIN="$HOME/GO/bin"
 #export GOPKGS="$HOME/GO/pkg"
 export QTDIR=/usr/include/QtCore
-export CC="colorgcc"
-export PATH="/opt/android-sdk/platform-tools:/usr/lib/colorgcc/bin:$PATH:$HOME/GO/bin"
+#export CC="colorgcc"
+export PATH="/opt/android-sdk/platform-tools:$PATH:$HOME/GO/bin"
 export CCACHE_PATH="/usr/bin"                 # Tell ccache to only use compilers here
 export CCACHE_DIR=/media/ccache               # Tell ccache to use this path to store its cache
 export DBI_DRIVER='mysql'
@@ -180,10 +180,10 @@ confirm_wrapper() {
 
     local runcommand="$1"; shift
 
-    if [ "${as_root}" = 'true' ] && [ "${USER}" != 'root' ]; then
-        echo "You cannot execute command: $runcommand"
-        return 1;
-    fi
+#    if [ "${USER}" != 'root' ]; then
+#        echo "You cannot execute command: $runcommand"
+#        return 1;
+#    fi
     confirm "${runcommand}" "$@"
 }
 

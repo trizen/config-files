@@ -4,9 +4,9 @@
 
 source /etc/profile
 
-cal
+#cal
 #alsi
-echo
+#echo
 
 # If not running interactively, don't do anything
 #[[ $- != *i* ]] && return
