@@ -1,7 +1,7 @@
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000000
+SAVEHIST=10000000
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -87,6 +87,7 @@ export CCACHE_PATH="/usr/bin"                 # Tell ccache to only use compiler
 export CCACHE_DIR=/media/ccache               # Tell ccache to use this path to store its cache
 export DBI_DRIVER='mysql'
 export PS1="%B%n%b[%~]: "
+export PZN='/media/PERL/Scripturi Perl/Proiecte Personale';
 
 
 #------------------------------

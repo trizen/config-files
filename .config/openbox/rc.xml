@@ -295,10 +295,19 @@
     </keybind>
     <keybind key="A-F2">
       <action name="Execute">
+        <command>gmrun</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+          <name>Command runner</name>
+        </startupnotify>
+      </action>
+    </keybind>
+    <keybind key="A-F3">
+      <action name="Execute">
         <command>pcmanfm</command>
         <startupnotify>
           <enabled>yes</enabled>
-          <name>System Monitor</name>
+          <name>File manager</name>
         </startupnotify>
       </action>
     </keybind>
