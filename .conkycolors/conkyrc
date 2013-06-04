@@ -26,7 +26,7 @@ text_buffer_size 2048
 #############################
 own_window_class Conky
 own_window yes
-own_window_type override
+#own_window_type override
 own_window_transparent yes
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 
@@ -36,6 +36,7 @@ gap_y 30
 minimum_size 182 600
 maximum_width 182
 
+background yes
 default_bar_size 180 8
 
 #########################

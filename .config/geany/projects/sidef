@@ -23,8 +23,9 @@ long_line_behaviour=1
 long_line_column=130
 
 [files]
-current_page=0
-FILE_NAME_0=98;Conf;0;EUTF-8;0;1;1;%2Fhome%2Fswampyx%2F.zshrc;0;4
+current_page=1
+FILE_NAME_0=1087;None;0;EUTF-8;0;1;1;%2Fhome%2Fswampyx%2F.conkyrc-old;0;4
+FILE_NAME_1=507;Conf;0;EUTF-8;0;1;1;%2Fhome%2Fswampyx%2F.conkyrc;0;4
 
 [VTE]
 last_dir=/home/swampyx

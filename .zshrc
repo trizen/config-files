@@ -1,7 +1,12 @@
 # Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
-HISTSIZE=10000000
-SAVEHIST=10000000
+export HISTFILE=~/.histfile
+export HISTSIZE=10000
+export SAVEHIST=$HISTSIZE
+
+setopt hist_ignore_all_dups
+setopt autocd
+setopt correctall
+
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
