@@ -3423,7 +3423,7 @@ ffmpeg-hw=1
 #audio=1
 
 # Default audio volume (integer)
-volume=417
+#volume=256
 
 # Audio output volume step (integer)
 #volume-step=32

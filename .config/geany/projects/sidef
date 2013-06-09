@@ -23,9 +23,11 @@ long_line_behaviour=1
 long_line_column=130
 
 [files]
-current_page=1
-FILE_NAME_0=1087;None;0;EUTF-8;0;1;1;%2Fhome%2Fswampyx%2F.conkyrc-old;0;4
-FILE_NAME_1=507;Conf;0;EUTF-8;0;1;1;%2Fhome%2Fswampyx%2F.conkyrc;0;4
+current_page=0
+FILE_NAME_0=423;Perl;0;EUTF-8;0;1;1;%2Fmedia%2FPERL%2FScripturi%20Perl%2FSidef%2Flib%2FSidef%2FTypes%2FString%2FString.pm;0;4
+FILE_NAME_1=1682;Go;0;EUTF-8;0;1;1;%2Fmedia%2FPrograme%2FGoogle%20Code%2Fcnp_info.go;0;4
+FILE_NAME_2=51;Ruby;0;EUTF-8;0;1;1;%2Fmedia%2FPERL%2FScripturi%20Perl%2FSidef%2Fbin%2Fhash_map.sf;0;4
+FILE_NAME_3=244;Ruby;0;EUTF-8;0;1;1;%2Fmedia%2FPERL%2FScripturi%20Perl%2FSidef%2Fbin%2Flevenshtein_distance.sf;0;4
 
 [VTE]
 last_dir=/home/swampyx

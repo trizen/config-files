@@ -5,7 +5,7 @@ export SAVEHIST=$HISTSIZE
 
 setopt hist_ignore_all_dups
 setopt autocd
-setopt correctall
+#setopt correctall
 
 
 # If not running interactively, don't do anything
@@ -98,7 +98,7 @@ export PZN='/media/PERL/Scripturi Perl/Proiecte Personale';
 #------------------------------
 # Alias stuff
 #------------------------------
-alias perl='perl -W'
+#alias perl='perl -W'
 alias d2h="perl -e 'printf qq|%X\n|, int( shift )'"
 alias d2o="perl -e 'printf qq|%o\n|, int( shift )'"
 alias d2b="perl -e 'printf qq|%b\n|, int( shift )'"

@@ -1,8 +1,8 @@
 conky &
+#obmenu-generator -i -s &
 nvidia-settings &
 feh --bg-scale /media/Others/Wallpapers/mountains.jpg &
 sakura &
-obmenu-generator -i -s &
-menutray -i &
 tint2 &
+menutray -i &
 exec openbox
