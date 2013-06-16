@@ -118,11 +118,11 @@ alias rime="cat /media/Others/Cuvinte\\ -\\ rime/rime-all.txt | grep $@"
 alias percritic='perlcritic --statistics'
 alias mkpm='h2xs -A -a -b 5.10.1 -X --skip-exporter --skip-warnings --skip-ppport --skip-autoloader -n $@'
 alias mkmodule='module-starter -mb --email=trizenx@gmail.com --author=Trizen $@'
-alias youtube-viewer="perl -X /usr/bin/youtube-viewer"
+#alias youtube-viewer="perl -X /usr/bin/youtube-viewer"
 alias music="youtube-viewer -A -n -m -s -category=Music $@"
 alias cp='cp -v'
-alias rcp='rsync -v --progress'
-alias rmv='rsync -v --progress --remove-source-files'
+#alias rcp='rsync -v --progress'
+#alias rmv='rsync -v --progress --remove-source-files'
 alias mv='mv -v'
 alias rm='rm -v'
 alias rmdir='rmdir -v'

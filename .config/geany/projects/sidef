@@ -23,10 +23,8 @@ long_line_behaviour=1
 long_line_column=130
 
 [files]
-current_page=2
-FILE_NAME_0=8054;Perl;0;EUTF-8;0;1;1;%2Fmedia%2FPERL%2FScripturi%20Perl%2FSidef%2Flib%2FSidef%2FTypes%2FArray%2FArray.pm;0;4
-FILE_NAME_1=12578;Perl;0;EUTF-8;0;1;1;%2Fmedia%2FPERL%2FScripturi%20Perl%2FSidef%2Flib%2FSidef%2FParser.pm;0;4
-FILE_NAME_2=80;Perl;0;EUTF-8;0;1;1;%2Ftmp%2Ftest.pl;0;4
+current_page=0
+FILE_NAME_0=8507;Perl;0;EUTF-8;0;1;1;%2Fmedia%2FPERL%2FScripturi%20Perl%2FSidef%2Flib%2FSidef%2FParser.pm;0;4
 
 [VTE]
 last_dir=/home/swampyx
