@@ -2,7 +2,7 @@
 # /home/swampyx/.nvidia-settings-rc
 #
 # Configuration file for nvidia-settings - the NVIDIA X Server Settings utility
-# Generated on Sun Jun 16 08:29:15 2013
+# Generated on Tue Jul  9 11:40:20 2013
 #
 
 # ConfigProperties:
@@ -38,12 +38,12 @@ Timer = Memory_Used_(GPU_0),Yes,3000
 0/DigitalVibrance[CRT-0]=0
 0/ImageSharpening[CRT-0]=0
 0/XVideoSyncToDisplay=1
-ARCH:0[dpy:0]/RedBrightness=-0.266667
-ARCH:0[dpy:0]/GreenBrightness=-0.266667
-ARCH:0[dpy:0]/BlueBrightness=-0.266667
-ARCH:0[dpy:0]/RedContrast=-0.038095
-ARCH:0[dpy:0]/GreenContrast=-0.038095
-ARCH:0[dpy:0]/BlueContrast=-0.038095
+ARCH:0[dpy:0]/RedBrightness=-0.104762
+ARCH:0[dpy:0]/GreenBrightness=-0.104762
+ARCH:0[dpy:0]/BlueBrightness=-0.104762
+ARCH:0[dpy:0]/RedContrast=0.000000
+ARCH:0[dpy:0]/GreenContrast=0.000000
+ARCH:0[dpy:0]/BlueContrast=0.000000
 ARCH:0[dpy:0]/RedGamma=1.000000
 ARCH:0[dpy:0]/GreenGamma=1.000000
 ARCH:0[dpy:0]/BlueGamma=1.000000

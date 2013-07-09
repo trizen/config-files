@@ -54,7 +54,7 @@ our $SCHEMA = [
     # {scripts => ['/home/swampyx/Desktop', 1, "text-x-script"]},
     #{cat       => ['others',            'Others',      'applications-system']},
 
-    #{wine_apps => ["Wine apps", "applications-other"]},
+    {wine_apps => ["Wine apps", "applications-other"]},
 
     #{cat => ['qt',          'QT Applications',    'qtlogo']},
     #{cat => ['gtk',         'GTK Applications',   'gnome-applications']},

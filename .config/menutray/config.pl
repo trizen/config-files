@@ -22,7 +22,10 @@
 our $CONFIG = {
   categories_case_sensitive => 0,
   clean_command_name_re     => undef,
-  desktop_files_paths       => ["/usr/share/applications", "$ENV{'HOME'}/.local/share/applications"],
+  desktop_files_paths       => [
+                                 "/usr/share/applications",
+                                 "/home/swampyx/.local/share/applications",
+                               ],
   editor                    => "geany",
   gdk_interpolation_type    => "hyper",
   gtk_rc_filename           => undef,

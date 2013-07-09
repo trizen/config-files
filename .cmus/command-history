@@ -1,5 +1,7 @@
 add Muzica
 clear
+q
+clea
 D
 pride
 prai
@@ -7,7 +9,6 @@ add Muzica/ROCK METAL/
 live-filter ynch Bages
 from l
 set pl_sort=artist album tracknumber title filename
-q
 add /home/swampyx/Muzica
 live-filter inux
 34pm
