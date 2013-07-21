@@ -24,7 +24,8 @@ our $SCHEMA = [
     {item => ["pcmanfm",                           'File Manager', 'file-manager']},
     {item => [$CONFIG->{terminal},                 'Terminal',     'terminal']},
     {item => ["$CONFIG->{editor} /media/PERL/Scripturi\\ Perl/Sidef/bin/sidef", "Sidef script",  "text-x-script"]},
-    {item => ["$CONFIG->{editor} /tmp/test.pl",    "TEMP script",   "text-x-script"]},
+    {item => ["$CONFIG->{editor} /tmp/test.pl",    "TEMP1 script",   "text-x-script"]},
+    {item => ["$CONFIG->{editor} /tmp/x.pl",    "TEMP2 script",   "text-x-script"]},
 
    # {
    #  item => [

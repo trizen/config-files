@@ -179,11 +179,11 @@
         show_thumbnails = "true" 
         show_directory_date = "false" 
         home_path = "" 
-        last_path = "/home/swampyx/Poze/Piatra Coziei" 
+        last_path = "/home/swampyx" 
         startup_path = "0" 
         exit_on_close = "false" 
 
-        main_window.x = "-63" 
+        main_window.x = "-31" 
         main_window.y = "24" 
         main_window.w = "485" 
         main_window.h = "729" 
