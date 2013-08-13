@@ -23,18 +23,15 @@ long_line_behaviour=1
 long_line_column=130
 
 [files]
-current_page=10
-FILE_NAME_0=384;Perl;0;EUTF-8;0;1;1;%2Fmedia%2FPERL%2FFun%2FSudoku%20Dice%2Fsudoku_dice_game_solver.pl;0;4
-FILE_NAME_1=329;Perl;0;EUTF-8;0;1;1;%2Fmedia%2FPERL%2FScripturi%20Perl%2FSidef%2Flib%2FSidef%2FSys%2FSys.pm;0;4
-FILE_NAME_2=1369;Perl;0;EUTF-8;0;1;1;%2Fmedia%2FPERL%2FScripturi%20Perl%2FSidef%2Flib%2FSidef%2FTypes%2FGlob%2FFileHandle.pm;0;4
-FILE_NAME_3=0;Perl;0;EUTF-8;0;1;1;%2Fmedia%2FPERL%2FScripturi%20Perl%2FSidef%2Flib%2FSidef%2FTypes%2FGlob%2FPipeHandle.pm;0;4
-FILE_NAME_4=1423;Perl;0;EUTF-8;0;1;1;%2Fmedia%2FPERL%2FScripturi%20Perl%2FSidef%2Flib%2FSidef%2FSys%2FSys.pod;0;4
-FILE_NAME_5=4913;Perl;0;EUTF-8;0;1;1;%2Fmedia%2FPERL%2FScripturi%20Perl%2FSidef%2Flib%2FSidef%2FTypes%2FGlob%2FFile.pm;0;4
-FILE_NAME_6=2028;Perl;0;EUTF-8;0;1;1;%2Fmedia%2FPERL%2FScripturi%20Perl%2FSidef%2Flib%2FSidef%2FTypes%2FGlob%2FDir.pm;0;4
-FILE_NAME_7=287;Perl;0;EUTF-8;0;1;1;%2Fmedia%2FPERL%2FScripturi%20Perl%2FSidef%2Flib%2FSidef%2FTypes%2FGlob%2FDirHandle.pm;0;4
-FILE_NAME_8=9321;Perl;0;EUTF-8;0;1;1;%2Fmedia%2FPERL%2FScripturi%20Perl%2FSidef%2Flib%2FSidef%2FTypes%2FString%2FString.pm;0;4
-FILE_NAME_9=56;Perl;0;EUTF-8;0;1;1;%2Fmedia%2FPERL%2FScripturi%20Perl%2FSidef%2Flib%2FSidef%2FTypes%2FArray%2FArray.pod;0;4
-FILE_NAME_10=11336;Perl;0;EUTF-8;0;1;1;%2Fmedia%2FPERL%2FScripturi%20Perl%2FSidef%2Flib%2FSidef%2FTypes%2FArray%2FArray.pm;0;4
+current_page=7
+FILE_NAME_0=329;Perl;0;EUTF-8;0;1;1;%2Fmedia%2FPERL%2FScripturi%20Perl%2FSidef%2Flib%2FSidef%2FSys%2FSys.pm;0;4
+FILE_NAME_1=1369;Perl;0;EUTF-8;0;1;1;%2Fmedia%2FPERL%2FScripturi%20Perl%2FSidef%2Flib%2FSidef%2FTypes%2FGlob%2FFileHandle.pm;0;4
+FILE_NAME_2=0;Perl;0;EUTF-8;0;1;1;%2Fmedia%2FPERL%2FScripturi%20Perl%2FSidef%2Flib%2FSidef%2FTypes%2FGlob%2FPipeHandle.pm;0;4
+FILE_NAME_3=1423;Perl;0;EUTF-8;0;1;1;%2Fmedia%2FPERL%2FScripturi%20Perl%2FSidef%2Flib%2FSidef%2FSys%2FSys.pod;0;4
+FILE_NAME_4=4913;Perl;0;EUTF-8;0;1;1;%2Fmedia%2FPERL%2FScripturi%20Perl%2FSidef%2Flib%2FSidef%2FTypes%2FGlob%2FFile.pm;0;4
+FILE_NAME_5=435;Perl;0;EUTF-8;0;1;1;%2Fmedia%2FPERL%2FScripturi%20Perl%2FSidef%2Flib%2FSidef%2FTypes%2FGlob%2FDir.pm;0;4
+FILE_NAME_6=163;Perl;0;EUTF-8;0;1;1;%2Fmedia%2FPERL%2FScripturi%20Perl%2FSidef%2Flib%2FSidef%2FTypes%2FGlob%2FDirHandle.pm;0;4
+FILE_NAME_7=220;Perl;0;EUTF-8;0;1;1;%2Fmedia%2FPERL%2FScripturi%20Perl%2FSidef%2Flib%2FSidef%2FTypes%2FBlock%2FCode.pm;0;4
 
 [VTE]
 last_dir=/home/swampyx

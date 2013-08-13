@@ -1,7 +1,8 @@
+add Muzica
+clear
+add Muzica/
 add /home/swampyx/Classical Music/
 add Classical\ Music
-clear
-add Muzica
 q
 clea
 D
@@ -41,7 +42,6 @@ list
 add /home/swampyx/Muzica Classica
 add /home/swampyx/Muzica\ Classica
 add Muzica Classica/
-add Muzica/
 shuffle
 bind -f common M toggle play_library1`
 set color_win_fg=cyan
