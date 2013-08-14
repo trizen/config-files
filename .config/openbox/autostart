@@ -16,7 +16,7 @@
 #
 conky &
 obmenu-generator -i -s &
-nvidia-settings &
+#nvidia-settings &
 feh --bg-scale /media/Others/Wallpapers/mountains.jpg &
 sakura &
 tint2 &

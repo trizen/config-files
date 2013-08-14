@@ -2676,7 +2676,7 @@ ffmpeg-hw=1
 #equalizer-2pass=0
 
 # Global gain (float)
-#equalizer-preamp=12.000000
+equalizer-preamp=0.000000
 
 [dtstofloat32] # DTS Coherent Acoustics audio decoder
 
@@ -2689,22 +2689,22 @@ ffmpeg-hw=1
 #compressor-rms-peak=0.000000
 
 # Attack time (float)
-#compressor-attack=25.000000
+compressor-attack=1.400000
 
 # Release time (float)
-#compressor-release=100.000000
+compressor-release=1.900000
 
 # Threshold level (float)
-#compressor-threshold=-11.000000
+compressor-threshold=0.000000
 
 # Ratio (float)
-#compressor-ratio=8.000000
+compressor-ratio=1.000000
 
 # Knee radius (float)
-#compressor-knee=2.500000
+compressor-knee=1.000000
 
 # Makeup gain (float)
-#compressor-makeup-gain=7.000000
+compressor-makeup-gain=0.000000
 
 [chorus_flanger] # Sound Delay
 
@@ -3869,7 +3869,7 @@ cd-audio=/dev/sr0
 #inhibit=1
 
 # Allow only one running instance (boolean)
-one-instance=1
+#one-instance=0
 
 # One instance when started from file (boolean)
 #one-instance-when-started-from-file=1

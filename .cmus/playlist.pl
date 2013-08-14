@@ -66,6 +66,7 @@
 /home/swampyx/Muzica/VH1 Top 100 Hard Rock Songs/Def Leppard - Photograph.mp3
 /home/swampyx/Muzica/VA-Metal_Hammer-Metal_Forge_Volume_Three-A_Tribute_to_Black_Sabbath-MAG-2010-GRAVEWISH/13-demagogue-encounter_(bonus_track).mp3
 /home/swampyx/Muzica/VH1 Top 100 Hard Rock Songs/Dio - Holy Diver.mp3
+/home/swampyx/Muzica/VH1 Top 100 Hard Rock Songs/Dio - Holy Diver.mp3
 /home/swampyx/Muzica/Best.rock.songs.part2-VansB/Heaven And Hell.mp3
 /home/swampyx/Muzica/Best.rock.songs.part1-VansB/998974986_music1.mp3
 /home/swampyx/Muzica/Best.rock.songs.part1-VansB/01-Sultans Of Swing.mp3
