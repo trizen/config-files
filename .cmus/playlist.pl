@@ -6,6 +6,7 @@
 /home/swampyx/Muzica/VH1 Top 100 Hard Rock Songs/Edgar Winter Group - Frankenstein.mp3
 /home/swampyx/Muzica/VH1 Top 100 Hard Rock Songs/Foo Fighters - Everlong.mp3
 /home/swampyx/Muzica/VH1 Top 100 Hard Rock Songs/Jethro Tull - Aqualung.mp3
+/home/swampyx/Muzica/VH1 Top 100 Hard Rock Songs/Jethro Tull - Aqualung.mp3
 /home/swampyx/Muzica/VH1 Top 100 Hard Rock Songs/Red Hot Chili Peppers - Give It Away.mp3
 /home/swampyx/Muzica/VH1 Top 100 Hard Rock Songs/Smashing Pumpkins - Bullet With Butterfly Wings.mp3
 /home/swampyx/Muzica/Best.rock.songs.part1-VansB/knockinonheavensdoor.mp3
