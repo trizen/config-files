@@ -1,28 +1,76 @@
 #!/usr/bin/perl
 
-# SCHEMA supports the following keys: item, cat, begin_cat, end_cat,
-#                                     exit, raw, sep, obgenmenu
-#
-# Posible values for each of this types are:
-# For 'item' : [COMMAND, LABEL, ICON] - icon is optional
-# For 'sep'  : A string representing the LABEL for the separator or undef for none
-# For 'cat'  : Any of the possible categories. 'cat => [CATEGORY, LABEL, ICON]'
-# For 'exit' : undef - default "Exit" action
-# For 'raw'  : A hardcoded XML line in the Openbox's menu.xml file format
-#    Example : {raw => '<menu icon="" id="client-list-combined-menu" />'},
+# obmenu-generator - schema file
+
+=for comment
+
+item: add an item into the menu
+
+    {item => ["command", "label", "icon"]}
+
+
+cat: add a category into the menu
+
+    {cat => ["name", "label", "icon"]}
+
+
+begin_cat: begin of a category
+
+    {begin_cat => ["name", "icon"]}
+
+
+end_cat: end of a category
+
+    {end_cat => undef}
+
+
+sep: menu line separator
+
+    {sep => undef} or {sep => "label"}
+
+
+exit: default "Exit" action
+
+    {exit => ["label", "icon"]}
+
+
+raw: any valid Openbox XML string
+
+    {raw => q(xml string)},
+
+
+obgenmenu: category provided by obmenu-generator
+
+    {obgenmenu => "label"}
+
+
+scripts: executable scripts from a directory
+
+    {scripts => ["/my/dir", BOOL, "icon"]}
+
+BOOL - can be either true or false (1 or 0)
+    0 => to open the script in background
+    1 => to open the script in a new terminal
+
+
+wine_apps: windows applications installed via wine
+
+    {wine_apps => ["label", "icon"]}
+
+=cut
 
 # NOTE:
 #    * Keys and values are case sensitive. Keep all keys lowercase.
-#    * ICON can be a either a direct path to a icon or a valid icon name
-#    * Category names are case insensitive. (ex: X-XFCE and x_xfce are equivalent)
+#    * ICON can be a either a direct path to an icon or a valid icon name
+#    * By default, category names are case insensitive. (e.g.: X-XFCE == x_xfce)
 
 require '/home/swampyx/.config/obmenu-generator/config.pl';
 
 our $SCHEMA = [
 
     #             COMMAND                 LABEL                ICON
-    {item => ["pcmanfm",                           'File Manager', 'file-manager']},
-    {item => [$CONFIG->{terminal},                 'Terminal',     'terminal']},
+    {item => ["stuurman",                'File Manager', 'file-manager']},
+    {item => ["sakura",                 'Terminal',     'terminal']},
     {item => ["$CONFIG->{editor} /media/PERL/Scripturi\\ Perl/Sidef/bin/sidef", "Sidef script",  "text-x-script"]},
     {item => ["$CONFIG->{editor} /tmp/test.pl",    "TEMP1 script",   "text-x-script"]},
     {item => ["$CONFIG->{editor} /tmp/x.pl",    "TEMP2 script",   "text-x-script"]},
@@ -36,6 +84,7 @@ our $SCHEMA = [
   #  },
 
     {item => ['luakit',     'Luakit', 'luakit']},
+    #{item => ["midori", 'Midori',  'midori']},
     {item => ["opera-next", 'Opera',  'opera']},
 
     {sep => 'Applications'},
@@ -63,12 +112,10 @@ our $SCHEMA = [
     #{cat => ['gnome',       'GNOME Applications', 'gnome-applications']},
     #{cat => ['consoleonly', 'CLI Applications',   'applications-utilities']},
 
-    {
-     raw =>
-'<menu id="FDSR" label="Disk" icon="/usr/share/icons/Faenza/devices/96/drive-harddisk.png" execute="obbrowser"/>'
-    },
+    {raw => '<menu id="FDSR" label="Disk" icon="/usr/share/icons/Faenza/devices/96/drive-harddisk.png" execute="obbrowser"/>'},
 
-    {obgenmenu => 'Openbox Settings'},
+    {sep       => undef},
+    {obgenmenu => ['Openbox Settings','applications-engineering']},
     {sep       => undef},
 
     #{item => ['xscreensaver-command -lock', 'Lock', 'lock']},

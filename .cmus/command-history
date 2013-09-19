@@ -1,5 +1,15 @@
-add Muzica
+add Severnyi Arkadii/
 clear
+delete
+win-remove
+add S
+add Sev
+fset ogg-or-mp3=ogg|mp3
+shell 
+rem
+del
+remove
+add Muzica
 add Classical Music/
 add Muzica/
 add /home/swampyx/Classical Music/

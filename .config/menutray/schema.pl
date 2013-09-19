@@ -45,7 +45,7 @@ our $SCHEMA = [
     #             COMMAND                 LABEL                ICON
     {item => ['pcmanfm',            'File Manager',       'file-manager']},
     {item => [$CONFIG->{terminal},  'Terminal',           'terminal']},
-    {item => ['luakit',             'Luakit',             'luakit']},
+    #{item => ['luakit',             'Luakit',             'luakit']},
     {item => ["gtk-youtube-viewer", "GTK Youtube Viewer", 'gtk-youtube-viewer']},
 
     {sep => 'Applications'},

@@ -15,7 +15,7 @@ indent_mode=2
 [project]
 name=Sidef
 base_path=/media/PERL/Scripturi Perl/Sidef
-description=
+description=A new programming language, written in Perl.
 file_patterns=*;
 
 [long line marker]
@@ -23,12 +23,7 @@ long_line_behaviour=1
 long_line_column=130
 
 [files]
-current_page=3
-FILE_NAME_0=58;Perl;0;EUTF-8;0;1;1;%2Ftmp%2Fx.pl;0;4
-FILE_NAME_1=2798;Perl;0;EUTF-8;0;1;1;%2Fmedia%2FPERL%2FScripturi%20Perl%2FSidef%2Flib%2FSidef%2FExec.pm;0;4
-FILE_NAME_2=4337;Perl;0;EUTF-8;0;1;1;%2Fmedia%2FPERL%2FScripturi%20Perl%2FSidef%2Fbin%2Fsidef;0;4
-FILE_NAME_3=2695;Perl;0;EUTF-8;0;1;1;%2Fmedia%2FPERL%2FScripturi%20Perl%2FSidef%2Futils%2Fdeparser.pl;0;4
-FILE_NAME_4=1034;Conf;0;EUTF-8;0;1;1;%2Fhome%2Fswampyx%2F.config%2Fgeany%2Fcolorschemes%2Ftango-dark.conf;0;4
+current_page=-1
 
 [VTE]
 last_dir=/home/swampyx

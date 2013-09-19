@@ -322,7 +322,7 @@
     </keybind>
     <keybind key="A-y">
       <action name="Execute">
-        <command>sakura -e 'gtk-youtube-viewer'</command>
+        <command>sakura -x 'gtk-youtube-viewer'</command>
         <startupnotify>
           <enabled>yes</enabled>
           <name>Youtube Viewer</name>

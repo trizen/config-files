@@ -37,6 +37,6 @@ our $CONFIG = {
   skip_app_name_re          => undef,
   skip_file_content_re      => undef,
   skip_file_name_re         => qr/^(?:Terminal|avahi|b(?:ssh|vnc)|dconf|ffadomixer|gconf|mplayer|pcmanfm|sakura)/,
-  terminal                  => "sakura",
+  terminal                  => "xterm",
   VERSION                   => 0.38,
 }

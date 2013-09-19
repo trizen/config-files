@@ -35,7 +35,7 @@ VERSION (NUMBER)
 
 our $CONFIG = {
   dirs_first      => 0,
-  file_manager    => "pcmanfm",
+  file_manager    => "stuurman",
   gtk_rc_filename => undef,
   icon_dirs_first => undef,
   icon_dirs_last  => undef,

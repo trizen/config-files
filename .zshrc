@@ -87,12 +87,13 @@ export GOBIN="$HOME/GO/bin"
 #export GOPKGS="$HOME/GO/pkg"
 export QTDIR=/usr/include/QtCore
 #export CC="colorgcc"
-export PATH="/opt/android-sdk/platform-tools:$PATH:$HOME/GO/bin"
+export PATH="/opt/android-sdk/platform-tools:$HOME/.gem/ruby/2.0.0/bin:$PATH"
 export CCACHE_PATH="/usr/bin"                 # Tell ccache to only use compilers here
 export CCACHE_DIR=/media/ccache               # Tell ccache to use this path to store its cache
 export DBI_DRIVER='mysql'
 export PS1="%B%n%b[%~]: "
-export PZN='/media/PERL/Scripturi Perl/Proiecte Personale';
+export PZN='/media/PERL/Scripturi Perl/Proiecte Personale'
+export SIDEF='/media/PERL/Scripturi Perl/Sidef/bin'
 
 
 #------------------------------
@@ -129,7 +130,8 @@ alias rmdir='rmdir -v'
 alias ln='ln -v'
 alias chmod="chmod -c"
 alias chown="chown -c"
-
+alias less="less -g -r"
+alias inxi="inxi -F -x -f -o -p"
 
 # Support colors in less
 export LESS_TERMCAP_mb=$'\E[01;33m'

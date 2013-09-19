@@ -1911,6 +1911,11 @@ qt-privacy-ask=0
 # Use the rotate video filter instead of transform (boolean)
 #motion-use-rotate=0
 
+[lirc] # Infrared remote control interface
+
+# Change the lirc configuration file (string)
+#lirc-file=
+
 [hotkeys] # Hotkeys management interface
 
 # MouseWheel up-down axis Control (integer)
@@ -3266,6 +3271,17 @@ compressor-makeup-gain=0.000000
 
 [access_udp] # UDP input
 
+[access_smb] # SMB input
+
+# SMB user name (string)
+#smb-user=
+
+# SMB password (string)
+#smb-pwd=
+
+# SMB domain (string)
+#smb-domain=
+
 [access_shm] # Shared memory framebuffer
 
 # Frame rate (float)
@@ -3878,7 +3894,7 @@ cd-audio=/dev/sr0
 #playlist-enqueue=0
 
 # Play files randomly forever (boolean)
-#random=0
+random=1
 
 # Repeat all (boolean)
 #loop=0
@@ -4600,13 +4616,3 @@ album-art=2
 # Playlist bookmark 10 (string)
 #bookmark10=
 
-[lirc] # Infrared remote control interface
-# Change the lirc configuration file (string)
-#lirc-file=
-[access_smb] # SMB input
-# SMB user name (string)
-#smb-user=
-# SMB password (string)
-#smb-pwd=
-# SMB domain (string)
-#smb-domain=
