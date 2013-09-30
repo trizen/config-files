@@ -188,7 +188,7 @@
         main_window.w = "550" 
         main_window.h = "944" 
         main_window.maximized = "true" 
-        main_window.hdivider_pos = "199" 
+        main_window.hdivider_pos = "200" 
         main_window.vdivider_pos = "200" 
 
         float_window.x = "0" 

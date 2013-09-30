@@ -23,7 +23,8 @@ long_line_behaviour=1
 long_line_column=130
 
 [files]
-current_page=-1
+current_page=0
+FILE_NAME_0=1838;Perl;0;EUTF-8;0;1;1;%2Fhome%2Fswampyx%2F.config%2Fmenutray%2Fschema.pl;0;4
 
 [VTE]
 last_dir=/home/swampyx

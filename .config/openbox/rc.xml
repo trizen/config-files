@@ -277,7 +277,7 @@
     </keybind>
     <keybind key="A-g">
       <action name="Execute">
-        <command>google-chrome</command>
+        <command>google-chrome-unstable</command>
         <startupnotify>
           <enabled>yes</enabled>
           <name>Google Chrome</name>

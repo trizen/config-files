@@ -85,7 +85,7 @@ our $SCHEMA = [
 
     {item => ['luakit',     'Luakit', 'luakit']},
     #{item => ["midori", 'Midori',  'midori']},
-    {item => ["opera-next", 'Opera',  'opera']},
+    #{item => ["opera-next", 'Opera',  'opera']},
 
     {sep => 'Applications'},
 

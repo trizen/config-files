@@ -1,0 +1,27 @@
+Советский
+уголовные песни
+youtube-viewer -rv='http://www.youtube.com/watch?v=T3WU6YUsYSo' -A -n -m -s
+Алик Фарбер
+Ошмянский
+Хава нагила
+Марина Девятова
+Oдесские Песни  (odessa songs)
+youtube-viewer -u 'sasha365i' -A -n -m -s   # Yiddish songs
+youtube-viewer -rv='http://www.youtube.com/watch?v=MnDu66QuK4Q' -A -n -m -s
+# kinder, kinder
+youtube-viewer -rv='http://www.youtube.com/watch?v=jogxqfH2Mw8' -A -n -m -s
+# # Apk
+youtube-viewer -u=anatolymogilevsky -A -n -m -s
+Karsten Troyke
+Trio Scho
+Aaron Copland
+yiddish song
+youtube-viewer -pl=PLa3dbzLYmJouCDsxBYhmETqzW6l7tXQSq -A -n -m -s
+Benny Bell
+Юлия Сахно
+Дюк-Тайм (duke-time)
+Голубой вагон (blue vagone)
+Марк Бернес
+youtube-viewer -rv 'http://www.youtube.com/watch?v=WosK8yKvgAM' -A -n -m -s
+youtube-viewer -rv 'http://www.youtube.com/watch?v=g9JHFNb-jSk' -A -n -m -s
+music одесская песня (odessa song)

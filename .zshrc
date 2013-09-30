@@ -75,10 +75,11 @@ zstyle ':completion:*:killall:*'   force-list always
 # Export stuff
 #------------------------------
 export USE_CCACHE=1
-export KCFLAGS="-march=native -Ofast"
+export CFLAGS="-march=native -Os -pipe -msse -msse2 -mmmx -m3dnow -fstack-protector --param=ssp-buffer-size=4 -D_FORTIFY_SOURCE=2"
+export CXXFLAGS="${CFLAGS}"
 export EDITOR='joe'
-export BROWSER='google-chrome'
-export WEBBROWSER='google-chrome'
+export BROWSER='google-chrome-unstable'
+export WEBBROWSER='google-chrome-unstable'
 export GOROOT=/usr/lib/go
 export GOOS=linux
 export FILEMANAGER='pcmanfm'
