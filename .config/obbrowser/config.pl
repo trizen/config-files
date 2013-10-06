@@ -6,40 +6,44 @@
 
 =for comment
 
-file_manager (STRING)
-    - command to your file manager for opening files and directories.
+|| ICON SETTINGS
+    | icon_dirs_first     : When looking for icons, look in this directories first,
+                            before looking in the directories of the current icon theme.
+                            Example: [
+                                "$ENV{HOME}/My icons",
+                            ],
 
-with_icons (BOOL)
-    - a true value will make the script to use icons for files and dirs.
-    - this option may be slow, depending on your system configuration.
+    | icon_dirs_last      : Look in this directories at the very last, after looked in
+                            /usr/share/pixmaps, /usr/share/icons/hicolor and some other
+                            directories.
+                            Example: [
+                                "/usr/share/icons/Tango",
+                            ],
 
-icon_dirs_first (ARRAY_REF) ['dir', ...]
-    - when looking for icons, look in this directories first.
+    | with_icons          : A true value will make the script to use icons for files and dirs.
+                            This option may be slow, depending on your system configuration.
 
-icon_dirs_last (ARRAY_REF) ['dir', ...]
-    - when looking for icons, look in this directories last.
+    | gtk_rc_filename     : Absolute path to your gtk-rc file.
+                            This file is used to get the current icon theme name.
 
-dirs_first (BOOL)
-    - a true value will make the script to order directories before files.
 
-gtk_rc_filename (STRING)
-    - path to your Gtk RC file.
-    - this file is used to get the current icon theme name.
-    - if the value is undefined (undef), it assumes '/home/swampyx/.gtkrc-2.0'
-    - if you're using Gtk3, change its value to: '/home/swampyx/.config/gtk-3.0/settings.ini'
-
-VERSION (NUMBER)
-    - version of obbrowser.
+|| MENU
+    | file_manager        : Command to your file manager for opening files and directories.
+    | start_path          : An absolute path from which we start to browse the filesystem.
+    | dirs_first          : A true value will make the script to order directories before files.
 
 =cut
 
 our $CONFIG = {
-  dirs_first      => 0,
-  file_manager    => "stuurman",
-  gtk_rc_filename => undef,
-  icon_dirs_first => undef,
-  icon_dirs_last  => undef,
-  start_path      => "/home/swampyx",
-  VERSION         => 0.02,
-  with_icons      => 1,
+  "dirs_first"          => 0,
+  "file_manager"        => "stuurman",
+  "Linux::DesktopFiles" => {
+                             gtk_rc_filename => "/home/swampyx/.gtkrc-2.0",
+                             icon_dirs_first => undef,
+                             icon_dirs_last  => undef,
+                             skip_svg_icons  => 1,
+                           },
+  "start_path"          => "/home/swampyx",
+  "VERSION"             => 0.03,
+  "with_icons"          => 1,
 }

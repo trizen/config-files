@@ -14,7 +14,7 @@ sub get_partitions {
 
         my ($fs, $type, $totalsize, $used, undef, $used_percent, $mountpoint) = split(' ', $line, 7);
 
-        next if $mountpoint =~ m{^/(?>dev|sys|run)\b};
+        next if $mountpoint =~ m{^/(?>dev|sys|run|.*/\.cache)\b};
 
         $used_percent =~ s/^\d+\K%\z// or next;
 

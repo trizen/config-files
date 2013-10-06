@@ -98,13 +98,9 @@ our $SCHEMA = [
     {cat => ['audiovideo',  'Multimedia',  'applications-multimedia']},
     {cat => ['network',     'Network',     'applications-internet']},
     {cat => ['office',      'Office',      'applications-office']},
+    {cat => ['others',      'Others',      'applications-system']},
     {cat => ['settings',    'Settings',    'applications-accessories']},
     {cat => ['system',      'System',      'applications-system']},
-
-    # {scripts => ['/home/swampyx/Desktop', 1, "text-x-script"]},
-    #{cat       => ['others',            'Others',      'applications-system']},
-
-    {wine_apps => ["Wine apps", "applications-other"]},
 
     #{cat => ['qt',          'QT Applications',    'qtlogo']},
     #{cat => ['gtk',         'GTK Applications',   'gnome-applications']},
@@ -112,7 +108,7 @@ our $SCHEMA = [
     #{cat => ['gnome',       'GNOME Applications', 'gnome-applications']},
     #{cat => ['consoleonly', 'CLI Applications',   'applications-utilities']},
 
-    {raw => '<menu id="FDSR" label="Disk" icon="/usr/share/icons/Faenza/devices/96/drive-harddisk.png" execute="obbrowser"/>'},
+    {pipe => ["obbrowser", "Disk", "drive-harddisk"]},
 
     {sep       => undef},
     {obgenmenu => ['Openbox Settings','applications-engineering']},

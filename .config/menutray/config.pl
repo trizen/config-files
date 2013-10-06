@@ -2,41 +2,79 @@
 
 # menutray - configuration file
 
-# desktop_files_paths    : Example: [ "$ENV{'HOME'}/.local/share/applications", '/my/path' ]
-# skip_file_name_re      : Skip .desktop files if their file names will match the regex.
-# skip_app_name_re       : Skip .desktop files based on the value of "Name"
-# skip_app_command_re    : Skip .desktop files based on the value of "Exec"
-# skip_file_content_re   : Skip .desktop files if the regex matches anywhere in the [Desktop Entry] section
-# clean_command_name_re  : Anything matched by this regex in the values of "Exec" will be replaced with nothing.
-# icon_type              : Menu icon type (ex: menu, small-toolbar, large-toolbar, button, dialog)
-# icon_size              : Icon size in pixels (for full path icons) (default: [16, 16])
-# missing_image          : Use this icon when an icon is missing (default: gtk-missing-image)
+=for comment
 
-# For regular expressions
-#    * is better to use qr/REGEX/ instead of 'REGEX'
+|| FILTERING
+    | skip_filename_re    : Skip a .desktop file if its name matches the regex.
+                            Name is from the last slash to the end. (filename.desktop)
+                            Example: qr/^(?:gimp|xterm)\b/,    # skips 'gimp' and 'xterm'
 
-# Regular expression example:
-# skip_file_name_re => qr/^(?:avahi|b(?:ssh|vnc))/,
-#  `- it will skip any .desktop file which begins with "avahi", "bssh" or "bvnc"
+    | skip_entry          : Skip a destkop file if the value from a given key matches the regex.
+                            Example: [
+                                {key => 'Name', re => qr/(?:about|terminal)/i},
+                                {key => 'Exec', re => qr/^xterm/},
+                            ],
+
+    | substitutions       : Substitute, by using a regex, in the values of the desktop files.
+                            Example: [
+                                {key => 'Exec', re => qr/xterm/, value => 'sakura'},
+                                {key => 'Exec', re => qr/\\\\/,  value => '\\', global => 1},    # for wine apps
+                            ],
+
+
+|| ICON SETTINGS
+    | icon_type           : Menu icon type (menu, small-toolbar, large-toolbar, button, dialog)
+    | icon_size           : Icon size in pixels (only for full path icons) (default: [16, 16])
+    | missing_image       : Use this icon for a missing icons (default: gtk-missing-image)
+
+
+|| KEYS
+    | tooltip_keys        : Valid keys for the tooltip text.
+                            Example: ['Comment[es]', 'Comment'],
+
+    | name_keys           : Valid keys for the item names.
+                            Example: ['Name[ja]', 'GenericName[ja]', 'Name'],
+
+
+|| PATHS
+    | desktop_files_paths   : Absolute paths which contains .desktop files.
+                              Example: [
+                                '/usr/share/applications',
+                                "$ENV{HOME}/.local/share/applications",
+                                glob("$ENV{HOME}/.local/share/applications/wine/Programs/*"),
+                              ],
+
+
+|| NOTES
+    | Regular expressions:
+        * use qr/RE/ instead of 'RE'
+        * use qr/RE/i for case insenstive mode
+
+=cut
 
 our $CONFIG = {
-  categories_case_sensitive => 0,
-  clean_command_name_re     => undef,
-  desktop_files_paths       => [
-                                 "/usr/share/applications",
-                                 "/home/swampyx/.local/share/applications",
-                               ],
-  editor                    => "geany",
-  gdk_interpolation_type    => "hyper",
-  gtk_rc_filename           => undef,
-  icon_size                 => [16, 16],
-  icon_type                 => "menu",
-  missing_image             => "gtk-missing-image",
-  set_tooltips              => 1,
-  skip_app_command_re       => undef,
-  skip_app_name_re          => undef,
-  skip_file_content_re      => undef,
-  skip_file_name_re         => qr/^(?:Terminal|avahi|b(?:ssh|vnc)|dconf|ffadomixer|gconf|mplayer|pcmanfm|sakura)/,
-  terminal                  => "xterm",
-  VERSION                   => 0.38,
+  "editor"                 => "geany",
+  "gdk_interpolation_type" => "hyper",
+  "icon_size"              => [16, 16],
+  "icon_type"              => "menu",
+  "Linux::DesktopFiles"    => {
+                                desktop_files_paths     => [
+                                                             "/usr/share/applications",
+                                                             "/home/swampyx/.local/share/applications",
+                                                           ],
+                                keep_empty_categories   => 0,
+                                keep_unknown_categories => 1,
+                                skip_entry              => undef,
+                                skip_filename_re        => qr/^(?:exo-|xfce4-about|Terminal|avahi|b(?:ssh|vnc)|dconf|ffadomixer|gconf|mplayer)/,
+                                substitutions           => undef,
+                                terminal                => "sakura",
+                                terminalization_format  => "%s -e '%s'",
+                                terminalize             => 1,
+                                unknown_category_key    => "other",
+                              },
+  "missing_image"          => "gtk-missing-image",
+  "name_keys"              => ["Name"],
+  "set_tooltips"           => 1,
+  "tooltip_keys"           => ["Comment"],
+  "VERSION"                => "0.40",
 }

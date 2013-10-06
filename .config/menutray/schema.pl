@@ -43,8 +43,8 @@ require '/home/swampyx/.config/menutray/config.pl';
 our $SCHEMA = [
 
     #             COMMAND                 LABEL                ICON
-    {item => ['pcmanfm',            'File Manager',       'file-manager']},
-    {item => [$CONFIG->{terminal},  'Terminal',           'terminal']},
+    {item => ['stuurman',            'File Manager',       'file-manager']},
+    {item => ['sakura',  'Terminal',           'terminal']},
     #{item => ['luakit',             'Luakit',             'luakit']},
     {item => ["gtk-youtube-viewer", "GTK Youtube Viewer", 'gtk-youtube-viewer']},
 
@@ -61,6 +61,11 @@ our $SCHEMA = [
     {cat => ['office',      'Office',      'applications-office']},
     {cat => ['settings',    'Settings',    'applications-accessories']},
     {cat => ['system',      'System',      'applications-system']},
+    #{cat => ['trizen',      'Trizen',      'applications-other']},
+    #{cat => ['top10',      'top10',      'applications-system']},
+    #{cat => ['Google',     'Google',       'applications-other']},
+    {cat => ['other',      'Other',       'applications-other']},
+    #{sep => "trizen"},
 
     #                VAR_NAME        LABEL         ICON
     #{begin_cat => ['$my_cat', 'My category',  'cat-icon']},
