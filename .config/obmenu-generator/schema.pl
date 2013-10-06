@@ -24,9 +24,10 @@ end_cat: end of a category
     {end_cat => undef}
 
 
-sep: menu line separator
+sep: horizontal line separator
 
-    {sep => undef} or {sep => "label"}
+    {sep => undef}
+    {sep => "label"}
 
 
 exit: default "Exit" action
@@ -34,56 +35,47 @@ exit: default "Exit" action
     {exit => ["label", "icon"]}
 
 
+pipe: a pipe menu entry
+
+    {pipe => ["command", "label", "icon"]}
+
+
 raw: any valid Openbox XML string
 
     {raw => q(xml string)},
 
 
-obgenmenu: category provided by obmenu-generator
+obgenmenu: menu entry provided by obmenu-generator
 
-    {obgenmenu => "label"}
-
-
-scripts: executable scripts from a directory
-
-    {scripts => ["/my/dir", BOOL, "icon"]}
-
-BOOL - can be either true or false (1 or 0)
-    0 => to open the script in background
-    1 => to open the script in a new terminal
-
-
-wine_apps: windows applications installed via wine
-
-    {wine_apps => ["label", "icon"]}
+    {obgenmenu => ["label", "icon"]}
 
 =cut
 
 # NOTE:
 #    * Keys and values are case sensitive. Keep all keys lowercase.
 #    * ICON can be a either a direct path to an icon or a valid icon name
-#    * By default, category names are case insensitive. (e.g.: X-XFCE == x_xfce)
+#    * Category names are case insensitive. (X-XFCE and x_xfce are equivalent)
 
 require '/home/swampyx/.config/obmenu-generator/config.pl';
 
 our $SCHEMA = [
 
     #             COMMAND                 LABEL                ICON
-    {item => ["stuurman",                'File Manager', 'file-manager']},
-    {item => ["sakura",                 'Terminal',     'terminal']},
-    {item => ["$CONFIG->{editor} /media/PERL/Scripturi\\ Perl/Sidef/bin/sidef", "Sidef script",  "text-x-script"]},
-    {item => ["$CONFIG->{editor} /tmp/test.pl",    "TEMP1 script",   "text-x-script"]},
-    {item => ["$CONFIG->{editor} /tmp/x.pl",    "TEMP2 script",   "text-x-script"]},
+    {item => ["stuurman",                       'File Manager', 'file-manager']},
+    {item => ["sakura",                         'Terminal',     'terminal']},
+    {item => ["$CONFIG->{editor} /tmp/test.pl", "TEMP1 script", "text-x-script"]},
+    {item => ["$CONFIG->{editor} /tmp/x.pl",    "TEMP2 script", "text-x-script"]},
 
-   # {
-   #  item => [
-   #      "wine \Q/home/swampyx/.wine/drive_c/Program Files/ValuSoft/18 Wheels of Steel American Long Haul/alh.exe",
-   #      'Long Haul',
-   #      '/home/swampyx/.wine/drive_c/Program Files/ValuSoft/18 Wheels of Steel American Long Haul/help_files/title.png'
-   #  ]
-  #  },
+  # {
+  #  item => [
+  #      "wine \Q/home/swampyx/.wine/drive_c/Program Files/ValuSoft/18 Wheels of Steel American Long Haul/alh.exe",
+  #      'Long Haul',
+  #      '/home/swampyx/.wine/drive_c/Program Files/ValuSoft/18 Wheels of Steel American Long Haul/help_files/title.png'
+  #  ]
+  # },
 
-    {item => ['luakit',     'Luakit', 'luakit']},
+    {item => ['luakit', 'Luakit', 'luakit']},
+
     #{item => ["midori", 'Midori',  'midori']},
     #{item => ["opera-next", 'Opera',  'opera']},
 
@@ -111,7 +103,7 @@ our $SCHEMA = [
     {pipe => ["obbrowser", "Disk", "drive-harddisk"]},
 
     {sep       => undef},
-    {obgenmenu => ['Openbox Settings','applications-engineering']},
+    {obgenmenu => ['Openbox Settings', 'applications-engineering']},
     {sep       => undef},
 
     #{item => ['xscreensaver-command -lock', 'Lock', 'lock']},

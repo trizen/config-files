@@ -1,6 +1,8 @@
 #!/usr/bin/perl
 
 # menutray - configuration file
+# This file will be updated automatically every time when is needed.
+# Any additional comment and/or indentation will be lost.
 
 =for comment
 
@@ -25,7 +27,7 @@
 || ICON SETTINGS
     | icon_type           : Menu icon type (menu, small-toolbar, large-toolbar, button, dialog)
     | icon_size           : Icon size in pixels (only for full path icons) (default: [16, 16])
-    | missing_image       : Use this icon for a missing icons (default: gtk-missing-image)
+    | missing_image       : Use this icon for missing icons (default: gtk-missing-image)
 
 
 || KEYS
@@ -33,7 +35,7 @@
                             Example: ['Comment[es]', 'Comment'],
 
     | name_keys           : Valid keys for the item names.
-                            Example: ['Name[ja]', 'GenericName[ja]', 'Name'],
+                            Example: ['Name[fr]', 'GenericName[fr]', 'Name'],   # french menu
 
 
 || PATHS
@@ -76,5 +78,5 @@ our $CONFIG = {
   "name_keys"              => ["Name"],
   "set_tooltips"           => 1,
   "tooltip_keys"           => ["Comment"],
-  "VERSION"                => "0.40",
+  "VERSION"                => 0.41,
 }
