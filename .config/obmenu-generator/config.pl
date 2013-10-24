@@ -81,6 +81,7 @@ our $CONFIG = {
                              desktop_files_paths     => [
                                                           "/usr/share/applications",
                                                           "/home/swampyx/.local/share/applications",
+                                                          glob("$ENV{HOME}/.local/share/applications/wine/Programs/*"),
                                                         ],
                              gtk_rc_filename         => "/home/swampyx/.gtkrc-2.0",
                              icon_dirs_first         => undef,
@@ -91,7 +92,9 @@ our $CONFIG = {
                              skip_filename_re        => qr/^(?:exo-|xfce4-about|Terminal|avahi|b(?:ssh|vnc)|dconf|ffadomixer|gconf|mplayer|sakura)/,
                              skip_svg_icons          => 1,
                              strict_icon_dirs        => undef,
-                             substitutions           => undef,
+                             substitutions           => [
+                                                          { global => 1, key => "Exec", re => qr/\\\\/, value => "\\" },
+                                                        ],
                              terminalization_format  => "%s -e '%s'",
                              terminalize             => 1,
                              unknown_category_key    => "other",

@@ -32,7 +32,7 @@ own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 
 alignment top_right
 gap_x 10
-gap_y 30
+gap_y 80
 minimum_size 182 600
 maximum_width 182
 
@@ -68,7 +68,10 @@ ${goto 32}Uptime: ${alignr}${color2}${uptime_short}${color}
 ${voffset 8}${font DroidSans:bold:size=8}${color4}PROCESSOR $stippled_hr${font}
 ${font DroidSans:size=7.6}${color3}${cpugraph cpu1}
 CPU:${color3} ${freq}MHz${alignr}Used: ${cpu cpu1}%
-${cpubar cpu0}
+${cpubar cpu1}
+${font DroidSans:size=7.6}${color3}${cpugraph cpu2}
+CPU:${color3} ${freq}MHz${alignr}Used: ${cpu cpu2}%
+${cpubar cpu2}
 # |--MEM
 #${voffset 2}${offset 1}${color0}${font Poky:size=14}M${font}${color}${goto 32}${voffset -7}RAM: ${font #Ubuntu:style=Bold:size=8}${color1}$memperc%${color}${font}
 #${voffset 1}${offset 1}${voffset 2}${color0}${membar 4,18}${color}${goto 32}${voffset -2}F: ${font #Ubuntu:style=Bold:size=8}${color2}${memeasyfree}${color}${font} U: ${font Ubuntu:style=Bold:size=8}${color2}${mem}${color}${font}

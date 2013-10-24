@@ -93,8 +93,8 @@ export CCACHE_PATH="/usr/bin"                 # Tell ccache to only use compiler
 export CCACHE_DIR=/media/ccache               # Tell ccache to use this path to store its cache
 export DBI_DRIVER='mysql'
 export PS1="%B%n%b[%~]: "
-export PZN='/media/PERL/Scripturi Perl/Proiecte Personale'
-export SIDEF='/media/PERL/Scripturi Perl/Sidef/bin'
+export PZN='/media/Perl/Personal projects'
+export SIDEF='/media/Perl/Sidef/bin'
 
 
 #------------------------------
@@ -133,6 +133,7 @@ alias chmod="chmod -c"
 alias chown="chown -c"
 alias less="less -g -r"
 alias inxi="inxi -F -x -f -o -p"
+alias url2pdf="wkhtmltopdf --use-xserver $@"
 
 # Support colors in less
 export LESS_TERMCAP_mb=$'\E[01;33m'

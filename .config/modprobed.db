@@ -7,9 +7,7 @@ crc_itu_t
 ehci_hcd
 ehci_pci
 evdev
-ext4
 fat
-floppy
 forcedeth
 gspca_main
 gspca_pac207
@@ -23,8 +21,8 @@ ipv6
 it87
 jbd2
 jfs
-joydev
 k8temp
+kvm
 libata
 mbcache
 media
@@ -37,6 +35,7 @@ parport
 parport_pc
 pata_acpi
 pata_amd
+powernow_k8
 ppdev
 processor
 reiserfs

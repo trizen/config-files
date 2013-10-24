@@ -2138,10 +2138,10 @@ qt-privacy-ask=0
 #sout-x264-stats=x264_2pass.log
 
 # Default preset setting used (string)
-#sout-x264-preset=
+sout-x264-preset=ultrafast
 
 # Default tune setting used (string)
-#sout-x264-tune=
+sout-x264-tune=film
 
 # x264 advanced options. (string)
 #sout-x264-options=
@@ -2401,9 +2401,6 @@ subsdec-encoding=ISO-8859-2
 # Skip the loop filter for H.264 decoding (integer)
 #avcodec-skiploopfilter=0
 
-# Discard cropping information (boolean)
-#avcodec-ignorecrop=0
-
 # Debug mask (integer)
 #avcodec-debug=0
 
@@ -2411,7 +2408,7 @@ subsdec-encoding=ISO-8859-2
 #avcodec-codec=
 
 # Hardware decoding (string)
-#avcodec-hw=none
+avcodec-hw=any
 
 # Threads (integer)
 #avcodec-threads=0
@@ -2509,7 +2506,7 @@ subsdec-encoding=ISO-8859-2
 #jack-connect-regex=system
 
 # Software gain (float)
-#jack-gain=1.000000
+jack-gain=1.157625
 
 [amem] # Audio memory output
 
@@ -2525,13 +2522,13 @@ subsdec-encoding=ISO-8859-2
 [alsa] # ALSA audio output
 
 # Audio output device (string)
-#alsa-audio-device=default
+alsa-audio-device=default:CARD=NVidia
 
 # Audio output channels (integer)
 #alsa-audio-channels=6
 
 # Software gain (float)
-#alsa-gain=1.000000
+alsa-gain=0.614125
 
 [afile] # File audio output
 
@@ -3522,7 +3519,7 @@ compressor-makeup-gain=0.000000
 #audio-time-stretch=1
 
 # Audio output module (string)
-#aout=
+aout=alsa
 
 # Audio filters (string)
 #audio-filter=
@@ -3660,7 +3657,7 @@ video-on-top=1
 #deinterlace-mode=blend
 
 # Video output module (string)
-#vout=
+vout=any
 
 # Video filter module (string)
 #video-filter=
@@ -3972,7 +3969,7 @@ random=1
 #one-instance=0
 
 # Use only one instance when started from file manager (boolean)
-#one-instance-when-started-from-file=1
+one-instance-when-started-from-file=0
 
 # Enqueue items into playlist in one instance mode (boolean)
 #playlist-enqueue=0

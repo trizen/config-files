@@ -25,3 +25,5 @@ Benny Bell
 youtube-viewer -rv 'http://www.youtube.com/watch?v=WosK8yKvgAM' -A -n -m -s
 youtube-viewer -rv 'http://www.youtube.com/watch?v=g9JHFNb-jSk' -A -n -m -s
 music одесская песня (odessa song)
+music Частушки
+music Сектор Газа
