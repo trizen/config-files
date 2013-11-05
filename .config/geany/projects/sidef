@@ -23,21 +23,8 @@ long_line_behaviour=1
 long_line_column=130
 
 [files]
-current_page=13
-FILE_NAME_0=42283;Perl;0;EUTF-8;0;1;1;%2Fmedia%2FPerl%2FSidef%2Flib%2FSidef%2FParser.pm;0;4
-FILE_NAME_1=65;Ruby;0;EUTF-8;0;1;1;%2Fmedia%2FPerl%2FSidef%2Fscripts%2Fhash_sort.sf;0;4
-FILE_NAME_2=225;Perl;0;EUTF-8;0;1;1;%2Fmedia%2FPerl%2FSidef%2Fscripts%2F99_bottles.sf;0;4
-FILE_NAME_3=266;Ruby;0;EUTF-8;0;1;1;%2Fmedia%2FPerl%2FSidef%2Fscripts%2Fbinary_search.sf;0;4
-FILE_NAME_4=221;Ruby;0;EUTF-8;0;1;1;%2Fmedia%2FPerl%2FSidef%2Fscripts%2FMath%2FAlgebra%2FMatrix.sm;0;4
-FILE_NAME_5=855;Ruby;0;EUTF-8;0;1;1;%2Fmedia%2FPerl%2FSidef%2Fscripts%2Fvar_ref.sf;0;4
-FILE_NAME_6=16;Ruby;0;EUTF-8;0;1;1;%2Fmedia%2FPerl%2FSidef%2Fscripts%2Fgcd.sf;0;4
-FILE_NAME_7=234;Perl;0;EUTF-8;0;1;1;%2Fmedia%2FPerl%2FSidef%2Fscripts%2Fsplit_combine.sf;0;4
-FILE_NAME_8=110;Ruby;0;EUTF-8;0;1;1;%2Fmedia%2FPerl%2FSidef%2Fscripts%2Ffibonacci_cached.sf;0;4
-FILE_NAME_9=20425;Perl;0;EUTF-8;0;1;1;%2Fmedia%2FPerl%2FPaid%20projects%2Foutputlogic%2Fparse_paths.pl;0;4
-FILE_NAME_10=4235;Perl;0;EUTF-8;0;1;1;%2Fmedia%2FPerl%2FPaid%20projects%2Foutputlogic%2Fparse_instances.pl;0;4
-FILE_NAME_11=56;None;0;EUTF-8;0;1;0;%2Fmedia%2FPerl%2FPaid%20projects%2Foutputlogic%2Fpaths1.rpt;0;4
-FILE_NAME_12=802;None;0;EUTF-8;0;1;1;%2Fmedia%2FPerl%2FPaid%20projects%2Foutputlogic%2Fparse_instances.csv;0;4
-FILE_NAME_13=148;Perl;0;EUTF-8;0;1;1;%2Ftmp%2Fscript.pl;0;4
+current_page=0
+FILE_NAME_0=24008;Sh;0;EUTF-8;0;1;1;%2Fmedia%2Fkernel%2Flinux-pf%2FPKGBUILD;0;4
 
 [VTE]
 last_dir=/home/swampyx

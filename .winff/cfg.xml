@@ -2,5 +2,5 @@
 <CONFIG>
   <unix ffmpeg="/usr/bin/ffmpeg" ffplay="/usr/bin/ffplay" terminal="/usr/bin/xterm" termoptions="-e"/>
   <general showoptions="false" pause="false" playsound="false" pass2="false" addfilesfolder="/home/swampyx/" currentpreset="MP3"/>
-  <window height="400" width="640" top="653" left="558"/>
+  <window height="400" width="640" top="630" left="533"/>
 </CONFIG>

@@ -56,6 +56,7 @@ set format_trackwin=%3n. %t%= %y %d
 set format_trackwin_va=%3n. %t (%a)%= %y %d 
 set icecast_default_charset=ISO-8859-1
 set id3_default_charset=ISO-8859-1
+set input.cdio.cddb_url=freedb.freedb.org:8880
 set lib_sort=artist album tracknumber title filename
 set mixer.alsa.channel=PCM
 set mixer.alsa.device=default

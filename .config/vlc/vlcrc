@@ -1552,23 +1552,6 @@ freetype-color=16776960
 # Password (string)
 #telnet-password=
 
-[skins2] # Skinnable Interface
-
-# Skin to use (string)
-#skins2-last=
-
-# Config of last used skin (string)
-#skins2-config=
-
-# Enable transparency effects (boolean)
-#skins2-transparency=0
-
-# Use a skinned playlist (boolean)
-#skinned-playlist=1
-
-# Display video in a skinned window if any (boolean)
-#skinned-video=1
-
 [qt4] # Qt interface
 
 # Start in minimal view (without menus) (boolean)
@@ -2401,6 +2384,9 @@ subsdec-encoding=ISO-8859-2
 # Skip the loop filter for H.264 decoding (integer)
 #avcodec-skiploopfilter=0
 
+# Discard cropping information (boolean)
+#avcodec-ignorecrop=0
+
 # Debug mask (integer)
 #avcodec-debug=0
 
@@ -2528,7 +2514,7 @@ alsa-audio-device=default:CARD=NVidia
 #alsa-audio-channels=6
 
 # Software gain (float)
-alsa-gain=0.614125
+#alsa-gain=1.000000
 
 [afile] # File audio output
 
