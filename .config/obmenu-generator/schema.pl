@@ -90,7 +90,7 @@ our $SCHEMA = [
     {cat => ['audiovideo',  'Multimedia',  'applications-multimedia']},
     {cat => ['network',     'Network',     'applications-internet']},
     {cat => ['office',      'Office',      'applications-office']},
-    {cat => ['other',       'Other',       'applications-system']},
+    {cat => ['other',       'Other',       'applications-other']},
     {cat => ['settings',    'Settings',    'applications-accessories']},
     {cat => ['system',      'System',      'applications-system']},
 
