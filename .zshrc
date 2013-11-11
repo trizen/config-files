@@ -1,6 +1,6 @@
 # Lines configured by zsh-newuser-install
 export HISTFILE=~/.histfile
-export HISTSIZE=10000
+export HISTSIZE=1000000
 export SAVEHIST=$HISTSIZE
 
 setopt hist_ignore_all_dups
@@ -115,7 +115,7 @@ alias gopkg="locate /usr/lib/go/src/pkg/ | perl -nE 'm{\.go\$}||next;m{/pkg/(.*)
 alias grep='grep --colour=auto'
 alias egrep='egrep --colour=auto'
 alias ls='ls --color=auto --human-readable --group-directories-first --classify'
-alias perltidy='perltidy -l=120 -f -kbl=1 -bbb -bbc -bbs -b -ple -bt=2 -pt=2 -sbt=2 -bvt=0 -sbvt=1 -cti=1 -bar -lp -anl'
+alias perltidy='perltidy -l=127 -f -kbl=1 -bbb -bbc -bbs -b -ple -bt=2 -pt=2 -sbt=2 -bvt=0 -sbvt=1 -cti=1 -bar -lp -anl'
 alias rime="cat /media/Others/Cuvinte\\ -\\ rime/rime-all.txt | grep $@"
 alias percritic='perlcritic --statistics'
 alias mkpm='h2xs -A -a -b 5.10.1 -X --skip-exporter --skip-warnings --skip-ppport --skip-autoloader -n $@'
@@ -135,6 +135,7 @@ alias chown="chown -c"
 alias less="less -g -r"
 alias inxi="inxi -F -x -f -o -p"
 alias url2pdf="wkhtmltopdf --use-xserver $@"
+alias locatepm="locatepm -b"
 
 # Support colors in less
 export LESS_TERMCAP_mb=$'\E[01;33m'
