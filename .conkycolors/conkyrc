@@ -61,7 +61,7 @@ ${voffset 6}${alignc}${time %d %B %Y}${voffset -6}
 # - SYSTEM - #
 ##############
 ${font DroidSans:style=Bold:size=8}${color4}SYSTEM $stippled_hr${font}
-${color0}${voffset 6}${font OpenLogos:size=19}a${font}${color}${goto 32}${voffset -14}Kernel:  ${alignr}${color2}${kernel}${color}
+${color0}${voffset 6}${font ConkyColorsLogos:size=19}a${font}${color}${goto 32}${voffset -14}Kernel:  ${alignr}${color2}${kernel}${color}
 ${goto 32}Uptime: ${alignr}${color2}${uptime_short}${color}
 # |--CPU
 #${voffset 2}${offset 2}${color0}${font Poky:size=14}P${color}${font}${voffset -4}${goto 32}CPU: ${font Ubuntu:style=Bold:size=8}${color1}${cpu cpu1}%${font} ${alignr}${font Ubuntu:style=Bold:size=8}${color1}${execi 30 sensors | grep 'Core 0' | awk '{print $3}' | sed 's/+//' | sed 's/\.0.*//'}${color}${font}  ${color2}${cpugraph cpu1 8,50 FFFFFF}${color}
@@ -103,19 +103,19 @@ ${execpi 60 perl ~/.conkycolors/scripts/conkyHD5.pl}
 ${voffset -2}${font Ubuntu:style=Bold:size=8}NETWORK $stippled_hr${font}
 # |--ETH0
 ${if_up enp0s7}
-${voffset -5}${color0}${font Webdings:size=17}”${font}${color}${goto 32}${voffset -5}Up: ${font Ubuntu:style=Bold:size=8}${color1}${upspeed enp0s7}${color}${font} ${alignr}${color2}${upspeedgraph enp0s7 8,60 FFFFFF}${color}
+${voffset -5}${color0}${font ConkyColors:size=17}v${font}${color}${goto 32}${voffset -5}Up: ${font Ubuntu:style=Bold:size=8}${color1}${upspeed enp0s7}${color}${font} ${alignr}${color2}${upspeedgraph enp0s7 8,60 FFFFFF}${color}
 ${goto 32}Total: ${font Ubuntu:style=Bold:size=8}${color2}${totalup enp0s7}${color}${font}
-${voffset 2}${color0}${font Webdings:size=17}“${font}${color}${goto 32}${voffset -5}Down: ${font Ubuntu:style=Bold:size=8}${color1}${downspeed enp0s7}${color}${font} ${alignr}${color2}${downspeedgraph enp0s7 8,60 FFFFFF}${color}
+${voffset 2}${color0}${font ConkyColors:size=17}u${font}${color}${goto 32}${voffset -5}Down: ${font Ubuntu:style=Bold:size=8}${color1}${downspeed enp0s7}${color}${font} ${alignr}${color2}${downspeedgraph enp0s7 8,60 FFFFFF}${color}
 ${goto 32}Total: ${font Ubuntu:style=Bold:size=8}${color2}${totaldown enp0s7}${color}${font}
-${voffset 2}${color0}${font Webdings:size=16}¬${font}${color}${goto 32}${voffset -4}Local IP: ${alignr}${color2}${addr enp0s7}${color}
+${voffset 2}${color0}${font ConkyColors:size=16}j${font}${color}${goto 32}${voffset -4}Local IP: ${alignr}${color2}${addr enp0s7}${color}
 #${goto 32}Public IP: ${alignr}${color2}${execi 10800 curl ifconfig.me}${color}
 # |--PPP0
 ${else}${if_up ppp0}
-${voffset -5}${color0}${font Webdings:size=17}”${font}${color}${goto 32}${voffset -5}Up: ${font Ubuntu:style=Bold:size=8}${color1}${upspeed ppp0}${color}${font} ${alignr}${color2}${upspeedgraph ppp0 8,60 FFFFFF}${color}
+${voffset -5}${color0}${font ConkyColors:size=17}v${font}${color}${goto 32}${voffset -5}Up: ${font Ubuntu:style=Bold:size=8}${color1}${upspeed ppp0}${color}${font} ${alignr}${color2}${upspeedgraph ppp0 8,60 FFFFFF}${color}
 ${goto 32}Total: ${font Ubuntu:style=Bold:size=8}${color2}${totalup ppp0}${color}${font}
-${voffset 2}${color0}${font Webdings:size=17}“${font}${color}${goto 32}${voffset -5}Down: ${font Ubuntu:style=Bold:size=8}${color1}${downspeed ppp0}${color}${font} ${alignr}${color2}${downspeedgraph ppp0 8,60 FFFFFF}${color}
+${voffset 2}${color0}${font ConkyColors:size=17}u${font}${color}${goto 32}${voffset -5}Down: ${font Ubuntu:style=Bold:size=8}${color1}${downspeed ppp0}${color}${font} ${alignr}${color2}${downspeedgraph ppp0 8,60 FFFFFF}${color}
 ${goto 32}Total: ${font Ubuntu:style=Bold:size=8}${color2}${totaldown ppp0}${color}${font}
-${voffset 2}${color0}${font Webdings:size=16}¬${font}${color}${goto 32}${voffset -4}Local IP: ${alignr}${color2}${addr ppp0}${color}
+${voffset 2}${color0}${font ConkyColors:size=16}j${font}${color}${goto 32}${voffset -4}Local IP: ${alignr}${color2}${addr ppp0}${color}
 ${else}${voffset 4}${offset 4}${color0}${font Wingdings:size=20}N${font}${color}${voffset -6}${goto 32}Network Unavailable${voffset 14}${endif}${endif}
 # |--PROC
 #${voffset 8}${color0}${font Poky:size=14}a${font}${color}${goto 32}${voffset -10}Processes: ${color2}${alignr 22}CPU${alignr}RAM${color}
