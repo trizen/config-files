@@ -2,7 +2,7 @@
 # /home/swampyx/.nvidia-settings-rc
 #
 # Configuration file for nvidia-settings - the NVIDIA X Server Settings utility
-# Generated on Sun Dec  1 02:14:05 2013
+# Generated on Mon Dec  2 21:58:20 2013
 #
 
 # ConfigProperties:
@@ -13,19 +13,14 @@ DisplayStatusBar = Yes
 SliderTextEntries = Yes
 IncludeDisplayNameInConfigFile = No
 ShowQuitDialog = Yes
+UpdateRulesOnProfileNameChange = Yes
 Timer = PowerMizer_Monitor_(GPU_0),Yes,10000
 Timer = Memory_Used_(GPU_0),Yes,30000
+Timer = Thermal_Monitor_(GPU_0),Yes,1000
 
 # Attributes:
 
-0/CursorShadow=0
-0/CursorShadowAlpha=64
-0/CursorShadowRed=0
-0/CursorShadowGreen=0
-0/CursorShadowBlue=0
-0/CursorShadowXOffset=4
-0/CursorShadowYOffset=2
-0/SyncToVBlank=1
+0/SyncToVBlank=0
 0/LogAniso=0
 0/FSAA=0
 0/TextureSharpen=0
@@ -35,15 +30,33 @@ Timer = Memory_Used_(GPU_0),Yes,30000
 0/FSAAAppControlled=1
 0/LogAnisoAppControlled=1
 0/OpenGLImageSettings=3
-0/DigitalVibrance[CRT-0]=0
-0/ImageSharpening[CRT-0]=0
-0/XVideoSyncToDisplay=1
-ARCH:0[dpy:0]/RedBrightness=0.000000
-ARCH:0[dpy:0]/GreenBrightness=0.000000
-ARCH:0[dpy:0]/BlueBrightness=0.000000
-ARCH:0[dpy:0]/RedContrast=0.000000
-ARCH:0[dpy:0]/GreenContrast=0.000000
-ARCH:0[dpy:0]/BlueContrast=0.000000
-ARCH:0[dpy:0]/RedGamma=1.000000
-ARCH:0[dpy:0]/GreenGamma=1.000000
-ARCH:0[dpy:0]/BlueGamma=1.000000
+0/FSAAAppEnhanced=0
+0/XVideoSyncToDisplayID=VGA-0
+[DPY:VGA-0]/Dithering=0
+[DPY:VGA-0]/DitheringMode=0
+[DPY:VGA-0]/DitheringDepth=0
+[DPY:VGA-0]/SynchronousPaletteUpdates=0
+[DPY:DVI-D-0]/Dithering=0
+[DPY:DVI-D-0]/DitheringMode=0
+[DPY:DVI-D-0]/DitheringDepth=0
+[DPY:DVI-D-0]/SynchronousPaletteUpdates=0
+[DPY:HDMI-0]/RedBrightness=0.000000
+[DPY:HDMI-0]/GreenBrightness=0.000000
+[DPY:HDMI-0]/BlueBrightness=0.000000
+[DPY:HDMI-0]/RedContrast=0.000000
+[DPY:HDMI-0]/GreenContrast=0.000000
+[DPY:HDMI-0]/BlueContrast=0.000000
+[DPY:HDMI-0]/RedGamma=1.000000
+[DPY:HDMI-0]/GreenGamma=1.000000
+[DPY:HDMI-0]/BlueGamma=1.000000
+[DPY:HDMI-0]/Dithering=0
+[DPY:HDMI-0]/DitheringMode=0
+[DPY:HDMI-0]/DitheringDepth=0
+[DPY:HDMI-0]/DigitalVibrance=0
+[DPY:HDMI-0]/ColorSpace=0
+[DPY:HDMI-0]/ColorRange=0
+[DPY:HDMI-0]/SynchronousPaletteUpdates=0
+[DPY:VGA-1]/Dithering=0
+[DPY:VGA-1]/DitheringMode=0
+[DPY:VGA-1]/DitheringDepth=0
+[DPY:VGA-1]/SynchronousPaletteUpdates=0
