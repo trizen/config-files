@@ -2,6 +2,7 @@
 export HISTFILE=~/.histfile
 export HISTSIZE=1000000
 export SAVEHIST=$HISTSIZE
+#export LC_ALL=C
 
 setopt hist_ignore_all_dups
 setopt autocd
@@ -136,6 +137,8 @@ alias less="less -g -r"
 alias inxi="inxi -F -x -f -o -p"
 alias url2pdf="wkhtmltopdf --use-xserver $@"
 alias locatepm="locatepm -b"
+alias japh="perl '$PZN/alien_japh3.pl'"
+alias install-perl="perlbrew install -Doptimize='-march=native -Os' -j 2 --noman --notest --thread --multi $@"
 
 # Support colors in less
 export LESS_TERMCAP_mb=$'\E[01;33m'

@@ -1,5 +1,5 @@
 ﻿###
-###  vlc 2.1.0
+###  vlc 2.1.1
 ###
 
 ###
@@ -1551,6 +1551,23 @@ freetype-color=16776960
 
 # Password (string)
 #telnet-password=
+
+[skins2] # Skinnable Interface
+
+# Skin to use (string)
+#skins2-last=
+
+# Config of last used skin (string)
+#skins2-config=
+
+# Enable transparency effects (boolean)
+#skins2-transparency=0
+
+# Use a skinned playlist (boolean)
+#skinned-playlist=1
+
+# Display video in a skinned window if any (boolean)
+#skinned-video=1
 
 [qt4] # Qt interface
 
@@ -3928,7 +3945,7 @@ cd-audio=/dev/sr0
 #inhibit=1
 
 # Play files randomly forever (boolean)
-random=1
+#random=0
 
 # Repeat all (boolean)
 #loop=0

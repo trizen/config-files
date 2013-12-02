@@ -28,5 +28,7 @@ music одесская песня (odessa song)
 music Частушки
 music Сектор Газа
 music Дилижанс
-
-
+Частушки про Путина
+music Chastushka
+music Русские частушки
+music Сибирские частушки

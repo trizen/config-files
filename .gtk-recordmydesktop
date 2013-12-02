@@ -33,7 +33,7 @@ $DISPLAY
 #Quick subsampling,1 disabled 0 enabled
 1
 #Working directory(temporary files)
-/tmp
+/home/swampyx/Others/recordmyDesktop
 #On the fly encoding,1 disabled 0 enabled
 1
 #Zero compression,1 disabled 0 enabled

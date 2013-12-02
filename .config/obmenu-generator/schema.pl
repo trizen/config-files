@@ -45,6 +45,7 @@ our $SCHEMA = [
     #{cat => ['consoleonly', 'CLI Applications',   'applications-utilities']},
 
     {pipe => ["obbrowser", "Disk", "drive-harddisk"]},
+    {pipe => ["obbrowser '/media/Perl/Paid projects'", "Work", "stock_script"]},
 
     {sep => undef},
 
