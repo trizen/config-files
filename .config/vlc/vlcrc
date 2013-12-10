@@ -1,5 +1,5 @@
 ﻿###
-###  vlc 2.1.1
+###  vlc 2.2.0-git
 ###
 
 ###
@@ -58,6 +58,150 @@
 
 # Peak height (integer)
 #spect-peak-height=1
+
+[projectm] # libprojectM effect
+
+# projectM preset path (string)
+#projectm-preset-path=/usr/share/projectM/presets
+
+# Title font (string)
+#projectm-title-font=/usr/share/fonts/TTF/DejaVuSans.ttf
+
+# Font menu (string)
+#projectm-menu-font=/usr/share/fonts/TTF/DejaVuSansMono.ttf
+
+# Video width (integer)
+#projectm-width=800
+
+# Video height (integer)
+#projectm-height=500
+
+# Mesh width (integer)
+#projectm-meshx=32
+
+# Mesh height (integer)
+#projectm-meshy=24
+
+# Texture size (integer)
+#projectm-texture-size=1024
+
+[goom] # Goom effect
+
+# Goom display width (integer)
+#goom-width=800
+
+# Goom display height (integer)
+#goom-height=500
+
+# Goom animation speed (integer)
+#goom-speed=6
+
+[glspectrum] # 3D OpenGL spectrum visualization
+
+# Video width (integer)
+#glspectrum-width=400
+
+# Video height (integer)
+#glspectrum-height=300
+
+[wall] # Wall video filter
+
+# Number of columns (integer)
+#wall-cols=3
+
+# Number of rows (integer)
+#wall-rows=3
+
+# Active windows (string)
+#wall-active=
+
+# Element aspect ratio (string)
+#wall-element-aspect=16:9
+
+[panoramix] # Panoramix: wall with overlap video filter
+
+# Number of columns (integer)
+#panoramix-cols=-1
+
+# Number of rows (integer)
+#panoramix-rows=-1
+
+# length of the overlapping area (in %) (integer)
+#panoramix-bz-length=100
+
+# height of the overlapping area (in %) (integer)
+#panoramix-bz-height=100
+
+# Attenuation (boolean)
+#panoramix-attenuate=1
+
+# Attenuation, begin (in %) (integer)
+#panoramix-bz-begin=0
+
+# Attenuation, middle (in %) (integer)
+#panoramix-bz-middle=50
+
+# Attenuation, end (in %) (integer)
+#panoramix-bz-end=100
+
+# middle position (in %) (integer)
+#panoramix-bz-middle-pos=50
+
+# Gamma (Red) correction (float)
+#panoramix-bz-gamma-red=1.000000
+
+# Gamma (Green) correction (float)
+#panoramix-bz-gamma-green=1.000000
+
+# Gamma (Blue) correction (float)
+#panoramix-bz-gamma-blue=1.000000
+
+# Black Crush for Red (integer)
+#panoramix-bz-blackcrush-red=140
+
+# Black Crush for Green (integer)
+#panoramix-bz-blackcrush-green=140
+
+# Black Crush for Blue (integer)
+#panoramix-bz-blackcrush-blue=140
+
+# White Crush for Red (integer)
+#panoramix-bz-whitecrush-red=200
+
+# White Crush for Green (integer)
+#panoramix-bz-whitecrush-green=200
+
+# White Crush for Blue (integer)
+#panoramix-bz-whitecrush-blue=200
+
+# Black Level for Red (integer)
+#panoramix-bz-blacklevel-red=150
+
+# Black Level for Green (integer)
+#panoramix-bz-blacklevel-green=150
+
+# Black Level for Blue (integer)
+#panoramix-bz-blacklevel-blue=150
+
+# White Level for Red (integer)
+#panoramix-bz-whitelevel-red=0
+
+# White Level for Green (integer)
+#panoramix-bz-whitelevel-green=0
+
+# White Level for Blue (integer)
+#panoramix-bz-whitelevel-blue=0
+
+# Active windows (string)
+#panoramix-active=
+
+[clone] # Clone video filter
+
+# Number of clones (integer)
+#clone-count=2
+
+# Video output modules (string)
+#clone-vout-list=
 
 [yuv] # YUV video output
 
@@ -131,29 +275,10 @@
 # Framebuffer uses hw acceleration (boolean)
 #fb-hw-accel=1
 
-[wall] # Wall video filter
-
-# Number of columns (integer)
-#wall-cols=3
-
-# Number of rows (integer)
-#wall-rows=3
-
-# Active windows (string)
-#wall-active=
-
-# Element aspect ratio (string)
-#wall-element-aspect=16:9
-
 [transform] # Video transformation filter
 
 # Transform type (string)
 #transform-type=90
-
-[swscale] # Video scaling filter
-
-# Scaling mode (integer)
-#swscale-mode=2
 
 [subsdelay] # Subtitle delay
 
@@ -327,83 +452,6 @@
 
 # Posterize level (integer)
 #posterize-level=6
-
-[panoramix] # Panoramix: wall with overlap video filter
-
-# Number of columns (integer)
-#panoramix-cols=-1
-
-# Number of rows (integer)
-#panoramix-rows=-1
-
-# length of the overlapping area (in %) (integer)
-#panoramix-bz-length=100
-
-# height of the overlapping area (in %) (integer)
-#panoramix-bz-height=100
-
-# Attenuation (boolean)
-#panoramix-attenuate=1
-
-# Attenuation, begin (in %) (integer)
-#panoramix-bz-begin=0
-
-# Attenuation, middle (in %) (integer)
-#panoramix-bz-middle=50
-
-# Attenuation, end (in %) (integer)
-#panoramix-bz-end=100
-
-# middle position (in %) (integer)
-#panoramix-bz-middle-pos=50
-
-# Gamma (Red) correction (float)
-#panoramix-bz-gamma-red=1.000000
-
-# Gamma (Green) correction (float)
-#panoramix-bz-gamma-green=1.000000
-
-# Gamma (Blue) correction (float)
-#panoramix-bz-gamma-blue=1.000000
-
-# Black Crush for Red (integer)
-#panoramix-bz-blackcrush-red=140
-
-# Black Crush for Green (integer)
-#panoramix-bz-blackcrush-green=140
-
-# Black Crush for Blue (integer)
-#panoramix-bz-blackcrush-blue=140
-
-# White Crush for Red (integer)
-#panoramix-bz-whitecrush-red=200
-
-# White Crush for Green (integer)
-#panoramix-bz-whitecrush-green=200
-
-# White Crush for Blue (integer)
-#panoramix-bz-whitecrush-blue=200
-
-# Black Level for Red (integer)
-#panoramix-bz-blacklevel-red=150
-
-# Black Level for Green (integer)
-#panoramix-bz-blacklevel-green=150
-
-# Black Level for Blue (integer)
-#panoramix-bz-blacklevel-blue=150
-
-# White Level for Red (integer)
-#panoramix-bz-whitelevel-red=0
-
-# White Level for Green (integer)
-#panoramix-bz-whitelevel-green=0
-
-# White Level for Blue (integer)
-#panoramix-bz-whitelevel-blue=0
-
-# Active windows (string)
-#panoramix-active=
 
 [motionblur] # Motion blur filter
 
@@ -607,7 +655,7 @@
 # Phosphor old field dimmer strength (integer)
 #sout-deinterlace-phosphor-dimmer=2
 
-[croppadd] # Video scaling filter
+[croppadd] # Video cropping filter
 
 # Pixels to crop from top (integer)
 #croppadd-croptop=0
@@ -643,14 +691,6 @@
 
 # Similarity threshold (integer)
 #colorthres-similaritythres=15
-
-[clone] # Clone video filter
-
-# Number of clones (integer)
-#clone-count=2
-
-# Video output modules (string)
-#clone-vout-list=
 
 [canvas] # Canvas video filter
 
@@ -923,6 +963,28 @@
 
 # Brightness threshold (boolean)
 #brightness-threshold=0
+
+[swscale] # Video scaling filter
+
+# Scaling mode (integer)
+#swscale-mode=2
+
+[vdpau_chroma] # VDPAU surface conversions
+
+# Deinterlace (integer)
+#vdpau-deinterlace=1
+
+# Inverse telecine (boolean)
+#vdpau-ivtc=0
+
+# Deinterlace chroma skip (boolean)
+#vdpau-chroma-skip=0
+
+# Noise reduction level (float)
+#vdpau-noise-reduction=0.000000
+
+# Scaling quality (integer)
+#vdpau-scaling=0
 
 [svg] # svg
 
@@ -1364,6 +1426,11 @@ freetype-color=16776960
 # Sync on Intra Frame (boolean)
 #packetizer-mpegvideo-sync-iframe=0
 
+[notify] # LibNotify Notification Plugin
+
+# Timeout (ms) (integer)
+#notify-timeout=4000
+
 [mux_ts] # TS muxer (libdvbpsi)
 
 # Video PID (integer)
@@ -1443,10 +1510,47 @@ freetype-color=16776960
 # PES maximum size (integer)
 #sout-ps-pes-max-size=65500
 
+[mux_ogg] # Ogg/OGM muxer
+
+# Index interval (integer)
+#sout-ogg-indexintvl=1000
+
+# Index size ratio (float)
+#sout-ogg-indexratio=1.000000
+
 [mux_mp4] # MP4/MOV muxer
 
 # Create "Fast Start" files (boolean)
 #sout-mp4-faststart=1
+
+[mux_avi] # AVI muxer
+
+# Artist (string)
+#sout-avi-artist=
+
+# Date (string)
+#sout-avi-date=
+
+# Genre (string)
+#sout-avi-genre=
+
+# Copyright (string)
+#sout-avi-copyright=
+
+# Comment (string)
+#sout-avi-comment=
+
+# Name (string)
+#sout-avi-name=
+
+# Subject (string)
+#sout-avi-subject=
+
+# Encoder (string)
+#sout-avi-encoder=VLC Media Player - 2.2.0-git Weatherwax
+
+# Keywords (string)
+#sout-avi-keywords=
 
 [mux_asf] # ASF muxer
 
@@ -1519,38 +1623,6 @@ freetype-color=16776960
 
 # Album art filename (string)
 #album-art-filename=
-
-[lua] # Lua interpreter
-
-# Lua interface (string)
-#lua-intf=dummy
-
-# Lua interface configuration (string)
-#lua-config=
-
-# Password (string)
-#http-password=
-
-# Source directory (string)
-#http-src=
-
-# Directory index (boolean)
-#http-index=0
-
-# TCP command input (string)
-#rc-host=
-
-# CLI input (string)
-#cli-host=
-
-# Host (string)
-#telnet-host=localhost
-
-# Port (integer)
-#telnet-port=4212
-
-# Password (string)
-#telnet-password=
 
 [skins2] # Skinnable Interface
 
@@ -1654,6 +1726,9 @@ qt-privacy-ask=0
 
 # Extra PMT (string)
 #ts-extra-pmt=
+
+# Trust in-stream PCR (boolean)
+#ts-trust-pcr=1
 
 # Set id of ES to PID (boolean)
 #ts-es-id-pid=1
@@ -1829,7 +1904,7 @@ qt-privacy-ask=0
 # Frames per Second (float)
 #es-fps=25.000000
 
-[dirac] # Dirac video demuxer
+[diracsys] # Dirac video demuxer
 
 # Value to adjust dts by (integer)
 #dirac-dts-offset=0
@@ -1858,13 +1933,13 @@ qt-privacy-ask=0
 # Format name (string)
 #avformat-format=
 
-# Advanced options. (string)
+# Advanced options (string)
 #avformat-options=
 
 # Avformat mux (string)
 #sout-avformat-mux=
 
-# Advanced options. (string)
+# Advanced options (string)
 #sout-avformat-options=
 
 [oldrc] # Remote control interface
@@ -1894,6 +1969,11 @@ qt-privacy-ask=0
 
 [motion] # motion control interface
 
+[lirc] # Infrared remote control interface
+
+# Change the lirc configuration file (string)
+#lirc-file=
+
 [gestures] # Mouse gestures control interface
 
 # Motion threshold (10-100) (integer)
@@ -1908,13 +1988,13 @@ qt-privacy-ask=0
 #vbi-page=100
 
 # Teletext transparency (boolean)
-#vbi-opaque=1
+#vbi-opaque=0
 
 # Teletext alignment (integer)
-#vbi-position=4
+#vbi-position=8
 
 # Teletext text subtitles (boolean)
-#vbi-text=0
+#vbi-text=1
 
 [x264] # H.264/MPEG-4 Part 10/AVC encoder (x264)
 
@@ -2160,7 +2240,24 @@ sout-x264-tune=film
 # CBR encoding (boolean)
 #sout-vorbis-cbr=0
 
+[twolame] # Libtwolame audio encoder
+
+# Encoding quality (float)
+#sout-twolame-quality=0.000000
+
+# Stereo mode (integer)
+#sout-twolame-mode=0
+
+# VBR mode (boolean)
+#sout-twolame-vbr=0
+
+# Psycho-acoustic model (integer)
+#sout-twolame-psy=3
+
 [theora] # Theora video decoder
+
+# Post processing quality (integer)
+#theora-postproc=-1
 
 # Encoding quality (integer)
 #sout-theora-quality=2
@@ -2350,6 +2447,26 @@ subsdec-encoding=ISO-8859-2
 # Default background alpha (integer)
 #kate-tiger-default-background-alpha=0
 
+[fluidsynth] # FluidSynth MIDI synthesizer
+
+# Sound fonts (string)
+#soundfont=
+
+# Chorus (boolean)
+#synth-chorus=1
+
+# Synthesis gain (float)
+#synth-gain=0.500000
+
+# Polyphony (integer)
+#synth-polyphony=256
+
+# Reverb (boolean)
+#synth-reverb=1
+
+# Sample rate (integer)
+#synth-sample-rate=44100
+
 [dvbsub] # DVB subtitles decoder
 
 # Subpicture position (integer)
@@ -2401,9 +2518,6 @@ subsdec-encoding=ISO-8859-2
 # Skip the loop filter for H.264 decoding (integer)
 #avcodec-skiploopfilter=0
 
-# Discard cropping information (boolean)
-#avcodec-ignorecrop=0
-
 # Debug mask (integer)
 #avcodec-debug=0
 
@@ -2411,12 +2525,12 @@ subsdec-encoding=ISO-8859-2
 #avcodec-codec=
 
 # Hardware decoding (string)
-avcodec-hw=any
+avcodec-hw=vdpau_avcodec
 
 # Threads (integer)
 #avcodec-threads=0
 
-# Advanced options. (string)
+# Advanced options (string)
 #avcodec-options=
 
 # Codec name (string)
@@ -2497,8 +2611,26 @@ avcodec-hw=any
 # Specify AAC audio profile to use (string)
 #sout-avcodec-aac-profile=low
 
-# Advanced options. (string)
+# Advanced options (string)
 #sout-avcodec-options=
+
+# Format name (string)
+#avformat-format=
+
+# Advanced options (string)
+#avformat-options=
+
+# Avformat mux (string)
+#sout-avformat-mux=
+
+# Advanced options (string)
+#sout-avformat-options=
+
+# Advanced options (string)
+#avio-options=
+
+# Advanced options (string)
+#sout-avio-options=
 
 [jack] # JACK audio output
 
@@ -2509,7 +2641,7 @@ avcodec-hw=any
 #jack-connect-regex=system
 
 # Software gain (float)
-jack-gain=1.157625
+#jack-gain=1.000000
 
 [amem] # Audio memory output
 
@@ -2680,7 +2812,7 @@ alsa-audio-device=default:CARD=NVidia
 # Maximal volume level (float)
 #norm-max-level=2.000000
 
-[mono] # Audio filter for stereo to mono conversion
+[mono] # Stereo to mono downmixer
 
 # Use downmix algorithm (boolean)
 #sout-mono-downmix=1
@@ -2719,7 +2851,7 @@ alsa-audio-device=default:CARD=NVidia
 #equalizer-vlcfreqs=1
 
 # Global gain (float)
-equalizer-preamp=0.000000
+#equalizer-preamp=12.000000
 
 [dtstofloat32] # DTS Coherent Acoustics audio decoder
 
@@ -2732,22 +2864,22 @@ equalizer-preamp=0.000000
 #compressor-rms-peak=0.000000
 
 # Attack time (float)
-compressor-attack=1.400000
+#compressor-attack=25.000000
 
 # Release time (float)
-compressor-release=1.900000
+#compressor-release=100.000000
 
 # Threshold level (float)
-compressor-threshold=0.000000
+#compressor-threshold=-11.000000
 
 # Ratio (float)
-compressor-ratio=1.000000
+#compressor-ratio=8.000000
 
 # Knee radius (float)
-compressor-knee=1.000000
+#compressor-knee=2.500000
 
 # Makeup gain (float)
-compressor-makeup-gain=0.000000
+#compressor-makeup-gain=7.000000
 
 [chorus_flanger] # Sound Delay
 
@@ -2806,7 +2938,7 @@ compressor-makeup-gain=0.000000
 # Enable internal upmixing (boolean)
 #a52-upmix=0
 
-[access_output_udp] # UDP stream output
+[udp] # UDP stream output
 
 # Caching value (ms) (integer)
 #sout-udp-caching=300
@@ -2928,6 +3060,37 @@ compressor-makeup-gain=0.000000
 
 # Follow the mouse (boolean)
 #screen-follow-mouse=0
+
+[vdr] # VDR recordings
+
+# Chapter offset in ms (integer)
+#vdr-chapter-offset=0
+
+# Frame rate (float)
+#vdr-fps=25.000000
+
+[vcdx] # Video CD (VCD 1.0, 1.1, 2.0, SVCD, HQVCD) input
+
+# If nonzero, this gives additional debug information. (integer)
+#vcdx-debug=0
+
+# Number of CD blocks to get in a single read. (integer)
+#vcdx-blocks-per-read=20
+
+# Use playback control? (boolean)
+#vcdx-PBC=0
+
+# Use track length as maximum unit in seek? (boolean)
+#vcdx-track-length=1
+
+# Show extended VCD info? (boolean)
+#vcdx-extended-info=0
+
+# Format to use in the playlist's "author" field. (string)
+#vcdx-author-format=%v - %F disc %c of %C
+
+# Format to use in the playlist's "title" field. (string)
+#vcdx-title-format=%I %N %L%S - %M %A %v - disc %c of %C %F
 
 [v4l2] # Video4Linux input
 
@@ -3063,10 +3226,26 @@ compressor-makeup-gain=0.000000
 # v4l2 driver controls (string)
 #v4l2-set-ctrls=
 
+[udp] # UDP input
+
+# Receive buffer (integer)
+#udp-buffer=4194304
+
 [timecode] # Time code subpicture elementary stream generator
 
 # Frame rate (string)
 #timecode-fps=25/1
+
+[smb] # SMB input
+
+# SMB user name (string)
+#smb-user=
+
+# SMB password (string)
+#smb-pwd=
+
+# SMB domain (string)
+#smb-domain=
 
 [shm] # Shared memory framebuffer
 
@@ -3178,6 +3357,81 @@ compressor-makeup-gain=0.000000
 
 # Blu-ray menus (boolean)
 #bluray-menu=0
+
+# Region code (string)
+#bluray-region=B
+
+[imem] # Memory input
+
+# ID (integer)
+#imem-id=-1
+
+# Group (integer)
+#imem-group=0
+
+# Category (integer)
+#imem-cat=0
+
+# Codec (string)
+#imem-codec=
+
+# Language (string)
+#imem-language=
+
+# Sample rate (integer)
+#imem-samplerate=0
+
+# Channels count (integer)
+#imem-channels=0
+
+# Width (integer)
+#imem-width=0
+
+# Height (integer)
+#imem-height=0
+
+# Display aspect ratio (string)
+#imem-dar=
+
+# Frame rate (string)
+#imem-fps=
+
+# Size (integer)
+#imem-size=0
+
+[http] # HTTP input
+
+# HTTP proxy (string)
+#http-proxy=
+
+# HTTP proxy password (string)
+#http-proxy-pwd=
+
+# HTTP referer value (string)
+#http-referrer=
+
+# User Agent (string)
+#http-user-agent=
+
+# Auto re-connect (boolean)
+#http-reconnect=0
+
+# Continuous stream (boolean)
+#http-continuous=0
+
+# Forward Cookies (boolean)
+#http-forward-cookies=1
+
+[ftp] # FTP input
+
+# FTP user name (string)
+#ftp-user=anonymous
+
+# FTP password (string)
+#ftp-pwd=anonymous@example.com
+
+# FTP account (string)
+#ftp-account=anonymous
 
 [filesystem] # File input
 
@@ -3338,34 +3592,13 @@ compressor-makeup-gain=0.000000
 # CDDB port (integer)
 #cddb-port=80
 
-[access_vdr] # VDR recordings
+[avio] # libavformat AVIO access
 
-# Chapter offset in ms (integer)
-#vdr-chapter-offset=0
+# Advanced options (string)
+#avio-options=
 
-# Frame rate (float)
-#vdr-fps=25.000000
-
-[access_udp] # UDP input
-
-[access_smb] # SMB input
-
-# SMB user name (string)
-#smb-user=
-
-# SMB password (string)
-#smb-pwd=
-
-# SMB domain (string)
-#smb-domain=
-
-[access_sftp] # SFTP input
-
-# Read size (integer)
-#sftp-readsize=8192
-
-# SFTP port (integer)
-#sftp-port=22
+# Advanced options (string)
+#sout-avio-options=
 
 [access_mms] # Microsoft Media Server (MMS) input
 
@@ -3388,86 +3621,6 @@ compressor-makeup-gain=0.000000
 
 # Auto connection (boolean)
 #jack-input-auto-connect=0
-
-[access_imem] # Memory input
-
-# ID (integer)
-#imem-id=-1
-
-# Group (integer)
-#imem-group=0
-
-# Category (integer)
-#imem-cat=0
-
-# Codec (string)
-#imem-codec=
-
-# Language (string)
-#imem-language=
-
-# Sample rate (integer)
-#imem-samplerate=0
-
-# Channels count (integer)
-#imem-channels=0
-
-# Width (integer)
-#imem-width=0
-
-# Height (integer)
-#imem-height=0
-
-# Display aspect ratio (string)
-#imem-dar=
-
-# Frame rate (string)
-#imem-fps=
-
-# Size (integer)
-#imem-size=0
-
-[access_http] # HTTP input
-
-# HTTP proxy (string)
-#http-proxy=
-
-# HTTP proxy password (string)
-#http-proxy-pwd=
-
-# HTTP referer value (string)
-#http-referrer=
-
-# User Agent (string)
-#http-user-agent=
-
-# Auto re-connect (boolean)
-#http-reconnect=0
-
-# Continuous stream (boolean)
-#http-continuous=0
-
-# Forward Cookies (boolean)
-#http-forward-cookies=1
-
-[access_ftp] # FTP input
-
-# FTP user name (string)
-#ftp-user=anonymous
-
-# FTP password (string)
-#ftp-pwd=anonymous@example.com
-
-# FTP account (string)
-#ftp-account=anonymous
-
-[access_avio] # FFmpeg access
-
-# Advanced options. (string)
-#avio-options=
-
-# Advanced options. (string)
-#sout-avio-options=
 
 [access_alsa] # ALSA audio capture
 
@@ -3564,7 +3717,7 @@ aout=alsa
 #overlay=1
 
 # Always on top (boolean)
-video-on-top=1
+#video-on-top=0
 
 # Enable wallpaper mode  (boolean)
 #video-wallpaper=0
@@ -3714,7 +3867,10 @@ vout=any
 #audio-language=
 
 # Subtitle language (string)
-#sub-language=
+sub-language=ro,en
+
+# Menu language (string)
+#menu-language=
 
 # Audio track ID (integer)
 #audio-track-id=-1
@@ -3753,13 +3909,13 @@ vout=any
 #bookmarks=
 
 # DVD device (string)
-dvd=/dev/sr0
+#dvd=/dev/dvd1
 
 # VCD device (string)
-vcd=/dev/sr0
+vcd=/dev/dvd1
 
 # Audio CD device (string)
-cd-audio=/dev/sr0
+cd-audio=/dev/dvd1
 
 # MTU of the network interface (integer)
 #mtu=1400
@@ -3972,7 +4128,7 @@ cd-audio=/dev/sr0
 #one-instance=0
 
 # Use only one instance when started from file manager (boolean)
-one-instance-when-started-from-file=0
+#one-instance-when-started-from-file=1
 
 # Enqueue items into playlist in one instance mode (boolean)
 #playlist-enqueue=0
@@ -3990,7 +4146,7 @@ one-instance-when-started-from-file=0
 #auto-preparse=1
 
 # Album art policy (integer)
-album-art=2
+#album-art=0
 
 # Services discovery modules (string)
 #services-discovery=

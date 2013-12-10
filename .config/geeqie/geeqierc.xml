@@ -158,6 +158,8 @@
             <file_type key = "jps" enabled = "true" extensions = ".jps" description = "Stereo side-by-side jpeg" file_class = "1" writable = "true" allow_sidecar = "false" />
             <file_type key = "mpo" enabled = "true" extensions = ".mpo" description = "Stereo multi-image jpeg" file_class = "1" writable = "false" allow_sidecar = "true" />
             <file_type key = "pto" enabled = "true" extensions = ".pto" description = "Panorama script file" file_class = "3" writable = "false" allow_sidecar = "false" />
+            <file_type key = "srw" enabled = "true" extensions = ".srw" description = "Samsung raw format" file_class = "2" writable = "false" allow_sidecar = "true" />
+            <file_type key = "rw2" enabled = "true" extensions = ".rw2" description = "Panasonic raw format" file_class = "2" writable = "false" allow_sidecar = "true" />
         </filter>
 
         <keyword_tree>
@@ -179,7 +181,7 @@
         show_thumbnails = "true" 
         show_directory_date = "false" 
         home_path = "" 
-        last_path = "/tmp/Geometric shapes" 
+        last_path = "/tmp" 
         startup_path = "0" 
         exit_on_close = "false" 
 
