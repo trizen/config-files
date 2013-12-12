@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <CONFIG>
   <unix ffmpeg="/usr/bin/ffmpeg" ffplay="/usr/bin/ffplay" terminal="/usr/bin/xterm" termoptions="-e"/>
-  <general showoptions="false" pause="false" playsound="false" pass2="false" addfilesfolder="/home/swampyx/" currentpreset="MP3"/>
-  <window height="400" width="640" top="340" left="640"/>
+  <general showoptions="false" pause="false" playsound="false" pass2="false" addfilesfolder="/home/swampyx/" currentpreset="MP3" destfolder="" rememberlast="false" multithreading="true" numberofthreads="0" priority=""/>
+  <window height="400" width="640" top="572" left="938"/>
 </CONFIG>

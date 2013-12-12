@@ -2663,7 +2663,7 @@ alsa-audio-device=default:CARD=NVidia
 #alsa-audio-channels=6
 
 # Software gain (float)
-#alsa-gain=1.000000
+alsa-gain=0.681472
 
 [afile] # File audio output
 
@@ -2985,6 +2985,9 @@ alsa-audio-device=default:CARD=NVidia
 
 # Number of segments (integer)
 #sout-livehttp-numsegs=0
+
+# Number of first segment (integer)
+#sout-livehttp-initial-segment-number=1
 
 # Split segments anywhere (boolean)
 #sout-livehttp-splitanywhere=0
@@ -3630,7 +3633,7 @@ alsa-audio-device=default:CARD=NVidia
 # Sample rate (integer)
 #alsa-samplerate=48000
 
-[main] # main program
+[core] # core program
 
 # Enable audio (boolean)
 #audio=1
