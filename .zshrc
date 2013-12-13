@@ -162,6 +162,10 @@ typeset -U path cdpath fpath manpath
 # Subroutines
 #------------------------------
 
+screencast() {
+    ffmpeg  -f alsa -ac 2 -i hw:0,0 -f x11grab -r 15 -s 1920x1080 -i :0.0 -acodec libmp3lame -vcodec libx264 -preset ultrafast -crf 10 -threads 0 -y $@
+}
+
 preexec() {
     printf '\e]0;%s\a' "$2"
 }
