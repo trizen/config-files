@@ -88,9 +88,16 @@ our $CONFIG = {
                keep_unknown_categories => 1,
                skip_entry              => undef,
                skip_filename_re => qr/^(?:exo-|xfce4-about|Terminal|avahi|b(?:ssh|vnc)|dconf|ffadomixer|gconf|mplayer|sakura)/,
-               skip_svg_icons   => 1,
+               skip_svg_icons   => 0,
                strict_icon_dirs => undef,
-               substitutions    => [{global => 1, key => "Exec", re => qr/\\\\/, value => "\\"},],
+               substitutions    => [
+                                 {
+                                  global => 1,
+                                  key    => "Exec",
+                                  re     => qr/\\\\/,
+                                  value  => "\\",
+                                 },
+                                ],
                terminalization_format => "%s -e '%s'",
                terminalize            => 1,
                unknown_category_key   => "other",

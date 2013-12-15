@@ -19,60 +19,6 @@
     begin_cat  => [$VAR, LABEL, ICON]
     end_cat    => [$VAR]
 
-=>> Examples
-
-** For 'raw':
-
-    {raw => <<'CODE'},
-{
-
-    # Create the main menu entry
-    my $entry = 'Gtk2::ImageMenuItem'->new('My menu');
-
-    # Set icon
-    $entry->set_image('Gtk2::Image'->new_from_icon_name('applications-system','menu'));
-
-    # Create the submenu
-    my $submenu = Gtk2::Menu->new;
-
-    # Create a new menu item
-    my $item = Gtk2::ImageMenuItem->new('Terminal');
-
-    # Set icon
-    $item->set_image('Gtk2::Image'->new_from_icon_name('terminal','menu'));
-
-    # Set a signal (activates on click)
-    $item->signal_connect('activate',sub {system 'xterm &'});
-
-    # Append the item to the submenu
-    $submenu->append($item);
-
-    # Set the submenu to the entry item
-    $entry->set_submenu($submenu);
-
-    # Append the entry to the main menu
-    $menu->append($entry);
-}
-CODE
-
-** For 'tree':
-
-    {
-     tree => [
-            [{
-                Name => "Item name",
-                Exec => "command",
-                Icon => "icon-name",
-            },
-            #{
-                # ...
-            #},
-            ],
-
-            'My submenu', 'icon-name'
-        ]
-    },
-
 =cut
 
 # NOTE:
@@ -80,7 +26,7 @@ CODE
 #    * ICON can be a either a direct path to an icon or a valid icon name
 #    * Category names are case insensitive. (X-XFCE and x_xfce are equivalent)
 
-require '/home/swampyx/.config/menutray/config.pl';
+require "$ENV{HOME}/.config/menutray/config.pl";
 
 our $SCHEMA = [
 

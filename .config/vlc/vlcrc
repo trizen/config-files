@@ -3660,7 +3660,7 @@ alsa-audio-device=default:CARD=NVidia
 #audio-desync=0
 
 # Audio resampler (string)
-#audio-resampler=
+audio-resampler=any
 
 # Replay gain mode (string)
 #audio-replay-gain-mode=none
@@ -4089,7 +4089,7 @@ cd-audio=/dev/dvd1
 #packetizer=
 
 # VoD server module (string)
-#vod-server=
+vod-server=any
 
 # Use a plugins cache (boolean)
 #plugins-cache=1
@@ -4140,7 +4140,7 @@ cd-audio=/dev/dvd1
 #media-library=0
 
 # Display playlist tree (boolean)
-#playlist-tree=0
+playlist-tree=1
 
 # Default stream (string)
 #open=
@@ -4167,7 +4167,7 @@ cd-audio=/dev/dvd1
 #syslog=0
 
 # Show advanced options (boolean)
-#advanced=0
+advanced=1
 
 # Interface interaction (boolean)
 #interact=1

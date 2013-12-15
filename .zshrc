@@ -146,6 +146,7 @@ export LESS_TERMCAP_se=$'\E[0m'
 export LESS_TERMCAP_so=$'\E[01;42;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
+export TEMP=/tmp
 
 
 # report about cpu-/system-/user-time of command if running longer than
