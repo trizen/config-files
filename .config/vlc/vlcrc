@@ -2663,7 +2663,7 @@ alsa-audio-device=default:CARD=NVidia
 #alsa-audio-channels=6
 
 # Software gain (float)
-#alsa-gain=1.000000
+alsa-gain=0.941192
 
 [afile] # File audio output
 

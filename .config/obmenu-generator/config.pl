@@ -32,7 +32,7 @@
                             ],
 
     | icon_dirs_second    : Look in this directories after looked in the directories of the
-                            current icons theme. (Before /usr/share/pixmaps)
+                            current icon theme. (Before /usr/share/pixmaps)
                             Example: [
                                 "/usr/share/icons/gnome",
                             ],
@@ -45,16 +45,13 @@
                             ],
 
     | strict_icon_dirs    : A true value will make the module to look only inside the directories
-                            specified by you in either one of the above tree options.
+                            specified by you in either one of the above three options.
 
     | gtk_rc_filename     : Absolute path to the GTK configuration file.
     | missing_image       : Use this icon for missing icons (default: gtk-missing-image)
 
 
 || KEYS
-    | tooltip_keys        : Valid keys for the tooltip text.
-                            Example: ['Comment[es]', 'Comment'],
-
     | name_keys           : Valid keys for the item names.
                             Example: ['Name[fr]', 'GenericName[fr]', 'Name'],   # french menu
 
@@ -76,34 +73,35 @@
 =cut
 
 our $CONFIG = {
-           "editor"              => "geany",
-           "Linux::DesktopFiles" => {
-               desktop_files_paths => ["/usr/share/applications", "$ENV{HOME}/.local/share/applications",
-                                       glob("$ENV{HOME}/.local/share/applications/wine/Programs/*"),
-                                      ],
-               gtk_rc_filename         => "$ENV{HOME}/.gtkrc-2.0",
-               icon_dirs_first         => undef,
-               icon_dirs_last          => undef,
-               icon_dirs_second        => undef,
-               keep_unknown_categories => 1,
-               skip_entry              => undef,
-               skip_filename_re => qr/^(?:exo-|xfce4-about|Terminal|avahi|b(?:ssh|vnc)|dconf|ffadomixer|gconf|mplayer|sakura)/,
-               skip_svg_icons   => 0,
-               strict_icon_dirs => undef,
-               substitutions    => [
-                                 {
-                                  global => 1,
-                                  key    => "Exec",
-                                  re     => qr/\\\\/,
-                                  value  => "\\",
-                                 },
-                                ],
-               terminalization_format => "%s -e '%s'",
-               terminalize            => 1,
-               unknown_category_key   => "other",
-           },
-           "missing_icon" => "gtk-missing-image",
-           "name_keys"    => ["Name"],
-           "terminal"     => "sakura",
-           "VERSION"      => 0.58,
-  }
+  "editor"              => "geany",
+  "Linux::DesktopFiles" => {
+                             desktop_files_paths     => [
+                                                          "/usr/share/applications",
+                                                          "/home/swampyx/.local/share/applications",
+                                                          "/home/swampyx/.local/share/applications/wine/Programs/18 Wheels of Steel American Long Haul",
+                                                          "/home/swampyx/.local/share/applications/wine/Programs/18 WoS Extreme Trucker 2",
+                                                          "/home/swampyx/.local/share/applications/wine/Programs/Electronic Arts",
+                                                          "/home/swampyx/.local/share/applications/wine/Programs/Farming Simulator 2013",
+                                                          "/home/swampyx/.local/share/applications/wine/Programs/Picasa 3",
+                                                        ],
+                             gtk_rc_filename         => "/home/swampyx/.gtkrc-2.0",
+                             icon_dirs_first         => undef,
+                             icon_dirs_last          => undef,
+                             icon_dirs_second        => undef,
+                             keep_unknown_categories => 1,
+                             skip_entry              => undef,
+                             skip_filename_re        => qr/^(?:exo-|xfce4-about|Terminal|avahi|b(?:ssh|vnc)|dconf|ffadomixer|gconf|mplayer|sakura)/,
+                             skip_svg_icons          => 0,
+                             strict_icon_dirs        => undef,
+                             substitutions           => [
+                                                          { global => 1, key => "Exec", re => qr/\\\\/, value => "\\" },
+                                                        ],
+                             terminalization_format  => "%s -e '%s'",
+                             terminalize             => 1,
+                             unknown_category_key    => "other",
+                           },
+  "missing_icon"        => "gtk-missing-image",
+  "name_keys"           => ["Name"],
+  "terminal"            => "sakura",
+  "VERSION"             => "0.59-git",
+}
