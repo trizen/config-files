@@ -1015,7 +1015,7 @@ freetype-color=16776960
 #freetype-bold=0
 
 # Background opacity (integer)
-#freetype-background-opacity=0
+freetype-background-opacity=128
 
 # Background color (integer)
 #freetype-background-color=0
@@ -1027,10 +1027,10 @@ freetype-color=16776960
 #freetype-outline-color=0
 
 # Outline thickness (integer)
-#freetype-outline-thickness=4
+freetype-outline-thickness=6
 
 # Shadow opacity (integer)
-#freetype-shadow-opacity=128
+freetype-shadow-opacity=0
 
 # Shadow color (integer)
 #freetype-shadow-color=0
@@ -2663,7 +2663,7 @@ alsa-audio-device=default:CARD=NVidia
 #alsa-audio-channels=6
 
 # Software gain (float)
-alsa-gain=0.941192
+#alsa-gain=1.000000
 
 [afile] # File audio output
 
