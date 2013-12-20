@@ -78,11 +78,7 @@ our $CONFIG = {
                              desktop_files_paths     => [
                                                           "/usr/share/applications",
                                                           "/home/swampyx/.local/share/applications",
-                                                          "/home/swampyx/.local/share/applications/wine/Programs/18 Wheels of Steel American Long Haul",
-                                                          "/home/swampyx/.local/share/applications/wine/Programs/18 WoS Extreme Trucker 2",
-                                                          "/home/swampyx/.local/share/applications/wine/Programs/Electronic Arts",
-                                                          "/home/swampyx/.local/share/applications/wine/Programs/Farming Simulator 2013",
-                                                          "/home/swampyx/.local/share/applications/wine/Programs/Picasa 3",
+                                                          glob("$ENV{HOME}/.local/share/applications/wine/Programs/*"),
                                                         ],
                              gtk_rc_filename         => "/home/swampyx/.gtkrc-2.0",
                              icon_dirs_first         => undef,
