@@ -2,7 +2,7 @@
 # /home/swampyx/.nvidia-settings-rc
 #
 # Configuration file for nvidia-settings - the NVIDIA X Server Settings utility
-# Generated on Wed Dec 18 13:08:18 2013
+# Generated on Sat Dec 28 23:39:02 2013
 #
 
 # ConfigProperties:
@@ -24,10 +24,10 @@ Timer = Thermal_Monitor_(GPU_0),Yes,1000
 0/LogAniso=0
 0/FSAA=0
 0/TextureSharpen=0
-0/TextureClamping=1
-0/FXAA=0
+0/TextureClamping=0
+0/FXAA=1
 0/AllowFlipping=1
-0/FSAAAppControlled=1
+0/FSAAAppControlled=0
 0/LogAnisoAppControlled=1
 0/OpenGLImageSettings=3
 0/FSAAAppEnhanced=0

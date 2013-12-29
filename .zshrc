@@ -137,7 +137,9 @@ alias url2pdf="wkhtmltopdf --use-xserver $@"
 alias locatepm="locatepm -b"
 alias japh="perl '$PZN/alien_japh3.pl'"
 alias install-perl="perlbrew install -Doptimize='-march=native -Os' -j 2 --noman --notest --thread --multi $@"
-alias dkms_nvidia="dkms install -m nvidia -v $(perl -E'say`pacman -Qi nvidia-dkms`=~/^Version\h*:\h*([^-]+)/m') -k $(uname -r)"
+#alias dkms_nvidia="dkms install -m nvidia -v $(perl -E'say`pacman -Qi nvidia-dkms`=~/^Version\h*:\h*([^-]+)/m') -k $@"
+alias plint="perl -MO=Lint,all $@"
+#alias gcc="gcc -march=native"
 
 # Support colors in less
 export LESS_TERMCAP_mb=$'\E[01;33m'

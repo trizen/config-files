@@ -38,3 +38,5 @@ rmusic 'http://www.youtube.com/watch?v=aPBIoRZfKGU'
 rmusic 'http://www.youtube.com/watch?v=DWUxpcrJyWA'
 youtube-viewer -pp 'https://www.youtube.com/playlist?list=PL3868043AD84334F1' -n -m -s
 rmusic 'http://www.youtube.com/watch?v=TmhA1993LWY'  # Loli Phabay
+rmusic 'http://www.youtube.com/watch?v=mMUeOl671KQ'
+music chastushki
