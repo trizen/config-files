@@ -23,15 +23,15 @@ long_line_behaviour=1
 long_line_column=130
 
 [files]
-current_page=0
-FILE_NAME_0=393;C++;0;EUTF-8;0;1;1;%2Fhome%2Fswampyx%2FOthers%2FLynda.com%20-%20C%20C%2B%2B%20Essential%20Training%2FLynda.com%20-%20C%20C%2B%2B%20Essential%20Training%2FExercise%20Files%2FChap02%2Fversion-test.cpp;0;4
-FILE_NAME_1=142;C;0;EUTF-8;0;1;1;%2Fhome%2Fswampyx%2FOthers%2FLynda.com%20-%20C%20C%2B%2B%20Essential%20Training%2FLynda.com%20-%20C%20C%2B%2B%20Essential%20Training%2FExercise%20Files%2FChap02%2Fhello.c;0;4
-FILE_NAME_2=172;C++;0;EUTF-8;0;1;1;%2Fhome%2Fswampyx%2FOthers%2FLynda.com%20-%20C%20C%2B%2B%20Essential%20Training%2FLynda.com%20-%20C%20C%2B%2B%20Essential%20Training%2FExercise%20Files%2FChap02%2Fhello.cpp;0;4
-FILE_NAME_3=65;C++;0;EUTF-8;0;1;1;%2Fhome%2Fswampyx%2FOthers%2FLynda.com%20-%20C%20C%2B%2B%20Essential%20Training%2FLynda.com%20-%20C%20C%2B%2B%20Essential%20Training%2FExercise%20Files%2FChap02%2Floop.cpp;0;4
-FILE_NAME_4=32833;C;0;EUTF-8;0;1;1;%2Ftmp%2Ftest.c;0;4
-FILE_NAME_5=0;C;0;EUTF-8;0;1;1;%2Fhome%2Fswampyx%2FOthers%2FLynda.com%20-%20C%20C%2B%2B%20Essential%20Training%2FLynda.com%20-%20C%20C%2B%2B%20Essential%20Training%2FExercise%20Files%2FChap02%2Fworking.c;0;4
-FILE_NAME_6=0;C++;0;EUTF-8;0;1;1;%2Fhome%2Fswampyx%2FOthers%2FLynda.com%20-%20C%20C%2B%2B%20Essential%20Training%2FLynda.com%20-%20C%20C%2B%2B%20Essential%20Training%2FExercise%20Files%2FChap02%2Fworking.cpp;0;4
-FILE_NAME_7=222;Perl;0;EUTF-8;0;1;1;%2Ftmp%2Fx.pl;0;4
+current_page=8
+FILE_NAME_0=166;C++;0;EUTF-8;0;1;1;%2Fhome%2Fswampyx%2FOthers%2FLynda.com%20-%20C%20C%2B%2B%20Essential%20Training%2FLynda.com%20-%20C%20C%2B%2B%20Essential%20Training%2FExercise%20Files%2FChap02%2Fhello.cpp;0;4
+FILE_NAME_1=236;C++;0;EUTF-8;0;1;1;%2Fhome%2Fswampyx%2FOthers%2FLynda.com%20-%20C%20C%2B%2B%20Essential%20Training%2FLynda.com%20-%20C%20C%2B%2B%20Essential%20Training%2FExercise%20Files%2FChap02%2Floop.cpp;0;4
+FILE_NAME_2=103;C;0;EUTF-8;0;1;1;%2Fhome%2Fswampyx%2FOthers%2FLynda.com%20-%20C%20C%2B%2B%20Essential%20Training%2FLynda.com%20-%20C%20C%2B%2B%20Essential%20Training%2FExercise%20Files%2FChap02%2Fworking.c;0;4
+FILE_NAME_3=68;C++;0;EUTF-8;0;1;1;%2Fhome%2Fswampyx%2FOthers%2FLynda.com%20-%20C%20C%2B%2B%20Essential%20Training%2FLynda.com%20-%20C%20C%2B%2B%20Essential%20Training%2FExercise%20Files%2FChap02%2Fworking.cpp;0;4
+FILE_NAME_4=925;Perl;0;EUTF-8;0;1;1;%2Fmedia%2FPerl%2FPersonal%20projects%2Fopenbox-file-browser.pl;0;4
+FILE_NAME_5=43;Perl;0;EUTF-8;0;1;1;%2Ftmp%2Fsoffice_guard.pl;0;4
+FILE_NAME_6=14957;Perl;0;EUTF-8;0;1;1;%2Fmedia%2FPerl%2FSidef%2Flib%2FSidef%2FTypes%2FArray%2FArray.pm;0;4
+FILE_NAME_7=3386;Perl;0;EUTF-8;0;1;1;%2Fmedia%2FPerl%2FSidef%2Flib%2FSidef%2FTypes%2FBlock%2FCode.pm;0;4
 
 [VTE]
 last_dir=/home/swampyx
@@ -49,4 +49,7 @@ C++FT_01_WD=
 C++FT_02_LB=
 C++FT_02_CM=
 C++FT_02_WD=
-filetypes=C++;
+filetypes=C++;C;
+CFT_01_LB=_Build
+CFT_01_CM=gcc -Wall -std=gnu11 -o "%e" "%f"
+CFT_01_WD=

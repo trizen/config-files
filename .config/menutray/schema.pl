@@ -31,7 +31,7 @@ require "$ENV{HOME}/.config/menutray/config.pl";
 our $SCHEMA = [
 
     #             COMMAND                 LABEL                ICON
-    {item => ['stuurman',           'File Manager',       'file-manager']},
+    {item => ['pcmanfm',            'File Manager',       'file-manager']},
     {item => ['sakura',             'Terminal',           'terminal']},
     {item => ['luakit',             'Luakit',             'luakit']},
     {item => ["gtk-youtube-viewer", "GTK Youtube Viewer", 'gtk-youtube-viewer']},

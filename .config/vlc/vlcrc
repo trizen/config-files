@@ -17,6 +17,12 @@
 # Video height (integer)
 #effect-height=500
 
+# FFT window (string)
+#effect-fft-window=flat
+
+# Kaiser window parameter (float)
+#effect-kaiser-param=3.000000
+
 # Show 80 bands instead of 20 (boolean)
 #visual-80-bands=1
 
@@ -1027,7 +1033,7 @@ freetype-color=16776960
 #freetype-outline-color=0
 
 # Outline thickness (integer)
-freetype-outline-thickness=6
+#freetype-outline-thickness=4
 
 # Shadow opacity (integer)
 #freetype-shadow-opacity=128
@@ -1058,11 +1064,8 @@ freetype-outline-thickness=6
 # Video scaling (float)
 #sout-transcode-scale=0.000000
 
-# Video frame-rate (float)
-#sout-transcode-fps=0.000000
-
-# Hurry up (boolean)
-#sout-transcode-hurry-up=0
+# Video frame-rate (string)
+#sout-transcode-fps=
 
 # Deinterlace video (boolean)
 #sout-transcode-deinterlace=0
@@ -1129,6 +1132,14 @@ freetype-outline-thickness=6
 
 # High priority (boolean)
 #sout-transcode-high-priority=0
+
+[stream_out_stats] # Writes statistic info about stream
+
+# Output file (string)
+#sout-stats-output=
+
+# Prefix to show on output line (string)
+#sout-stats-prefix=stats
 
 [stream_out_standard] # Standard stream output
 
@@ -1712,6 +1723,9 @@ qt-privacy-ask=0
 # Maximum Volume displayed (integer)
 #qt-max-volume=125
 
+# Fullscreen controller mouse sensitivity (integer)
+#qt-fs-sensitivity=3
+
 [ncurses] # Ncurses interface
 
 # Filebrowser starting point (string)
@@ -1732,12 +1746,6 @@ qt-privacy-ask=0
 
 # Set id of ES to PID (boolean)
 #ts-es-id-pid=1
-
-# Fast udp streaming (string)
-#ts-out=
-
-# MTU for out mode (integer)
-#ts-out-mtu=1400
 
 # CSA Key (string)
 #ts-csa-ck=
@@ -1893,6 +1901,11 @@ qt-privacy-ask=0
 
 # Real-time (boolean)
 #image-realtime=0
+
+[hevc] # HEVC/H.265 video demuxer
+
+# Frames per Second (float)
+#hevc-force-fps=0.000000
 
 [h264] # H264 video demuxer
 
@@ -2433,6 +2446,11 @@ subsdec-encoding=ISO-8859-2
 # Default background alpha (integer)
 #kate-tiger-default-background-alpha=0
 
+[jpeg] # JPEG image decoder
+
+# Quality level (integer)
+#sout-jpeg-quality=95
+
 [fluidsynth] # FluidSynth MIDI synthesizer
 
 # Sound fonts (string)
@@ -2649,7 +2667,7 @@ alsa-audio-device=default:CARD=NVidia
 #alsa-audio-channels=6
 
 # Software gain (float)
-alsa-gain=1.000000
+#alsa-gain=1.000000
 
 [afile] # File audio output
 
@@ -3016,6 +3034,9 @@ alsa-gain=1.000000
 # Mime (string)
 #sout-http-mime=
 
+# Metacube (boolean)
+#sout-http-metacube=0
+
 [access_output_file] # File stream output
 
 # Overwrite existing file (boolean)
@@ -3109,6 +3130,9 @@ alsa-gain=1.000000
 
 # Picture aspect-ratio n:m (string)
 #v4l2-aspect-ratio=4:3
+
+# Frame rate (string)
+#v4l2-fps=60
 
 # Radio device (string)
 #v4l2-radio-dev=/dev/radio0
@@ -3707,7 +3731,7 @@ aout=alsa
 #disable-screensaver=1
 
 # Show media title on video (boolean)
-video-title-show=0
+#video-title-show=1
 
 # Show video title for x milliseconds (integer)
 #video-title-timeout=5000
@@ -3890,13 +3914,13 @@ sub-language=ro,en
 #bookmarks=
 
 # DVD device (string)
-dvd=/dev/sr0
+#dvd=/dev/sr0
 
 # VCD device (string)
-vcd=/dev/sr0
+#vcd=/dev/sr0
 
 # Audio CD device (string)
-cd-audio=/dev/sr0
+#cd-audio=/dev/sr0
 
 # MTU of the network interface (integer)
 #mtu=1400
@@ -4013,7 +4037,7 @@ cd-audio=/dev/sr0
 #access=
 
 # Demux module (string)
-#demux=
+#demux=any
 
 # Stream filter module (string)
 #stream-filter=
@@ -4028,7 +4052,7 @@ cd-audio=/dev/sr0
 #sout-keep=0
 
 # Enable streaming of all ES (boolean)
-#sout-all=0
+#sout-all=1
 
 # Enable audio stream output (boolean)
 #sout-audio=1
@@ -4082,7 +4106,7 @@ cd-audio=/dev/sr0
 #inhibit=1
 
 # Play files randomly forever (boolean)
-random=1
+#random=0
 
 # Repeat all (boolean)
 #loop=0
@@ -4151,7 +4175,7 @@ random=1
 #interact=1
 
 # Locally collect statistics (boolean)
-#stats=1
+#stats=0
 
 # Interface module (string)
 #intf=

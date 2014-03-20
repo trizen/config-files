@@ -175,7 +175,7 @@
         id = "main" 
         style = "0" 
         order = "123" 
-        dir_view_type = "0" 
+        dir_view_type = "1" 
         file_view_type = "0" 
         show_marks = "false" 
         show_thumbnails = "true" 

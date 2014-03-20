@@ -36,7 +36,7 @@
 
 our $CONFIG = {
   "dirs_first"          => 0,
-  "file_manager"        => "stuurman",
+  "file_manager"        => "pcmanfm",
   "Linux::DesktopFiles" => {
                              gtk_rc_filename => "/home/swampyx/.gtkrc-2.0",
                              icon_dirs_first => undef,

@@ -14,7 +14,7 @@ my $editor = $CONFIG->{editor};
 our $SCHEMA = [
 
     #             COMMAND                 LABEL                ICON
-    {item => ["stuurman",             'File Manager', 'file-manager']},
+    {item => ["pcmanfm",             'File Manager', 'file-manager']},
     {item => ["sakura",               'Terminal',     'terminal']},
     {item => ["$editor /tmp/test.pl", "TEMP1 script", "text-x-script"]},
     {item => ["$editor /tmp/x.pl",    "TEMP2 script", "text-x-script"]},
@@ -44,8 +44,9 @@ our $SCHEMA = [
     #{cat => ['gnome',       'GNOME Applications', 'gnome-applications']},
     #{cat => ['consoleonly', 'CLI Applications',   'applications-utilities']},
 
-    {pipe => ["obbrowser",                             "Disk", "drive-harddisk"]},
-    {pipe => ["obbrowser '/media/Perl/Paid projects'", "Work", "stock_script"]},
+    #{pipe => ["obbrowser",                             "Disk", "drive-harddisk"]},
+    #{pipe => ["obbrowser '/media/Perl/Paid projects'", "Work", "stock_script"]},
+    {pipe => ["openbox-pipefs .", "Disk", "drive-harddisk"]},
 
     {sep => undef},
 
