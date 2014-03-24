@@ -765,9 +765,6 @@
 
 [audiobargraph_v] # Audio Bar Graph Video sub source
 
-# Value of the audio channels levels (string)
-#audiobargraph_v-i_values=
-
 # X coordinate (integer)
 #audiobargraph_v-x=0
 
@@ -779,9 +776,6 @@
 
 # Bargraph position (integer)
 #audiobargraph_v-position=-1
-
-# Alarm (integer)
-#audiobargraph_v-alarm=0
 
 # Bar width in pixel (default : 10) (integer)
 #audiobargraph_v-barWidth=10
@@ -1105,9 +1099,6 @@ freetype-color=16776960
 
 # Audio sample rate (integer)
 #sout-transcode-samplerate=0
-
-# Synchronise on audio track (boolean)
-#sout-transcode-audio-sync=0
 
 # Audio filter (string)
 #sout-transcode-afilter=
@@ -1676,7 +1667,7 @@ freetype-color=16776960
 #qt-fs-opacity=0.800000
 
 # Resize interface to the native video size (boolean)
-#qt-video-autoresize=1
+qt-video-autoresize=0
 
 # Show playing item name in window title (boolean)
 #qt-name-in-title=1
@@ -2907,12 +2898,6 @@ alsa-audio-device=default:CARD=NVidia
 
 [audiobargraph_a] # Audio part of the BarGraph function
 
-# TCP address to use (string)
-#audiobargraph_a-address=localhost
-
-# TCP port to use (integer)
-#audiobargraph_a-port=12345
-
 # Defines if BarGraph information should be sent (integer)
 #audiobargraph_a-bargraph=1
 
@@ -2930,9 +2915,6 @@ alsa-audio-device=default:CARD=NVidia
 
 # Time between two alarm messages in ms (integer)
 #audiobargraph_a-repetition_time=2000
-
-# Force connection reset regularly (integer)
-#audiobargraph_a-connection_reset=1
 
 [a52tofloat32] # ATSC A/52 (AC-3) audio decoder
 
