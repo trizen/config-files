@@ -77,7 +77,8 @@ our $CONFIG = {
   "Linux::DesktopFiles" => {
                              desktop_files_paths     => [
                                                           "/usr/share/applications",
-                                                          "/home/swampyx/.local/share/applications",
+                                                          "$ENV{HOME}/.local/share/applications",
+                                                          glob("$ENV{HOME}/.local/share/applications/wine/Programs/*"),
                                                         ],
                              gtk_rc_filename         => "/home/swampyx/.gtkrc-2.0",
                              icon_dirs_first         => undef,

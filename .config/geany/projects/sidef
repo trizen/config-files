@@ -14,8 +14,8 @@ indent_mode=2
 
 [project]
 name=Sidef
-base_path=/media/Perl/Sidef
-description=A new programming language, written in Perl.
+base_path=/media/data/Perl/Sidef
+description=A modern programming language, written in Perl.
 file_patterns=*;
 
 [long line marker]
@@ -23,8 +23,12 @@ long_line_behaviour=1
 long_line_column=130
 
 [files]
-current_page=0
-FILE_NAME_0=212;Perl;0;EUTF-8;0;1;1;%2Fhome%2Fswampyx%2Ffstab_beauty.pl;0;4
+current_page=4
+FILE_NAME_0=0;Perl;0;EUTF-8;0;1;1;%2Fhome%2Fswampyx%2Fpoweroff.pl;0;4
+FILE_NAME_1=0;Ruby;0;EUTF-8;0;1;1;%2Fmedia%2Fdata%2FPerl%2FSidef%2Fscripts%2F100_doors_2.sf;0;4
+FILE_NAME_2=0;Ruby;0;EUTF-8;0;1;1;%2Fmedia%2Fdata%2FPerl%2FSidef%2Fscripts%2Farray_callback.sf;0;4
+FILE_NAME_3=67;Ruby;0;EUTF-8;0;1;1;%2Fmedia%2Fdata%2FPerl%2FSidef%2Fscripts%2Fbulls_and_cows.sf;0;4
+FILE_NAME_4=0;Perl;0;EUTF-8;0;1;1;%2Fhome%2Fswampyx%2Ffstab_beauty.pl;0;4
 
 [VTE]
 last_dir=/home/swampyx

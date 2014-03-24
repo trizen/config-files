@@ -17,7 +17,7 @@
 obmenu-generator -i -s &
 conky &
 #nvidia-settings &
-#feh --bg-scale /media/Others/Wallpapers/mountains.jpg &
+feh --bg-scale ~/Others/wallpaper.jpg &
 sakura &
 tint2 &
 menutray -i &
