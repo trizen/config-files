@@ -23,14 +23,8 @@ long_line_behaviour=1
 long_line_column=130
 
 [files]
-current_page=6
-FILE_NAME_0=166;C++;0;EUTF-8;0;1;1;%2Fhome%2Fswampyx%2FOthers%2FLynda.com%20-%20C%20C%2B%2B%20Essential%20Training%2FLynda.com%20-%20C%20C%2B%2B%20Essential%20Training%2FExercise%20Files%2FChap02%2Fhello.cpp;0;4
-FILE_NAME_1=236;C++;0;EUTF-8;0;1;1;%2Fhome%2Fswampyx%2FOthers%2FLynda.com%20-%20C%20C%2B%2B%20Essential%20Training%2FLynda.com%20-%20C%20C%2B%2B%20Essential%20Training%2FExercise%20Files%2FChap02%2Floop.cpp;0;4
-FILE_NAME_2=103;C;0;EUTF-8;0;1;1;%2Fhome%2Fswampyx%2FOthers%2FLynda.com%20-%20C%20C%2B%2B%20Essential%20Training%2FLynda.com%20-%20C%20C%2B%2B%20Essential%20Training%2FExercise%20Files%2FChap02%2Fworking.c;0;4
-FILE_NAME_3=68;C++;0;EUTF-8;0;1;1;%2Fhome%2Fswampyx%2FOthers%2FLynda.com%20-%20C%20C%2B%2B%20Essential%20Training%2FLynda.com%20-%20C%20C%2B%2B%20Essential%20Training%2FExercise%20Files%2FChap02%2Fworking.cpp;0;4
-FILE_NAME_4=925;Perl;0;EUTF-8;0;1;1;%2Fmedia%2FPerl%2FPersonal%20projects%2Fopenbox-file-browser.pl;0;4
-FILE_NAME_5=13106;Perl;0;EUTF-8;0;1;1;%2Fmedia%2FPerl%2FSidef%2Flib%2FSidef%2FTypes%2FArray%2FArray.pm;0;4
-FILE_NAME_6=3386;Perl;0;EUTF-8;0;1;1;%2Fmedia%2FPerl%2FSidef%2Flib%2FSidef%2FTypes%2FBlock%2FCode.pm;0;4
+current_page=0
+FILE_NAME_0=212;Perl;0;EUTF-8;0;1;1;%2Fhome%2Fswampyx%2Ffstab_beauty.pl;0;4
 
 [VTE]
 last_dir=/home/swampyx

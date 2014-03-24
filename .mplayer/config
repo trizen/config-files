@@ -1,0 +1,7 @@
+# Write your default config options here!
+
+# default configuration that applies to every file
+[default]
+vo=libgl,xv,directfb
+ao=alsa
+subfont-text-scale=3
