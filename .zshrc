@@ -92,8 +92,8 @@ export CCACHE_PATH="/usr/bin"                 # Tell ccache to only use compiler
 #export CCACHE_DIR=/media/ccache               # Tell ccache to use this path to store its cache
 export DBI_DRIVER='mysql'
 export PS1="%B%n%b[%~]: "
-export PZN='/media/Perl/Personal projects'
-export SIDEF='/media/Perl/Sidef/bin'
+export PZN='/media/data/Perl/Personal projects'
+export SIDEF='/media/data/Perl/Sidef/bin'
 
 
 #------------------------------
@@ -167,8 +167,16 @@ typeset -U path cdpath fpath manpath
 #------------------------------
 
 screencast() {
-    ffmpeg  -f alsa -ac 2 -i hw:0,0 -f x11grab -r 15 -s 1920x1080 -i :0.0 -acodec libmp3lame -vcodec libx264 -preset ultrafast -crf 10 -threads 0 -y $@
+    ffmpeg -hwaccel vdpau -f alsa -ac 2 -i hw:0,0 -f x11grab -r 15 -s 1920x1080 -i :0.0 -acodec libmp3lame -vcodec libx264 -preset ultrafast -crf 10 -threads 0 -y $@
 }
+
+fzf_cd() {
+  zle -I;
+  local dir
+  dir=$(find ${1:-*} -path '*/\.*' -prune \
+                  -o -type d -print 2> /dev/null | fzf +m) &&
+  cd "$dir"
+}; zle -N fzf_cd; bindkey '^E' fzf_cd;
 
 preexec() {
     printf '\e]0;%s\a' "$2"

@@ -41,3 +41,6 @@ rmusic 'http://www.youtube.com/watch?v=TmhA1993LWY'  # Loli Phabay
 rmusic 'http://www.youtube.com/watch?v=mMUeOl671KQ'
 music chastushki
 rmusic 'http://www.youtube.com/watch?v=q0W8GrTClEc'
+music шансон
+music Александр Розенбаум
+music Russian folk

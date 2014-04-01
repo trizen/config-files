@@ -23,12 +23,12 @@ long_line_behaviour=1
 long_line_column=130
 
 [files]
-current_page=4
-FILE_NAME_0=0;Perl;0;EUTF-8;0;1;1;%2Fhome%2Fswampyx%2Fpoweroff.pl;0;4
-FILE_NAME_1=0;Ruby;0;EUTF-8;0;1;1;%2Fmedia%2Fdata%2FPerl%2FSidef%2Fscripts%2F100_doors_2.sf;0;4
-FILE_NAME_2=0;Ruby;0;EUTF-8;0;1;1;%2Fmedia%2Fdata%2FPerl%2FSidef%2Fscripts%2Farray_callback.sf;0;4
-FILE_NAME_3=67;Ruby;0;EUTF-8;0;1;1;%2Fmedia%2Fdata%2FPerl%2FSidef%2Fscripts%2Fbulls_and_cows.sf;0;4
-FILE_NAME_4=0;Perl;0;EUTF-8;0;1;1;%2Fhome%2Fswampyx%2Ffstab_beauty.pl;0;4
+current_page=3
+FILE_NAME_0=524;C++;0;EUTF-8;0;1;1;%2Fmedia%2Fdata%2FAltele%2FLynda.com%20-%20C%20C%2B%2B%20Essential%20Training%2FExercise%20Files%2FChap05%2Ffloat-types.cpp;0;4
+FILE_NAME_1=306;C++;0;EUTF-8;0;1;1;%2Fmedia%2Fdata%2FAltele%2FLynda.com%20-%20C%20C%2B%2B%20Essential%20Training%2FExercise%20Files%2FChap05%2Fc-strings.cpp;0;4
+FILE_NAME_2=329;C++;0;EUTF-8;0;1;1;%2Fmedia%2Fdata%2FAltele%2FLynda.com%20-%20C%20C%2B%2B%20Essential%20Training%2FExercise%20Files%2FChap05%2Fcpp-strings.cpp;0;4
+FILE_NAME_3=208;C++;0;EUTF-8;0;1;1;%2Fmedia%2Fdata%2FAltele%2FLynda.com%20-%20C%20C%2B%2B%20Essential%20Training%2FExercise%20Files%2FChap05%2Fchar-escape.cpp;0;4
+FILE_NAME_4=32441;Perl;0;EUTF-8;0;1;1;%2Fmedia%2Fdata%2FPerl%2FSidef%2Flib%2FSidef%2FParser.pm;0;4
 
 [VTE]
 last_dir=/home/swampyx
