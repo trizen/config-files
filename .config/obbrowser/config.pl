@@ -41,7 +41,7 @@ our $CONFIG = {
                              gtk_rc_filename => "/home/swampyx/.gtkrc-2.0",
                              icon_dirs_first => undef,
                              icon_dirs_last  => undef,
-                             skip_svg_icons  => 1,
+                             skip_svg_icons  => 0,
                            },
   "start_path"          => "/home/swampyx",
   "VERSION"             => 0.03,

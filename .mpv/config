@@ -1,4 +1,4 @@
 # Write your default config options here!
 
-vo=vdpau
-vc=ffmpeg12vdpau,ffwmv3vdpau,ffvc1vdpau,ffh264vdpau,ffodivxvdpau
+vo=opengl
+hwdec=auto
