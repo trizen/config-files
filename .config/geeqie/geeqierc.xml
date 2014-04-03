@@ -181,7 +181,7 @@
         show_thumbnails = "true" 
         show_directory_date = "false" 
         home_path = "" 
-        last_path = "/media/data/Altele/18.Wheels.of.Steel.Collection/18 WoS Across America" 
+        last_path = "/tmp" 
         startup_path = "0" 
         exit_on_close = "false" 
 

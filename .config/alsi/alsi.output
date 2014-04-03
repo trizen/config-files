@@ -36,7 +36,7 @@ my $b = "\b\b\b\b";
  {GTK2_ICON_THEME => $b . '%11sIcon:%s %s'},           # Gtk2 icon theme
  {GTK2_FONT_NAME  => $b . '%11sFont:%s %s'},           # Gtk2 font name
 
- {CPU        => $b . '%12sCPU:%s %s'},                 # CPU name
+ {CPU        => $b . "%12sCPU:%s AMD Athlon(tm) 64 X2 4000+\n"},                 # CPU name
  {RAM        => $b . '%12sRAM:%s %s'},                 # RAM usage
 #                                                       {OTHER  => "    =>>>> %sPartitions%s <<<<="},
  {PARTITIONS => '...'},                                # Partitions goes here

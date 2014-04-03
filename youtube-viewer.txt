@@ -44,3 +44,4 @@ rmusic 'http://www.youtube.com/watch?v=q0W8GrTClEc'
 music шансон
 music Александр Розенбаум
 music Russian folk
+music частушки с матом
