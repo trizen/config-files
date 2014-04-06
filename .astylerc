@@ -4,12 +4,12 @@
 #
 
 # Insert empty lines around unrelated blocks, labels, classes, ...
---break-blocks
+#--break-blocks
 
 # Insert space padding around operators. Any end of line comments will remain in the original column, if possible. Note that there is no option to unpad. Once padded, they stay padded.
 --pad-oper
 
-#Insert space padding after paren headers only (e.g. 'if', 'for', 'while'...). Any end of line comments will remain in the original column, if possible. This can be used with unpad-paren to remove unwanted spaces.
+# Insert space padding after paren headers only (e.g. 'if', 'for', 'while'...). Any end of line comments will remain in the original column, if possible. This can be used with unpad-paren to remove unwanted spaces.
 --pad-header
 
 # Remove unnecessary space padding around parenthesis. This

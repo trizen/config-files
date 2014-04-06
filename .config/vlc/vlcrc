@@ -610,7 +610,7 @@ alsa-audio-device=default:CARD=NVidia
 #alsa-audio-channels=6
 
 # Software gain (float)
-alsa-gain=1.000000
+#alsa-gain=1.000000
 
 [amem] # Audio memory output
 
@@ -2860,15 +2860,15 @@ freetype-color=16776960
 # XVideo format id (integer)
 #xvideo-format-id=0
 
-[xcb_window] # X11 video window (XCB)
-
-# X11 display (string)
-#x11-display=
-
 [vout_sdl] # Simple DirectMedia Layer video output
 
 # SDL chroma format (string)
 #sdl-chroma=
+
+[xcb_window] # X11 video window (XCB)
+
+# X11 display (string)
+#x11-display=
 
 [xcb_x11] # X11 video output (XCB)
 
