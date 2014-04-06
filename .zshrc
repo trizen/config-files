@@ -170,6 +170,13 @@ screencast() {
     ffmpeg -hwaccel vdpau -f alsa -ac 2 -i hw:0,0 -f x11grab -r 15 -s 1920x1080 -i :0.0 -acodec libmp3lame -vcodec libx264 -preset ultrafast -crf 10 -threads 0 -y $@
 }
 
+randmusic() {
+    local str
+    str=$(grep --line-number . youtube-viewer.txt | grep "^$(wc -l ~/youtube-viewer.txt | perl -anE 'say 1+int rand $F[0]'):" | perl -nE '/^\d+:(.*\S)/ && say $1=~s/\h*#.*//rs') &&
+    echo $str &&
+    eval "$str"
+}
+
 fzf_cd() {
   zle -I;
   local dir

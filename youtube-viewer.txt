@@ -1,34 +1,30 @@
-Советский
-уголовные песни
+music Советский
+music уголовные песни
 rmusic 'http://www.youtube.com/watch?v=T3WU6YUsYSo'
-Алик Фарбер
-Ошмянский
-Хава нагила
-Марина Девятова
-Oдесские Песни  (odessa songs)
+music Алик Фарбер
+music Ошмянский
+music Хава нагила
+music Марина Девятова
+music Oдесские Песни  #(odessa songs)
 youtube-viewer -u 'sasha365i' -A -n -m -s   # Yiddish songs
 rmusic 'http://www.youtube.com/watch?v=MnDu66QuK4Q'
-# kinder, kinder
-rmusic 'http://www.youtube.com/watch?v=jogxqfH2Mw8'
-# # Apk
-youtube-viewer -u=anatolymogilevsky -A -n -m -s
-Karsten Troyke
-Trio Scho
-Aaron Copland
-yiddish song
+rmusic 'http://www.youtube.com/watch?v=jogxqfH2Mw8'  # kinder, kinder
+youtube-viewer -u=anatolymogilevsky -A -n -m -s     # Apk
+music Aaron Copland
+music yiddish song
 youtube-viewer -pp=PLa3dbzLYmJouCDsxBYhmETqzW6l7tXQSq -n -s -A
-Benny Bell
-Юлия Сахно
-Дюк-Тайм (duke-time)
-Голубой вагон (blue vagone)
-Марк Бернес
+music Benny Bell
+music Юлия Сахно
+music Дюк-Тайм #(duke-time)
+music Голубой вагон #(blue vagone)
+music Марк Бернес
 rmusic 'http://www.youtube.com/watch?v=WosK8yKvgAM'
 rmusic 'http://www.youtube.com/watch?v=g9JHFNb-jSk'
-music одесская песня (odessa song)
+music одесская песня #(odessa song)
 music Частушки
 music Сектор Газа
 music Дилижанс
-Частушки про Путина
+music Частушки про Путина
 music Chastushka
 music Русские частушки
 music Сибирские частушки
@@ -45,3 +41,5 @@ music шансон
 music Александр Розенбаум
 music Russian folk
 music частушки с матом
+rmusic 'http://www.youtube.com/watch?v=EO2m4GPFqvo'
+music Виктор Давидзон
