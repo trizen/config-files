@@ -94,7 +94,7 @@ export DBI_DRIVER='mysql'
 export PS1="%B%n%b[%~]: "
 export PZN='/media/data/Perl/Personal projects'
 export SIDEF='/media/data/Perl/Sidef/bin'
-
+export WER='/media/data/Perl/Github/perl-scripts'
 
 #------------------------------
 # Alias stuff
