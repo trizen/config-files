@@ -20,9 +20,31 @@
 # GTK3_ICON_THEME - ex: {GTK3_ICON_THEME => '%sGTK3 icon theme:%s %s'},
 # GTK3_FONT_NAME  - ex: {GTK3_FONT_NAME  => '%sGTK3 font name:%s %s'},
 
+my ($mem_u,  $mem_t,  $mem_p)  = split(' ', `free -m|head -2|tail -1|awk '{print\$3-\$7,\$2,(\$3-\$7)/\$2*100}'`);
+my ($swap_u, $swap_t, $swap_p) = split(' ', `tail -1 /proc/swaps|awk '{print\$4/1024,\$3/1024,\$4/\$3*100}'`);
+
+my $CONFIG = do "$ENV{HOME}/.config/alsi/alsi.conf";
+my $colors = do "$ENV{HOME}/.config/alsi/alsi.colors";
+
+my ($mem_color, $swap_color, $end_color);
+if ($CONFIG->{USAGE_COLORS_BOLD} || $CONFIG->{USAGE_COLORS}) {
+    $mem_color  = get_usage_color($mem_p);
+    $swap_color = get_usage_color($swap_p);
+    $end_color  = $colors->{reset};
+}
+
+sub get_usage_color {
+    my ($percent) = @_;
+    foreach my $color (qw(green yellow red)) {
+        return $colors->{$color}{$CONFIG->{USAGE_COLORS_BOLD} ? 'bold' : 'normal'}
+          if $percent <= $CONFIG->{"USAGE_PRECENT_\U$color\E"};
+    }
+}
+
 my $b = "\b\b\b\b";
-[{HARDCODED => "\b\e[1;37m\e[41mTHIS IS ALSI\e[0m"},
- {OS        => $b . '%13sOS:%s %s'},                 # Operating system
+[
+ {HARDCODED => "\b\e[1;37m\e[41mTHIS IS ALSI\e[0m"},
+ {OS        => $b . '%13sOS:%s %s'},                   # Operating system
  {HOSTNAME  => $b . '%4sHostname:%s %s'},              # Hostname
  {UPTIME    => $b . '%9sUptime:%s %s'},                # Uptime
  {KERNEL    => $b . '%9sKernel:%s %s'},                # Kernel version
@@ -36,8 +58,10 @@ my $b = "\b\b\b\b";
  {GTK2_ICON_THEME => $b . '%11sIcon:%s %s'},           # Gtk2 icon theme
  {GTK2_FONT_NAME  => $b . '%11sFont:%s %s'},           # Gtk2 font name
 
- {CPU        => $b . "%12sCPU:%s AMD Athlon(tm) 64 X2 4000+\n"},                 # CPU name
- {RAM        => $b . '%12sRAM:%s %s'},                 # RAM usage
-#                                                       {OTHER  => "    =>>>> %sPartitions%s <<<<="},
- {PARTITIONS => '...'},                                # Partitions goes here
+ {CPU => $b . "%12sCPU:%s AMD Athlon(tm) 64 X2 4000+\n"},    # CPU name
+ {OTHER => $b . sprintf('%%11sSWAP:%%s %s%dM%s / %dM (%s%d%%%s)', $swap_color, $swap_u, $end_color, $swap_t, $swap_color, $swap_p, $end_color)},
+ {OTHER => $b . sprintf('%%12sRAM:%%s %s%dM%s / %dM (%s%d%%%s)', $mem_color, $mem_u, $end_color, $mem_t, $mem_color, $mem_p, $end_color)},
+
+ ## {OTHER  => "    =>>>> %sPartitions%s <<<<="},
+ {PARTITIONS => '...'},    # Partitions goes here
 ]

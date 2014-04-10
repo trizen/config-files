@@ -263,11 +263,6 @@
 # Region code (string)
 #bluray-region=B
 
-[dvdread] # DVDRead Input (no menu support)
-
-# DVD angle (integer)
-#dvdread-angle=1
-
 [dvdnav] # DVDnav Input
 
 # DVD angle (integer)
@@ -604,7 +599,7 @@
 [alsa] # ALSA audio output
 
 # Audio output device (string)
-alsa-audio-device=default:CARD=NVidia
+alsa-audio-device=sysdefault:CARD=NVidia_1
 
 # Audio output channels (integer)
 #alsa-audio-channels=6
@@ -1118,7 +1113,7 @@ avcodec-hw=any
 #vbi-position=8
 
 # Teletext text subtitles (boolean)
-#vbi-text=1
+#vbi-text=0
 
 [telx] # Teletext subtitles decoder
 
@@ -2860,15 +2855,15 @@ freetype-color=16776960
 # XVideo format id (integer)
 #xvideo-format-id=0
 
-[vout_sdl] # Simple DirectMedia Layer video output
-
-# SDL chroma format (string)
-#sdl-chroma=
-
 [xcb_window] # X11 video window (XCB)
 
 # X11 display (string)
 #x11-display=
+
+[vout_sdl] # Simple DirectMedia Layer video output
+
+# SDL chroma format (string)
+#sdl-chroma=
 
 [xcb_x11] # X11 video output (XCB)
 

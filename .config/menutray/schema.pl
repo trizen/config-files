@@ -28,12 +28,14 @@
 
 require "$ENV{HOME}/.config/menutray/config.pl";
 
+my $editor = $CONFIG->{editor};
+
 our $SCHEMA = [
 
     #             COMMAND                 LABEL                ICON
-    {item => ['pcmanfm',            'File Manager',       'file-manager']},
-    {item => ['sakura',             'Terminal',           'terminal']},
-    {item => ['luakit',             'Luakit',             'luakit']},
+    {item => ['thunar',             'File Manager',       'file-manager']},
+    {item => ["$editor /tmp/x.go",  'Test Script',         'text-x-script']},
+    {item => ['luakit',             'Luakit Browser',             'luakit']},
     {item => ["gtk-youtube-viewer", "GTK Youtube Viewer", 'gtk-youtube-viewer']},
 
     {sep => undef},

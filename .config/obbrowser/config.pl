@@ -44,6 +44,6 @@ our $CONFIG = {
                              skip_svg_icons  => 0,
                            },
   "start_path"          => "/home/swampyx",
-  "VERSION"             => 0.03,
+  "VERSION"             => 0.04,
   "with_icons"          => 1,
 }

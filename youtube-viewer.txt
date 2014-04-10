@@ -43,3 +43,10 @@ music Russian folk
 music частушки с матом
 rmusic 'http://www.youtube.com/watch?v=EO2m4GPFqvo'
 music Виктор Давидзон
+rmusic 'https://www.youtube.com/watch?v=aM5PbwHAjos'
+rmusic 'http://www.youtube.com/watch?v=TJzyvCm9O0I'
+music матерные песни
+music Частушки с матом
+music Дроздовская Катя
+rmusic 'http://www.youtube.com/watch?v=4yjeEK5-knY'
+music Gruppa Ahas

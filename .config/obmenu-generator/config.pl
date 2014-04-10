@@ -99,5 +99,5 @@ our $CONFIG = {
   "missing_icon"        => "gtk-missing-image",
   "name_keys"           => ["Name"],
   "terminal"            => "sakura",
-  "VERSION"             => "0.59-git",
+  "VERSION"             => 0.59,
 }
