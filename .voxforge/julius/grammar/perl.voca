@@ -5,9 +5,28 @@
 </s>        sil
 
 % CMD
-START      y ah ng
-STOP       n ay n
+RUN        r ah n
+STOP       k ih l
+
+% MCMD
+PLAY        p l ey
+STOP        s t aa p
+
+% KEYBOARD
+PRESS      p r eh s
+
+% OUTPUT
+WRITE      r ay t
 
 % THING
-MUSIC     w ah n
 TERM      s eh v ax n
+EDITOR    eh d ax t
+
+% MTHING
+MUSIC     m y uw z ix k
+
+% KEY
+ENTER     eh n t er
+
+% TEXT
+FUNCTION  f ah ng k sh ax n

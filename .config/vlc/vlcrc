@@ -3795,7 +3795,7 @@ aout=alsa
 #deinterlace-mode=blend
 
 # Video output module (string)
-vout=vdpau_display
+vout=any
 
 # Video filter module (string)
 #video-filter=

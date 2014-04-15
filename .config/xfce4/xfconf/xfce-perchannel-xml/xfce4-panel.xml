@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="xfce4-panel" version="1.0">
+  <property name="configver" type="int" value="2"/>
+  <property name="panels" type="array">
+    <value type="int" value="2"/>
+    <property name="panel-2" type="empty">
+      <property name="position" type="string" value="p=10;x=0;y=0"/>
+      <property name="position-locked" type="bool" value="true"/>
+      <property name="plugin-ids" type="array">
+        <value type="int" value="7"/>
+        <value type="int" value="8"/>
+        <value type="int" value="9"/>
+        <value type="int" value="10"/>
+        <value type="int" value="11"/>
+        <value type="int" value="12"/>
+        <value type="int" value="13"/>
+        <value type="int" value="14"/>
+      </property>
+      <property name="autohide" type="bool" value="true"/>
+      <property name="size" type="uint" value="41"/>
+      <property name="background-style" type="uint" value="2"/>
+      <property name="background-image" type="string" value="/home/swampyx/Others/wallpaper.jpg"/>
+      <property name="enter-opacity" type="uint" value="100"/>
+      <property name="leave-opacity" type="uint" value="100"/>
+    </property>
+  </property>
+  <property name="plugins" type="empty">
+    <property name="plugin-7" type="string" value="showdesktop"/>
+    <property name="plugin-8" type="string" value="separator">
+      <property name="style" type="uint" value="1"/>
+    </property>
+    <property name="plugin-9" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="13970532491.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-10" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="13970532492.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-11" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="13970532493.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-12" type="string" value="launcher">
+      <property name="items" type="array">
+        <value type="string" value="13970532494.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-13" type="string" value="separator">
+      <property name="style" type="uint" value="1"/>
+    </property>
+    <property name="plugin-14" type="string" value="directorymenu">
+      <property name="base-directory" type="string" value="/home/swampyx"/>
+    </property>
+  </property>
+</channel>
