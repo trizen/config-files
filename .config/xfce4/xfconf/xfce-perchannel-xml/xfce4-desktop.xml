@@ -27,7 +27,10 @@
       <property name="show-home" type="bool" value="true"/>
       <property name="show-filesystem" type="bool" value="false"/>
       <property name="show-trash" type="bool" value="false"/>
-      <property name="show-removable" type="bool" value="true"/>
+      <property name="show-removable" type="bool" value="false"/>
+      <property name="show-network-removable" type="bool" value="false"/>
+      <property name="show-unknown-removable" type="bool" value="false"/>
+      <property name="show-device-removable" type="bool" value="false"/>
     </property>
     <property name="style" type="int" value="2"/>
     <property name="single-click" type="bool" value="true"/>
@@ -40,5 +43,9 @@
     <property name="show-icons" type="bool" value="true"/>
     <property name="show-workspace-names" type="bool" value="false"/>
     <property name="show-sticky-once" type="bool" value="false"/>
+  </property>
+  <property name="last" type="empty">
+    <property name="window-width" type="int" value="654"/>
+    <property name="window-height" type="int" value="484"/>
   </property>
 </channel>

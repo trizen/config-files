@@ -1,10 +1,10 @@
 #exec openbox-session
 #exec gnome-session
-xset dpms 0 0 0 &
+xset dpms 0 0 0
 #xset -dpms &
-xset s noblank &
-xset s noexpose &
-xset s off &
+xset s noblank
+xset s noexpose
+#xset s off &
 exec startxfce4
 #exec startkde
 #exec openbox-kde-session

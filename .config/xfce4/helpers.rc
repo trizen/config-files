@@ -1,4 +1,4 @@
 TerminalEmulator=sakura
-FileManager=Thunar
-
+FileManager=pcmanfm
 WebBrowser=chromium-dev
+

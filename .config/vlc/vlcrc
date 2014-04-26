@@ -917,7 +917,7 @@ sout-x264-tune=film
 #avcodec-codec=
 
 # Hardware decoding (string)
-avcodec-hw=any
+avcodec-hw=vdpau_avcodec
 
 # Threads (integer)
 #avcodec-threads=0
@@ -2855,15 +2855,15 @@ freetype-color=16776960
 # XVideo format id (integer)
 #xvideo-format-id=0
 
-[xcb_window] # X11 video window (XCB)
-
-# X11 display (string)
-#x11-display=
-
 [vout_sdl] # Simple DirectMedia Layer video output
 
 # SDL chroma format (string)
 #sdl-chroma=
+
+[xcb_window] # X11 video window (XCB)
+
+# X11 display (string)
+#x11-display=
 
 [xcb_x11] # X11 video output (XCB)
 
@@ -3795,7 +3795,7 @@ aout=alsa
 #deinterlace-mode=blend
 
 # Video output module (string)
-vout=any
+vout=vdpau_display
 
 # Video filter module (string)
 #video-filter=

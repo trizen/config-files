@@ -26,12 +26,12 @@
       <property name="&lt;Super&gt;p" type="string" value="xfce4-display-settings --minimal"/>
       <property name="override" type="bool" value="true"/>
       <property name="&lt;Alt&gt;F1" type="string" value="sakura"/>
-      <property name="&lt;Alt&gt;F3" type="string" value="thunar"/>
       <property name="&lt;Alt&gt;g" type="string" value="chromium-dev"/>
       <property name="&lt;Alt&gt;y" type="string" value="gtk-youtube-viewer"/>
       <property name="&lt;Alt&gt;s" type="string" value="lxtask"/>
       <property name="&lt;Alt&gt;x" type="string" value="geany /tmp/x.pl"/>
       <property name="&lt;Alt&gt;F2" type="string" value="gmrun"/>
+      <property name="&lt;Alt&gt;F3" type="string" value="pcmanfm"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">

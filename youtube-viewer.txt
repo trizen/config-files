@@ -52,3 +52,6 @@ rmusic 'http://www.youtube.com/watch?v=4yjeEK5-knY'
 music Gruppa Ahas
 music Дроздовская Екатерина
 rmusic 'http://www.youtube.com/watch?v=Y3POnpNxqQs'
+music -u=4astuschki
+yv 'https://www.youtube.com/watch?v=VjgHd6HKtvE&index=200&list=FLcwUNX2tWntqwqy_SSnkm9g'
+music блатная песня

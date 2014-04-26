@@ -23,14 +23,10 @@ long_line_behaviour=1
 long_line_column=130
 
 [files]
-current_page=6
-FILE_NAME_0=0;None;0;EUTF-8;0;1;1;%2Fhome%2Fswampyx%2F.voxforge%2Fjulius%2Fgrammar%2Fperl.dfa;0;4
-FILE_NAME_1=94;None;0;EUTF-8;0;1;1;%2Fhome%2Fswampyx%2F.voxforge%2Fjulius%2Fgrammar%2Fperl.dict;0;4
-FILE_NAME_2=411;Perl;0;EUTF-8;0;1;1;%2Fmedia%2Fdata%2FPerl%2FGithub%2Fperl-scripts%2Fvoice_control.pl;0;4
-FILE_NAME_3=103;None;0;EUTF-8;0;1;1;%2Fhome%2Fswampyx%2F.voxforge%2Fjulius%2Fgrammar%2Fperl.grammar;0;4
-FILE_NAME_4=227;None;0;EUTF-8;0;1;1;%2Fhome%2Fswampyx%2F.voxforge%2Fjulius%2Fgrammar%2Fperl.voca;0;4
-FILE_NAME_5=1138;Perl;0;EUTF-8;0;1;1;%2Fmedia%2Fdata%2FPerl%2FGithub%2Fperl-scripts%2FHAL8212.pl;0;4
-FILE_NAME_6=1817;None;0;EUTF-8;0;1;1;%2Fmedia%2Fdata%2FPerl%2FGithub%2Fperl-scripts%2Flingua_tagger.txt;0;4
+current_page=2
+FILE_NAME_0=1103;None;0;EUTF-8;0;1;1;%2Fmedia%2Fdata%2FPerl%2FGithub%2Fperl-scripts%2Flingua_tagger.txt;0;4
+FILE_NAME_1=760;Perl;0;EUTF-8;0;1;1;%2Fmedia%2Fdata%2FPerl%2FPersonal%20projects%2FsmartWordWrap.pl;0;4
+FILE_NAME_2=16;Perl;0;EUTF-8;0;1;1;%2Ftmp%2Fx.pl;0;4
 
 [VTE]
 last_dir=/home/swampyx
