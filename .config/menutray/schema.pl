@@ -3,21 +3,17 @@
 # menutray - schema file
 
 =for comment
-=> Main keys
 
-    sep  => undef
-    raw  => PERL_CODE
-    item => [COMMAND, LABEL, ICON]
-    cat  => [CATEGORY, LABEL, ICON]
-    tree => [ARRAY_REF, LABEL, ICON]
-
-=> Menutray's keys
-
-    exit       => [LABEL, ICON]
-    menutray   => [LABEL, ICON]
-    regenerate => [LABEL, ICON]
-    begin_cat  => [$VAR, LABEL, ICON]
-    end_cat    => [$VAR]
+    item:       add an item inside the menu               {item => ['command', 'label', 'icon']},
+    cat:        add a category inside the menu             {cat => ['name', 'label", 'icon']},
+    sep:        horizontal line separator                  {sep => undef}
+    raw:        any valid Perl code                        {raw => q(...)},
+    tree:       custom category with items                {tree => [[{...}], 'label', 'icon']},
+    begin_cat:  begin of a category                  {begin_cat => ['$var', 'name', 'icon']},
+    end_cat:    end of a category                      {end_cat => '$var'},
+    menutray:   generic menu settings                 {menutray => ['label', 'icon']},
+    regenerate: regenerate menu                     {regenerate => ['label', 'icon']},
+    exit:       quit menu                                 {exit => ['label', 'icon']},
 
 =cut
 
@@ -58,11 +54,6 @@ our $SCHEMA = [
     #{cat => ['x_xfce',      'XFCE Applications',  'applications-other']},
     #{cat => ['gnome',       'GNOME Applications', 'gnome-applications']},
     #{cat => ['consoleonly', 'CLI Applications',   'applications-utilities']},
-
-    #                VAR_NAME       LABEL         ICON
-    #{begin_cat => ['$my_cat', 'My category', 'cat-icon']},
-    #             ... some items ...
-    #{end_cat   => '$my_cat'},
 
     {menutray => ['Menutray', 'preferences-desktop']},
 

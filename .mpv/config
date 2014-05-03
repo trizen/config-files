@@ -1,4 +1,5 @@
 # Write your default config options here!
 
-vo=opengl
-hwdec=auto
+vo=opengl-hq,opengl,xv,wayland
+ao=alsa
+hwdec=vdpau

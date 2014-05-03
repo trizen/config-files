@@ -91,6 +91,7 @@ export QTDIR=/usr/include/QtCore
 export CCACHE_PATH="/usr/bin"                 # Tell ccache to only use compilers here
 #export CCACHE_DIR=/media/ccache               # Tell ccache to use this path to store its cache
 export DBI_DRIVER='mysql'
+export PATH="/usr/lib/ccache:$PATH"
 export PS1="%B%n%b[%~]: "
 export PZN='/media/data/Perl/Personal projects'
 export SIDEF='/media/data/Perl/Sidef/bin'

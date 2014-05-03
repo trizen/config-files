@@ -605,7 +605,7 @@ alsa-audio-device=sysdefault:CARD=NVidia_1
 #alsa-audio-channels=6
 
 # Software gain (float)
-alsa-gain=1.000000
+#alsa-gain=1.000000
 
 [amem] # Audio memory output
 
