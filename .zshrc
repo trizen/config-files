@@ -1,13 +1,12 @@
 # Lines configured by zsh-newuser-install
 export HISTFILE=~/.histfile
-export HISTSIZE=1000000
+export HISTSIZE=100000
 export SAVEHIST=$HISTSIZE
 #export LC_ALL=C
 
 setopt hist_ignore_all_dups
 setopt autocd
 #setopt correctall
-
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -16,7 +15,6 @@ emulate sh -c 'source /etc/profile'
 
 if [[ $(whoami) != "root" ]]; then
     cal
-    echo
 fi
 
 
@@ -77,8 +75,8 @@ zstyle ':completion:*:killall:*'   force-list always
 #------------------------------
 export USE_CCACHE=1
 export EDITOR='joe'
-export BROWSER='google-chrome'
-export WEBBROWSER='google-chrome'
+export BROWSER='chromium'
+export WEBBROWSER='chromium'
 export GOROOT=/usr/lib/go
 export GOOS=linux
 export FILEMANAGER='pcmanfm'
@@ -87,9 +85,8 @@ export GOBIN="$HOME/GO/bin"
 #export GOPKGS="$HOME/GO/pkg"
 export QTDIR=/usr/include/QtCore
 #export CC="colorgcc"
-#export PATH="/opt/android-sdk/platform-tools:$HOME/.gem/ruby/2.0.0/bin:$PATH"
-export CCACHE_PATH="/usr/bin"                 # Tell ccache to only use compilers here
-#export CCACHE_DIR=/media/ccache               # Tell ccache to use this path to store its cache
+export CCACHE_PATH="/usr/bin"
+#export CCACHE_DIR=/media/ccache
 export DBI_DRIVER='mysql'
 export PATH="/usr/lib/ccache:$PATH"
 export PS1="%B%n%b[%~]: "
@@ -100,48 +97,45 @@ export WER='/media/data/Perl/Github/perl-scripts'
 #------------------------------
 # Alias stuff
 #------------------------------
-#alias perl='perl -W'
-alias d2h="perl -e 'printf qq|%X\n|, int( shift )'"
-alias d2o="perl -e 'printf qq|%o\n|, int( shift )'"
-alias d2b="perl -e 'printf qq|%b\n|, int( shift )'"
-alias c2b="perl -E 'say unpack \"B*\", shift'"
-alias h2d="perl -e 'printf qq|%d\n|, hex( shift )'"
-alias h2o="perl -e 'printf qq|%o\n|, hex( shift )'"
-alias h2b="perl -e 'printf qq|%b\n|, hex( shift )'"
-alias o2h="perl -e 'printf qq|%X\n|, oct( shift )'"
-alias o2d="perl -e 'printf qq|%d\n|, oct( shift )'"
-alias o2b="perl -e 'printf qq|%b\n|, oct( shift )'"
-alias gopkg="locate /usr/lib/go/src/pkg/ | perl -nE 'm{\.go\$}||next;m{/pkg/(.*)/[^/]+$}&&\$\${\$1}++?next:defined(\$1)?say\$1:next'"
-alias grep='grep --colour=auto'
-alias egrep='egrep --colour=auto'
+alias df='df -hT'                           # human readable, print filetype
+alias du='du -d1 -h'                        # max depth, human readable
+alias free='free -h'                        # human readable
+alias cp='cp -v'                            # verbose copy
+alias mv='mv -v'                            # verbose move
+alias rm='rm -v'                            # verbove remove
+alias rmdir='rmdir -v'                      # verbose remove dir
+alias mkdir='mkdir -p -v'                   # create if not exist, verbose
+alias ln='ln -v'                            # verbose link
+alias wget='wget -c'                        # continues/resumes
+alias chmod='chmod -c'
+alias chown='chown -c'
+#alias rcp='rsync -v --progress'
+#alias rmv='rsync -v --progress --remove-source-files'
+
+## Alias Color Commands
+alias dir='ls --color=auto --format=vertical'
+alias vdir='ls --color=auto --format=long'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
 alias ls='ls --color=auto --human-readable --group-directories-first --classify'
+alias less='less -g -r'
+
+## Other aliases
 alias perltidy='perltidy -l=127 -f -kbl=1 -bbb -bbc -bbs -b -ple -bt=2 -pt=2 -sbt=2 -bvt=0 -sbvt=1 -cti=1 -bar -lp -anl'
-alias rime="cat /media/Others/Cuvinte\\ -\\ rime/rime-all.txt | grep $@"
-alias percritic='perlcritic --statistics'
-alias mkpm='h2xs -A -a -b 5.10.1 -X --skip-exporter --skip-warnings --skip-ppport --skip-autoloader -n $@'
-alias mkmodule='module-starter -mb --email=trizenx@gmail.com --author=Trizen $@'
-#alias youtube-viewer="perl -X /usr/bin/youtube-viewer"
 alias music="youtube-viewer -A -n -m -s --min-seconds=60 --max-seconds=480 $@"
 alias rmusic="youtube-viewer -A -n -s --min-seconds=60 --max-seconds=480 -rv $@"
 alias yv="youtube-viewer"
-alias cp='cp -v'
-#alias rcp='rsync -v --progress'
-#alias rmv='rsync -v --progress --remove-source-files'
-alias mv='mv -v'
-alias rm='rm -v'
-alias rmdir='rmdir -v'
-alias ln='ln -v'
-alias chmod="chmod -c"
-alias chown="chown -c"
-alias less="less -g -r"
 alias inxi="inxi -F -x -f -o -p"
 alias url2pdf="wkhtmltopdf --use-xserver $@"
 alias locatepm="locatepm -b"
-alias japh="perl '$PZN/alien_japh3.pl'"
 alias install-perl="perlbrew install -Doptimize='-march=native -Ofast' -j 2 --noman --notest --thread --multi $@"
-#alias dkms_nvidia="dkms install -m nvidia -v $(perl -E'say`pacman -Qi nvidia-dkms`=~/^Version\h*:\h*([^-]+)/m') -k $@"
 alias plint="perl -MO=Lint,all $@"
-#alias gcc="gcc -march=native"
+#alias dkms_nvidia="dkms install -m nvidia -v $(perl -E'say`pacman -Qi nvidia-dkms`=~/^Version\h*:\h*([^-]+)/m') -k $@"
+#alias percritic='perlcritic --statistics'
+#alias mkpm='h2xs -A -a -b 5.10.1 -X --skip-exporter --skip-warnings --skip-ppport --skip-autoloader -n $@'
+#alias mkmodule='module-starter -mb --email=trizenx@gmail.com --author=Trizen $@'
+
 
 # Support colors in less
 export LESS_TERMCAP_mb=$'\E[01;33m'
@@ -170,13 +164,6 @@ typeset -U path cdpath fpath manpath
 
 screencast() {
     ffmpeg -hwaccel vdpau -f alsa -ac 2 -i hw:0,0 -f x11grab -r 15 -s 1920x1080 -i :0.0 -acodec libmp3lame -vcodec libx264 -preset ultrafast -crf 10 -threads 0 -y $@
-}
-
-randmusic() {
-    local str
-    str=$(grep --line-number . youtube-viewer.txt | grep "^$(wc -l ~/youtube-viewer.txt | perl -anE 'say 1+int rand $F[0]'):" | perl -nE '/^\d+:(.*\S)/ && say $1=~s/\h*#.*//rs') &&
-    echo $str &&
-    eval "$str"
 }
 
 fzf_cd() {
