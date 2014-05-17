@@ -4,7 +4,7 @@
 # Option values are case insensitive.
 
 # Start in full screen mode
-full-screen   = False
+full-screen   = True
 
 # Maximize small images
 maximize      = False

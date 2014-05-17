@@ -86,6 +86,7 @@ export GOBIN="$HOME/GO/bin"
 export QTDIR=/usr/include/QtCore
 #export CC="colorgcc"
 export CCACHE_PATH="/usr/bin"
+export CCACHE_SLOPPINESS="include_file_mtime,time_macros,file_macro"
 #export CCACHE_DIR=/media/ccache
 export DBI_DRIVER='mysql'
 export PATH="/usr/lib/ccache:$PATH"
@@ -131,6 +132,8 @@ alias url2pdf="wkhtmltopdf --use-xserver $@"
 alias locatepm="locatepm -b"
 alias install-perl="perlbrew install -Doptimize='-march=native -Ofast' -j 2 --noman --notest --thread --multi $@"
 alias plint="perl -MO=Lint,all $@"
+alias betty="/home/swampyx/Other/betty/main.rb"
+alias convert="$SIDEF/sidef $SIDEF/../scripts/Real-world\ problems/Converter/unit_converter.sf"
 #alias dkms_nvidia="dkms install -m nvidia -v $(perl -E'say`pacman -Qi nvidia-dkms`=~/^Version\h*:\h*([^-]+)/m') -k $@"
 #alias percritic='perlcritic --statistics'
 #alias mkpm='h2xs -A -a -b 5.10.1 -X --skip-exporter --skip-warnings --skip-ppport --skip-autoloader -n $@'

@@ -29,7 +29,7 @@ my $editor = $CONFIG->{editor};
 our $SCHEMA = [
 
     #             COMMAND                 LABEL                ICON
-    {item => ['thunar',             'File Manager',       'file-manager']},
+    {item => ['pcmanfm',            'File Manager',       'file-manager']},
     {item => ["$editor /tmp/x.go",  'Test Script',         'text-x-script']},
     {item => ['luakit',             'Luakit Browser',             'luakit']},
     {item => ["gtk-youtube-viewer", "GTK Youtube Viewer", 'gtk-youtube-viewer']},
