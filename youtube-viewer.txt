@@ -55,3 +55,5 @@ rmusic 'http://www.youtube.com/watch?v=Y3POnpNxqQs'
 music -u=4astuschki
 yv 'https://www.youtube.com/watch?v=VjgHd6HKtvE&index=200&list=FLcwUNX2tWntqwqy_SSnkm9g'
 music блатная песня
+rmusic 'http://www.youtube.com/watch?v=Jvw3k_JKBeU'
+music polka

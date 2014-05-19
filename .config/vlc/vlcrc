@@ -941,7 +941,7 @@ sout-x264-tune=film
 #subsdec-align=0
 
 # Subtitle text encoding (string)
-subsdec-encoding=UTF-16LE
+subsdec-encoding=ISO-8859-2
 
 # UTF-8 subtitle autodetection (boolean)
 #subsdec-autodetect-utf8=1
@@ -2094,7 +2094,7 @@ qt-privacy-ask=0
 [freetype] # Freetype2 font renderer
 
 # Font (string)
-freetype-font=Sans Serif
+freetype-font=DejaVu Sans
 
 # Monospace Font (string)
 #freetype-monofont=Monospace

@@ -92,7 +92,7 @@ export DBI_DRIVER='mysql'
 export PATH="/usr/lib/ccache:$PATH"
 export PS1="%B%n%b[%~]: "
 export PZN='/media/data/Perl/Personal projects'
-export SIDEF='/media/data/Perl/Sidef/bin'
+export SIDEF='/media/data/Perl/Sidef'
 export WER='/media/data/Perl/Github/perl-scripts'
 
 #------------------------------
@@ -133,7 +133,8 @@ alias locatepm="locatepm -b"
 alias install-perl="perlbrew install -Doptimize='-march=native -Ofast' -j 2 --noman --notest --thread --multi $@"
 alias plint="perl -MO=Lint,all $@"
 alias betty="/home/swampyx/Other/betty/main.rb"
-alias convert="$SIDEF/sidef $SIDEF/../scripts/Real-world\ problems/Converter/unit_converter.sf"
+alias roxy="$SIDEF/bin/sidef -nGMP $SIDEF/scripts/Real-world\ programs/Converter/unit_converter.sf"
+alias sidef="$SIDEF/bin/sidef"
 #alias dkms_nvidia="dkms install -m nvidia -v $(perl -E'say`pacman -Qi nvidia-dkms`=~/^Version\h*:\h*([^-]+)/m') -k $@"
 #alias percritic='perlcritic --statistics'
 #alias mkpm='h2xs -A -a -b 5.10.1 -X --skip-exporter --skip-warnings --skip-ppport --skip-autoloader -n $@'
