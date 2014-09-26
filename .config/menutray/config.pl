@@ -67,7 +67,7 @@ our $CONFIG = {
                                 keep_empty_categories   => 0,
                                 keep_unknown_categories => 1,
                                 skip_entry              => undef,
-                                skip_filename_re        => qr/^(?:compton|exo-|xfce4-about|avahi|b(?:ssh|vnc)|dconf|ffadomixer|gconf|mplayer)/,
+                                skip_filename_re        => qr/^(?:compton|exo-|xfce4-about|avahi|b(?:ssh|vnc)|dconf|ffadomixer|gconf|mplayer|pcmanfm)/,
                                 substitutions           => [
                                                              { global => 1, key => "Exec", re => qr/\\\\/, value => "\\" },
                                                            ],

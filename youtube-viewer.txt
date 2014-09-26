@@ -57,3 +57,6 @@ yv 'https://www.youtube.com/watch?v=VjgHd6HKtvE&index=200&list=FLcwUNX2tWntqwqy_
 music блатная песня
 rmusic 'http://www.youtube.com/watch?v=Jvw3k_JKBeU'
 music polka
+rmusic 'https://www.youtube.com/watch?v=c6qo6vwE-nI'
+music ЭМИЛЬ КРУПНИК
+rmusic 'http://www.youtube.com/watch?v=uNNrX3WE3W4'

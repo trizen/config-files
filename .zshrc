@@ -135,6 +135,7 @@ alias plint="perl -MO=Lint,all $@"
 alias betty="/home/swampyx/Other/betty/main.rb"
 alias roxy="$SIDEF/bin/sidef -nGMP $SIDEF/scripts/Real-world\ programs/Converter/unit_converter.sf"
 alias sidef="$SIDEF/bin/sidef"
+alias rusmusic="perl -MList::Util=shuffle -E 'system q{mpv}, q{--no-video}, shuffle(glob(q{~/Videos/Rusa/*}))'"
 #alias dkms_nvidia="dkms install -m nvidia -v $(perl -E'say`pacman -Qi nvidia-dkms`=~/^Version\h*:\h*([^-]+)/m') -k $@"
 #alias percritic='perlcritic --statistics'
 #alias mkpm='h2xs -A -a -b 5.10.1 -X --skip-exporter --skip-warnings --skip-ppport --skip-autoloader -n $@'

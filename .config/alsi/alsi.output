@@ -22,7 +22,7 @@
 my $b = "\b\b\b\b";
 [{HARDCODED => "\b\e[1;37m\e[41mTHIS IS ALSI\e[0m"},
  {OS        => $b . '%13sOS:%s %s'},                   # Operating system
- {HOSTNAME  => $b . '%4sHostname:%s %s'},              # Hostname
+ #{HOSTNAME  => $b . '%4sHostname:%s %s'},              # Hostname
  {UPTIME    => $b . '%9sUptime:%s %s'},                # Uptime
  {KERNEL    => $b . '%9sKernel:%s %s'},                # Kernel version
  {SHELL     => $b . '%10sShell:%s %s'},                # Shell

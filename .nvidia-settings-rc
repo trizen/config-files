@@ -2,7 +2,7 @@
 # /home/swampyx/.nvidia-settings-rc
 #
 # Configuration file for nvidia-settings - the NVIDIA X Server Settings utility
-# Generated on Sun May 18 00:28:15 2014
+# Generated on Fri Sep 26 16:52:34 2014
 #
 
 # ConfigProperties:
@@ -14,9 +14,9 @@ SliderTextEntries = Yes
 IncludeDisplayNameInConfigFile = No
 ShowQuitDialog = Yes
 UpdateRulesOnProfileNameChange = Yes
-Timer = PowerMizer_Monitor_(GPU_0),Yes,10000
-Timer = Memory_Used_(GPU_0),Yes,30000
 Timer = Thermal_Monitor_(GPU_0),Yes,1000
+Timer = Memory_Used_(GPU_0),Yes,30000
+Timer = PowerMizer_Monitor_(GPU_0),Yes,10000
 
 # Attributes:
 

@@ -4,7 +4,7 @@
 # Option values are case insensitive.
 
 # Start in full screen mode
-full-screen   = True
+full-screen   = False
 
 # Maximize small images
 maximize      = False
@@ -25,7 +25,7 @@ scrollbars    = False
 zoom-pointer  = False
 
 # Alpha checks in the background
-alpha-checks  = True
+alpha-checks  = False
 
 # Dithering
 dither        = False
