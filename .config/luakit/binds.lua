@@ -241,6 +241,15 @@ add_binds("normal", {
     buf("^ZQ$",                     function (w) w:close_win() end),
     buf("^D$",                      function (w) w:close_win() end),
 
+    -- youtube-viewer
+    key({}, "v", "Open Youtube video",
+        function (w)
+            local uri = w.view.uri
+            if uri then
+              luakit.spawn(string.format("sakura -e youtube-viewer --no-interactive %q", uri))
+        end
+    end),
+
     -- Enter passthrough mode
     key({"Control"}, "z",           function (w) w:set_mode("passthrough") end),
 })

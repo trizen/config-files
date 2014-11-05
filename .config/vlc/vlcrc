@@ -964,7 +964,7 @@ sout-x264-tune=film
 #avcodec-codec=
 
 # Hardware decoding (string)
-#avcodec-hw=any
+avcodec-hw=vdpau_avcodec
 
 # Threads (integer)
 #avcodec-threads=0

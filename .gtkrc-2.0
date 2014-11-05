@@ -1,10 +1,11 @@
 # DO NOT EDIT! This file will be overwritten by LXAppearance.
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
+include "/home/swampyx/.gtkrc-2.0.mine"
 gtk-theme-name="Albatross"
 gtk-icon-theme-name="Faenza-Darkest"
 gtk-font-name="Droid Sans 8"
-gtk-cursor-theme-name=""
+gtk-cursor-theme-name="Adwaita"
 gtk-cursor-theme-size=16
 gtk-toolbar-style=GTK_TOOLBAR_ICONS
 gtk-toolbar-icon-size=GTK_ICON_SIZE_SMALL_TOOLBAR
@@ -16,4 +17,3 @@ gtk-xft-antialias=1
 gtk-xft-hinting=1
 gtk-xft-hintstyle="hintfull"
 gtk-xft-rgba="none"
-include "/home/swampyx/.gtkrc-2.0.mine"

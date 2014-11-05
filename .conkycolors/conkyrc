@@ -130,4 +130,4 @@ ${voffset -1}${goto 32}${color2}${top name 5}${color}${font Ubuntu:style=Bold:si
 # - CALENDAR - #
 ################
 ${voffset 4}${font Ubuntu:style=Bold:size=8}DATE $stippled_hr${font}
-${voffset -2}${color0}${font Poky:size=16}D${font}${voffset -8}${font Termsyn:size=7}${offset -17}${voffset 4}${time %d}${font}${color}${voffset -1}${font Termsyn:size=10}${execpi 1800 DJS=`date +%_d`; cal  -m|sed '2,8!d'| sed '/./!d' | sed 's/^/${goto 32}/'| sed 's/$/ /' | sed 's/^/ /'}${voffset -1}
+${voffset -2}${color0}${font Poky:size=16}D${font}${voffset -8}${font Terminal:size=7}${offset -17}${voffset 4}${time %d}${font}${color}${voffset -1}${font Terminal:size=10}${execpi 1800 DJS=`date +%_d`; cal  -m|sed '2,8!d'| sed '/./!d' | sed 's/^/${goto 32}/'| sed 's/$/ /' | sed 's/^/ /'}${voffset -1}

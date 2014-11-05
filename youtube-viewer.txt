@@ -60,3 +60,6 @@ music polka
 rmusic 'https://www.youtube.com/watch?v=c6qo6vwE-nI'
 music ЭМИЛЬ КРУПНИК
 rmusic 'http://www.youtube.com/watch?v=uNNrX3WE3W4'
+music Gop so smykom
+music Гоп-стоп
+rmusic 'http://www.youtube.com/watch?v=baYnlS1sBBw'
