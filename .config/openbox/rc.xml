@@ -40,7 +40,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Cyclism</name>
+    <name>Surreal</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -277,10 +277,10 @@
     </keybind>
     <keybind key="A-g">
       <action name="Execute">
-        <command>google-chrome</command>
+        <command>chromium</command>
         <startupnotify>
           <enabled>yes</enabled>
-          <name>Google Chrome</name>
+          <name>Chromium</name>
         </startupnotify>
       </action>
     </keybind>
@@ -290,6 +290,15 @@
         <startupnotify>
           <enabled>yes</enabled>
           <name>System Monitor</name>
+        </startupnotify>
+      </action>
+    </keybind>
+    <keybind key="A-x">
+      <action name="Execute">
+        <command>geany /tmp/x.pl</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+          <name>A perl script</name>
         </startupnotify>
       </action>
     </keybind>
@@ -691,7 +700,7 @@
   </menu>
   <applications>
     <application name="sakura">
-      <decor>no</decor>
+      <decor>yes</decor>
     </application>
   </applications>
   <!--

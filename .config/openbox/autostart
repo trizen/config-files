@@ -14,10 +14,10 @@
 
 # If you want to use XFCE config tools...
 #
-obmenu-generator -i -s &
+obmenu-generator -i -s
 conky &
 #nvidia-settings &
-feh --bg-scale ~/Others/wallpaper.jpg &
+feh --bg-scale ~/Other/wallpaper.jpg &
 sakura &
 tint2 &
 menutray -i &

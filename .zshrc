@@ -110,6 +110,7 @@ alias ln='ln -v'                            # verbose link
 alias wget='wget -c'                        # continues/resumes
 alias chmod='chmod -c'
 alias chown='chown -c'
+alias subr='sub-renamer -r'
 #alias rcp='rsync -v --progress'
 #alias rmv='rsync -v --progress --remove-source-files'
 
@@ -221,3 +222,5 @@ confirm_wrapper() {
 poweroff() { confirm_wrapper --root $0 "$@"; }
 reboot() { confirm_wrapper --root $0 "$@"; }
 hibernate() { confirm_wrapper --root $0 "$@"; }
+
+[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx

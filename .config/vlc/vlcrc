@@ -6,38 +6,6 @@
 ### lines beginning with a '#' character are comments
 ###
 
-[lua] # Lua interpreter
-
-# Lua interface (string)
-#lua-intf=dummy
-
-# Lua interface configuration (string)
-#lua-config=
-
-# Password (string)
-#http-password=
-
-# Source directory (string)
-#http-src=
-
-# Directory index (boolean)
-#http-index=0
-
-# TCP command input (string)
-#rc-host=
-
-# CLI input (string)
-#cli-host=
-
-# Host (string)
-#telnet-host=localhost
-
-# Port (integer)
-#telnet-port=4212
-
-# Password (string)
-#telnet-password=
-
 [rtp] # Real-Time Protocol (RTP) input
 
 # RTCP (local) port (integer)
@@ -71,6 +39,14 @@
 
 # Advanced options (string)
 #sout-avio-options=
+
+[sftp] # SFTP input
+
+# Read size (integer)
+#sftp-readsize=8192
+
+# SFTP port (integer)
+#sftp-port=22
 
 [udp] # UDP input
 
@@ -197,7 +173,7 @@
 #dvb-bandwidth=0
 
 # Transmission mode (integer)
-dvb-transmission=-1
+#dvb-transmission=0
 
 # Guard interval (string)
 #dvb-guard=
@@ -346,6 +322,23 @@ dvb-transmission=-1
 
 # CDDB port (integer)
 #cddb-port=80
+
+[wl_screenshooter] # Screen capture (with Wayland)
+
+# Frame rate (float)
+#screen-fps=2.000000
+
+# Region left column (integer)
+#screen-left=0
+
+# Region top row (integer)
+#screen-top=0
+
+# Capture region width (integer)
+#screen-width=0
+
+# Capture region height (integer)
+#screen-height=0
 
 [xcb_screen] # Screen capture (with X11/XCB)
 
@@ -644,7 +637,7 @@ dvb-transmission=-1
 [alsa] # ALSA audio output
 
 # Audio output device (string)
-alsa-audio-device=sysdefault:CARD=NVidia_1
+alsa-audio-device=default:CARD=NVidia_1
 
 # Audio output channels (integer)
 #alsa-audio-channels=6
@@ -964,7 +957,7 @@ sout-x264-tune=film
 #avcodec-codec=
 
 # Hardware decoding (string)
-avcodec-hw=vdpau_avcodec
+#avcodec-hw=any
 
 # Threads (integer)
 #avcodec-threads=0
@@ -1024,7 +1017,7 @@ avcodec-hw=vdpau_avcodec
 #sout-avcodec-trellis=0
 
 # Fixed quantizer scale (float)
-#sout-avcodec-qscale=0.000000
+#sout-avcodec-qscale=3.000000
 
 # Strict standard compliance (integer)
 #sout-avcodec-strict=0
@@ -1136,13 +1129,13 @@ avcodec-hw=vdpau_avcodec
 #vbi-page=100
 
 # Teletext transparency (boolean)
-vbi-opaque=1
+#vbi-opaque=0
 
 # Teletext alignment (integer)
 #vbi-position=8
 
 # Teletext text subtitles (boolean)
-vbi-text=1
+#vbi-text=0
 
 [telx] # Teletext subtitles decoder
 
@@ -1150,10 +1143,10 @@ vbi-text=1
 #telx-override-page=-1
 
 # Ignore subtitle flag (boolean)
-telx-ignore-subtitle-flag=1
+#telx-ignore-subtitle-flag=0
 
 # Workaround for France (boolean)
-telx-french-workaround=1
+#telx-french-workaround=0
 
 [svcdsub] # Philips OGT (SVCD subtitle) decoder
 
@@ -1169,12 +1162,12 @@ subsdec-encoding=ISO-8859-2
 #subsdec-autodetect-utf8=1
 
 # Formatted Subtitles (boolean)
-subsdec-formatted=0
+#subsdec-formatted=1
 
 [spudec] # DVD subtitles decoder
 
 # Disable DVD subtitle transparency (boolean)
-dvdsub-transparency=1
+#dvdsub-transparency=0
 
 [dvbsub] # DVB subtitles decoder
 
@@ -1212,7 +1205,7 @@ dvdsub-transparency=1
 [schroedinger] # Dirac video decoder using libschroedinger
 
 # Rate control method (string)
-sout-schro-rate-control=constant_noise_threshold
+#sout-schro-rate-control=
 
 # Constant quality factor (float)
 #sout-schro-quality=-1.000000
@@ -1230,7 +1223,7 @@ sout-schro-rate-control=constant_noise_threshold
 #sout-schro-min-bitrate=-1
 
 # GOP structure (string)
-sout-schro-gop-structure=adaptive
+#sout-schro-gop-structure=
 
 # GOP length (integer)
 #sout-schro-gop-length=-1
@@ -1242,13 +1235,13 @@ sout-schro-gop-structure=adaptive
 #sout-schro-coding-mode=auto
 
 # Motion Vector precision (string)
-sout-schro-mv-precision=1
+#sout-schro-mv-precision=
 
 # Size of motion compensation blocks (string)
-sout-schro-motion-block-size=automatic
+#sout-schro-motion-block-size=
 
 # Overlap of motion compensation blocks (string)
-sout-schro-motion-block-overlap=automatic
+#sout-schro-motion-block-overlap=
 
 # Three component motion estimation (integer)
 #sout-schro-me-combined=-1
@@ -1266,10 +1259,10 @@ sout-schro-motion-block-overlap=automatic
 #sout-schro-enable-phasecorr-me=-1
 
 # Intra picture DWT filter (string)
-sout-schro-intra-wavelet=desl_dubuc_9_7
+#sout-schro-intra-wavelet=
 
 # Inter picture DWT filter (string)
-sout-schro-inter-wavelet=desl_dubuc_9_7
+#sout-schro-inter-wavelet=
 
 # Number of DWT iterations (integer)
 #sout-schro-transform-depth=-1
@@ -1278,10 +1271,10 @@ sout-schro-inter-wavelet=desl_dubuc_9_7
 #sout-schro-enable-multiquant=-1
 
 # Size of code blocks in each subband (string)
-sout-schro-codeblock-size=automatic
+#sout-schro-codeblock-size=
 
 # Prefilter (string)
-sout-schro-filtering=none
+#sout-schro-filtering=
 
 # Amount of prefiltering (float)
 #sout-schro-filter-value=-1.000000
@@ -1290,7 +1283,7 @@ sout-schro-filtering=none
 #sout-schro-enable-scd=-1
 
 # perceptual weighting method (string)
-sout-schro-perceptual-weighting=none
+#sout-schro-perceptual-weighting=
 
 # perceptual distance (float)
 #sout-schro-perceptual-distance=-1.000000
@@ -1305,7 +1298,7 @@ sout-schro-perceptual-weighting=none
 #sout-schro-vert-slices=-1
 
 # Force Profile (string)
-sout-schro-force-profile=auto
+#sout-schro-force-profile=
 
 [fluidsynth] # FluidSynth MIDI synthesizer
 
@@ -1559,10 +1552,86 @@ sout-schro-force-profile=auto
 # Append to existing file (boolean)
 #demuxdump-append=0
 
+[lua] # Lua interpreter
+
+# Lua interface (string)
+#lua-intf=dummy
+
+# Lua interface configuration (string)
+#lua-config=
+
+# Password (string)
+#http-password=
+
+# Source directory (string)
+#http-src=
+
+# Directory index (boolean)
+#http-index=0
+
+# TCP command input (string)
+#rc-host=
+
+# CLI input (string)
+#cli-host=
+
+# Host (string)
+#telnet-host=localhost
+
+# Port (integer)
+#telnet-port=4212
+
+# Password (string)
+#telnet-password=
+
 [folder] # Folder meta data
 
 # Album art filename (string)
 #album-art-filename=
+
+[rtsp] # Legacy RTSP VoD server
+
+# MUX for RAW RTSP transport (string)
+#rtsp-raw-mux=ts
+
+# Maximum number of connections (integer)
+#rtsp-throttle-users=0
+
+# Sets the timeout option in the RTSP session string (integer)
+#rtsp-session-timeout=5
+
+[gnutls] # GNU TLS transport layer security
+
+# TLS cipher priorities (string)
+#gnutls-priorities=NORMAL
+
+[audioscrobbler] # Submission of played songs to last.fm
+
+# Username (string)
+#lastfm-username=
+
+# Password (string)
+#lastfm-password=
+
+# Scrobbler URL (string)
+#scrobbler-url=post.audioscrobbler.com
+
+[logger] # File logging
+
+# Log filename (string)
+#logfile=
+
+# Log format (string)
+#logmode=text
+
+# Syslog ident (string)
+#syslog-ident=vlc
+
+# Syslog facility (string)
+#syslog-facility=user
+
+# Verbosity (integer)
+#log-verbose=-1
 
 [notify] # LibNotify Notification Plugin
 
@@ -1697,6 +1766,100 @@ sout-schro-force-profile=auto
 
 # Buffer Size (Seconds) (integer)
 #dash-buffersize=30
+
+[vdpau_chroma] # VDPAU surface conversions
+
+# Deinterlace (integer)
+#vdpau-deinterlace=1
+
+# Inverse telecine (boolean)
+#vdpau-ivtc=0
+
+# Deinterlace chroma skip (boolean)
+#vdpau-chroma-skip=0
+
+# Noise reduction level (float)
+#vdpau-noise-reduction=0.000000
+
+# Scaling quality (integer)
+#vdpau-scaling=0
+
+[yuv] # YUV video output
+
+# device, fifo or filename (string)
+#yuv-file=stream.yuv
+
+# Chroma used (string)
+#yuv-chroma=
+
+# YUV4MPEG2 header (default disabled) (boolean)
+#yuv-yuv4mpeg2=0
+
+[vmem] # Video memory output
+
+# Width (integer)
+#vmem-width=320
+
+# Height (integer)
+#vmem-height=200
+
+# Pitch (integer)
+#vmem-pitch=640
+
+# Chroma (string)
+#vmem-chroma=RV16
+
+[vdummy] # Dummy video output
+
+# Dummy image chroma format (string)
+#dummy-chroma=
+
+[vout_sdl] # Simple DirectMedia Layer video output
+
+# SDL chroma format (string)
+#sdl-chroma=
+
+[fb] # GNU/Linux framebuffer video output
+
+# Framebuffer device (string)
+#fbdev=/dev/fb0
+
+# Run fb on current tty (boolean)
+#fb-tty=1
+
+# Image format (default RGB) (string)
+#fb-chroma=
+
+# Framebuffer resolution to use (integer)
+#fb-mode=4
+
+# Framebuffer uses hw acceleration (boolean)
+#fb-hw-accel=1
+
+[wl_shell_surface] # Wayland shell surface
+
+# Wayland display (string)
+#wl-display=
+
+[xcb_xv] # XVideo output (XCB)
+
+# XVideo adaptor number (integer)
+#xvideo-adaptor=-1
+
+# XVideo format id (integer)
+#xvideo-format-id=0
+
+[xcb_window] # X11 video window (XCB)
+
+# X11 display (string)
+#x11-display=
+
+[xcb_x11] # X11 video output (XCB)
+
+[gl] # OpenGL video output (experimental)
+
+# OpenGL extension (string)
+#gl=
 
 [samplerate] # Secret Rabbit Code (libsamplerate) resampler
 
@@ -2087,50 +2250,6 @@ qt-privacy-ask=0
 # Fullscreen controller mouse sensitivity (integer)
 #qt-fs-sensitivity=3
 
-[vod_rtsp] # Legacy RTSP VoD server
-
-# MUX for RAW RTSP transport (string)
-#rtsp-raw-mux=ts
-
-# Maximum number of connections (integer)
-#rtsp-throttle-users=0
-
-# Sets the timeout option in the RTSP session string (integer)
-#rtsp-session-timeout=5
-
-[logger] # File logging
-
-# Log filename (string)
-#logfile=
-
-# Log format (string)
-#logmode=text
-
-# Syslog ident (string)
-#syslog-ident=vlc
-
-# Syslog facility (string)
-#syslog-facility=user
-
-# Verbosity (integer)
-#log-verbose=-1
-
-[gnutls] # GNU TLS transport layer security
-
-# TLS cipher priorities (string)
-#gnutls-priorities=NORMAL
-
-[audioscrobbler] # Submission of played songs to last.fm
-
-# Username (string)
-#lastfm-username=
-
-# Password (string)
-#lastfm-password=
-
-# Scrobbler URL (string)
-#scrobbler-url=post.audioscrobbler.com
-
 [packetizer_mpegvideo] # MPEG-I/II video packetizer
 
 # Sync on Intra Frame (boolean)
@@ -2147,7 +2266,7 @@ qt-privacy-ask=0
 freetype-font=DejaVu Sans
 
 # Monospace Font (string)
-freetype-monofont=DejaVu Sans Mono
+#freetype-monofont=Monospace
 
 # Font size in pixels (integer)
 #freetype-fontsize=0
@@ -2162,10 +2281,10 @@ freetype-rel-fontsize=12
 freetype-color=16776960
 
 # Force bold (boolean)
-freetype-bold=1
+#freetype-bold=0
 
 # Background opacity (integer)
-freetype-background-opacity=100
+freetype-background-opacity=128
 
 # Background color (integer)
 #freetype-background-color=0
@@ -2201,25 +2320,6 @@ freetype-outline-thickness=6
 
 # FFmpeg post processing filter chains (string)
 #postproc-name=default
-
-[opencv_wrapper] # OpenCV video filter wrapper
-
-# Scale factor (0.1-2.0) (float)
-#opencv-scale=1.000000
-
-# OpenCV filter chroma (string)
-#opencv-chroma=input
-
-# Wrapper filter output (string)
-#opencv-output=input
-
-# OpenCV internal filter name (string)
-#opencv-filter-name=none
-
-[opencv_example] # OpenCV face detection example filter
-
-# Haar cascade filename (string)
-#opencv-haarcascade-file=c:\haarcascade_frontalface_alt.xml
 
 [atmo] # AtmoLight Filter
 
@@ -2367,6 +2467,11 @@ freetype-outline-thickness=6
 # Mark analyzed pixels (boolean)
 #atmo-showdots=0
 
+[fps] # FPS conversion video filter
+
+# ? (string)
+#fps-fps=
+
 [anaglyph] # Convert 3D picture to anaglyph image video filter
 
 # Color scheme (string)
@@ -2475,7 +2580,7 @@ freetype-outline-thickness=6
 #rss-y=0
 
 # Text position (integer)
-rss-position=0
+#rss-position=-1
 
 # Opacity (integer)
 #rss-opacity=255
@@ -2584,7 +2689,7 @@ rss-position=0
 #marq-y=0
 
 # Marquee position (integer)
-marq-position=0
+#marq-position=-1
 
 # Opacity (integer)
 #marq-opacity=255
@@ -2622,7 +2727,7 @@ marq-position=0
 #logo-opacity=255
 
 # Logo position (integer)
-logo-position=0
+#logo-position=-1
 
 [gaussianblur] # Gaussian blur video filter
 
@@ -2781,7 +2886,7 @@ logo-position=0
 #audiobargraph_v-transparency=255
 
 # Bargraph position (integer)
-audiobargraph_v-position=0
+#audiobargraph_v-position=-1
 
 # Bar width in pixel (default : 10) (integer)
 #audiobargraph_v-barWidth=10
@@ -2863,7 +2968,7 @@ audiobargraph_v-position=0
 #rmtosd-password=
 
 # VNC poll interval (integer)
-rmtosd-update=300
+#rmtosd-update=1000
 
 # VNC polling (boolean)
 #rmtosd-vnc-polling=0
@@ -2895,83 +3000,6 @@ rmtosd-update=300
 
 # Phosphor old field dimmer strength (integer)
 #sout-deinterlace-phosphor-dimmer=2
-
-[yuv] # YUV video output
-
-# device, fifo or filename (string)
-#yuv-file=stream.yuv
-
-# Chroma used (string)
-#yuv-chroma=
-
-# YUV4MPEG2 header (default disabled) (boolean)
-#yuv-yuv4mpeg2=0
-
-[vmem] # Video memory output
-
-# Width (integer)
-#vmem-width=320
-
-# Height (integer)
-#vmem-height=200
-
-# Pitch (integer)
-#vmem-pitch=640
-
-# Chroma (string)
-#vmem-chroma=RV16
-
-[vdummy] # Dummy video output
-
-# Dummy image chroma format (string)
-#dummy-chroma=
-
-[wl_shell_surface] # Wayland shell surface
-
-# Wayland display (string)
-#wl-display=
-
-[xcb_xv] # XVideo output (XCB)
-
-# XVideo adaptor number (integer)
-#xvideo-adaptor=-1
-
-# XVideo format id (integer)
-#xvideo-format-id=0
-
-[xcb_window] # X11 video window (XCB)
-
-# X11 display (string)
-#x11-display=
-
-[vout_sdl] # Simple DirectMedia Layer video output
-
-# SDL chroma format (string)
-#sdl-chroma=
-
-[xcb_x11] # X11 video output (XCB)
-
-[fb] # GNU/Linux framebuffer video output
-
-# Framebuffer device (string)
-#fbdev=/dev/fb0
-
-# Run fb on current tty (boolean)
-#fb-tty=1
-
-# Image format (default RGB) (string)
-#fb-chroma=
-
-# Framebuffer resolution to use (integer)
-#fb-mode=4
-
-# Framebuffer uses hw acceleration (boolean)
-#fb-hw-accel=1
-
-[gl] # OpenGL video output (experimental)
-
-# OpenGL extension (string)
-gl=any
 
 [goom] # Goom effect
 
@@ -3679,23 +3707,6 @@ gl=any
 # Delay of the ES (ms) (integer)
 #sout-delay-delay=0
 
-[vdpau_chroma] # VDPAU surface conversions
-
-# Deinterlace (integer)
-#vdpau-deinterlace=1
-
-# Inverse telecine (boolean)
-#vdpau-ivtc=0
-
-# Deinterlace chroma skip (boolean)
-#vdpau-chroma-skip=0
-
-# Noise reduction level (float)
-#vdpau-noise-reduction=0.000000
-
-# Scaling quality (integer)
-#vdpau-scaling=0
-
 [core] # core program
 
 # Enable audio (boolean)
@@ -3804,7 +3815,7 @@ aout=alsa
 #mouse-hide-timeout=1000
 
 # Video snapshot directory (or filename) (string)
-snapshot-path=/home/swampyx
+#snapshot-path=
 
 # Video snapshot file prefix (string)
 #snapshot-prefix=vlcsnap-
@@ -3816,7 +3827,7 @@ snapshot-path=/home/swampyx
 #snapshot-preview=1
 
 # Use sequential numbers instead of timestamps (boolean)
-snapshot-sequential=1
+#snapshot-sequential=0
 
 # Video snapshot width (integer)
 #snapshot-width=-1
@@ -3848,9 +3859,6 @@ snapshot-sequential=1
 # Video Auto Scaling (boolean)
 #autoscale=1
 
-# Video scaling factor (float)
-#scale=1.000000
-
 # Monitor pixel aspect ratio (string)
 #monitor-par=
 
@@ -3873,13 +3881,13 @@ snapshot-sequential=1
 #zoom=1.000000
 
 # Deinterlace (integer)
-deinterlace=-1
+#deinterlace=0
 
 # Deinterlace mode (string)
 #deinterlace-mode=blend
 
 # Video output module (string)
-vout=vdpau_display
+vout=any
 
 # Video filter module (string)
 #video-filter=
@@ -3894,7 +3902,7 @@ vout=vdpau_display
 #osd=1
 
 # Text rendering module (string)
-text-renderer=any
+#text-renderer=
 
 # Use subtitle file (string)
 #sub-file=
@@ -3933,7 +3941,7 @@ text-renderer=any
 #audio-language=
 
 # Subtitle language (string)
-sub-language=ro,en
+#sub-language=
 
 # Menu language (string)
 #menu-language=
@@ -4146,7 +4154,7 @@ sub-language=ro,en
 #packetizer=
 
 # VoD server module (string)
-vod-server=any
+#vod-server=
 
 # Use a plugins cache (boolean)
 #plugins-cache=1
@@ -4161,7 +4169,7 @@ vod-server=any
 #inhibit=1
 
 # Play files randomly forever (boolean)
-#random=0
+random=1
 
 # Repeat all (boolean)
 #loop=0

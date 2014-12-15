@@ -5,7 +5,8 @@ xset dpms 0 0 0
 xset s noblank
 xset s noexpose
 #xset s off &
-exec startxfce4
+#exec startxfce4
+exec openbox-session
 #exec startkde
 #exec openbox-kde-session
 #exec fluxbox
