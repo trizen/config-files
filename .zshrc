@@ -91,9 +91,9 @@ export CCACHE_SLOPPINESS="include_file_mtime,time_macros,file_macro"
 export DBI_DRIVER='mysql'
 export PATH="/usr/lib/ccache:$PATH"
 export PS1="%B%n%b[%~]: "
-export PZN='/media/data/Perl/Personal projects'
-export SIDEF='/media/data/Perl/Sidef'
-export WER='/media/data/Perl/Github/perl-scripts'
+export PZN='/home/swampyx/Other/Programare/Personal projects'
+export SIDEF='/home/swampyx/Other/Programare/Sidef'
+export WER='/home/swampyx/Other/Programare/perl-scripts'
 
 #------------------------------
 # Alias stuff
@@ -133,7 +133,7 @@ alias url2pdf="wkhtmltopdf --use-xserver $@"
 alias locatepm="locatepm -b"
 alias install-perl="perlbrew install -Doptimize='-march=native -Ofast' -j 2 --noman --notest --thread --multi $@"
 alias plint="perl -MO=Lint,all $@"
-alias betty="/home/swampyx/Other/betty/main.rb"
+alias betty="/home/swampyx/Other/Programare/betty/main.rb"
 alias roxy="$SIDEF/bin/sidef -nGMP $SIDEF/scripts/Real-world\ programs/Converter/unit_converter.sf"
 alias sidef="$SIDEF/bin/sidef"
 alias rusmusic="perl -MList::Util=shuffle -E 'system q{mpv}, q{--no-video}, shuffle(glob(q{~/Videos/Rusa/*}))'"
@@ -223,4 +223,4 @@ poweroff() { confirm_wrapper --root $0 "$@"; }
 reboot() { confirm_wrapper --root $0 "$@"; }
 hibernate() { confirm_wrapper --root $0 "$@"; }
 
-[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
+#[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx

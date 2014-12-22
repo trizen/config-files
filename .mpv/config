@@ -3,3 +3,4 @@
 vo=opengl-hq,opengl,xv
 ao=alsa
 hwdec=vdpau
+sub-codepage=utf8:latin2

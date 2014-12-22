@@ -40,14 +40,6 @@
 # Advanced options (string)
 #sout-avio-options=
 
-[sftp] # SFTP input
-
-# Read size (integer)
-#sftp-readsize=8192
-
-# SFTP port (integer)
-#sftp-port=22
-
 [udp] # UDP input
 
 # Receive buffer (integer)
@@ -637,7 +629,7 @@
 [alsa] # ALSA audio output
 
 # Audio output device (string)
-alsa-audio-device=default:CARD=NVidia_1
+alsa-audio-device=default:CARD=PCH
 
 # Audio output channels (integer)
 #alsa-audio-channels=6
@@ -916,10 +908,10 @@ alsa-audio-device=default:CARD=NVidia_1
 #sout-x264-stats=x264_2pass.log
 
 # Default preset setting used (string)
-sout-x264-preset=ultrafast
+#sout-x264-preset=
 
 # Default tune setting used (string)
-sout-x264-tune=film
+#sout-x264-tune=
 
 # x264 advanced options. (string)
 #sout-x264-options=
@@ -1299,26 +1291,6 @@ subsdec-encoding=ISO-8859-2
 
 # Force Profile (string)
 #sout-schro-force-profile=
-
-[fluidsynth] # FluidSynth MIDI synthesizer
-
-# Sound fonts (string)
-#soundfont=
-
-# Chorus (boolean)
-#synth-chorus=1
-
-# Synthesis gain (float)
-#synth-gain=0.500000
-
-# Polyphony (integer)
-#synth-polyphony=256
-
-# Reverb (boolean)
-#synth-reverb=1
-
-# Sample rate (integer)
-#synth-sample-rate=44100
 
 [ddummy] # Dummy decoder
 
@@ -1758,14 +1730,17 @@ subsdec-encoding=ISO-8859-2
 
 [dash] # Dynamic Adaptive Streaming over HTTP
 
+# Adaptation Logic (integer)
+#dash-logic=0
+
 # Preferred Width (integer)
 #dash-prefwidth=480
 
 # Preferred Height (integer)
 #dash-prefheight=360
 
-# Buffer Size (Seconds) (integer)
-#dash-buffersize=30
+# Fixed Bandwidth in KiB/s (integer)
+#dash-prefbw=250
 
 [vdpau_chroma] # VDPAU surface conversions
 
@@ -2111,11 +2086,6 @@ subsdec-encoding=ISO-8859-2
 # Time between two alarm messages in ms (integer)
 #audiobargraph_a-repetition_time=2000
 
-[lirc] # Infrared remote control interface
-
-# Change the lirc configuration file (string)
-#lirc-file=
-
 [motion] # motion control interface
 
 [oldrc] # Remote control interface
@@ -2150,11 +2120,6 @@ subsdec-encoding=ISO-8859-2
 
 # Trigger button (string)
 #gestures-button=left
-
-[ncurses] # Ncurses interface
-
-# Filebrowser starting point (string)
-#browse-dir=
 
 [skins2] # Skinnable Interface
 
@@ -3887,7 +3852,7 @@ aout=alsa
 #deinterlace-mode=blend
 
 # Video output module (string)
-vout=any
+vout=vdpau_display
 
 # Video filter module (string)
 #video-filter=
@@ -3941,7 +3906,7 @@ vout=any
 #audio-language=
 
 # Subtitle language (string)
-#sub-language=
+sub-language=ro,en
 
 # Menu language (string)
 #menu-language=
@@ -4169,7 +4134,7 @@ vout=any
 #inhibit=1
 
 # Play files randomly forever (boolean)
-random=1
+#random=0
 
 # Repeat all (boolean)
 #loop=0

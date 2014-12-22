@@ -61,7 +61,7 @@ our $SCHEMA = [
 
     #{pipe => ["obbrowser '/media/data/Perl/Paid projects'", "Work", "stock_script"]},
     #{pipe => ["perl /media/data/MYPKGS/obbrowser/obbrowser /home/swampyx/Others/Test", "Test", "stock_script"]},
-    {pipe => ["openbox-pipefs .", "Disk", "drive-harddisk"]},
+    #{pipe => ["openbox-pipefs .", "Disk", "drive-harddisk"]},
     #{pipe => ["perl /media/data/MYPKGS/obmenu-generator/obmenu-generator -i --schema ~/.config/obmenu-generator/my_schema.pl", "All", "start-here"]},
 
     ## Generic advanced settings

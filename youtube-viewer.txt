@@ -63,3 +63,4 @@ rmusic 'http://www.youtube.com/watch?v=uNNrX3WE3W4'
 music Gop so smykom
 music Гоп-стоп
 rmusic 'http://www.youtube.com/watch?v=baYnlS1sBBw'
+music Высоцкий
