@@ -908,10 +908,10 @@ alsa-audio-device=default:CARD=PCH
 #sout-x264-stats=x264_2pass.log
 
 # Default preset setting used (string)
-#sout-x264-preset=
+sout-x264-preset=ultrafast
 
 # Default tune setting used (string)
-#sout-x264-tune=
+sout-x264-tune=film
 
 # x264 advanced options. (string)
 #sout-x264-options=
@@ -1296,6 +1296,20 @@ subsdec-encoding=ISO-8859-2
 
 # Save raw codec data (boolean)
 #dummy-save-es=0
+
+[dash] # Dynamic Adaptive Streaming over HTTP
+
+# Adaptation Logic (integer)
+#dash-logic=0
+
+# Preferred Width (integer)
+#dash-prefwidth=480
+
+# Preferred Height (integer)
+#dash-prefheight=360
+
+# Fixed Bandwidth in KiB/s (integer)
+#dash-prefbw=250
 
 [ts] # MPEG Transport Stream demuxer
 
@@ -1727,20 +1741,6 @@ subsdec-encoding=ISO-8859-2
 
 # Video output modules (string)
 #clone-vout-list=
-
-[dash] # Dynamic Adaptive Streaming over HTTP
-
-# Adaptation Logic (integer)
-#dash-logic=0
-
-# Preferred Width (integer)
-#dash-prefwidth=480
-
-# Preferred Height (integer)
-#dash-prefheight=360
-
-# Fixed Bandwidth in KiB/s (integer)
-#dash-prefbw=250
 
 [vdpau_chroma] # VDPAU surface conversions
 
@@ -3846,7 +3846,7 @@ aout=alsa
 #zoom=1.000000
 
 # Deinterlace (integer)
-#deinterlace=0
+deinterlace=-1
 
 # Deinterlace mode (string)
 #deinterlace-mode=blend
@@ -4134,7 +4134,7 @@ sub-language=ro,en
 #inhibit=1
 
 # Play files randomly forever (boolean)
-#random=0
+random=1
 
 # Repeat all (boolean)
 #loop=0

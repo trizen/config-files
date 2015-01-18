@@ -1,3 +1,75 @@
+# Path to your oh-my-zsh installation.
+ZSH=/home/swampyx/.oh-my-zsh/
+
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+ZSH_THEME="agnoster"
+
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to disable bi-weekly auto-update checks.
+#DISABLE_AUTO_UPDATE="false"
+
+# Uncomment the following line to change how often to auto-update (in days).
+#export UPDATE_ZSH_DAYS=1
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+#plugins=(cp)
+
+# User configuration
+
+#export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export MANPATH="/usr/local/man:$MANPATH"
+
+source $ZSH/oh-my-zsh.sh
+
+# You may need to manually set your language environment
+export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
+
 # Lines configured by zsh-newuser-install
 export HISTFILE=~/.histfile
 export HISTSIZE=100000
@@ -17,6 +89,11 @@ if [[ $(whoami) != "root" ]]; then
     cal
 fi
 
+function git_prompt_info() {
+  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
+  echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$ZSH_THEME_GIT_PROMPT_SUFFIX"
+}
+
 
 #-----------------------------
 # Dircolors
@@ -26,28 +103,27 @@ export LS_COLORS='rs=0:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:
 #------------------------------
 # Keybindings
 #------------------------------
-bindkey -v
-typeset -g -A key
-#bindkey '\e[3~' delete-char
-bindkey '\e[1~' beginning-of-line
-bindkey '\e[4~' end-of-line
-#bindkey '\e[2~' overwrite-mode
-bindkey '^?' backward-delete-char
-bindkey '^[[1~' beginning-of-line
-bindkey '^[[5~' up-line-or-history
-bindkey '^[[3~' delete-char
-bindkey '^[[4~' end-of-line
-bindkey '^[[6~' down-line-or-history
-bindkey '^[[A' up-line-or-search
-bindkey '^[[D' backward-char
-bindkey '^[[B' down-line-or-search
-bindkey '^[[C' forward-char
-# for rxvt
-bindkey "\e[8~" end-of-line
-bindkey "\e[7~" beginning-of-line
-# for gnome-terminal
-bindkey "\eOH" beginning-of-line
-bindkey "\eOF" end-of-line
+#~ bindkey -v
+#~ typeset -g -A key
+#~ bindkey '\e[3~' delete-char
+#~ bindkey '\e[1~' beginning-of-line
+#~ bindkey '\e[4~' end-of-line
+#~ bindkey '\e[2~' overwrite-mode
+#~ bindkey '^?' backward-delete-char
+#~ bindkey '^[[1~' beginning-of-line
+#~ bindkey '^[[5~' up-line-or-history
+#~ bindkey '^[[3~' delete-char
+#~ bindkey '^[[6~' down-line-or-history
+#~ bindkey '^[[A' up-line-or-search
+#~ bindkey '^[[D' backward-char
+#~ bindkey '^[[B' down-line-or-search
+#~ bindkey '^[[C' forward-char
+#~ # for rxvt
+#~ bindkey "\e[8~" end-of-line
+#~ bindkey "\e[7~" beginning-of-line
+#~ # for gnome-terminal
+#~ bindkey "\eOH" beginning-of-line
+#~ bindkey "\eOF" end-of-line
 
 
 #------------------------------
@@ -55,19 +131,20 @@ bindkey "\eOF" end-of-line
 #------------------------------
 zmodload zsh/complist
 autoload -Uz compinit
-compinit
-zstyle :compinstall filename '${HOME}/.zshrc'
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+#~ compinit
+#~ zstyle :compinstall filename '${HOME}/.zshrc'
 
-zstyle ':completion:*:pacman:*' force-list always
-zstyle ':completion:*:*:pacman:*' menu yes select
+#~ zstyle ':completion:*:pacman:*' force-list always
+#~ zstyle ':completion:*:*:pacman:*' menu yes select
 
-zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+#~ zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
-zstyle ':completion:*:*:kill:*' menu yes select
-zstyle ':completion:*:kill:*'   force-list always
+#~ zstyle ':completion:*:*:kill:*' menu yes select
+#~ zstyle ':completion:*:kill:*'   force-list always
 
-zstyle ':completion:*:*:killall:*' menu yes select
-zstyle ':completion:*:killall:*'   force-list always
+#~ zstyle ':completion:*:*:killall:*' menu yes select
+#~ zstyle ':completion:*:killall:*'   force-list always
 
 
 #------------------------------
@@ -90,7 +167,7 @@ export CCACHE_SLOPPINESS="include_file_mtime,time_macros,file_macro"
 #export CCACHE_DIR=/media/ccache
 export DBI_DRIVER='mysql'
 export PATH="/usr/lib/ccache:$PATH"
-export PS1="%B%n%b[%~]: "
+#export PS1="%B%n%b[%~]: "
 export PZN='/home/swampyx/Other/Programare/Personal projects'
 export SIDEF='/home/swampyx/Other/Programare/Sidef'
 export WER='/home/swampyx/Other/Programare/perl-scripts'
@@ -134,7 +211,7 @@ alias locatepm="locatepm -b"
 alias install-perl="perlbrew install -Doptimize='-march=native -Ofast' -j 2 --noman --notest --thread --multi $@"
 alias plint="perl -MO=Lint,all $@"
 alias betty="/home/swampyx/Other/Programare/betty/main.rb"
-alias roxy="$SIDEF/bin/sidef -nGMP $SIDEF/scripts/Real-world\ programs/Converter/unit_converter.sf"
+alias roxy="$SIDEF/bin/sidef -nGMP $SIDEF/scripts/Applications/unit_converter.sf"
 alias sidef="$SIDEF/bin/sidef"
 alias rusmusic="perl -MList::Util=shuffle -E 'system q{mpv}, q{--no-video}, shuffle(glob(q{~/Videos/Rusa/*}))'"
 #alias dkms_nvidia="dkms install -m nvidia -v $(perl -E'say`pacman -Qi nvidia-dkms`=~/^Version\h*:\h*([^-]+)/m') -k $@"

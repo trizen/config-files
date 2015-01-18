@@ -59,7 +59,7 @@ our $SCHEMA = [
     #{cat => ['gnome',       'GNOME Applications', 'gnome-applications']},
     #{cat => ['consoleonly', 'CLI Applications',   'applications-utilities']},
 
-    #{pipe => ["obbrowser '/media/data/Perl/Paid projects'", "Work", "stock_script"]},
+    {pipe => ["obbrowser $ENV{HOME}", "Disk", "drive-harddisk"]},
     #{pipe => ["perl /media/data/MYPKGS/obbrowser/obbrowser /home/swampyx/Others/Test", "Test", "stock_script"]},
     #{pipe => ["openbox-pipefs .", "Disk", "drive-harddisk"]},
     #{pipe => ["perl /media/data/MYPKGS/obmenu-generator/obmenu-generator -i --schema ~/.config/obmenu-generator/my_schema.pl", "All", "start-here"]},
