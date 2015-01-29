@@ -65,3 +65,5 @@ music Гоп-стоп
 rmusic 'http://www.youtube.com/watch?v=baYnlS1sBBw'
 music Высоцкий
 music Владимир Высоцкий
+rmusic 'http://www.youtube.com/watch?v=0iIQuqZ100E'
+rmusic 'http://www.youtube.com/watch?v=TXc9oNkZs7A'

@@ -15,6 +15,7 @@
 # If you want to use XFCE config tools...
 #
 obmenu-generator -i -s
+numlockx on
 setxkbmap ro &
 compton &
 conky &

@@ -3846,13 +3846,13 @@ aout=alsa
 #zoom=1.000000
 
 # Deinterlace (integer)
-deinterlace=-1
+#deinterlace=-1
 
 # Deinterlace mode (string)
 #deinterlace-mode=blend
 
 # Video output module (string)
-vout=vdpau_display
+vout=gl
 
 # Video filter module (string)
 #video-filter=

@@ -3,7 +3,7 @@
 
 include "/home/swampyx/.gtkrc-2.0.mine"
 gtk-theme-name="Albatross"
-gtk-icon-theme-name="Faenza-Darkest"
+gtk-icon-theme-name="Faenza-Radiance"
 gtk-font-name="Droid Sans 8"
 gtk-cursor-theme-name="Adwaita"
 gtk-cursor-theme-size=16
