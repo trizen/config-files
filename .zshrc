@@ -171,6 +171,7 @@ export PATH="/usr/lib/ccache:$PATH"
 export PZN='/home/swampyx/Other/Programare/Personal projects'
 export SIDEF='/home/swampyx/Other/Programare/Sidef'
 export WER='/home/swampyx/Other/Programare/perl-scripts'
+export FUN='/home/swampyx/Other/Programare/Fun scripts'
 
 #------------------------------
 # Alias stuff
@@ -218,6 +219,22 @@ alias rusmusic="perl -MList::Util=shuffle -E 'system q{mpv}, q{--no-video}, shuf
 #alias percritic='perlcritic --statistics'
 #alias mkpm='h2xs -A -a -b 5.10.1 -X --skip-exporter --skip-warnings --skip-ppport --skip-autoloader -n $@'
 #alias mkmodule='module-starter -mb --email=trizenx@gmail.com --author=Trizen $@'
+
+# Local scripts
+alias merge-images="perl $WER/Image/gd_star_trails.pl"
+alias mmerge-images="perl $WER/Image/magick_star_trails.pl"
+alias scgrep="perl $WER/Greppers/scgrep"
+alias any_to_3gp="perl $WER/Converters/any_to_3gp.pl"
+alias unidec_renamer="perl $WER/Decoders/unidec_renamer.pl"
+alias fdf="perl $WER/Finders/fdf"
+alias fsfn="perl $WER/Finders/fsfn.pl"
+alias pview="perl $WER/Visualisators/pview"
+alias disk-stats="perl $WER/Visualisators/disk-stats.pl"
+alias file-monitor="perl $WER/Monitoring/file-monitor"
+alias locatepm="perl $WER/Finders/locatepm -b"
+alias img-rewrite="perl $WER/Image/img_rewrite.pl"
+alias sany2mp3="sidef $SIDEF/scripts/Applications/sany2mp3.sf"
+alias make_filenames_safe="sidef $SIDEF/scripts/Applications/make_filenames_safe.sf"
 
 
 # Support colors in less
