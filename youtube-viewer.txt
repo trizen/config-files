@@ -67,3 +67,5 @@ music Высоцкий
 music Владимир Высоцкий
 rmusic 'http://www.youtube.com/watch?v=0iIQuqZ100E'
 rmusic 'http://www.youtube.com/watch?v=TXc9oNkZs7A'
+rmusic 'http://www.youtube.com/watch?v=HVZTl6DWAmE'
+music אידיש --category=Music

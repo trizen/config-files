@@ -231,10 +231,11 @@ alias fsfn="perl $WER/Finders/fsfn.pl"
 alias pview="perl $WER/Visualisators/pview"
 alias disk-stats="perl $WER/Visualisators/disk-stats.pl"
 alias file-monitor="perl $WER/Monitoring/file-monitor"
-alias locatepm="perl $WER/Finders/locatepm -b"
+alias locatepm="perl $WER/Finders/locatepm -i -b"
 alias img-rewrite="perl $WER/Image/img_rewrite.pl"
 alias sany2mp3="sidef $SIDEF/scripts/Applications/sany2mp3.sf"
 alias make_filenames_safe="sidef $SIDEF/scripts/Applications/make_filenames_safe.sf"
+alias wave-cmp="perl $WER/Audio/wave-cmp.pl"
 
 
 # Support colors in less

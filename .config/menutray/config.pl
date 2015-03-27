@@ -57,8 +57,8 @@
 our $CONFIG = {
   "editor"                 => "geany",
   "gdk_interpolation_type" => "hyper",
-  "icon_size"              => [16, 16],
-  "icon_type"              => "menu",
+  "icon_size"              => [32, 32],
+  "icon_type"              => "dnd",
   "Linux::DesktopFiles"    => {
                                 desktop_files_paths     => [
                                                              "/usr/share/applications",
@@ -80,5 +80,5 @@ our $CONFIG = {
   "name_keys"              => ["Name"],
   "set_tooltips"           => 1,
   "tooltip_keys"           => ["Comment"],
-  "VERSION"                => 0.42,
+  "VERSION"                => 0.43,
 }

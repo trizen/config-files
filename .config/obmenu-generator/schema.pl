@@ -31,8 +31,8 @@ our $SCHEMA = [
     #           COMMAND                   LABEL           ICON
     {item => ["pcmanfm",              'File Manager', 'file-manager']},
     {item => ["sakura",               'Terminal',     'terminal']},
-    {item => ["$editor /tmp/test.pl", "TEMP1 script", "text-x-script"]},
-    {item => ["$editor /tmp/x.pl",    "TEMP2 script", "text-x-script"]},
+    #{item => ["$editor /tmp/test.pl", "TEMP1 script", "text-x-script"]},
+    #{item => ["$editor /tmp/x.pl",    "TEMP2 script", "text-x-script"]},
     {item => ['luakit',               'Luakit',       'luakit']},
 
     #{item => ["midori", 'Midori',  'midori']},
