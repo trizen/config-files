@@ -77,8 +77,8 @@ our $CONFIG = {
   "Linux::DesktopFiles" => {
                              desktop_files_paths     => [
                                                           "/usr/share/applications",
-                                                          "$ENV{HOME}/.local/share/applications",
-                                                          "$ENV{HOME}/Desktop",
+                                                          "/home/swampyx/.local/share/applications",
+                                                          "/home/swampyx/Desktop",
                                                         ],
                              gtk_rc_filename         => "/home/swampyx/.gtkrc-2.0",
                              icon_dirs_first         => undef,
@@ -99,5 +99,5 @@ our $CONFIG = {
   "missing_icon"        => "gtk-missing-image",
   "name_keys"           => ["Name"],
   "terminal"            => "sakura",
-  "VERSION"             => 0.61,
+  "VERSION"             => 0.63,
 }

@@ -17,7 +17,7 @@
 --unpad-paren
 
 # Remove brackets from a bracketed one line conditional statements.
---remove-brackets
+#--remove-brackets
 
 # Convert tabs to the appropriate number of spaces.
 --convert-tabs
