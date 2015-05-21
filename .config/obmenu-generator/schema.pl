@@ -33,7 +33,8 @@ our $SCHEMA = [
     {item => ["sakura",               'Terminal',     'terminal']},
     #{item => ["$editor /tmp/test.pl", "TEMP1 script", "text-x-script"]},
     #{item => ["$editor /tmp/x.pl",    "TEMP2 script", "text-x-script"]},
-    {item => ['luakit',               'Luakit',       'luakit']},
+    #{item => ['luakit',               'Luakit',       'luakit']},
+    {item => ['qupzilla',               'QupZilla',       'qupzilla']},
 
     #{item => ["midori", 'Midori',  'midori']},
     #{item => ["opera-next", 'Opera',  'opera']},
