@@ -1,0 +1,15 @@
+pkgbase = alsi
+	pkgdesc = ALSI: a configurable system information tool for Arch Linux. [Inspired by Archey]
+	pkgver = 0.4.7
+	pkgrel = 1
+	url = https://github.com/trizen/alsi
+	arch = any
+	license = GPLv3
+	depends = perl>=5.14.2
+	depends = perl-data-dump
+	optdepends = scrot: for taking screenshots.
+	source = https://github.com/trizen/alsi/archive/0.4.7.tar.gz
+	md5sums = 87afdc1b0374563bab48404c5f7c55a2
+
+pkgname = alsi
+
