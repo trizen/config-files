@@ -237,6 +237,7 @@ alias sany2mp3="sidef $SIDEF/scripts/Applications/sany2mp3.sf"
 alias make_filenames_safe="sidef $SIDEF/scripts/Applications/make_filenames_safe.sf"
 alias wave-cmp="perl $WER/Audio/wave-cmp.pl"
 alias canly="perl $WER/Analyzers/perl_code_analyzer.pl"
+alias img-autocrop="perl $WER/Image/img-autocrop.pl"
 
 
 # Support colors in less

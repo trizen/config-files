@@ -61,16 +61,14 @@ our $CONFIG = {
   "icon_type"              => "dnd",
   "Linux::DesktopFiles"    => {
                                 desktop_files_paths     => [
-                                                             "/usr/share/applications",
-                                                             "/home/swampyx/.local/share/applications",
-                                                           ],
-                                keep_empty_categories   => 0,
+                                    '/usr/share/applications',
+                                    "$ENV{HOME}/.local/share/applications",
+                                    glob("$ENV{HOME}/.local/share/applications/wine/Programs/*"),
+                                ],
                                 keep_unknown_categories => 1,
                                 skip_entry              => undef,
-                                skip_filename_re        => qr/^(?:compton|exo-|xfce4-about|avahi|b(?:ssh|vnc)|dconf|ffadomixer|gconf|mplayer|pcmanfm)/,
-                                substitutions           => [
-                                                             { global => 1, key => "Exec", re => qr/\\\\/, value => "\\" },
-                                                           ],
+                                skip_filename_re        => qr/^(?:compton)/,
+                                substitutions           => undef,
                                 terminal                => "sakura",
                                 terminalization_format  => "%s -e '%s'",
                                 terminalize             => 1,

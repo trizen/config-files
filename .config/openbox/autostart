@@ -23,5 +23,6 @@ conky &
 feh --bg-scale ~/Other/wallpaper.jpg
 sakura &
 tint2 &
+transmission-gtk &
 fbrowse-tray -m dnd ~/Videos
 #menutray -i &
