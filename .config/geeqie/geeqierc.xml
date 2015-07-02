@@ -178,10 +178,10 @@
         dir_view_type = "1" 
         file_view_type = "0" 
         show_marks = "false" 
-        show_thumbnails = "false" 
+        show_thumbnails = "true" 
         show_directory_date = "false" 
         home_path = "" 
-        last_path = "/tmp" 
+        last_path = "/home/swampyx" 
         startup_path = "0" 
         exit_on_close = "false" 
 

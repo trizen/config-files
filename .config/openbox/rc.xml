@@ -200,15 +200,6 @@
   </dock>
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
-     <keybind key="C-A-space">
-        <action name="Execute">
-        <command>perl ~/.config/menutray/menu.pl -p</command>
-        <startupnotify>
-          <enabled>yes</enabled>
-          <name>Chromium</name>
-        </startupnotify>
-      </action>
-    </keybind>
     <keybind key="C-A-Left">
       <action name="GoToDesktop"/>
     </keybind>
