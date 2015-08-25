@@ -155,10 +155,11 @@ export EDITOR='joe'
 export BROWSER='chromium'
 export WEBBROWSER='chromium'
 export GOROOT=/usr/lib/go
-export GOOS=linux
+export GOOS='linux'
 export FILEMANAGER='pcmanfm'
 export GOPATH="$HOME/GO"
 export GOBIN="$HOME/GO/bin"
+export GOMAXPROCS=2
 #export GOPKGS="$HOME/GO/pkg"
 export QTDIR=/usr/include/QtCore
 #export CC="colorgcc"
@@ -214,7 +215,8 @@ alias plint="perl -MO=Lint,all $@"
 alias betty="/home/swampyx/Other/Programare/betty/main.rb"
 alias roxy="$SIDEF/bin/sidef -nGMP $SIDEF/scripts/Applications/unit_converter.sf"
 alias sidef="$SIDEF/bin/sidef"
-alias rusmusic="perl -MList::Util=shuffle -E 'system q{mpv}, q{--no-video}, shuffle(glob(q{~/Videos/Rusa/*}))'"
+alias rusmusic="perl -MList::Util=shuffle -E 'system(q{mpv}, q{--no-video}, shuffle(glob(q{~/Music/Rusa\ net/Converted/*}), glob(q{~/Music/{Altele,Rusa,Recenta\ rusa,Rusa\ Noua}/*}), glob(q{~/Music/*.{mp4,mp3,webm}})))'"
+#alias rusmusic="perl -MList::Util=shuffle -E 'system q{mpv}, q{--no-video}, shuffle(glob(q{~/Videos/Rusa/*}))'"
 #alias dkms_nvidia="dkms install -m nvidia -v $(perl -E'say`pacman -Qi nvidia-dkms`=~/^Version\h*:\h*([^-]+)/m') -k $@"
 #alias percritic='perlcritic --statistics'
 #alias mkpm='h2xs -A -a -b 5.10.1 -X --skip-exporter --skip-warnings --skip-ppport --skip-autoloader -n $@'
@@ -228,7 +230,8 @@ alias any_to_3gp="perl $WER/Converters/any_to_3gp.pl"
 alias unidec_renamer="perl $WER/Decoders/unidec_renamer.pl"
 alias fdf="perl $WER/Finders/fdf"
 alias fsfn="perl $WER/Finders/fsfn.pl"
-alias pview="perl $WER/Visualisators/pview"
+#alias pview="perl $WER/Visualisators/pview"
+alias pview="pl2term"
 alias disk-stats="perl $WER/Visualisators/disk-stats.pl"
 alias file-monitor="perl $WER/Monitoring/file-monitor"
 alias locatepm="perl $WER/Finders/locatepm -i -b"

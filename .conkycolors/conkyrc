@@ -55,7 +55,7 @@ TEXT
 #############
 # - CLOCK - #
 #############
-${voffset -10}${alignc 46}${color2}${font Arial Black:size=30}${time %H:%M}${font}${color}
+${voffset -10}${alignc}${color2}${font Arial Black:size=30}${time %H:%M}${font}${color}
 ${voffset 6}${alignc}${time %d %B %Y}${voffset -6}
 ##############
 # - SYSTEM - #

@@ -1,6 +1,6 @@
-# Write your default config options here!
-
 vo=opengl-hq,opengl,xv
 ao=alsa
 hwdec=vdpau
 sub-codepage=utf8:latin2
+slang=rom,ro,eng,en
+alang=eng,en,rom,ro

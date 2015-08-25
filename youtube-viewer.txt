@@ -71,3 +71,7 @@ rmusic 'http://www.youtube.com/watch?v=HVZTl6DWAmE'
 music אידיש --category=Music
 music ДИЛИЖАНС
 music Вилли Токарев
+music --channel UCyIGLl1aE1k1P5yY-aewYJA
+music Українські --category=10
+music Українські коломийки
+
