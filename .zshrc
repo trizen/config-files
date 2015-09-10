@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-ZSH=/home/swampyx/.oh-my-zsh/
+ZSH="/home/swampyx/.oh-my-zsh/"
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -150,6 +150,7 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 
 #------------------------------
 # Export stuff
 #------------------------------
+export XDG_CONFIG_HOME="$HOME/.config"
 export USE_CCACHE=1
 export EDITOR='joe'
 export BROWSER='chromium'
@@ -169,10 +170,11 @@ export CCACHE_SLOPPINESS="include_file_mtime,time_macros,file_macro"
 export DBI_DRIVER='mysql'
 export PATH="/usr/lib/ccache:$PATH"
 #export PS1="%B%n%b[%~]: "
-export PZN='/home/swampyx/Other/Programare/Personal projects'
-export SIDEF='/home/swampyx/Other/Programare/Sidef'
-export WER='/home/swampyx/Other/Programare/perl-scripts'
-export FUN='/home/swampyx/Other/Programare/Fun scripts'
+export PROG="$HOME/Other/Programare"
+export PZN="$PROG/Personal projects"
+export SIDEF="$PROG/Sidef"
+export WER="$PROG/perl-scripts"
+export FUN="$PROG/Fun scripts"
 
 #------------------------------
 # Alias stuff
@@ -212,7 +214,6 @@ alias url2pdf="wkhtmltopdf --use-xserver $@"
 alias locatepm="locatepm -b"
 alias install-perl="perlbrew install -Doptimize='-march=native -Ofast' -j 2 --noman --notest --thread --multi $@"
 alias plint="perl -MO=Lint,all $@"
-alias betty="/home/swampyx/Other/Programare/betty/main.rb"
 alias roxy="$SIDEF/bin/sidef -nGMP $SIDEF/scripts/Applications/unit_converter.sf"
 alias sidef="$SIDEF/bin/sidef"
 alias rusmusic="perl -MList::Util=shuffle -E 'system(q{mpv}, q{--no-video}, shuffle(glob(q{~/Music/Rusa\ net/Converted/*}), glob(q{~/Music/{Altele,Rusa,Recenta\ rusa,Rusa\ Noua}/*}), glob(q{~/Music/*.{mp4,mp3,webm}})))'"
