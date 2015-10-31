@@ -173,6 +173,7 @@ export PATH="/usr/lib/ccache:$PATH"
 export PROG="$HOME/Other/Programare"
 export PZN="$PROG/Personal projects"
 export SIDEF="$PROG/Sidef"
+export CORVINUS="$PROG/Corvinus"
 export WER="$PROG/perl-scripts"
 export FUN="$PROG/Fun scripts"
 
@@ -205,6 +206,7 @@ alias ls='ls --color=auto --human-readable --group-directories-first --classify'
 alias less='less -g -r'
 
 ## Other aliases
+alias p='perl6 --optimize=3 $@'
 alias perltidy='perltidy -l=127 -f -kbl=1 -bbb -bbc -bbs -b -ple -bt=2 -pt=2 -sbt=2 -bvt=0 -sbvt=1 -cti=1 -bar -lp -anl'
 alias music="youtube-viewer -A -n -m -s --min-seconds=60 --max-seconds=480 $@"
 alias rmusic="youtube-viewer -A -n -s --min-seconds=60 --max-seconds=480 -rv $@"
@@ -216,6 +218,8 @@ alias install-perl="perlbrew install -Doptimize='-march=native -Ofast' -j 2 --no
 alias plint="perl -MO=Lint,all $@"
 alias roxy="$SIDEF/bin/sidef -nGMP $SIDEF/scripts/Applications/unit_converter.sf"
 alias sidef="$SIDEF/bin/sidef"
+alias sf="$SIDEF/bin/sidef"
+alias corvin="$CORVINUS/bin/corvin"
 alias rusmusic="perl -MList::Util=shuffle -E 'system(q{mpv}, q{--no-video}, shuffle(glob(q{~/Music/Rusa\ net/Converted/*}), glob(q{~/Music/{Altele,Rusa,Recenta\ rusa,Rusa\ Noua}/*}), glob(q{~/Music/*.{mp4,mp3,webm}})))'"
 #alias rusmusic="perl -MList::Util=shuffle -E 'system q{mpv}, q{--no-video}, shuffle(glob(q{~/Videos/Rusa/*}))'"
 #alias dkms_nvidia="dkms install -m nvidia -v $(perl -E'say`pacman -Qi nvidia-dkms`=~/^Version\h*:\h*([^-]+)/m') -k $@"
@@ -226,6 +230,9 @@ alias rusmusic="perl -MList::Util=shuffle -E 'system(q{mpv}, q{--no-video}, shuf
 # Local scripts
 alias merge-images="perl $WER/Image/gd_star_trails.pl"
 alias mmerge-images="perl $WER/Image/magick_star_trails.pl"
+alias similar-imgs="perl $WER/Image/gd_similar_images.pl"
+alias img2html="perl $WER/Image/img2html.pl"
+alias img2ascii="perl $WER/Image/img2ascii.pl"
 alias scgrep="perl $WER/Greppers/scgrep"
 alias any_to_3gp="perl $WER/Converters/any_to_3gp.pl"
 alias unidec_renamer="perl $WER/Decoders/unidec_renamer.pl"
