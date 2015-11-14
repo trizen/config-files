@@ -181,11 +181,11 @@
         startup_path = "0" 
         exit_on_close = "false" 
 
-        main_window.x = "110" 
-        main_window.y = "43" 
+        main_window.x = "660" 
+        main_window.y = "32" 
         main_window.w = "1061" 
         main_window.h = "1018" 
-        main_window.maximized = "true" 
+        main_window.maximized = "false" 
         main_window.hdivider_pos = "200" 
         main_window.vdivider_pos = "200" 
 

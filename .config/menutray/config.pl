@@ -57,17 +57,21 @@
 our $CONFIG = {
   "editor"                 => "geany",
   "gdk_interpolation_type" => "hyper",
-  "icon_size"              => [32, 32],
-  "icon_type"              => "dnd",
+  "icon_size"              => [24, 24],
+  "icon_type"              => "large-toolbar",
   "Linux::DesktopFiles"    => {
                                 desktop_files_paths     => [
-                                    '/usr/share/applications',
-                                    "$ENV{HOME}/.local/share/applications",
-                                    glob("$ENV{HOME}/.local/share/applications/wine/Programs/*"),
-                                ],
+                                                             "/usr/share/applications",
+                                                             "/home/swampyx/.local/share/applications",
+                                                           ],
                                 keep_unknown_categories => 1,
-                                skip_entry              => undef,
-                                skip_filename_re        => qr/^(?:compton)/,
+                                skip_entry              => [
+                                                             {
+                                                               key => "Name",
+                                                               re  => qr/^(?:Avahi|Qt4?\b|Hardware Locality|File Manager|HDSP)/,
+                                                             },
+                                                           ],
+                                skip_filename_re        => qr/^(?:compton|avahi|u?xterm|sakura)/,
                                 substitutions           => undef,
                                 terminal                => "sakura",
                                 terminalization_format  => "%s -e '%s'",

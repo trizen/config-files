@@ -85,7 +85,12 @@ our $CONFIG = {
                              icon_dirs_last          => undef,
                              icon_dirs_second        => undef,
                              keep_unknown_categories => 1,
-                             skip_entry              => undef,
+                             skip_entry              => [
+                                                          {
+                                                            key => "Name",
+                                                            re  => qr/^(?:Avahi|Qt4?\b|Hardware Locality|File Manager|HDSP)/,
+                                                          },
+                                                        ],
                              skip_filename_re        => qr/^(?:exo-|xfce4-about|Terminal|avahi|b(?:ssh|vnc)|dconf|ffadomixer|gconf|mplayer|sakura|compton)/,
                              skip_svg_icons          => 0,
                              strict_icon_dirs        => undef,
