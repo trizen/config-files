@@ -83,7 +83,7 @@ our $CONFIG = {
                              gtk_rc_filename         => "/home/swampyx/.gtkrc-2.0",
                              icon_dirs_first         => undef,
                              icon_dirs_last          => undef,
-                             icon_dirs_second        => undef,
+                             icon_dirs_second        => ["/usr/share/icons/Faenza"],
                              keep_unknown_categories => 1,
                              skip_entry              => [
                                                           {

@@ -80,6 +80,9 @@ setopt hist_ignore_all_dups
 setopt autocd
 #setopt correctall
 
+export CFLAGS="-march=native -O3 -pipe -fstack-protector-strong --param=ssp-buffer-size=4"
+export CXXFLAGS="-march=native -O3 -pipe -fstack-protector-strong --param=ssp-buffer-size=4"
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -168,11 +171,12 @@ export CCACHE_PATH="/usr/bin"
 export CCACHE_SLOPPINESS="include_file_mtime,time_macros,file_macro"
 #export CCACHE_DIR=/media/ccache
 export DBI_DRIVER='mysql'
-export PATH="/usr/lib/ccache:$PATH"
+export PATH="/usr/lib/ccache/bin:$PATH:/home/swampyx/.gem/ruby/2.2.0/bin:/usr/share/perl6/vendor/bin"
 #export PS1="%B%n%b[%~]: "
 export PROG="$HOME/Other/Programare"
 export PZN="$PROG/Personal projects"
 export SIDEF="$PROG/Sidef"
+export JOHANA="$PROG/Johana"
 export CORVINUS="$PROG/corvinus2"
 export WER="$PROG/perl-scripts"
 export FUN="$PROG/Fun scripts"
@@ -214,10 +218,12 @@ alias yv="youtube-viewer"
 alias inxi="inxi -F -x -f -o -p"
 alias url2pdf="wkhtmltopdf --use-xserver $@"
 alias locatepm="locatepm -b"
-alias install-perl="perlbrew install -Doptimize='-march=native -Ofast' -j 2 --noman --notest --thread --multi $@"
+alias install-perl="perlbrew install -Doptimize='-march=native -Ofast -pipe' -j 2 --noman --notest --thread --multi $@"
 alias plint="perl -MO=Lint,all $@"
-alias roxy="$SIDEF/bin/sidef $SIDEF/scripts/Applications/smart-units.sf"
+alias roxy="$SIDEF/bin/sidef /home/swampyx/Other/Programare/MYPKGS/smart-units/smart-units.sf"
 alias sidef="$SIDEF/bin/sidef"
+alias johana="$JOHANA/bin/johana"
+alias jh="$JOHANA/bin/johana"
 alias sf="$SIDEF/bin/sidef"
 alias corvin="$CORVINUS/bin/corvin"
 alias rusmusic="perl -MList::Util=shuffle -E 'system(q{mpv}, q{--no-video}, shuffle(glob(q{~/Music/Rusa\ net/Converted/*}), glob(q{~/Music/{Altele,Rusa,Recenta\ rusa,Rusa\ Noua}/*}), glob(q{~/Music/*.{mp4,mp3,webm}})))'"

@@ -25,7 +25,7 @@
 
 
 || ICON SETTINGS
-    | icon_type           : Menu icon type (menu, small-toolbar, large-toolbar, button, dialog)
+    | icon_type           : Menu icon type (menu, dnd, small-toolbar, large-toolbar, button, dialog)
     | icon_size           : Icon size in pixels (only for absolute icon paths) (default: [16, 16])
     | missing_image       : Use this icon for missing icons (default: gtk-missing-image)
 
@@ -82,5 +82,5 @@ our $CONFIG = {
   "name_keys"              => ["Name"],
   "set_tooltips"           => 1,
   "tooltip_keys"           => ["Comment"],
-  "VERSION"                => 0.43,
+  "VERSION"                => 0.44,
 }

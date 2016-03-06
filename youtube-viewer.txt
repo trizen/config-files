@@ -79,4 +79,16 @@ rmusic 'http://www.youtube.com/watch?v=PGRt7Fq86_4'
 music --channel=UC6IFLr1Onl0gBA8AE_SZ-TQ
 music ПРИСПІВКИ
 music свадебные
-music Бабушка здорова	# babushka starova
+music Бабушка здорова   # babushka starova
+music Новогодние частушки  # christmas chestuski
+music --channel 'UCHv6xIw1XP5InXo92LWRHew'      # russian music
+music Dark cabaret
+music Voltaire --category=10
+music Parno Graszt
+yv --channel 'UC6IFLr1Onl0gBA8AE_SZ-TQ' -A -n   # Семен Жоров
+music --channel 'UC5e_dZEHgy--DyF5QUxpZVA'      # Ukrainian songs
+music --pid=PL7ampTUhoS4ZT7JNBdHiVqS4eHPn4a_D5  # wedding Ukrainian songs
+rmusic 'https://www.youtube.com/watch?v=SFoy_7FlRoI'  # Алексей Московский-Мăшăр çунат
+rmusic 'http://www.youtube.com/watch?v=sNBzlsqLbiU'
+music Группировка Ленинград
+music Українські Частушки
