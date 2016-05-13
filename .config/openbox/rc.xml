@@ -277,10 +277,10 @@
     </keybind>
     <keybind key="A-g">
       <action name="Execute">
-        <command>chromium</command>
+        <command>google-chrome</command>
         <startupnotify>
           <enabled>yes</enabled>
-          <name>Chromium</name>
+          <name>Google Chrome</name>
         </startupnotify>
       </action>
     </keybind>

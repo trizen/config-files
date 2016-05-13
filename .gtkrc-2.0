@@ -2,7 +2,7 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 include "/home/swampyx/.gtkrc-2.0.mine"
-gtk-theme-name="Albatross"
+gtk-theme-name="Vertex-Light"
 gtk-icon-theme-name="Numix"
 gtk-font-name="Droid Sans 8"
 gtk-cursor-theme-name="Adwaita"
@@ -15,5 +15,5 @@ gtk-enable-event-sounds=0
 gtk-enable-input-feedback-sounds=0
 gtk-xft-antialias=1
 gtk-xft-hinting=1
-gtk-xft-hintstyle="hintfull"
+gtk-xft-hintstyle="hintmedium"
 gtk-xft-rgba="none"

@@ -29,11 +29,10 @@ my $editor = $CONFIG->{editor};
 our $SCHEMA = [
 
     #           COMMAND                   LABEL           ICON
-    {item => ["pcmanfm",              'File Manager', 'file-manager']},
-    {item => ["sakura",               'Terminal',     'terminal']},
-    #{item => ["$editor /tmp/test.pl", "TEMP1 script", "text-x-script"]},
-    #{item => ["$editor /tmp/x.pl",    "TEMP2 script", "text-x-script"]},
-    {item => ['luakit',               'Luakit',       'luakit']},
+    {item => ["pcmanfm", 'File Manager', 'file-manager']},
+    {item => ["sakura",  'Terminal',     'terminal']},
+    {item => ['luakit',  'Luakit',       'luakit']},
+
     #{item => ['vivaldi-preview',               'Vivaldi',       'vivaldi']},
 
     #{item => ["midori", 'Midori',  'midori']},
@@ -61,9 +60,10 @@ our $SCHEMA = [
     #{cat => ['consoleonly', 'CLI Applications',   'applications-utilities']},
 
     {pipe => ["obbrowser $ENV{HOME}", "Disk", "drive-harddisk"]},
-    #{pipe => ["perl /media/data/MYPKGS/obbrowser/obbrowser /home/swampyx/Others/Test", "Test", "stock_script"]},
-    #{pipe => ["openbox-pipefs .", "Disk", "drive-harddisk"]},
-    #{pipe => ["perl /media/data/MYPKGS/obmenu-generator/obmenu-generator -i --schema ~/.config/obmenu-generator/my_schema.pl", "All", "start-here"]},
+
+#{pipe => ["perl /media/data/MYPKGS/obbrowser/obbrowser /home/swampyx/Others/Test", "Test", "stock_script"]},
+#{pipe => ["openbox-pipefs .", "Disk", "drive-harddisk"]},
+#{pipe => ["perl /media/data/MYPKGS/obmenu-generator/obmenu-generator -i --schema ~/.config/obmenu-generator/my_schema.pl", "All", "start-here"]},
 
     ## Generic advanced settings
     #{sep       => undef},
@@ -71,38 +71,38 @@ our $SCHEMA = [
     #{sep       => undef},
 
     ## Custom advanced settings
-    {sep => undef},
+    {sep       => undef},
     {begin_cat => ['Advanced Settings', 'gnome-settings']},
 
-        # Configuration files
-        {item => ["$editor ~/.conkyrc",              'Conky RC',    'text-x-source']},
-        {item => ["$editor ~/.config/tint2/tint2rc", 'Tint2 Panel', 'text-x-source']},
+    # Configuration files
+    {item => ["$editor ~/.conkyrc",              'Conky RC',    'text-x-source']},
+    {item => ["$editor ~/.config/tint2/tint2rc", 'Tint2 Panel', 'text-x-source']},
 
-        # obmenu-generator category
-        {begin_cat => ['Obmenu-Generator', 'menu-editor']},
-            {item => ["$editor ~/.config/obmenu-generator/schema.pl", 'Menu Schema', 'text-x-source']},
-            {item => ["$editor ~/.config/obmenu-generator/config.pl", 'Menu Config', 'text-x-source']},
+    # obmenu-generator category
+    {begin_cat => ['Obmenu-Generator',                             'menu-editor']},
+    {item      => ["$editor ~/.config/obmenu-generator/schema.pl", 'Menu Schema', 'text-x-source']},
+    {item      => ["$editor ~/.config/obmenu-generator/config.pl", 'Menu Config', 'text-x-source']},
 
-            {sep  => undef},
-            {item => ["$0 -p",       'Generate a pipe menu',              'menu-editor']},
-            {item => ["$0 -s -c",    'Generate a static menu',            'menu-editor']},
-            {item => ["$0 -p -i",    'Generate a pipe menu with icons',   'menu-editor']},
-            {item => ["$0 -s -i -c", 'Generate a static menu with icons', 'menu-editor']},
-            {sep  => undef},
+    {sep  => undef},
+    {item => ["$0 -p", 'Generate a pipe menu', 'menu-editor']},
+    {item => ["$0 -s -c", 'Generate a static menu', 'menu-editor']},
+    {item => ["$0 -p -i", 'Generate a pipe menu with icons', 'menu-editor']},
+    {item => ["$0 -s -i -c", 'Generate a static menu with icons', 'menu-editor']},
+    {sep  => undef},
 
-            {item    => ['obmenu-generator -d', 'Refresh Icon Set', 'gtk-refresh']},
-        {end_cat => undef},
+    {item    => ['obmenu-generator -d', 'Refresh Icon Set', 'gtk-refresh']},
+    {end_cat => undef},
 
-        # Openbox category
-        {begin_cat => ['Openbox', 'openbox']},
-            {item      => ['openbox --reconfigure',               'Reconfigure Openbox', 'openbox']},
-            {item => ["$editor ~/.config/openbox/autostart", 'Openbox Autostart',   'shellscript']},
-            {item => ["$editor ~/.config/openbox/rc.xml",    'Openbox RC',          'text-xml']},
-            {item => ["$editor ~/.config/openbox/menu.xml",  'Openbox Menu',        'text-xml']},
-        {end_cat => undef},
+    # Openbox category
+    {begin_cat => ['Openbox',                             'openbox']},
+    {item      => ['openbox --reconfigure',               'Reconfigure Openbox', 'openbox']},
+    {item      => ["$editor ~/.config/openbox/autostart", 'Openbox Autostart', 'shellscript']},
+    {item      => ["$editor ~/.config/openbox/rc.xml",    'Openbox RC', 'text-xml']},
+    {item      => ["$editor ~/.config/openbox/menu.xml",  'Openbox Menu', 'text-xml']},
+    {end_cat => undef},
 
     {end_cat => undef},
-    {sep => undef},
+    {sep     => undef},
 
     ## The xscreensaver lock command
     #{item => ['xscreensaver-command -lock', 'Lock', 'lock']},

@@ -156,8 +156,8 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 
 export XDG_CONFIG_HOME="$HOME/.config"
 export USE_CCACHE=1
 export EDITOR='joe'
-export BROWSER='chromium'
-export WEBBROWSER='chromium'
+export BROWSER='google-chrome'
+export WEBBROWSER='google-chrome'
 export GOROOT=/usr/lib/go
 export GOOS='linux'
 export FILEMANAGER='pcmanfm'
@@ -213,6 +213,7 @@ alias less='less -g -r'
 alias p='perl6 --optimize=3 $@'
 alias perltidy='perltidy -l=127 -f -kbl=1 -bbb -bbc -bbs -b -ple -bt=2 -pt=2 -sbt=2 -bvt=0 -sbvt=1 -cti=1 -bar -lp -anl'
 alias music="youtube-viewer -A -n -m -s --min-seconds=60 --max-seconds=480 $@"
+alias favmusic="youtube-viewer -F -m -n --std-input=:anp\ :re=\\\\p{cyrillic} --page \$1"
 alias rmusic="youtube-viewer -A -n -s --min-seconds=60 --max-seconds=480 -rv $@"
 alias yv="youtube-viewer"
 alias inxi="inxi -F -x -f -o -p"

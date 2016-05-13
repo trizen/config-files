@@ -92,3 +92,12 @@ rmusic 'https://www.youtube.com/watch?v=SFoy_7FlRoI'  # Алексей Моск�
 rmusic 'http://www.youtube.com/watch?v=sNBzlsqLbiU'
 music Группировка Ленинград
 music Українські Частушки
+rmusic 'https://www.youtube.com/watch?v=hvUKRr3NjaA'
+music Українські весільні пісні
+rmusic 'https://www.youtube.com/watch?v=OlTjRonyBDU'
+rmusic 'http://www.youtube.com/watch?v=xE9l6JrnJKE'
+music Коломийки
+music Феликс Шиндер
+yv -cv UC5VgYSXcFCDHCOEkW0N4Cpw -m -A -n -s
+music А.Заборский
+rmusic 'https://www.youtube.com/watch?v=wZITpta0ysU'

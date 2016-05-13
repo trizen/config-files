@@ -104,5 +104,5 @@ our $CONFIG = {
   "missing_icon"        => "gtk-missing-image",
   "name_keys"           => ["Name"],
   "terminal"            => "sakura",
-  "VERSION"             => 0.66,
+  "VERSION"             => 0.67,
 }

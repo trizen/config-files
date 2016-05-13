@@ -78,9 +78,10 @@ our $CONFIG = {
                                 terminalize             => 1,
                                 unknown_category_key    => "other",
                               },
+  "menutray_icon"          => "start-here",
   "missing_image"          => "gtk-missing-image",
   "name_keys"              => ["Name"],
   "set_tooltips"           => 1,
   "tooltip_keys"           => ["Comment"],
-  "VERSION"                => 0.44,
+  "VERSION"                => 0.45,
 }
