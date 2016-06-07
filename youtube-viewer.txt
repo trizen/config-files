@@ -101,3 +101,11 @@ music Феликс Шиндер
 yv -cv UC5VgYSXcFCDHCOEkW0N4Cpw -m -A -n -s
 music А.Заборский
 rmusic 'https://www.youtube.com/watch?v=wZITpta0ysU'
+music Johannes Brahms
+music Johann Strauss II
+yv -cv UC2VaeFox41ANW6vu_Ab0rfw -m -A -n -s
+music коломийки на весіллі
+rmusic 'https://www.youtube.com/watch?v=cPt8uPLIdHw'
+music Народний фолькльор
+music Весілля Турка-Львів
+rmusic 'https://www.youtube.com/watch?v=7LUm-E4GPU8'

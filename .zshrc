@@ -171,7 +171,7 @@ export CCACHE_PATH="/usr/bin"
 export CCACHE_SLOPPINESS="include_file_mtime,time_macros,file_macro"
 #export CCACHE_DIR=/media/ccache
 export DBI_DRIVER='mysql'
-export PATH="/usr/lib/ccache/bin:$PATH:/home/swampyx/.gem/ruby/2.2.0/bin:/usr/share/perl6/vendor/bin"
+export PATH="/usr/lib/ccache/bin:$PATH:/usr/share/perl6/vendor/bin"
 #export PS1="%B%n%b[%~]: "
 export PROG="$HOME/Other/Programare"
 export PZN="$PROG/Personal projects"
@@ -210,7 +210,7 @@ alias ls='ls --color=auto --human-readable --group-directories-first --classify'
 alias less='less -g -r'
 
 ## Other aliases
-alias p='perl6 --optimize=3 $@'
+alias p='rlwrap perl6 --optimize=3 $@'
 alias perltidy='perltidy -l=127 -f -kbl=1 -bbb -bbc -bbs -b -ple -bt=2 -pt=2 -sbt=2 -bvt=0 -sbvt=1 -cti=1 -bar -lp -anl'
 alias music="youtube-viewer -A -n -m -s --min-seconds=60 --max-seconds=480 $@"
 alias favmusic="youtube-viewer -F -m -n --std-input=:anp\ :re=\\\\p{cyrillic} --page \$1"
@@ -221,13 +221,14 @@ alias url2pdf="wkhtmltopdf --use-xserver $@"
 alias locatepm="locatepm -b"
 alias install-perl="perlbrew install -Doptimize='-march=native -Ofast -pipe' -j 2 --noman --notest --thread --multi $@"
 alias plint="perl -MO=Lint,all $@"
-alias roxy="$SIDEF/bin/sidef /home/swampyx/Other/Programare/MYPKGS/smart-units/smart-units.sf"
+alias roxy="rlwrap $SIDEF/bin/sidef /home/swampyx/Other/Programare/MYPKGS/smart-units/smart-units.sf"
 alias sidef="$SIDEF/bin/sidef"
 alias johana="$JOHANA/bin/johana"
 alias jh="$JOHANA/bin/johana"
 alias sf="$SIDEF/bin/sidef"
 alias corvin="$CORVINUS/bin/corvin"
 alias rusmusic="perl -MList::Util=shuffle -E 'system(q{mpv}, q{--no-video}, shuffle(glob(q{~/Music/Rusa\ net/Converted/*}), glob(q{~/Music/{Altele,Rusa,Recenta\ rusa,Rusa\ Noua}/*}), glob(q{~/Music/*.{mp4,mp3,webm}})))'"
+alias dirmusic="perl -E 'for(glob(\"\*\")){push@songs,\$_ if -f\$_;}system(qw(mpv --shuffle --no-video),@songs)'"
 #alias rusmusic="perl -MList::Util=shuffle -E 'system q{mpv}, q{--no-video}, shuffle(glob(q{~/Videos/Rusa/*}))'"
 #alias dkms_nvidia="dkms install -m nvidia -v $(perl -E'say`pacman -Qi nvidia-dkms`=~/^Version\h*:\h*([^-]+)/m') -k $@"
 #alias percritic='perlcritic --statistics'
