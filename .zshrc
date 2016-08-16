@@ -177,6 +177,7 @@ export PROG="$HOME/Other/Programare"
 export PZN="$PROG/Personal projects"
 export SIDEF="$PROG/Sidef"
 export JOHANA="$PROG/Johana"
+export VEGA="$PROG/Vega"
 export CORVINUS="$PROG/corvinus2"
 export WER="$PROG/perl-scripts"
 export FUN="$PROG/Fun scripts"
@@ -212,9 +213,9 @@ alias less='less -g -r'
 ## Other aliases
 alias p='rlwrap perl6 --optimize=3 $@'
 alias perltidy='perltidy -l=127 -f -kbl=1 -bbb -bbc -bbs -b -ple -bt=2 -pt=2 -sbt=2 -bvt=0 -sbvt=1 -cti=1 -bar -lp -anl'
-alias music="youtube-viewer -A -n -m -s --min-seconds=60 --max-seconds=480 $@"
+alias music="youtube-viewer -A -n -m -s --player=mplayer_audio --min-seconds=60 --max-seconds=480 $@"
 alias favmusic="youtube-viewer -F -m -n --std-input=:anp\ :re=\\\\p{cyrillic} --page \$1"
-alias rmusic="youtube-viewer -A -n -s --min-seconds=60 --max-seconds=480 -rv $@"
+alias rmusic="youtube-viewer -A -n -s --player=mplayer_audio --min-seconds=60 --max-seconds=480 -rv $@"
 alias yv="youtube-viewer"
 alias inxi="inxi -F -x -f -o -p"
 alias url2pdf="wkhtmltopdf --use-xserver $@"
@@ -223,6 +224,7 @@ alias install-perl="perlbrew install -Doptimize='-march=native -Ofast -pipe' -j 
 alias plint="perl -MO=Lint,all $@"
 alias roxy="rlwrap $SIDEF/bin/sidef /home/swampyx/Other/Programare/MYPKGS/smart-units/smart-units.sf"
 alias sidef="$SIDEF/bin/sidef"
+alias vega="$VEGA/bin/vega"
 alias johana="$JOHANA/bin/johana"
 alias jh="$JOHANA/bin/johana"
 alias sf="$SIDEF/bin/sidef"

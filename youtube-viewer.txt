@@ -109,3 +109,15 @@ rmusic 'https://www.youtube.com/watch?v=cPt8uPLIdHw'
 music Народний фолькльор
 music Весілля Турка-Львів
 rmusic 'https://www.youtube.com/watch?v=7LUm-E4GPU8'
+music SEX У НАШОМУ СЕЛ
+rmusic 'http://www.youtube.com/watch?v=VnkmyIBLJv4'
+rmusic 'https://www.youtube.com/watch?v=4JzkdMoxruY'
+music simcha --category=10
+rmusic 'https://www.youtube.com/watch?v=StZvlNEs42M'
+music Тимур Шаов
+rmusic 'https://www.youtube.com/watch?v=o7rV_PmxMsU'
+rmusic 'http://www.youtube.com/watch?v=dnlhxThebQo'
+music DI MEZINKE OYSGEGEBN
+yv -cp 'UCe3tPdpxTF7wdBG8uV4hbew'	# DNewsPlus
+music свадьба аккордеонист
+music коломийки свадьба

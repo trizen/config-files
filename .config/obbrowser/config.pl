@@ -46,7 +46,7 @@ our $CONFIG = {
                                          icon_dirs_last  => undef,
                                          skip_svg_icons  => 0,
                                         },
-               "mime_ext_only" => 1,
+               "mime_ext_only" => 0,
                "start_path"    => "/home/swampyx",
                "VERSION"       => 0.06,
                "with_icons"    => 1,
