@@ -35,7 +35,7 @@ my $b = "\b\b\b\b";
  {GTK2_ICON_THEME => $b . '%11sIcon:%s %s'},           # Gtk2 icon theme
  {GTK2_FONT_NAME  => $b . '%11sFont:%s %s'},           # Gtk2 font name
 
- {CPU  => $b . "%12sCPU:%s Intel(R) Celeron(R) CPU G1820\n"},    # CPU name
+ {OTHER  => $b . "%12sCPU:%s Intel(R) Celeron(R) CPU G1820\n"},    # CPU name
  {SWAP => $b . '%11sSWAP:%s %s'},                             # SWAP usage
  {RAM  => $b . '%12sRAM:%s %s'},                              # RAM usage
 

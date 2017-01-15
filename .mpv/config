@@ -1,4 +1,4 @@
-vo=opengl-hq,opengl,xv
+profile=opengl-hq
 ao=alsa
 hwdec=vdpau
 sub-codepage=utf8:latin2

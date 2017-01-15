@@ -31,7 +31,7 @@ our $SCHEMA = [
     #           COMMAND                   LABEL           ICON
     {item => ["pcmanfm", 'File Manager', 'file-manager']},
     {item => ["sakura",  'Terminal',     'terminal']},
-    {item => ['luakit',  'Luakit',       'luakit']},
+    {item => ['chromium',  'Chromium',       'chromium']},
 
     #{item => ['vivaldi-preview',               'Vivaldi',       'vivaldi']},
 

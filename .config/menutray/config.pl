@@ -1,12 +1,13 @@
 #!/usr/bin/perl
 
 # menutray - configuration file
-# This file will be updated automatically every time when is needed.
+# This file will be updated automatically.
 # Any additional comment and/or indentation will be lost.
 
 =for comment
 
 || FILTERING
+
     | skip_filename_re    : Skip a .desktop file if its name matches the regex.
                             Name is from the last slash to the end. (filename.desktop)
                             Example: qr/^(?:gimp|xterm)\b/,    # skips 'gimp' and 'xterm'
@@ -25,12 +26,14 @@
 
 
 || ICON SETTINGS
+
     | icon_type           : Menu icon type (menu, dnd, small-toolbar, large-toolbar, button, dialog)
     | icon_size           : Icon size in pixels (only for absolute icon paths) (default: [16, 16])
     | missing_image       : Use this icon for missing icons (default: gtk-missing-image)
 
 
 || KEYS
+
     | tooltip_keys        : Valid keys for the tooltip text.
                             Example: ['Comment[es]', 'Comment'],
 
@@ -39,7 +42,8 @@
 
 
 || PATHS
-    | desktop_files_paths   : Absolute paths which contains .desktop files.
+
+    | desktop_files_paths   : Absolute paths which contain .desktop files.
                               Example: [
                                 '/usr/share/applications',
                                 "$ENV{HOME}/.local/share/applications",
@@ -48,9 +52,10 @@
 
 
 || NOTES
+
     | Regular expressions:
         * use qr/RE/ instead of 'RE'
-        * use qr/RE/i for case insenstive mode
+        * use qr/RE/i for case insensitive mode
 
 =cut
 
@@ -63,6 +68,7 @@ our $CONFIG = {
                                 desktop_files_paths     => [
                                                              "/usr/share/applications",
                                                              "/home/swampyx/.local/share/applications",
+                                                             "/home/swampyx/Desktop",
                                                            ],
                                 keep_unknown_categories => 1,
                                 skip_entry              => [
@@ -72,7 +78,9 @@ our $CONFIG = {
                                                              },
                                                            ],
                                 skip_filename_re        => qr/^(?:compton|avahi|u?xterm|sakura)/,
-                                substitutions           => undef,
+                                substitutions           => [
+                                                             { global => 1, key => "Exec", re => qr/\\\\/, value => "\\" },
+                                                           ],
                                 terminal                => "sakura",
                                 terminalization_format  => "%s -e '%s'",
                                 terminalize             => 1,
@@ -83,5 +91,5 @@ our $CONFIG = {
   "name_keys"              => ["Name"],
   "set_tooltips"           => 1,
   "tooltip_keys"           => ["Comment"],
-  "VERSION"                => 0.45,
+  "VERSION"                => 0.47,
 }

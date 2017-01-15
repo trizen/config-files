@@ -32,7 +32,7 @@ our $SCHEMA = [
     {item => ['pcmanfm',            'File Manager',       'fileopen']},
     #{item => ["$editor /tmp/x.go",  'Test Script',         'text-x-script']},
     #{item => ['vivaldi-preview',             'Vivaldi',             'vivaldi']},
-    {item => ['luakit',             'Luakit Browser',             'luakit']},
+    #{item => ['luakit',             'Luakit Browser',             'luakit']},
     {item => ["gtk-youtube-viewer", "GTK Youtube Viewer", 'gtk-youtube-viewer']},
 
     {sep => undef},

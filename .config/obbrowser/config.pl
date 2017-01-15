@@ -37,17 +37,17 @@
 =cut
 
 our $CONFIG = {
-               "browse_label"        => "Browse here...",
-               "dirs_first"          => 0,
-               "file_manager"        => "pcmanfm",
-               "Linux::DesktopFiles" => {
-                                         gtk_rc_filename => "/home/swampyx/.gtkrc-2.0",
-                                         icon_dirs_first => undef,
-                                         icon_dirs_last  => undef,
-                                         skip_svg_icons  => 0,
-                                        },
-               "mime_ext_only" => 0,
-               "start_path"    => "/home/swampyx",
-               "VERSION"       => 0.06,
-               "with_icons"    => 1,
-              }
+  "browse_label"        => "Browse here...",
+  "dirs_first"          => 0,
+  "file_manager"        => "pcmanfm",
+  "Linux::DesktopFiles" => {
+                             gtk_rc_filename => "/home/swampyx/.gtkrc-2.0",
+                             icon_dirs_first => undef,
+                             icon_dirs_last  => undef,
+                             skip_svg_icons  => 0,
+                           },
+  "mime_ext_only"       => 1,
+  "start_path"          => "/home/swampyx",
+  "VERSION"             => 0.06,
+  "with_icons"          => 1,
+}

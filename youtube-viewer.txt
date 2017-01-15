@@ -118,6 +118,18 @@ music Тимур Шаов
 rmusic 'https://www.youtube.com/watch?v=o7rV_PmxMsU'
 rmusic 'http://www.youtube.com/watch?v=dnlhxThebQo'
 music DI MEZINKE OYSGEGEBN
-yv -cp 'UCe3tPdpxTF7wdBG8uV4hbew'	# DNewsPlus
+yv -cp 'UCe3tPdpxTF7wdBG8uV4hbew' -m	# DNewsPlus
 music свадьба аккордеонист
 music коломийки свадьба
+rmusic 'https://www.youtube.com/watch?v=GGBrOKwSFfE'
+yv -up=crashcourse -m
+yv -pp='PLiZRy8ycBJTdu6S9Ovh6EFdSoxE0JwpBT' -s -n -m
+music Townes Van Zandt
+music 'w&w'
+rmusic 'http://www.youtube.com/watch?v=nZSy2DKSstQ'
+music Slaid Cleaves
+rmusic 'https://www.youtube.com/watch?v=7jZDCUaiTlQ'
+music ThouShaltNot
+music Tim Minchin
+rmusic 'http://www.youtube.com/watch?v=OtuDUFyqpME'
+rmusic 'https://www.youtube.com/watch?v=vY7ZLbvZ0_0'

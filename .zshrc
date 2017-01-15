@@ -213,9 +213,9 @@ alias less='less -g -r'
 ## Other aliases
 alias p='rlwrap perl6 --optimize=3 $@'
 alias perltidy='perltidy -l=127 -f -kbl=1 -bbb -bbc -bbs -b -ple -bt=2 -pt=2 -sbt=2 -bvt=0 -sbvt=1 -cti=1 -bar -lp -anl'
-alias music="youtube-viewer -A -n -m -s --player=mplayer_audio --min-seconds=60 --max-seconds=480 $@"
+alias music="youtube-viewer -A -n -m -s --min-seconds=60 --max-seconds=480 $@"
 alias favmusic="youtube-viewer -F -m -n --std-input=:anp\ :re=\\\\p{cyrillic} --page \$1"
-alias rmusic="youtube-viewer -A -n -s --player=mplayer_audio --min-seconds=60 --max-seconds=480 -rv $@"
+alias rmusic="youtube-viewer -A -n -s --min-seconds=60 --max-seconds=480 -rv $@"
 alias yv="youtube-viewer"
 alias inxi="inxi -F -x -f -o -p"
 alias url2pdf="wkhtmltopdf --use-xserver $@"
@@ -259,6 +259,7 @@ alias make_filenames_safe="sidef $SIDEF/scripts/Applications/make_filenames_safe
 alias wave-cmp="perl $WER/Audio/wave-cmp.pl"
 alias canly="perl $WER/Analyzers/perl_code_analyzer.pl"
 alias img-autocrop="perl $WER/Image/img-autocrop.pl"
+alias yafu="rlwrap yafu $@"
 
 
 # Support colors in less
