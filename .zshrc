@@ -11,7 +11,7 @@ ZSH_THEME="agnoster"
 # CASE_SENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-#DISABLE_AUTO_UPDATE="false"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
 #export UPDATE_ZSH_DAYS=1
@@ -45,7 +45,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-#plugins=(cp)
+#plugins=(git)
 
 # User configuration
 
@@ -215,7 +215,7 @@ alias p='rlwrap perl6 --optimize=3 $@'
 alias perltidy='perltidy -l=127 -f -kbl=1 -bbb -bbc -bbs -b -ple -bt=2 -pt=2 -sbt=2 -bvt=0 -sbvt=1 -cti=1 -bar -lp -anl'
 alias music="youtube-viewer -A -n -m -s --res=audio --min-seconds=60 --max-seconds=480 $@"
 alias favmusic="youtube-viewer -F -m -n --res=audio --std-input=:anp\ :re=\\\\p{cyrillic} --page \$1"
-alias rmusic="youtube-viewer -A -n -s --res=audio --min-seconds=60 --max-seconds=480 -rv $@"
+alias rmusic="youtube-viewer -A -m -n -s --res=audio --min-seconds=60 --max-seconds=480 -rv $@"
 alias yv="youtube-viewer"
 #alias inxi="inxi -F -x -f -o -p"
 alias url2pdf="wkhtmltopdf --use-xserver $@"
@@ -236,6 +236,7 @@ alias dirmusic="perl -E 'for(glob(\"\*\")){push@songs,\$_ if -f\$_;}system(qw(mp
 #alias percritic='perlcritic --statistics'
 #alias mkpm='h2xs -A -a -b 5.10.1 -X --skip-exporter --skip-warnings --skip-ppport --skip-autoloader -n $@'
 #alias mkmodule='module-starter -mb --email=trizenx@gmail.com --author=Trizen $@'
+alias plspellcheck="perl $WER/Analyzers/perl_code_spellcheck.pl --scan=all $@"
 
 # Local scripts
 alias merge-images="perl $WER/Image/gd_star_trails.pl"
@@ -260,6 +261,8 @@ alias wave-cmp="perl $WER/Audio/wave-cmp.pl"
 alias canly="perl $WER/Analyzers/perl_code_analyzer.pl"
 alias img-autocrop="perl $WER/Image/img-autocrop.pl"
 alias yafu="rlwrap yafu $@"
+alias poem-from-poem="perl $WER/Lingua/poetry_from_poetry.pl"
+alias rand-poem="perl $WER/Lingua/poetry_from_poetry_with_variations.pl"
 
 
 # Support colors in less
@@ -290,14 +293,6 @@ typeset -U path cdpath fpath manpath
 screencast() {
     ffmpeg -hwaccel vdpau -f alsa -ac 2 -i hw:0,0 -f x11grab -r 30 -s 1920x1080 -i :0.0 -acodec aac -vcodec libx264 -preset ultrafast -crf 10 -threads 0 -y $@
 }
-
-fzf_cd() {
-  zle -I;
-  local dir
-  dir=$(find ${1:-*} -path '*/\.*' -prune \
-                  -o -type d -print 2> /dev/null | fzf +m) &&
-  cd "$dir"
-}; zle -N fzf_cd; bindkey '^E' fzf_cd;
 
 preexec() {
     printf '\e]0;%s\a' "$2"
