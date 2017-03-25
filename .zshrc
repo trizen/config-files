@@ -161,6 +161,7 @@ export WEBBROWSER='chromium'
 export GOROOT=/usr/lib/go
 export GOOS='linux'
 export FILEMANAGER='pcmanfm'
+export TERM='xterm'
 export GOPATH="$HOME/GO"
 export GOBIN="$HOME/GO/bin"
 export GOMAXPROCS=2
@@ -216,6 +217,7 @@ alias perltidy='perltidy -l=127 -f -kbl=1 -bbb -bbc -bbs -b -ple -bt=2 -pt=2 -sb
 alias music="youtube-viewer -A -n -m -s --res=audio --min-seconds=60 --max-seconds=480 $@"
 alias favmusic="youtube-viewer -F -m -n --res=audio --std-input=:anp\ :re=\\\\p{cyrillic} --page \$1"
 alias rmusic="youtube-viewer -A -m -n -s --res=audio --min-seconds=60 --max-seconds=480 -rv $@"
+alias randalias="$SIDEF/bin/sidef -E 'say(%F<#{ENV{:HOME}}/youtube-viewer.txt>.open_r.lines.rand)'"
 alias yv="youtube-viewer"
 #alias inxi="inxi -F -x -f -o -p"
 alias url2pdf="wkhtmltopdf --use-xserver $@"
@@ -235,7 +237,6 @@ alias dirmusic="perl -E 'for(glob(\"\*\")){push@songs,\$_ if -f\$_;}system(qw(mp
 #alias dkms_nvidia="dkms install -m nvidia -v $(perl -E'say`pacman -Qi nvidia-dkms`=~/^Version\h*:\h*([^-]+)/m') -k $@"
 #alias percritic='perlcritic --statistics'
 #alias mkpm='h2xs -A -a -b 5.10.1 -X --skip-exporter --skip-warnings --skip-ppport --skip-autoloader -n $@'
-#alias mkmodule='module-starter -mb --email=trizenx@gmail.com --author=Trizen $@'
 alias plspellcheck="perl $WER/Analyzers/perl_code_spellcheck.pl --scan=all $@"
 
 # Local scripts
