@@ -156,8 +156,8 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 
 export XDG_CONFIG_HOME="$HOME/.config"
 export USE_CCACHE=1
 export EDITOR='joe'
-export BROWSER='chromium'
-export WEBBROWSER='chromium'
+export BROWSER='brave'
+export WEBBROWSER='brave'
 export GOROOT=/usr/lib/go
 export GOOS='linux'
 export FILEMANAGER='pcmanfm'
@@ -265,7 +265,6 @@ alias yafu="rlwrap yafu $@"
 alias poem-from-poem="perl $WER/Lingua/poetry_from_poetry.pl"
 alias rand-poem="perl $WER/Lingua/poetry_from_poetry_with_variations.pl"
 
-
 # Support colors in less
 export LESS_TERMCAP_mb=$'\E[01;33m'
 export LESS_TERMCAP_md=$'\E[01;33m'
@@ -317,6 +316,10 @@ confirm() {
     else
         return 1
     fi
+}
+
+unistream() {
+    mpv $(youtube-dl -g $@)
 }
 
 confirm_wrapper() {

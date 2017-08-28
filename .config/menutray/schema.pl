@@ -5,12 +5,10 @@
 =for comment
 
     item:       add an item inside the menu               {item => ['command', 'label', 'icon']},
-    cat:        add a category inside the menu             {cat => ['name', 'label", 'icon']},
+    cat:        add a category inside the menu             {cat => ['name', 'label', 'icon']},
     sep:        horizontal line separator                  {sep => undef}
-    raw:        any valid Perl code                        {raw => q(...)},
-    tree:       custom category with items                {tree => [[{...}], 'label', 'icon']},
-    begin_cat:  begin of a category                  {begin_cat => ['$var', 'name', 'icon']},
-    end_cat:    end of a category                      {end_cat => '$var'},
+    beg:        beginning of a submenu                     {beg => ['name', 'icon']},
+    end:        end of a submenu                           {end => undef},
     menutray:   generic menu settings                 {menutray => ['label', 'icon']},
     regenerate: regenerate menu                     {regenerate => ['label', 'icon']},
     exit:       quit menu                                 {exit => ['label', 'icon']},
@@ -21,10 +19,6 @@
 #    * Keys and values are case sensitive. Keep all keys lowercase.
 #    * ICON can be a either a direct path to an icon or a valid icon name
 #    * Category names are case insensitive. (X-XFCE and x_xfce are equivalent)
-
-require "$ENV{HOME}/.config/menutray/config.pl";
-
-my $editor = $CONFIG->{editor};
 
 our $SCHEMA = [
 
@@ -50,15 +44,10 @@ our $SCHEMA = [
     {cat => ['settings',    'Settings',    'applications-accessories']},
     {cat => ['system',      'System',      'applications-system']},
 
-    #{cat => ['qt',          'QT Applications',    'qtlogo']},
-    #{cat => ['gtk',         'GTK Applications',   'gnome-applications']},
-    #{cat => ['x_xfce',      'XFCE Applications',  'applications-other']},
-    #{cat => ['gnome',       'GNOME Applications', 'gnome-applications']},
-    #{cat => ['consoleonly', 'CLI Applications',   'applications-utilities']},
-
     {menutray => ['Menutray', 'preferences-desktop']},
 
     {sep        => undef},
     {regenerate => ['Regenerate', 'gtk-refresh']},
     {exit       => ['Exit', 'exit']},
+
   ]

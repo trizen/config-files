@@ -23,38 +23,16 @@
                                 {key => 'Exec', re => qr/\\\\/,  value => '\\', global => 1},    # for wine apps
                             ],
 
-
 || ICON SETTINGS
-    | icon_dirs_first     : When looking for icons, look in this directories first,
-                            before looking in the directories of the current icon theme.
-                            Example: [
-                                "$ENV{HOME}/My icons",
-                            ],
-
-    | icon_dirs_second    : Look in this directories after looked in the directories of the
-                            current icon theme. (Before /usr/share/pixmaps)
-                            Example: [
-                                "/usr/share/icons/gnome",
-                            ],
-
-    | icon_dirs_last      : Look in this directories at the very last, after looked in
-                            /usr/share/pixmaps, /usr/share/icons/hicolor and some other
-                            directories.
-                            Example: [
-                                "/usr/share/icons/Tango",
-                            ],
-
-    | strict_icon_dirs    : A true value will make the script to look only inside the directories
-                            specified by you in either one of the above three options.
-
     | gtk_rc_filename     : Absolute path to the GTK configuration file.
-    | missing_image       : Use this icon for missing icons (default: gtk-missing-image)
-
+    | missing_icon        : Use this icon for missing icons (default: gtk-missing-image)
+    | icon_size           : Preferred size for icons. (default: 32)
+    | force_svg_icons     : Use only SVG icons. (default: 0)
+    | force_icon_size     : Use only icons at the preferred icon size, if possible. (default: 0)
 
 || KEYS
     | name_keys           : Valid keys for application name.
                             Example: ['Name[fr]', 'GenericName[fr]', 'Name'],   # french menu
-
 
 || PATHS
     | desktop_files_paths   : Absolute paths which contain .desktop files.
@@ -63,7 +41,6 @@
                                 "$ENV{HOME}/.local/share/applications",
                                 glob("$ENV{HOME}/.local/share/applications/wine/Programs/*"),
                               ],
-
 
 || NOTES
     | Regular expressions:
@@ -74,16 +51,17 @@
 
 our $CONFIG = {
   "editor"              => "geany",
+  "force_icon_size"     => 0,
+  "force_svg_icons"     => 0,
+  "gtk_rc_filename"     => "$ENV{HOME}/.gtkrc-2.0",
+  "icon_size"           => 32,
   "Linux::DesktopFiles" => {
                              desktop_files_paths     => [
                                                           "/usr/share/applications",
-                                                          "/home/swampyx/.local/share/applications",
-                                                          "/home/swampyx/Desktop",
+                                                          "/usr/local/share/applications",
+                                                          "$ENV{HOME}/.local/share/applications",
+                                                          "$ENV{HOME}/Desktop",
                                                         ],
-                             gtk_rc_filename         => "/home/swampyx/.gtkrc-2.0",
-                             icon_dirs_first         => undef,
-                             icon_dirs_last          => undef,
-                             icon_dirs_second        => undef,
                              keep_unknown_categories => 1,
                              skip_entry              => [
                                                           {
@@ -92,8 +70,6 @@ our $CONFIG = {
                                                           },
                                                         ],
                              skip_filename_re        => qr/^(?:exo-|xfce4-about|Terminal|avahi|b(?:ssh|vnc)|dconf|ffadomixer|gconf|mplayer|sakura|compton)/,
-                             skip_svg_icons          => 0,
-                             strict_icon_dirs        => undef,
                              substitutions           => [
                                                           { global => 1, key => "Exec", re => qr/\\\\/, value => "\\" },
                                                         ],
@@ -104,5 +80,5 @@ our $CONFIG = {
   "missing_icon"        => "gtk-missing-image",
   "name_keys"           => ["Name"],
   "terminal"            => "sakura",
-  "VERSION"             => 0.69,
+  "VERSION"             => "0.80",
 }

@@ -25,4 +25,4 @@ sakura &
 tint2 &
 transmission-gtk &
 #fbrowse-tray -m dnd ~/Videos
-menutray -i &
+menutray -i -gtk3 &

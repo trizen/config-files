@@ -2,8 +2,8 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 include "/home/swampyx/.gtkrc-2.0.mine"
-gtk-theme-name="Vertex-Light"
-gtk-icon-theme-name="Numix-Circle"
+gtk-theme-name="Vertex"
+gtk-icon-theme-name="Surfn-Numix-Misty"
 gtk-font-name="Droid Sans 8"
 gtk-cursor-theme-name="Adwaita"
 gtk-cursor-theme-size=0
