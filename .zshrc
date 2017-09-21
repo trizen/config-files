@@ -156,8 +156,8 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 
 export XDG_CONFIG_HOME="$HOME/.config"
 export USE_CCACHE=1
 export EDITOR='joe'
-export BROWSER='brave'
-export WEBBROWSER='brave'
+export BROWSER='chromium'
+export WEBBROWSER='chromium'
 export GOROOT=/usr/lib/go
 export GOOS='linux'
 export FILEMANAGER='pcmanfm'
@@ -220,7 +220,7 @@ alias rmusic="youtube-viewer -A -m -n -s --res=audio --min-seconds=60 --max-seco
 alias randalias="$SIDEF/bin/sidef -E 'say(%F<#{ENV{:HOME}}/youtube-viewer.txt>.open_r.lines.rand)'"
 alias yv="youtube-viewer"
 #alias inxi="inxi -F -x -f -o -p"
-alias url2pdf="wkhtmltopdf --use-xserver $@"
+alias url2pdf="wkhtmltopdf --use-xserver --enable-javascript --enable-smart-shrinking --images --enable-external-links --load-error-handling ignore --javascript-delay 3500 $@"
 alias locatepm="locatepm -b"
 alias install-perl="perlbrew install -Doptimize='-march=native -Ofast -pipe' -j 2 --noman --notest --thread --multi $@"
 alias plint="perl -MO=Lint,all $@"

@@ -51,7 +51,7 @@ foreach my $i (0 .. $#partitions) {
     my $icon = sprintf '%.0f', $partition->{used_percent} / 10;
     $icon = $icon > 9 ? 0 : $icon < 1 ? "A" : $icon;
 
-    printf '${color0}${font Pie charts for maps:size=18}%s${font}${color}   '
-      . '${voffset -5}%s ${font Termsyn:size=8}${alignr}${color1}%s / %4s${color}${font}${font}'
+    printf '${color0}${font Pie charts for maps:pixelsize=18}%s${font}${color}   '
+      . '${voffset -5}%s ${font Termsyn:pixelsize=8}${alignr}${color1}%s / %4s${color}${font}${font}'
       . "\n\n", $icon, $partition->{mountpoint}, $partition->{used_size}, $partition->{total_size};
 }

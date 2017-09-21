@@ -51,7 +51,7 @@ our $SCHEMA = [
     {cat => ['network',     'Network',     'applications-internet']},
     {cat => ['office',      'Office',      'applications-office']},
     {cat => ['other',       'Other',       'applications-other']},
-    {cat => ['settings',    'Settings',    'applications-accessories']},
+    {cat => ['settings',    'Settings',    'applications-system-orange']},
     {cat => ['system',      'System',      'applications-system']},
 
     #                  LABEL          ICON

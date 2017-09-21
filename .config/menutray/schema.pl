@@ -48,6 +48,6 @@ our $SCHEMA = [
 
     {sep        => undef},
     {regenerate => ['Regenerate', 'gtk-refresh']},
-    {exit       => ['Exit', 'exit']},
+    {exit       => ['Quit', 'application-exit']},
 
   ]
