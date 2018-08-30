@@ -19,21 +19,13 @@
 
     | substitutions       : Substitute, by using a regex, in the values of the desktop files.
                             Example: [
-                                {key => 'Exec', re => qr/xterm/, value => 'sakura'},
-                                {key => 'Exec', re => qr/\\\\/,  value => '\\', global => 1},    # for wine apps
+                                {key => 'Exec', re => qr/xterm/, value => 'terminator'},
                             ],
 
 || ICON SETTINGS
     | icon_type           : Menu icon type (menu, dnd, small-toolbar, large-toolbar, button, dialog)
     | icon_size           : Icon size in pixels (only for absolute icon paths) (default: [16, 16])
     | missing_image       : Use this icon for missing icons (default: gtk-missing-image)
-
-|| KEYS
-    | tooltip_keys        : Valid keys for the tooltip text.
-                            Example: ['Comment[es]', 'Comment'],
-
-    | name_keys           : Valid keys for the item names.
-                            Example: ['Name[fr]', 'GenericName[fr]', 'Name'],   # french menu
 
 || PATHS
     | desktop_files_paths   : Absolute paths which contain .desktop files.
@@ -46,36 +38,37 @@
 =cut
 
 our $CONFIG = {
-  "editor"                 => "geany",
-  "gdk_interpolation_type" => "hyper",
-  "icon_size"              => [24, 24],
-  "icon_type"              => "large-toolbar",
-  "Linux::DesktopFiles"    => {
-                                desktop_files_paths     => [
-                                                             "/usr/share/applications",
-                                                             "$ENV{HOME}/.local/share/applications",
-                                                             "$ENV{HOME}/Desktop",
-                                                           ],
-                                keep_unknown_categories => 1,
-                                skip_entry              => [
-                                                             {
-                                                               key => "Name",
-                                                               re  => qr/^(?:Avahi|Qt4?\b|Hardware Locality|File Manager|HDSP)/,
-                                                             },
-                                                           ],
-                                skip_filename_re        => qr/^(?:compton|avahi|u?xterm|sakura)/,
-                                substitutions           => [
-                                                             { global => 1, key => "Exec", re => qr/\\\\/, value => "\\" },
-                                                           ],
-                                terminal                => "sakura",
-                                terminalization_format  => "%s -e '%s'",
-                                terminalize             => 1,
-                                unknown_category_key    => "other",
-                              },
-  "menutray_icon"          => "start-here",
-  "missing_image"          => "gtk-missing-image",
-  "name_keys"              => ["Name"],
-  "set_tooltips"           => 1,
-  "tooltip_keys"           => ["Comment"],
-  "VERSION"                => "0.50",
+  "editor"              => "geany",
+  "icon_size"           => [24, 24],
+  "icon_type"           => "large-toolbar",
+  "Linux::DesktopFiles" => {
+                             desktop_files_paths     => [
+                                                          "/usr/share/applications",
+                                                          "/usr/local/share/applications",
+                                                          "$ENV{HOME}/.local/share/applications",
+                                                          "$ENV{HOME}/Desktop",
+                                                        ],
+                             keep_unknown_categories => 1,
+                             skip_entry              => [
+                                                          {
+                                                            key => "Name",
+                                                            re  => qr/^(?:Avahi|Qt4?\b|Hardware Locality|File Manager|HDSP|Echomixer|Envy24 |HDAJack|Hwmix)/,
+                                                          },
+                                                          { key => "OnlyShowIn", re => qr/XFCE/ },
+                                                        ],
+                             skip_filename_re        => qr/^(?:exo-|xfce4-about|Terminal|avahi|b(?:ssh|vnc)|dconf|ffadomixer|gconf|mplayer|terminator|compton)/,
+                             substitutions           => undef,
+                             terminal                => "terminator",
+                             terminalization_format  => "%s -e '%s'",
+                             terminalize             => 1,
+                             unknown_category_key    => "other",
+                           },
+  "locale_support"      => 1,
+  "menutray_icon"       => "start-here",
+  "menutray_title"      => "menutray",
+  "menutray_tooltip"    => "Applications",
+  "missing_image"       => "gtk-missing-image",
+  "popup_at_cursor"     => 1,
+  "tooltips"            => 1,
+  "VERSION"             => 0.52,
 }

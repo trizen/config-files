@@ -29,17 +29,17 @@ my $editor = $CONFIG->{editor};
 
 our $SCHEMA = [
 
-    #           COMMAND        LABEL           ICON
-    {item => ['pcmanfm',   'File Manager', 'system-file-manager']},
-    {item => ['sakura',    'Terminal',     'utilities-terminal']},
-    {item => ['chromium',  'Chromium',     'chromium']},
+    #           COMMAND         LABEL           ICON
+    {item => ['pcmanfm',    'File Manager', 'system-file-manager']},
+    {item => ['terminator', 'Terminal',     'utilities-terminal']},
+    {item => ['chromium',   'Chromium',     'chromium']},
 
     #{item => ['vivaldi-preview',               'Vivaldi',       'vivaldi']},
 
     #{item => ["midori", 'Midori',  'midori']},
     #{item => ["opera-next", 'Opera',  'opera']},
 
-    {sep => 'Applications'},
+    {sep => undef},
 
     #          NAME            LABEL                ICON
     {cat => ['utility',     'Accessories', 'applications-utilities']},

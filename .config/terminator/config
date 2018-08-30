@@ -1,0 +1,33 @@
+[global_config]
+  broadcast_default = off
+  dbus = False
+  enabled_plugins = ,
+  extra_styling = False
+  inactive_color_offset = 1.0
+  title_font = Sans Italic 8
+  title_inactive_bg_color = "#729fcf"
+  title_transmit_bg_color = "#3465a4"
+  title_use_system_font = False
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      profile = default
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    background_darkness = 0.93
+    cursor_blink = False
+    cursor_color = "#aaaaaa"
+    cursor_shape = ibeam
+    font = Misc Termsyn 11
+    foreground_color = "#3465a4"
+    icon_bell = False
+    palette = "#000000:#cc0000:#4e9a06:#c4a000:#3465a4:#75507b:#06989a:#d3d7cf:#555753:#ef2929:#8ae234:#fce94f:#729fcf:#ad7fa8:#34e2e2:#eeeeec"
+    scrollback_lines = 100000
+    use_system_font = False

@@ -14,15 +14,16 @@
 
 # If you want to use XFCE config tools...
 #
-obmenu-generator -i -s
-numlockx on
-setxkbmap ro &
-compton &
-conky &
+/usr/bin/obmenu-generator -i -s
+/usr/bin/numlockx on
+/usr/bin/setxkbmap ro &
+/usr/bin/compton &
+/usr/bin/conky &
 #nvidia-settings &
-feh --bg-scale ~/Other/wallpaper.jpg
-sakura &
-tint2 &
-transmission-gtk &
-#fbrowse-tray -m dnd ~/Videos
-menutray -i -gtk3 &
+/usr/bin/feh --bg-scale ~/Other/wallpaper.jpg
+/usr/bin/terminator &
+/usr/bin/tint2 &
+#/usr/bin/transmission-gtk &
+#/usr/bin/fbrowse-tray -m dnd ~/Videos
+/usr/bin/menutray -i -gtk3 &
+/usr/bin/perl ~/.config/openbox/kill_fat_perls.pl &

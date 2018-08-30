@@ -57,9 +57,9 @@ TEXT
 #############
 # - CLOCK - #
 #############
-${voffset 4}${font Liberation Sans:style=Bold:size=8}DATE $stippled_hr${font}
-${alignc}${time %d %B %Y}
+#${voffset 4}${font Liberation Sans:style=Bold:size=8}DATE $stippled_hr${font}
 ${voffset -2}${alignc}${color2}${font Liberation Sans:style=Bold:size=30}${time %H:%M}${font}${color}
+${alignc}${time %d %B %Y}
 
 ##############
 # - SYSTEM - #
@@ -86,8 +86,8 @@ $membar
 ##############
 # - NVIDIA - #
 ##############
-${voffset 4}${font Liberation Sans:style=Bold:size=8}NVIDIA $stippled_hr${font}
-${color0}${voffset 2}${font ConkyColorsLogos:size=16}n${font}${color}${goto 32}${voffset -8}GPU Temp:${alignr}${font Liberation Sans:style=Bold:size=8}${color1} ${exec nvidia-settings -q [gpu:0]/GPUCoreTemp | grep Attribute | cut -d ' ' -f 6 | cut -c 1-2}${font}${color}°C
+#~ ${voffset 4}${font Liberation Sans:style=Bold:size=8}NVIDIA $stippled_hr${font}
+#~ ${color0}${voffset 2}${font ConkyColorsLogos:size=16}n${font}${color}${goto 32}${voffset -8}GPU Temp:${alignr}${font Liberation Sans:style=Bold:size=8}${color1} ${exec nvidia-settings -q [gpu:0]/GPUCoreTemp | grep Attribute | cut -d ' ' -f 6 | cut -c 1-2}${font}${color}°C
 ##########
 # - HD - #
 ##########
@@ -99,12 +99,12 @@ ${execpi 60 /usr/share/conkycolors/bin/conkyHD2}
 ###############
 ${voffset -4}${font Liberation Sans:style=Bold:size=8}NETWORK $stippled_hr${font}
 # |--ETH0
-${if_up enp3s0}
-${voffset -5}${color0}${font ConkyColors:size=17}v${font}${color}${goto 32}${voffset -5}Up: ${font Ubuntu:style=Bold:size=8}${color1}${upspeed enp3s0}${color}${font} ${alignr}${color2}${upspeedgraph enp3s0 8,60 FFFFFF}${color}
-${goto 32}Total: ${font Ubuntu:style=Bold:size=8}${color2}${totalup enp3s0}${color}${font}
-${voffset 2}${color0}${font ConkyColors:size=17}u${font}${color}${goto 32}${voffset -5}Down: ${font Ubuntu:style=Bold:size=8}${color1}${downspeed enp3s0}${color}${font} ${alignr}${color2}${downspeedgraph enp3s0 8,60 FFFFFF}${color}
-${goto 32}Total: ${font Ubuntu:style=Bold:size=8}${color2}${totaldown enp3s0}${color}${font}
-${voffset 2}${color0}${font ConkyColors:size=16}j${font}${color}${goto 32}${voffset -4}Local IP: ${alignr}${color2}${addr enp3s0}${color}
+${if_up enp2s0}
+${voffset -5}${color0}${font ConkyColors:size=17}v${font}${color}${goto 32}${voffset -5}Up: ${font Ubuntu:style=Bold:size=8}${color1}${upspeed enp2s0}${color}${font} ${alignr}${color2}${upspeedgraph enp2s0 8,60 FFFFFF}${color}
+${goto 32}Total: ${font Ubuntu:style=Bold:size=8}${color2}${totalup enp2s0}${color}${font}
+${voffset 2}${color0}${font ConkyColors:size=17}u${font}${color}${goto 32}${voffset -5}Down: ${font Ubuntu:style=Bold:size=8}${color1}${downspeed enp2s0}${color}${font} ${alignr}${color2}${downspeedgraph enp2s0 8,60 FFFFFF}${color}
+${goto 32}Total: ${font Ubuntu:style=Bold:size=8}${color2}${totaldown enp2s0}${color}${font}
+${voffset 2}${color0}${font ConkyColors:size=16}j${font}${color}${goto 32}${voffset -4}Local IP: ${alignr}${color2}${addr enp2s0}${color}
 #${goto 32}Public IP: ${alignr}${color2}${execi 10800 curl ifconfig.me}${color}
 # |--PPP0
 ${else}${if_up ppp0}
@@ -117,7 +117,7 @@ ${else}${voffset 4}${offset 4}${color0}${font Wingdings:size=20}N${font}${color}
 ################
 # - CALENDAR - #
 ################
-${voffset -2}${color0}${font ConkyColors:size=15}D${font}${voffset -8}${font Liberation Sans:style=Bold:size=8}${offset -17}${voffset 4}${time %d}${font}${color}${voffset -1}${font Liberation Mono:size=9}${execpi 300 DJS=`date +%_d`; cal -m|sed '2,8!d'| sed '/./!d' | sed 's/^/${goto 42} /'| sed 's/$/ /' | sed 's/^/ /' | sed /" $DJS "/s/" $DJS "/" "'${font Liberation Sans:style=Bold:size=10}${voffset -2}${offset -4}${color1} '"$DJS"'${color}${font Liberation Mono:size=9}'" "/}${voffset -1}
+${voffset -2}${color0}${font ConkyColors:size=15}D${font}${voffset -8}${font Liberation Sans:style=Bold:size=7}${offset -17}${voffset 4}${time %d}${font}${color}${voffset -1}${font Liberation Mono:size=7}${execpi 300 DJS=`date +%_d`; cal -m|sed '2,8!d'| sed '/./!d' | sed 's/^/${goto 42} /'| sed 's/$/ /' | sed 's/^/ /' | sed /" $DJS "/s/" $DJS "/" "'${font Liberation Sans:style=Bold:size=8}${voffset -2}${offset -4}${color1} '"$DJS"'${color}${font Liberation Mono:size=7}'" "/}${voffset -1}
 # |--PROC
 ${voffset 4}${color0}${font ConkyColors:size=16}C${font}${color}${goto 32}${voffset -10}Processes: ${color2}${alignr 13}CPU${alignr}RAM${color}
 ${voffset -1}${goto 42}${color2}${top name 1}${color}${font Liberation Sans:style=Bold:size=8}${color1} ${goto 126}${top cpu 1}${alignr }${top mem 1}${color}${font}

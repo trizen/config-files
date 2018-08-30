@@ -80,8 +80,10 @@ setopt hist_ignore_all_dups
 setopt autocd
 #setopt correctall
 
-export CFLAGS="-march=native -O3 -pipe -fstack-protector-strong --param=ssp-buffer-size=4"
-export CXXFLAGS="-march=native -O3 -pipe -fstack-protector-strong --param=ssp-buffer-size=4"
+export CFLAGS="-march=native -O3 -pipe -fstack-protector-strong --param=ssp-buffer-size=4 -fno-plt"
+export CXXFLAGS="-march=native -O3 -pipe -fstack-protector-strong --param=ssp-buffer-size=4 -fno-plt"
+export LDFLAGS="-Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now"
+export MAKEFLAGS="-j2"
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -222,7 +224,7 @@ alias yv="youtube-viewer"
 #alias inxi="inxi -F -x -f -o -p"
 alias url2pdf="wkhtmltopdf --use-xserver --enable-javascript --enable-smart-shrinking --images --enable-external-links --load-error-handling ignore --javascript-delay 3500 $@"
 alias locatepm="locatepm -b"
-alias install-perl="perlbrew install -Doptimize='-march=native -Ofast -pipe' -j 2 --noman --notest --thread --multi $@"
+alias install-perl="perlbrew install --ld --64all -Dusemymalloc -Doptimize='-march=native -Ofast -pipe -fno-plt' -j 2 --noman --notest --thread --multi $@"
 alias plint="perl -MO=Lint,all $@"
 alias roxy="rlwrap $SIDEF/bin/sidef /home/swampyx/Other/Programare/MYPKGS/smart-units/smart-units.sf"
 alias sidef="$SIDEF/bin/sidef"
