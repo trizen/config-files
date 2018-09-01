@@ -246,7 +246,7 @@ add_binds("normal", {
         function (w)
             local uri = w.view.uri
             if uri then
-              luakit.spawn(string.format("terminator -e youtube-viewer --no-interactive %q", uri))
+              luakit.spawn(string.format("tilix -e youtube-viewer --no-interactive %q", uri))
         end
     end),
 

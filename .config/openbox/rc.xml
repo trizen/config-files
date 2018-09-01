@@ -323,7 +323,7 @@
     </keybind>
     <keybind key="A-F1">
       <action name="Execute">
-        <command>terminator --working-directory=/tmp</command>
+        <command>tilix --working-directory=/tmp</command>
         <startupnotify>
           <enabled>yes</enabled>
           <name>Terminal</name>
@@ -332,7 +332,7 @@
     </keybind>
     <keybind key="A-y">
       <action name="Execute">
-        <command>terminator -x 'gtk-youtube-viewer'</command>
+        <command>tilix -e 'gtk-youtube-viewer'</command>
         <startupnotify>
           <enabled>yes</enabled>
           <name>Youtube Viewer</name>
@@ -700,7 +700,7 @@
     <!-- show the manage desktops section in the client-list-(combined-)menu -->
   </menu>
   <applications>
-    <application name="terminator">
+    <application name="tilix">
       <decor>yes</decor>
     </application>
   </applications>

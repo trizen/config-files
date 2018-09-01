@@ -20,7 +20,7 @@
 
     | substitutions       : Substitute, by using a regex, in the values from the desktop files.
                             Example: [
-                                {key => 'Exec', re => qr/xterm/, value => 'terminator', global => 1},
+                                {key => 'Exec', re => qr/xterm/, value => 'tilix', global => 1},
                             ],
 
 || ICON SETTINGS
@@ -66,7 +66,7 @@ our $CONFIG = {
                                                           },
                                                           { key => "OnlyShowIn", re => qr/XFCE/ },
                                                         ],
-                             skip_filename_re        => qr/^(?:exo-|xfce4-about|Terminal|avahi|b(?:ssh|vnc)|dconf|ffadomixer|gconf|mplayer|terminator|compton)/,
+                             skip_filename_re        => qr/^(?:exo-|xfce4-about|Terminal|avahi|b(?:ssh|vnc)|dconf|ffadomixer|gconf|mplayer|tilix|compton)/,
                              substitutions           => undef,
                              terminalization_format  => "%s -e '%s'",
                              terminalize             => 1,
@@ -74,6 +74,6 @@ our $CONFIG = {
                            },
   "locale_support"      => 0,
   "missing_icon"        => "gtk-missing-image",
-  "terminal"            => "terminator",
+  "terminal"            => "tilix",
   "VERSION"             => 0.84,
 }

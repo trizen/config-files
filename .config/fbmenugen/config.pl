@@ -20,7 +20,7 @@
 
     | substitutions       : Substitute, by using a regex, in the values of the desktop files.
                             Example: [
-                                {key => 'Exec', re => qr/xterm/, value => 'terminator', global => 1},
+                                {key => 'Exec', re => qr/xterm/, value => 'tilix', global => 1},
                                 {key => 'Name', re => qr/^GNU I\w+ M\w+ P\w+/, value => 'GIMP'},
                             ],
 
@@ -70,6 +70,6 @@ our $CONFIG = {
                            },
   "menu_title"          => "Fluxbox",
   "missing_icon"        => "gtk-missing-image",
-  "terminal"            => "terminator",
+  "terminal"            => "tilix",
   "VERSION"             => 0.82,
 }

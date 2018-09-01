@@ -21,7 +21,7 @@
 /usr/bin/conky &
 #nvidia-settings &
 /usr/bin/feh --bg-scale ~/Other/wallpaper.jpg
-/usr/bin/terminator &
+/usr/bin/tilix &
 /usr/bin/tint2 &
 #/usr/bin/transmission-gtk &
 #/usr/bin/fbrowse-tray -m dnd ~/Videos

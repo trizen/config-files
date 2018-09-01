@@ -33,7 +33,7 @@ floating_modifier $mod
 bindsym $mod+Return exec i3-sensible-terminal
 
 # terminal
-bindsym $mod+F1 exec terminator --working-directory=/tmp
+bindsym $mod+F1 exec tilix --working-directory=/tmp
 
 # application runner
 bindsym $mod+F2 exec gmrun
@@ -188,4 +188,4 @@ bar {
 
 # startup apps
 exec menutray -i -gtk3
-exec terminator --working-directory=/tmp
+exec tilix --working-directory=/tmp

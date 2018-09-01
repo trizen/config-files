@@ -27,7 +27,7 @@ our $SCHEMA = [
     #{item => ["$editor /tmp/x.go",  'Test Script',         'text-x-script']},
     #{item => ['vivaldi-preview',             'Vivaldi',             'vivaldi']},
     #{item => ['luakit',             'Luakit Browser',             'luakit']},
-    {item => ["terminator --working-directory=/tmp", "Open terminal", "terminal"]},
+    {item => ["tilix --working-directory=/tmp", "Open terminal", "terminal"]},
     {item => ["gtk-youtube-viewer", "GTK Youtube Viewer", 'gtk-youtube-viewer']},
 
     {sep => undef},
