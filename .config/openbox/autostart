@@ -21,9 +21,9 @@
 /usr/bin/conky &
 #nvidia-settings &
 /usr/bin/feh --bg-scale ~/Other/wallpaper.jpg
-/usr/bin/tilix &
+/usr/bin/tilix --working-directory=/tmp &
 /usr/bin/tint2 &
-#/usr/bin/transmission-gtk &
+/usr/bin/transmission-gtk &
 #/usr/bin/fbrowse-tray -m dnd ~/Videos
-/usr/bin/menutray -i -gtk3 &
+/usr/bin/menutray -i &
 /usr/bin/perl ~/.config/openbox/kill_fat_perls.pl &
