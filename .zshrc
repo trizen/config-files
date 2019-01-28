@@ -5,16 +5,18 @@ ZSH="/home/swampyx/.oh-my-zsh/"
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster"
+
+# Interesting themes: agnoster duellj candy rgm gnzh xiong-chiamiov-plus terminalparty
+ZSH_THEME="terminalparty"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="false"
 
 # Uncomment the following line to change how often to auto-update (in days).
-#export UPDATE_ZSH_DAYS=1
+export UPDATE_ZSH_DAYS=1
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -130,7 +132,6 @@ export LS_COLORS='rs=0:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:
 #~ bindkey "\eOH" beginning-of-line
 #~ bindkey "\eOF" end-of-line
 
-
 #------------------------------
 # Comp stuff
 #------------------------------
@@ -177,7 +178,7 @@ export DBI_DRIVER='mysql'
 export PATH="/usr/lib/ccache/bin:$PATH:/usr/share/perl6/vendor/bin"
 #export PS1="%B%n%b[%~]: "
 export PROG="$HOME/Other/Programare"
-export PZN="$PROG/Personal projects"
+#export PZN="$PROG/Personal projects"
 export SIDEF="$PROG/Sidef"
 #export JOHANA="$PROG/Johana"
 #export VEGA="$PROG/Vega"
@@ -200,7 +201,7 @@ alias ln='ln -v'                            # verbose link
 alias wget='wget -c'                        # continues/resumes
 alias chmod='chmod -c'
 alias chown='chown -c'
-alias subr='sub-renamer -r'
+#alias subr='sub-renamer -r'
 #alias rcp='rsync -v --progress'
 #alias rmv='rsync -v --progress --remove-source-files'
 
@@ -210,12 +211,14 @@ alias vdir='ls --color=auto --format=long'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-alias ls='ls --color=auto --human-readable --group-directories-first --classify'
+#alias ls='ls --color=auto --human-readable --group-directories-first --classify'
+alias ls='exa --group-directories-first --classify'
 alias less='less -g -r'
 
 ## Other aliases
 alias p='rlwrap perl6 --optimize=3 $@'
-alias perltidy='perltidy -l=127 -f -kbl=1 -bbb -bbc -bbs -b -ple -bt=2 -pt=2 -sbt=2 -bvt=0 -sbvt=1 -cti=1 -bar -lp -anl'
+alias mpu='perl -Mntheory=:all -E $@'
+alias perltidy='perltidy -utf8 -l=127 -f -kbl=1 -bbb -bbc -bbs -b -ple -bt=2 -pt=2 -sbt=2 -bvt=0 -sbvt=1 -cti=1 -bar -lp -anl'
 alias music="youtube-viewer -A -n -m -s --res=audio --min-seconds=60 --max-seconds=480 $@"
 alias favmusic="youtube-viewer -F -m -n --res=audio --std-input=:anp\ :re=\\\\p{cyrillic} --page \$1"
 alias rmusic="youtube-viewer -A -m -n -s --res=audio --min-seconds=60 --max-seconds=480 -rv $@"

@@ -1,3 +1,4 @@
 FileManager=pcmanfm
 WebBrowser=chromium
-TerminalEmulator=tilix
+TerminalEmulator=custom-TerminalEmulator
+

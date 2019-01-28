@@ -75,5 +75,5 @@ our $CONFIG = {
   "locale_support"      => 0,
   "missing_icon"        => "gtk-missing-image",
   "terminal"            => "tilix",
-  "VERSION"             => 0.84,
+  "VERSION"             => 0.85,
 }
