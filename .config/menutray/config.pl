@@ -19,7 +19,7 @@
 
     | substitutions       : Substitute, by using a regex, in the values of the desktop files.
                             Example: [
-                                {key => 'Exec', re => qr/xterm/, value => 'terminator'},
+                                {key => 'Exec', re => qr/xterm/, value => 'tilix'},
                             ],
 
 || ICON SETTINGS
@@ -52,7 +52,7 @@ our $CONFIG = {
                              skip_entry              => [
                                                           {
                                                             key => "Name",
-                                                            re  => qr/^(?:Avahi|Qt4?\b|Hardware Locality|File Manager|HDSP|Echomixer|Envy24 |HDAJack|Hwmix)/,
+                                                            re  => qr/^(?:Avahi|Qt4?\b|Hardware Locality|File Manager|HDSP|Echomixer|Envy24 |HDAJack|Hwmix|FFADO Mixer)/,
                                                           },
                                                           { key => "OnlyShowIn", re => qr/XFCE/ },
                                                         ],
@@ -70,5 +70,5 @@ our $CONFIG = {
   "missing_image"       => "gtk-missing-image",
   "popup_at_cursor"     => 1,
   "tooltips"            => 1,
-  "VERSION"             => 0.52,
+  "VERSION"             => 0.53,
 }

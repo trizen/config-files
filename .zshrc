@@ -227,7 +227,7 @@ alias yv="youtube-viewer"
 #alias inxi="inxi -F -x -f -o -p"
 alias url2pdf="wkhtmltopdf --use-xserver --enable-javascript --enable-smart-shrinking --images --enable-external-links --load-error-handling ignore --javascript-delay 3500 $@"
 alias locatepm="locatepm -b"
-alias install-perl="perlbrew install --ld --64all -Dusemymalloc -Doptimize='-march=native -Ofast -pipe -fno-plt' -j 2 --noman --notest --thread --multi $@"
+alias install-perl="perlbrew install --ld --64all -Doptimize='-march=native -Ofast -pipe -fno-plt' -j 2 --noman --notest --thread --multi $@"
 alias plint="perl -MO=Lint,all $@"
 alias roxy="rlwrap $SIDEF/bin/sidef /home/swampyx/Other/Programare/MYPKGS/smart-units/smart-units.sf"
 alias sidef="$SIDEF/bin/sidef"
@@ -269,6 +269,7 @@ alias img-autocrop="perl $WER/Image/img-autocrop.pl"
 alias yafu="rlwrap yafu $@"
 alias poem-from-poem="perl $WER/Lingua/poetry_from_poetry.pl"
 alias rand-poem="perl $WER/Lingua/poetry_from_poetry_with_variations.pl"
+alias oeis="perl $PROG/experimental-projects/oeis-autoload/main.pl $@"
 
 # Support colors in less
 export LESS_TERMCAP_mb=$'\E[01;33m'

@@ -244,7 +244,7 @@
       <action name="FocusToBottom"/>
       <action name="Unfocus"/>
     </keybind>
-    <keybind key="A-M"><action name="Execute"><command>sh -c "pkill -u $(whoami) -o -f menutray -SIGUSR1"</command></action></keybind>
+    <keybind key="A-a"><action name="Execute"><command>sh -c "pkill -u $(whoami) -o -f menutray -SIGUSR1"</command></action></keybind>
     <keybind key="A-space">
       <action name="ShowMenu">
         <menu>client-menu</menu>

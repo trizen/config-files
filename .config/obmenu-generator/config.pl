@@ -62,7 +62,7 @@ our $CONFIG = {
                              skip_entry              => [
                                                           {
                                                             key => "Name",
-                                                            re  => qr/^(?:Avahi|Qt4?\b|Hardware Locality|File Manager|HDSP|Echomixer|Envy24 |HDAJack|Hwmixvol)/,
+                                                            re  => qr/^(?:Avahi|Qt4?\b|Hardware Locality|File Manager|HDSP|Echomixer|Envy24 |HDAJack|FFADO Mixer|Hwmixvol)/,
                                                           },
                                                           { key => "OnlyShowIn", re => qr/XFCE/ },
                                                         ],

@@ -1,12 +1,18 @@
 #!/usr/bin/perl
-{fileheader}
-# Created on: {datetime}
 
-use 5.010;
+use 5.020;
 use strict;
 use warnings;
 
+use Math::GMPz;
+use Math::AnyNum;
+use ntheory qw(:all);
+use experimental qw(signatures);
 
-sub {
+sub foo ($n) {
 
+}
+
+foreach my $n(1..10) {
+    say "a($n) = ", foo($n);
 }
