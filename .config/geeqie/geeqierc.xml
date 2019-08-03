@@ -231,6 +231,7 @@
             <file_type key = "flv" enabled = "false" extensions = ".flv" description = "Flash Video file" file_class = "4" writable = "false" allow_sidecar = "false" />
             <file_type key = "dds" enabled = "true" extensions = ".dds" description = "DirectDraw Surface" file_class = "1" writable = "false" allow_sidecar = "false" />
             <file_type key = "pdf" enabled = "true" extensions = ".pdf" description = "Portable Document Format" file_class = "6" writable = "false" allow_sidecar = "false" />
+            <file_type key = "heif" enabled = "true" extensions = ".heif;.heic" description = "HEIF Image" file_class = "1" writable = "true" allow_sidecar = "false" />
         </filter>
 
         <marks_tooltips>
@@ -343,10 +344,10 @@
         startup_path = "0" 
         exit_on_close = "false" 
 
-        main_window.x = "577" 
-        main_window.y = "152" 
-        main_window.w = "1139" 
-        main_window.h = "660" 
+        main_window.x = "117" 
+        main_window.y = "138" 
+        main_window.w = "1579" 
+        main_window.h = "864" 
         main_window.maximized = "false" 
         main_window.hdivider_pos = "290" 
         main_window.vdivider_pos = "200" 
