@@ -1,75 +1,62 @@
-######################
-# - Conky settings - #
-######################
-update_interval 5
-total_run_times 0
-net_avg_samples 1
-cpu_avg_samples 1
-if_up_strictness link
 
-imlib_cache_size 0
-double_buffer yes
-no_buffers yes
+conky.config = {
+    alignment = 'top_right',
+    background = false,
+    border_width = 1,
+    cpu_avg_samples = 1,
+    net_avg_samples = 2,
+    default_color = 'cccccc',
+    default_outline_color = 'white',
+    default_shade_color = 'white',
+    double_buffer = true,
+    draw_borders = false,
+    draw_graph_borders = true,
+    draw_outline = false,
+    draw_shades = false,
+    extra_newline = false,
+    font = 'Liberation Sans:size=8',
+    gap_x = 25,
+    gap_y = 40,
+    minimum_height = 5,
+    minimum_width = 5,
+    maximum_width = 182,
+    no_buffers = true,
+    out_to_console = false,
+    out_to_ncurses = false,
+    out_to_stderr = false,
+    out_to_x = true,
+    own_window = true,
+    override_utf8_locale = true,
+    format_human_readable = true,
+    own_window_class = 'Conky',
+    own_window_type = 'desktop',
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+    show_graph_range = false,
+    show_graph_scale = false,
+    own_window_transparent = true,
+    own_window_argb_visual = true,
+    own_window_argb_value = 200,
+    stippled_borders = 0,
+    update_interval = 2.0,
+    uppercase = false,
+    use_spacer = 'none',
+    use_xft = true,
+}
 
-format_human_readable
-
-#####################
-# - Text settings - #
-#####################
-use_xft yes
-xftfont Liberation Sans:size=8
-override_utf8_locale yes
-text_buffer_size 2048
-
-#############################
-# - Window specifications - #
-#############################
-own_window_class Conky
-own_window yes
-own_window_type normal
-own_window_transparent yes
-own_window_argb_visual yes
-own_window_argb_value 200
-own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
-
-alignment top_right
-gap_x 25
-gap_y 40
-minimum_size 182 600
-maximum_width 182
-
-default_bar_size 180 8
-
-#########################
-# - Graphics settings - #
-#########################
-draw_shades no
-
-default_color cccccc
-
-color0 white
-color1 FFFFFF
-color2 white
-color3 FFFFFF
-
-TEXT
-
-#############
-# - CLOCK - #
-#############
+conky.text = [[
+#-- CLOCK --
 #${voffset 4}${font Liberation Sans:style=Bold:size=8}DATE $stippled_hr${font}
 ${voffset -2}${alignc}${color2}${font Liberation Sans:style=Bold:size=30}${time %H:%M}${font}${color}
 ${alignc}${time %d %B %Y}
 
-##############
-# - SYSTEM - #
-##############
+#-- SYSTEM --
 ${font Liberation Sans:style=Bold:size=8}SYSTEM $stippled_hr${font}
 ${color0}${voffset 8}${offset 4}${font ConkyColorsLogos:size=9}a${font}${color}${voffset -16}
 ${color0}${font ConkyColors:size=16}b${font}${color}
 ${goto 32}${voffset -23}Kernel: ${alignr}${color2}${kernel}${color}
 ${goto 32}Uptime: ${alignr}${color2}${uptime}${color}
-# |--CPU
+
+#-- CPU --
 ${voffset 8}${font Liberation Sans:bold:size=8}${color4}PROCESSOR $stippled_hr${font}
 ${font Liberation Sans:size=8}${color3}${cpugraph cpu1}
 CPU:${color3} ${freq}MHz${alignr}Used: ${cpu cpu1}%
@@ -77,7 +64,8 @@ ${cpubar cpu1}
 ${font Liberation Sans:size=8}${color3}${cpugraph cpu2}
 CPU:${color3} ${freq}MHz${alignr}Used: ${cpu cpu2}%
 ${cpubar cpu2}
-# |--MEM
+
+#-- MEM --
 #${voffset 2}${color0}${font ConkyColors:size=15}g${font}${color}${goto 32}${voffset -7}RAM: ${font Liberation Sans:style=Bold:size=8}${color1}$memperc%${color}${font}
 #${offset 1}${color0}${membar 4,17}${color}${goto 32}F: ${font Liberation Sans:style=Bold:size=8}${color2}${memeasyfree}${color}${font} U: ${font Liberation Sans:style=Bold:size=8}${color2}${mem}${color}${font}
 ${voffset 8}${font Liberation Sans:bold:size=8}${color4}MEMORY $stippled_hr${font}
@@ -88,12 +76,14 @@ $membar
 ##############
 #~ ${voffset 4}${font Liberation Sans:style=Bold:size=8}NVIDIA $stippled_hr${font}
 #~ ${color0}${voffset 2}${font ConkyColorsLogos:size=16}n${font}${color}${goto 32}${voffset -8}GPU Temp:${alignr}${font Liberation Sans:style=Bold:size=8}${color1} ${exec nvidia-settings -q [gpu:0]/GPUCoreTemp | grep Attribute | cut -d ' ' -f 6 | cut -c 1-2}${font}${color}°C
+
 ##########
 # - HD - #
 ##########
 ${voffset 4}${font Liberation Sans:style=Bold:size=8}SDD $stippled_hr${font}
-${execpi 60 /usr/share/conkycolors/bin/conkyHD2}
+${execpi 60 perl /usr/share/conkycolors/bin/conkyHD2}
 #${execpi 60 perl ~/.conkycolors/scripts/conkyHD5.pl}
+
 ###############
 # - NETWORK - #
 ###############
@@ -114,16 +104,21 @@ ${voffset -5}${color0}${font ConkyColors:size=17}v${font}${color}${goto 32}${vof
 ${goto 32}Total: ${font Ubuntu:style=Bold:size=8}${color2}${totalup ppp0}${color}${font}
 ${voffset 2}${color0}${font ConkyColors:size=17}u${font}${color}${goto 32}${voffset -5}Down: ${font Ubuntu:style=Bold:size=8}${color1}${downspeed ppp0}${color}${font} ${alignr}${color2}${downspeedgraph ppp0 8,60 FFFFFF}${color}
 ${goto 32}Total: ${font Ubuntu:style=Bold:size=8}${color2}${totaldown ppp0}${color}${font}
+
 ${voffset 2}${color0}${font ConkyColors:size=16}j${font}${color}${goto 32}${voffset -4}Local IP: ${alignr}${color2}${addr ppp0}${color}
 ${else}${voffset 4}${offset 4}${color0}${font Wingdings:size=20}N${font}${color}${voffset -6}${goto 32}Network Unavailable${voffset 14}${endif}${endif}
 ################
 # - CALENDAR - #
 ################
-${voffset -2}${color0}${font ConkyColors:size=15}D${font}${voffset -8}${font Liberation Sans:style=Bold:size=7}${offset -17}${voffset 4}${time %d}${font}${color}${voffset -1}${font Liberation Mono:size=7}${execpi 300 DJS=`date +%_d`; cal -m|sed '2,8!d'| sed '/./!d' | sed 's/^/${goto 42} /'| sed 's/$/ /' | sed 's/^/ /' | sed /" $DJS "/s/" $DJS "/" "'${font Liberation Sans:style=Bold:size=8}${voffset -2}${offset -4}${color1} '"$DJS"'${color}${font Liberation Mono:size=7}'" "/}${voffset -1}
-# |--PROC
+#~ ${voffset -2}${color0}${font ConkyColors:size=15}D${font}${voffset -8}${font Liberation Sans:style=Bold:size=7}${offset -17}${voffset 4}${time %d}${font}${color}${voffset -1}${font Liberation Mono:size=7}${execpi 300 DJS=`date +%_d`; cal -m|sed '2,8!d'| sed '/./!d' | sed 's/^/${goto 42} /'| sed 's/$/ /' | sed 's/^/ /' | sed /" $DJS "/s/" $DJS "/" "'${font Liberation Sans:style=Bold:size=8}${voffset -2}${offset -4}${color1} '"$DJS"'${color}${font Liberation Mono:size=7}'" "/}${voffset -1}
+############
+# - PROC - #
+############
 ${voffset 4}${color0}${font ConkyColors:size=16}C${font}${color}${goto 32}${voffset -10}Processes: ${color2}${alignr 13}CPU${alignr}RAM${color}
 ${voffset -1}${goto 42}${color2}${top name 1}${color}${font Liberation Sans:style=Bold:size=8}${color1} ${goto 126}${top cpu 1}${alignr }${top mem 1}${color}${font}
 ${voffset -1}${goto 42}${color2}${top name 2}${color}${font Liberation Sans:style=Bold:size=8}${color1} ${goto 126}${top cpu 2}${alignr }${top mem 2}${color}${font}
 ${voffset -1}${goto 42}${color2}${top name 3}${color}${font Liberation Sans:style=Bold:size=8}${color1} ${goto 126}${top cpu 3}${alignr }${top mem 3}${color}${font}
 ${voffset -1}${goto 42}${color2}${top name 4}${color}${font Liberation Sans:style=Bold:size=8}${color1} ${goto 126}${top cpu 4}${alignr }${top mem 4}${color}${font}
 ${voffset -1}${goto 42}${color2}${top name 5}${color}${font Liberation Sans:style=Bold:size=8}${color1} ${goto 126}${top cpu 5}${alignr }${top mem 5}${color}${font}
+
+]]

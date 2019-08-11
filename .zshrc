@@ -222,8 +222,8 @@ alias mpu='perl -Mntheory=:all -E $@'
 alias perltidy='perltidy -utf8 -l=127 -f -kbl=1 -bbb -bbc -bbs -b -ple -bt=2 -pt=2 -sbt=2 -bvt=0 -sbvt=1 -cti=1 -bar -lp -anl'
 alias music="youtube-viewer -A -n -m -s --res=audio --min-seconds=60 --max-seconds=480 $@"
 alias favmusic="youtube-viewer -F -m -n --res=audio --std-input=:anp\ :re=\\\\p{cyrillic} --page \$1"
-#alias rmusic="youtube-viewer -A -m -n -s --res=audio --min-seconds=60 --max-seconds=480 -rv $@"
-alias rmusic="youtube-viewer -n --res=audio --min-seconds=60 --max-seconds=480 --autoplay $@"
+alias rmusic="youtube-viewer -A -m -n -s --res=audio --min-seconds=60 --max-seconds=480 -rv $@"
+#alias rmusic="youtube-viewer -n --res=audio --min-seconds=60 --max-seconds=480 --autoplay $@"
 alias randalias="$SIDEF/bin/sidef -E 'say(%F<#{ENV{:HOME}}/youtube-viewer.txt>.open_r.lines.rand)'"
 alias yv="youtube-viewer"
 #alias inxi="inxi -F -x -f -o -p"
