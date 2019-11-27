@@ -17,7 +17,7 @@
 /usr/bin/obmenu-generator -i -s
 /usr/bin/numlockx on
 /usr/bin/setxkbmap ro &
-/usr/bin/compton &
+/usr/bin/picom &
 /usr/bin/conky &
 #nvidia-settings &
 /usr/bin/feh --bg-scale ~/Other/wallpaper.jpg

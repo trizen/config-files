@@ -56,7 +56,7 @@ our $CONFIG = {
                                                           },
                                                           { key => "OnlyShowIn", re => qr/XFCE/ },
                                                         ],
-                             skip_filename_re        => qr/^(?:exo-|xfce4-about|Terminal|avahi|b(?:ssh|vnc)|dconf|ffadomixer|gconf|mplayer|tilix|compton)/,
+                             skip_filename_re        => qr/^(?:exo-|xfce4-about|Terminal|avahi|b(?:ssh|vnc)|dconf|ffadomixer|gconf|mplayer|tilix|compton|picom|conky)/,
                              substitutions           => undef,
                              terminal                => "tilix",
                              terminalization_format  => "%s -e '%s'",

@@ -2,7 +2,7 @@
 ao=alsa
 vo=gpu
 hwdec=gpu
-sub-codepage=utf8:latin2
+sub-codepage=latin2
 slang=rom,rum,ro,eng,en
 alang=eng,en,rom,ro,rum
 sub-pos=95

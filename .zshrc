@@ -223,6 +223,7 @@ alias perltidy='perltidy -utf8 -l=127 -f -kbl=1 -bbb -bbc -bbs -b -ple -bt=2 -pt
 alias music="youtube-viewer -A -n -m -s --res=audio --min-seconds=60 --max-seconds=480 $@"
 alias favmusic="youtube-viewer -F -m -n --res=audio --std-input=:anp\ :re=\\\\p{cyrillic} --page \$1"
 alias rmusic="youtube-viewer -A -m -n -s --res=audio --min-seconds=60 --max-seconds=480 -rv $@"
+alias autoplay="youtube-viewer -n --min-seconds=60 --max-seconds=480 --autoplay $@"
 #alias rmusic="youtube-viewer -n --res=audio --min-seconds=60 --max-seconds=480 --autoplay $@"
 alias randalias="$SIDEF/bin/sidef -E 'say(%F<#{ENV{:HOME}}/youtube-viewer.txt>.open_r.lines.rand)'"
 alias yv="youtube-viewer"
@@ -273,6 +274,9 @@ alias poem-from-poem="perl $WER/../Lingua/poetry_from_poetry.pl"
 alias rand-poem="perl $WER/../Lingua/poetry_from_poetry_with_variations.pl"
 alias oeis="perl $PROG/experimental-projects/oeis-autoload/main.pl $@"
 alias siqs="perl $WER/../Math/siqs_factorization.pl $@"
+alias dbf="perl ~/Other/Programare/experimental-projects/factordb/factordb.pl $@"
+alias img-strip="perl $WER/../Image/remove_sensitive_exif_tags.pl $@"
+alias img-optimize="perl $WER/../Image/optimize_images.pl $@"
 
 # Support colors in less
 export LESS_TERMCAP_mb=$'\E[01;33m'

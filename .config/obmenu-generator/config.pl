@@ -66,7 +66,7 @@ our $CONFIG = {
                                                           },
                                                           { key => "OnlyShowIn", re => qr/XFCE/ },
                                                         ],
-                             skip_filename_re        => qr/^(?:exo-|xfce4-about|Terminal|avahi|b(?:ssh|vnc)|dconf|ffadomixer|gconf|mplayer|tilix|compton)/,
+                             skip_filename_re        => qr/^(?:exo-|xfce4-about|Terminal|avahi|b(?:ssh|vnc)|dconf|ffadomixer|gconf|mplayer|tilix|compton|picom|conky|tint2)/,
                              substitutions           => undef,
                              terminalization_format  => "%s -e '%s'",
                              terminalize             => 1,
@@ -75,5 +75,6 @@ our $CONFIG = {
   "locale_support"      => 0,
   "missing_icon"        => "gtk-missing-image",
   "terminal"            => "tilix",
-  "VERSION"             => 0.85,
+  "use_gtk3"            => 1,
+  "VERSION"             => 0.86,
 }
