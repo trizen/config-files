@@ -30,9 +30,9 @@ my $editor = $CONFIG->{editor};
 our $SCHEMA = [
 
     #           COMMAND         LABEL           ICON
-    {item => ['pcmanfm',    'File Manager', 'system-file-manager']},
+    {item => ['thunar',    'File Manager', 'system-file-manager']},
     {item => ['tilix', 'Terminal',     'utilities-terminal']},
-    {item => ['chromium',   'Chromium',     'chromium']},
+    {item => ['brave',   'Brave',     'brave-beta']},
 
     #{item => ['vivaldi-preview',               'Vivaldi',       'vivaldi']},
 

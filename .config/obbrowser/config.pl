@@ -6,7 +6,8 @@
 
 =for comment
 
-|| ICON SETTINGS
+# ICON SETTINGS
+
     | use_gtk3         : Use the Gtk3 library for resolving the icon-paths. (default: 0)
     | with_icons       : Use icons for files and directories.
     | mime_ext_only    : Determine the mimetype by extension only. (may improve performance)
@@ -16,7 +17,8 @@
     | force_icon_size  : Always get the icon scaled to the requested size. (default: 0)
     | gtk_rc_filename  : Absolute path to the GTK configuration file.
 
-|| MENU
+# MENU
+
     | terminal         : Command to a terminal emulator for opening directories.
     | file_manager     : Command to a file manager for opening files and directories.
     | browse_label     : Label for "Browse here..." action.
@@ -31,7 +33,7 @@
 our $CONFIG = {
   browse_label      => "Browse here...",
   dirs_first        => 1,
-  file_manager      => "pcmanfm",
+  file_manager      => "thunar",
   file_manager_icon => "folder-open",
   force_icon_size   => 0,
   generic_fallback  => 1,

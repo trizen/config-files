@@ -142,7 +142,7 @@
 
        use obconf if you want to change these without having to log out
        and back in -->
-    <number>4</number>
+    <number>2</number>
     <firstdesk>1</firstdesk>
     <names>
       <!-- set names up here if you want to, like this:
@@ -314,7 +314,7 @@
     </keybind>
     <keybind key="A-F3">
       <action name="Execute">
-        <command>pcmanfm</command>
+        <command>thunar</command>
         <startupnotify>
           <enabled>yes</enabled>
           <name>File manager</name>
@@ -332,7 +332,7 @@
     </keybind>
     <keybind key="A-y">
       <action name="Execute">
-        <command>tilix -e 'gtk-youtube-viewer'</command>
+        <command>gtk-youtube-viewer</command>
         <startupnotify>
           <enabled>yes</enabled>
           <name>Youtube Viewer</name>

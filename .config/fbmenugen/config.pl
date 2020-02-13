@@ -18,13 +18,13 @@
                                 {key => 'OnlyShowIn', re => qr/XFCE/},
                             ],
 
-    | substitutions       : Substitute, by using a regex, in the values of the desktop files.
+    | substitutions       : Substitute, by using a regex, in the values from the desktop files.
                             Example: [
                                 {key => 'Exec', re => qr/xterm/, value => 'tilix', global => 1},
-                                {key => 'Name', re => qr/^GNU I\w+ M\w+ P\w+/, value => 'GIMP'},
                             ],
 
 || ICON SETTINGS
+    | use_gtk3            : Use the Gtk3 library for resolving the icon-paths. (default: 0)
     | gtk_rc_filename     : Absolute path to the GTK configuration file.
     | missing_icon        : Use this icon for missing icons (default: gtk-missing-image)
     | icon_size           : Preferred size for icons. (default: 32)
@@ -59,7 +59,6 @@ our $CONFIG = {
                                                           "$ENV{HOME}/.local/share/applications",
                                                           "$ENV{HOME}/Desktop",
                                                         ],
-                             gtk_rc_filename         => "$ENV{HOME}/.gtkrc-2.0",
                              keep_unknown_categories => 1,
                              skip_entry              => undef,
                              skip_filename_re        => undef,
@@ -68,8 +67,10 @@ our $CONFIG = {
                              terminalize             => 1,
                              unknown_category_key    => "other",
                            },
+  "locale_support"      => 1,
   "menu_title"          => "Fluxbox",
   "missing_icon"        => "gtk-missing-image",
   "terminal"            => "tilix",
-  "VERSION"             => 0.82,
+  "use_gtk3"            => 0,
+  "VERSION"             => 0.84,
 }

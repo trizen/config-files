@@ -159,8 +159,8 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 
 export XDG_CONFIG_HOME="$HOME/.config"
 export USE_CCACHE=1
 export EDITOR='joe'
-export BROWSER='chromium'
-export WEBBROWSER='chromium'
+export BROWSER='brave-dev'
+export WEBBROWSER='brave-dev'
 export GOROOT=/usr/lib/go
 export GOOS='linux'
 export FILEMANAGER='pcmanfm'
@@ -200,6 +200,7 @@ alias rmdir='rmdir -v'                      # verbose remove dir
 alias mkdir='mkdir -p -v'                   # create if not exist, verbose
 alias ln='ln -v'                            # verbose link
 alias wget='wget -c'                        # continues/resumes
+alias wget2='wget2 -c --progress=bar --force-progress'
 alias chmod='chmod -c'
 alias chown='chown -c'
 #alias subr='sub-renamer -r'
@@ -230,7 +231,7 @@ alias yv="youtube-viewer"
 #alias inxi="inxi -F -x -f -o -p"
 alias url2pdf="wkhtmltopdf --use-xserver --enable-javascript --enable-smart-shrinking --images --enable-external-links --load-error-handling ignore --javascript-delay 3500 $@"
 alias locatepm="locatepm -b"
-alias install-perl="perlbrew install --ld --64all -Doptimize='-march=native -Ofast -pipe -fno-plt' -j 2 --noman --notest --thread --multi $@"
+alias install-perl="perlbrew install --ld --64all -Doptimize='-march=native -O3 -pipe -fno-plt' -j 2 --noman --notest --thread --multi $@"
 alias plint="perl -MO=Lint,all $@"
 alias roxy="rlwrap $SIDEF/bin/sidef /home/swampyx/Other/Programare/MYPKGS/smart-units/smart-units.sf"
 alias sidef="$SIDEF/bin/sidef"
@@ -265,7 +266,7 @@ alias file-monitor="perl $WER/../Monitoring/file-monitor"
 alias locatepm="perl $WER/../Finders/locatepm -i -b"
 alias img-rewrite="perl $WER/../Image/img_rewrite.pl"
 alias any2mp3="sidef $SIDEF/scripts/Applications/any2mp3.sf"
-alias make_filenames_safe="sidef $SIDEF/scripts/Applications/make_filenames_safe.sf"
+alias make_filenames_safe="sidef /home/swampyx/Other/Programare/sidef-scripts/File/make_filenames_safe.sf"
 alias wave-cmp="perl $WER/../Audio/wave-cmp.pl"
 alias canly="perl $WER/../Analyzers/perl_code_analyzer.pl"
 alias img-autocrop="perl $WER/../Image/img-autocrop.pl"
@@ -275,6 +276,7 @@ alias rand-poem="perl $WER/../Lingua/poetry_from_poetry_with_variations.pl"
 alias oeis="perl $PROG/experimental-projects/oeis-autoload/main.pl $@"
 alias siqs="perl $WER/../Math/siqs_factorization.pl $@"
 alias dbf="perl ~/Other/Programare/experimental-projects/factordb/factordb.pl $@"
+alias factordb="perl ~/Other/Programare/experimental-projects/factordb/get_factordb.pl $@"
 alias img-strip="perl $WER/../Image/remove_sensitive_exif_tags.pl $@"
 alias img-optimize="perl $WER/../Image/optimize_images.pl $@"
 
