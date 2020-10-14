@@ -46,7 +46,7 @@ our $CONFIG = {
   terminal_icon     => "utilities-terminal",
   terminal_label    => "Terminal here...",
   use_gtk3          => 1,
-  VERSION           => 0.12,
+  VERSION           => 0.13,
   with_icons        => 1,
   with_terminal     => 1,
 }

@@ -23,7 +23,7 @@
 our $SCHEMA = [
 
     #             COMMAND                 LABEL                ICON
-    {item => ['pcmanfm',            'File Manager',       'fileopen']},
+    {item => ['thunar',            'File Manager',       'fileopen']},
     #{item => ["$editor /tmp/x.go",  'Test Script',         'text-x-script']},
     #{item => ['vivaldi-preview',             'Vivaldi',             'vivaldi']},
     #{item => ['luakit',             'Luakit Browser',             'luakit']},

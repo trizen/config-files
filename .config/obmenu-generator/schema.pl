@@ -32,7 +32,7 @@ our $SCHEMA = [
     #           COMMAND         LABEL           ICON
     {item => ['thunar',    'File Manager', 'system-file-manager']},
     {item => ['tilix', 'Terminal',     'utilities-terminal']},
-    {item => ['brave',   'Brave',     'brave-beta']},
+    {item => ['brave',   'Brave',     'brave-dev']},
 
     #{item => ['vivaldi-preview',               'Vivaldi',       'vivaldi']},
 

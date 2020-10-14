@@ -24,6 +24,7 @@
 /usr/bin/tilix --working-directory=/tmp &
 /usr/bin/tint2 &
 /usr/bin/transmission-gtk &
-#/usr/bin/fbrowse-tray -m dnd ~/Videos
+#/usr/bin/fbrowse-tray -m dnd ~/Videos &
+/usr/bin/fbrowse-tray /tmp &
 /usr/bin/menutray -i -gtk3 &
 /usr/bin/perl ~/.config/openbox/kill_fat_perls.pl &

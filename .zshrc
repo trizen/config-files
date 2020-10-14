@@ -82,6 +82,8 @@ setopt hist_ignore_all_dups
 setopt autocd
 #setopt correctall
 
+export PERL_MM_OPT='OPTIMIZE="-march=native -O3 -pipe -fno-plt"'
+export CCFLAGS="-march=native -O3 -pipe -fstack-protector-strong --param=ssp-buffer-size=4 -fno-plt"
 export CFLAGS="-march=native -O3 -pipe -fstack-protector-strong --param=ssp-buffer-size=4 -fno-plt"
 export CXXFLAGS="-march=native -O3 -pipe -fstack-protector-strong --param=ssp-buffer-size=4 -fno-plt"
 export LDFLAGS="-Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now"
@@ -93,7 +95,7 @@ export MAKEFLAGS="-j2"
 emulate sh -c 'source /etc/profile'
 
 if [[ $(whoami) != "root" ]]; then
-    cal
+    #cal
 fi
 
 function git_prompt_info() {
@@ -163,7 +165,7 @@ export BROWSER='brave-dev'
 export WEBBROWSER='brave-dev'
 export GOROOT=/usr/lib/go
 export GOOS='linux'
-export FILEMANAGER='pcmanfm'
+export FILEMANAGER='thunar'
 export TERM='xterm'
 export GOPATH="$HOME/GO"
 export GOBIN="$HOME/GO/bin"
@@ -190,6 +192,7 @@ export FUN="$PROG/Fun scripts"
 #------------------------------
 # Alias stuff
 #------------------------------
+alias nano='nano --indicator'               # nano with scrollbar
 alias df='df -hT'                           # human readable, print filetype
 alias du='du -d1 -h'                        # max depth, human readable
 alias free='free -h'                        # human readable
@@ -221,11 +224,18 @@ alias less='less -g -r'
 alias p='rlwrap perl6 --optimize=3 $@'
 alias mpu='perl -Mntheory=:all -E $@'
 alias perltidy='perltidy -utf8 -l=127 -f -kbl=1 -bbb -bbc -bbs -b -ple -bt=2 -pt=2 -sbt=2 -bvt=0 -sbvt=1 -cti=1 -bar -lp -anl'
-alias music="youtube-viewer -A -n -m -s --res=audio --min-seconds=60 --max-seconds=480 $@"
-alias favmusic="youtube-viewer -F -m -n --res=audio --std-input=:anp\ :re=\\\\p{cyrillic} --page \$1"
-alias rmusic="youtube-viewer -A -m -n -s --res=audio --min-seconds=60 --max-seconds=480 -rv $@"
-alias autoplay="youtube-viewer -n --min-seconds=60 --max-seconds=480 --autoplay $@"
-#alias rmusic="youtube-viewer -n --res=audio --min-seconds=60 --max-seconds=480 --autoplay $@"
+
+alias music="youtube-viewer -A -n -s --res=audio --min-seconds=60 --max-seconds=600 --category=music $@"
+alias rmusic="youtube-viewer -A -n -s --res=audio --min-seconds=60 --max-seconds=600 -rv $@"
+alias favmusic="youtube-viewer -A -n -s --pid=PLa3dbzLYmJouCDsxBYhmETqzW6l7tXQSq --page \$1"
+#alias autoplay="youtube-viewer -A -n --min-seconds=60 --max-seconds=600 --autoplay $@"
+#alias autoplay="youtube-viewer -A -n --min-seconds=60 --max-seconds=480 --autoplay $@"
+
+#alias music="straw-viewer -A -n -s --res=audio --min-seconds=60 --max-seconds=480 $@"
+#alias rmusic="straw-viewer -A -n -s --res=audio --min-seconds=60 --max-seconds=480 -rv $@"
+#alias favmusic="straw-viewer -A -n -s -pid=PLa3dbzLYmJouCDsxBYhmETqzW6l7tXQSq"
+#alias autoplay="straw-viewer -A -n --min-seconds=60 --max-seconds=480 --autoplay $@"
+
 alias randalias="$SIDEF/bin/sidef -E 'say(%F<#{ENV{:HOME}}/youtube-viewer.txt>.open_r.lines.rand)'"
 alias yv="youtube-viewer"
 #alias inxi="inxi -F -x -f -o -p"
@@ -265,8 +275,9 @@ alias disk-stats="perl $WER/../Visualisators/disk-stats.pl"
 alias file-monitor="perl $WER/../Monitoring/file-monitor"
 alias locatepm="perl $WER/../Finders/locatepm -i -b"
 alias img-rewrite="perl $WER/../Image/img_rewrite.pl"
-alias any2mp3="sidef $SIDEF/scripts/Applications/any2mp3.sf"
-alias make_filenames_safe="sidef /home/swampyx/Other/Programare/sidef-scripts/File/make_filenames_safe.sf"
+alias any2mp3="sidef $WES/../Converters/any2mp3.sf"
+alias any2audio="sidef $WES/../Converters/any2audio.sf"
+alias make_filenames_safe="sidef $WES/../File/make_filenames_safe.sf"
 alias wave-cmp="perl $WER/../Audio/wave-cmp.pl"
 alias canly="perl $WER/../Analyzers/perl_code_analyzer.pl"
 alias img-autocrop="perl $WER/../Image/img-autocrop.pl"

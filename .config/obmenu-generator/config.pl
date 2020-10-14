@@ -63,7 +63,7 @@ our $CONFIG = {
                              skip_entry              => [
                                                           {
                                                             key => "Name",
-                                                            re  => qr/^(?:Avahi|Qt4?\b|Hardware Locality|File Manager|HDSP|Echomixer|Envy24 |HDAJack|FFADO Mixer|Hwmixvol)/,
+                                                            re  => qr/^(?:Avahi|Qt4?\b|Hardware Locality|File Manager|HDSP|Echomixer|Envy24 |HDAJack|FFADO Mixer|Hwmixvol|Joe's)/,
                                                           },
                                                           { key => "OnlyShowIn", re => qr/XFCE/ },
                                                         ],
@@ -77,5 +77,5 @@ our $CONFIG = {
   "missing_icon"        => "gtk-missing-image",
   "terminal"            => "tilix",
   "use_gtk3"            => 1,
-  "VERSION"             => 0.87,
+  "VERSION"             => 0.88,
 }
