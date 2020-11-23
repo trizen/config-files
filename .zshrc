@@ -1,5 +1,6 @@
 # Path to your oh-my-zsh installation.
-ZSH="/home/swampyx/.oh-my-zsh/"
+#ZSH="/home/swampyx/.oh-my-zsh/"
+ZSH="/usr/share/oh-my-zsh"
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -161,8 +162,8 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 
 export XDG_CONFIG_HOME="$HOME/.config"
 export USE_CCACHE=1
 export EDITOR='joe'
-export BROWSER='brave-dev'
-export WEBBROWSER='brave-dev'
+export BROWSER='firefox'
+export WEBBROWSER='firefox'
 export GOROOT=/usr/lib/go
 export GOOS='linux'
 export FILEMANAGER='thunar'

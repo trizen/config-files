@@ -1,8 +1,7 @@
 #profile=opengl-hq
 ao=alsa
 vo=gpu
-gpu-context=x11
-hwdec=gpu
+hwdec=vaapi
 sub-codepage=latin2
 slang=rom,rum,ro,eng,en
 alang=eng,en,rom,ro,rum
