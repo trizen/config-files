@@ -68,7 +68,13 @@ our $CONFIG = {
                                                           { key => "OnlyShowIn", re => qr/XFCE/ },
                                                         ],
                              skip_filename_re        => qr/^(?:exo-|xfce4-about|Terminal|avahi|b(?:ssh|vnc)|dconf|ffadomixer|gconf|mplayer|tilix|compton|picom|conky|tint2)/,
-                             substitutions           => undef,
+                             substitutions           => [
+                                                          {
+                                                            key => "Name",
+                                                            re => qr/^GNU Image Manipulation Program/,
+                                                            value => "G.I.M.P.",
+                                                          },
+                                                        ],
                              terminalization_format  => "%s -e '%s'",
                              terminalize             => 1,
                              unknown_category_key    => "other",
@@ -77,5 +83,5 @@ our $CONFIG = {
   "missing_icon"        => "gtk-missing-image",
   "terminal"            => "tilix",
   "use_gtk3"            => 1,
-  "VERSION"             => 0.88,
+  "VERSION"             => 0.89,
 }

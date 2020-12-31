@@ -94,6 +94,7 @@ mei_me
 mii
 mousedev
 mrp
+msr
 mtd
 nf_conntrack
 nf_conntrack_broadcast
@@ -114,6 +115,7 @@ nvidia_modeset
 of_mdio
 ofpart
 overlay
+overlayfs
 pci_stub
 processor
 r8169
