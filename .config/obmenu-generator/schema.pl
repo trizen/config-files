@@ -33,6 +33,8 @@ our $SCHEMA = [
     {item => ['thunar',    'File Manager', 'system-file-manager']},
     {item => ['tilix', 'Terminal',     'utilities-terminal']},
     {item => ['firefox',   'Firefox',     'firefox']},
+    {item => ['/usr/bin/apulse /usr/bin/tor-browser',   'Tor Browser',     'tor-browser']},
+    {item => ['/usr/bin/librewolf',   'LibreWolf',     'librewolf']},
 
     #{item => ['vivaldi-preview',               'Vivaldi',       'vivaldi']},
 

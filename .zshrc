@@ -83,10 +83,10 @@ setopt hist_ignore_all_dups
 setopt autocd
 #setopt correctall
 
-export PERL_MM_OPT='OPTIMIZE="-march=native -O3 -pipe -fno-plt"'
-export CCFLAGS="-march=native -O3 -pipe -fstack-protector-strong --param=ssp-buffer-size=4 -fno-plt"
-export CFLAGS="-march=native -O3 -pipe -fstack-protector-strong --param=ssp-buffer-size=4 -fno-plt"
-export CXXFLAGS="-march=native -O3 -pipe -fstack-protector-strong --param=ssp-buffer-size=4 -fno-plt"
+export PERL_MM_OPT='OPTIMIZE="-march=native -O3 -pipe -fno-plt -fstack-clash-protection -fcf-protection"'
+export CCFLAGS="-march=native -O3 -pipe -fno-plt -fexceptions -Wp,-D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fstack-clash-protection -fcf-protection"
+export CFLAGS="-march=native -O3 -pipe -fno-plt -fexceptions -Wp,-D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fstack-clash-protection -fcf-protection"
+export CXXFLAGS="-march=native -O3 -pipe -fno-plt -fexceptions -Wp,-D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fstack-clash-protection -fcf-protection"
 export LDFLAGS="-Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now"
 export MAKEFLAGS="-j2"
 
@@ -165,11 +165,12 @@ export EDITOR='joe'
 export BROWSER='firefox'
 export WEBBROWSER='firefox'
 export GOROOT=/usr/lib/go
+#export GOROOT="$HOME/go"
 export GOOS='linux'
 export FILEMANAGER='thunar'
 export TERM='xterm'
-export GOPATH="$HOME/GO"
-export GOBIN="$HOME/GO/bin"
+export GOPATH="$HOME/go"
+export GOBIN="$HOME/go/bin"
 export GOMAXPROCS=2
 #export GOPKGS="$HOME/GO/pkg"
 export QTDIR=/usr/include/QtCore
@@ -178,7 +179,7 @@ export CCACHE_PATH="/usr/bin"
 export CCACHE_SLOPPINESS="include_file_mtime,time_macros,file_macro"
 #export CCACHE_DIR=/media/ccache
 export DBI_DRIVER='mysql'
-export PATH="/usr/lib/ccache/bin:$PATH:/usr/share/perl6/vendor/bin"
+export PATH="/usr/lib/ccache/bin:$PATH:/usr/share/perl6/vendor/bin:$HOME/.raku/bin"
 #export PS1="%B%n%b[%~]: "
 export PROG="$HOME/Other/Programare"
 #export PZN="$PROG/Personal projects"
@@ -193,6 +194,12 @@ export FUN="$PROG/Fun scripts"
 #------------------------------
 # Alias stuff
 #------------------------------
+alias zef='proxychains4 zef'
+alias cpan='proxychains4 cpan'
+alias cpan-outdated='proxychains4 cpan-outdated'
+alias cpanm='proxychains4 cpanm -M https://cpan.metacpan.org --verify --lwp'
+alias cpanm-reporter='proxychains4 cpanm-reporter'
+alias git='torify git'
 alias nano='nano --indicator'               # nano with scrollbar
 alias df='df -hT'                           # human readable, print filetype
 alias du='du -d1 -h'                        # max depth, human readable
@@ -204,7 +211,7 @@ alias rmdir='rmdir -v'                      # verbose remove dir
 alias mkdir='mkdir -p -v'                   # create if not exist, verbose
 alias ln='ln -v'                            # verbose link
 alias wget='wget -c'                        # continues/resumes
-alias wget2='wget2 -c --progress=bar --force-progress'
+#alias wget2='wget2 -c --progress=bar --force-progress'
 alias chmod='chmod -c'
 alias chown='chown -c'
 #alias subr='sub-renamer -r'
@@ -238,13 +245,13 @@ alias favmusic="youtube-viewer -A -n -s --pid=PLa3dbzLYmJouCDsxBYhmETqzW6l7tXQSq
 #alias autoplay="straw-viewer -A -n --min-seconds=60 --max-seconds=480 --autoplay $@"
 
 alias randalias="$SIDEF/bin/sidef -E 'say(%F<#{ENV{:HOME}}/youtube-viewer.txt>.open_r.lines.rand)'"
-alias yv="youtube-viewer"
+alias yv="pipe-viewer"
 #alias inxi="inxi -F -x -f -o -p"
 alias url2pdf="wkhtmltopdf --use-xserver --enable-javascript --enable-smart-shrinking --images --enable-external-links --load-error-handling ignore --javascript-delay 3500 $@"
 alias locatepm="locatepm -b"
 alias install-perl="perlbrew install --ld --64all -Doptimize='-march=native -O3 -pipe -fno-plt' -j 2 --noman --notest --thread --multi $@"
 alias plint="perl -MO=Lint,all $@"
-alias roxy="rlwrap $SIDEF/bin/sidef /home/swampyx/Other/Programare/MYPKGS/smart-units/smart-units.sf"
+alias roxy="$SIDEF/bin/sidef /home/swampyx/Other/Programare/MYPKGS/smart-units/smart-units.sf"
 alias sidef="$SIDEF/bin/sidef"
 #alias vega="$VEGA/bin/vega"
 #alias johana="$JOHANA/bin/johana"
@@ -286,12 +293,16 @@ alias img-autocrop="perl $WER/../Image/img-autocrop.pl"
 alias yafu="rlwrap yafu $@"
 alias poem-from-poem="perl $WER/../Lingua/poetry_from_poetry.pl"
 alias rand-poem="perl $WER/../Lingua/poetry_from_poetry_with_variations.pl"
-alias oeis="perl $PROG/experimental-projects/oeis-autoload/main.pl $@"
+alias oeis="torify perl $PROG/experimental-projects/oeis-autoload/oeis.pl $@"
+alias oeisf="torify sidef $PROG/experimental-projects/oeis-autoload/oeis.sf $@"
 alias siqs="perl $WER/../Math/siqs_factorization.pl $@"
 alias dbf="perl ~/Other/Programare/experimental-projects/factordb/factordb.pl $@"
 alias factordb="perl ~/Other/Programare/experimental-projects/factordb/get_factordb.pl $@"
 alias img-strip="perl $WER/../Image/remove_sensitive_exif_tags.pl $@"
 alias img-optimize="perl $WER/../Image/optimize_images.pl $@"
+alias png2jpg="perl $WER/../Image/gd_png2jpg.pl $@"
+alias webp2png="perl $WER/../Image/webp2png.pl $@"
+alias collage="perl $WER/../Image/collage.pl $@"
 
 # Support colors in less
 export LESS_TERMCAP_mb=$'\E[01;33m'

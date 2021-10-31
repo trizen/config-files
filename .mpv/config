@@ -1,8 +1,0 @@
-#profile=opengl-hq
-ao=alsa
-vo=gpu
-hwdec=vaapi
-sub-codepage=latin2
-slang=rom,rum,ro,eng,en
-alang=eng,en,rom,ro,rum
-sub-pos=95

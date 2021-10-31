@@ -24,7 +24,7 @@
                             ],
 
 || ICON SETTINGS
-    | use_gtk3            : Use the Gtk3 library for resolving the icon paths. (default: 0)
+    | gtk_version         : The version of the Gtk library used for resolving the icon paths. (default: 3)
     | gtk_rc_filename     : Absolute path to the GTK configuration file.
     | missing_icon        : Use this icon for missing icons (default: gtk-missing-image)
     | icon_size           : Preferred size for icons. (default: 32)
@@ -51,6 +51,7 @@ our $CONFIG = {
   "force_icon_size"     => 0,
   "generic_fallback"    => 0,
   "gtk_rc_filename"     => "$ENV{HOME}/.gtkrc-2.0",
+  "gtk_version"         => 3,
   "icon_size"           => 32,
   "Linux::DesktopFiles" => {
                              desktop_files_paths     => [
@@ -71,6 +72,5 @@ our $CONFIG = {
   "menu_title"          => "Fluxbox",
   "missing_icon"        => "gtk-missing-image",
   "terminal"            => "tilix",
-  "use_gtk3"            => 1,
-  "VERSION"             => 0.85,
+  "VERSION"             => 0.86,
 }

@@ -24,8 +24,8 @@
                             ],
 
 || ICON SETTINGS
-    | use_gtk3            : Use the Gtk3 library for resolving the icon paths. (default: 0)
-    | gtk_rc_filename     : Absolute path to the GTK configuration file.
+    | gtk_version         : The version of the Gtk library used for resolving the icon paths. (default: 3)
+    | gtk_rc_filename     : Absolute path to the Gtk configuration file.
     | missing_icon        : Use this icon for missing icons (default: gtk-missing-image)
     | icon_size           : Preferred size for icons. (default: 48)
     | generic_fallback    : Try to shorten icon name at '-' characters before looking at inherited themes. (default: 0)
@@ -50,7 +50,8 @@ our $CONFIG = {
   "editor"              => "geany",
   "force_icon_size"     => 0,
   "generic_fallback"    => 0,
-  "gtk_rc_filename"     => "$ENV{HOME}/.gtkrc-2.0",
+  "gtk_rc_filename"     => "$ENV{HOME}/.config/gtk-3.0/settings.ini",
+  "gtk_version"         => 3,
   "icon_size"           => 48,
   "Linux::DesktopFiles" => {
                              desktop_files_paths     => [
@@ -74,6 +75,11 @@ our $CONFIG = {
                                                             re => qr/^GNU Image Manipulation Program/,
                                                             value => "G.I.M.P.",
                                                           },
+                                                          {
+                                                            key => "Exec",
+                                                            re => qr|^/usr/bin/tor-browser|,
+                                                            value => "/usr/bin/apulse /usr/bin/tor-browser",
+                                                          },
                                                         ],
                              terminalization_format  => "%s -e '%s'",
                              terminalize             => 1,
@@ -82,6 +88,5 @@ our $CONFIG = {
   "locale_support"      => 0,
   "missing_icon"        => "gtk-missing-image",
   "terminal"            => "tilix",
-  "use_gtk3"            => 1,
-  "VERSION"             => 0.89,
+  "VERSION"             => "0.90",
 }

@@ -28,9 +28,9 @@ my $editor = $CONFIG->{editor};
 our $SCHEMA = [
 
     #          COMMAND                 LABEL              ICON
-    {item => ['xdg-open .',       'File Manager', 'system-file-manager']},
-    {item => ['xterm',            'Terminal',     'utilities-terminal']},
-    {item => ['xdg-open http://', 'Web Browser',  'web-browser']},
+    {item => ['thunar',       'File Manager', 'system-file-manager']},
+    {item => ['tilix',            'Terminal',     'utilities-terminal']},
+    {item => ['firefox', 'Web Browser',  'web-browser']},
     {item => ['fbrun',            'Run command',  'system-run']},
 
     {sep => 'undef'},

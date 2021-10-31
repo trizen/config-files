@@ -278,7 +278,7 @@
     </keybind>
     <keybind key="A-g">
       <action name="Execute">
-        <command>chromium</command>
+        <command>firefox</command>
         <startupnotify>
           <enabled>yes</enabled>
           <name>Web browser</name>
@@ -332,7 +332,7 @@
     </keybind>
     <keybind key="A-y">
       <action name="Execute">
-        <command>gtk-youtube-viewer</command>
+        <command>tilix -e gtk-youtube-viewer</command>
         <startupnotify>
           <enabled>yes</enabled>
           <name>Youtube Viewer</name>

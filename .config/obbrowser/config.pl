@@ -8,7 +8,7 @@
 
 # ICON SETTINGS
 
-    | use_gtk3         : Use the Gtk3 library for resolving the icon-paths. (default: 0)
+    | gtk_version      : The version of the Gtk library used for resolving the icon paths. (default: 3)
     | with_icons       : Use icons for files and directories.
     | mime_ext_only    : Determine the mimetype by extension only. (may improve performance)
 
@@ -33,11 +33,12 @@
 our $CONFIG = {
   browse_label      => "Browse here...",
   dirs_first        => 1,
-  file_manager      => "thunar",
+  file_manager      => "exo-open",
   file_manager_icon => "folder-open",
   force_icon_size   => 0,
   generic_fallback  => 1,
-  gtk_rc_filename   => "$ENV{HOME}/.gtkrc-2.0",
+  gtk_rc_filename   => "$ENV{HOME}/.config/gtk-3.0/settings.ini",
+  gtk_version       => 3,
   icon_size         => 48,
   ignore_dotfiles   => 1,
   mime_ext_only     => 1,
@@ -45,8 +46,7 @@ our $CONFIG = {
   terminal          => "tilix --working-directory",
   terminal_icon     => "utilities-terminal",
   terminal_label    => "Terminal here...",
-  use_gtk3          => 1,
-  VERSION           => 0.13,
+  VERSION           => 0.14,
   with_icons        => 1,
   with_terminal     => 1,
 }

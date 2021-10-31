@@ -23,6 +23,7 @@
                             ],
 
 || ICON SETTINGS
+    | gtk_version         : The version of the Gtk library used for the menu. (default: 3)
     | icon_type           : Menu icon type (menu, dnd, small-toolbar, large-toolbar, button, dialog)
     | icon_size           : Icon size in pixels (only for absolute icon paths) (default: [16, 16])
     | missing_image       : Use this icon for missing icons (default: gtk-missing-image)
@@ -39,7 +40,8 @@
 
 our $CONFIG = {
   "editor"              => "geany",
-  "icon_size"           => [24, 24],
+  "gtk_version"         => 3,
+  "icon_size"           => [16, 16],
   "icon_type"           => "large-toolbar",
   "Linux::DesktopFiles" => {
                              desktop_files_paths     => [
@@ -52,7 +54,7 @@ our $CONFIG = {
                              skip_entry              => [
                                                           {
                                                             key => "Name",
-                                                            re  => qr/^(?:Avahi|Qt4?\b|Hardware Locality|File Manager|HDSP|Echomixer|Envy24 |HDAJack|Hwmix|FFADO Mixer)/,
+                                                            re  => qr/^(?:Avahi|Qt4?\b|Hardware Locality|File Manager|HDSP|Echomixer|Envy24 |HDAJack|Hwmix|FFADO Mixer|Joe's)/,
                                                           },
                                                           { key => "OnlyShowIn", re => qr/XFCE/ },
                                                         ],
@@ -76,5 +78,5 @@ our $CONFIG = {
   "missing_image"       => "gtk-missing-image",
   "popup_at_cursor"     => 1,
   "tooltips"            => 1,
-  "VERSION"             => 0.53,
+  "VERSION"             => 0.54,
 }
