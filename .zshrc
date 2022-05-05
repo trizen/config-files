@@ -56,6 +56,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
+#source /etc/profile.d/android-ndk.sh
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
@@ -162,8 +163,8 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 
 export XDG_CONFIG_HOME="$HOME/.config"
 export USE_CCACHE=1
 export EDITOR='joe'
-export BROWSER='firefox'
-export WEBBROWSER='firefox'
+export BROWSER='librewolf'
+export WEBBROWSER='librewolf'
 export GOROOT=/usr/lib/go
 #export GOROOT="$HOME/go"
 export GOOS='linux'
@@ -180,6 +181,7 @@ export CCACHE_SLOPPINESS="include_file_mtime,time_macros,file_macro"
 #export CCACHE_DIR=/media/ccache
 export DBI_DRIVER='mysql'
 export PATH="/usr/lib/ccache/bin:$PATH:/usr/share/perl6/vendor/bin:$HOME/.raku/bin"
+export PATH="$PATH:/opt/android-ndk/toolchains/llvm/prebuilt/linux-x86_64/bin:/opt/android-sdk/platform-tools"
 #export PS1="%B%n%b[%~]: "
 export PROG="$HOME/Other/Programare"
 #export PZN="$PROG/Personal projects"
@@ -190,6 +192,33 @@ export CORVINUS="$PROG/corvinus2"
 export WER="$PROG/perl-scripts/Math"
 export WES="$PROG/sidef-scripts/Math"
 export FUN="$PROG/Fun scripts"
+export CWTCH_HOME="$HOME/.cwtch"
+#export TARGETARCH="llvm"
+
+export NDK="/opt/android-ndk"
+
+# NDK Version
+export NDK_TARGETVER=27
+
+# Target arch - here armv7a for android
+#export NDK_TARGETARCH="armv7a-linux-androideabi"
+export NDK_TARGETARCH="arm-linux-androideabi"
+
+# Target CPU (ARMv7a)
+export NDK_TARGETSHORTARCH="armv7a"
+
+# Toolchain version
+#export NDK_TOOLVER=""
+
+# Architecture of a machine that does cross compilation
+export NDK_HOSTARCH="linux-x86_64"
+
+# Set needed preprocessor symbols
+export NDK_TOOLS="$NDK/toolchains/llvm/prebuilt/$NDK_HOSTARCH/bin"
+export NDK_TOOL="$NDK_TOOLS/clang"
+export NDK_LIBS="$NDK/prebuilt/prebuilt/$NDK_HOSTARCH/lib"
+export NDK_SYSROOT="$NDK/toolchains/llvm/prebuilt/$NDK_HOSTARCH/sysroot"
+export NDK_INCLUDES="-I$NDK_SYSROOT/usr/include -I$NDK/sysroot/usr/include/$NDK_TARGETARCH"
 
 #------------------------------
 # Alias stuff
@@ -236,7 +265,7 @@ alias perltidy='perltidy -utf8 -l=127 -f -kbl=1 -bbb -bbc -bbs -b -ple -bt=2 -pt
 alias music="youtube-viewer -A -n -s --res=audio --min-seconds=60 --max-seconds=600 --category=music $@"
 alias rmusic="youtube-viewer -A -n -s --res=audio --min-seconds=60 --max-seconds=600 -rv $@"
 alias favmusic="youtube-viewer -A -n -s --pid=PLa3dbzLYmJouCDsxBYhmETqzW6l7tXQSq --page \$1"
-#alias autoplay="youtube-viewer -A -n --min-seconds=60 --max-seconds=600 --autoplay $@"
+alias autoplay="youtube-viewer -A -n --min-seconds=60 --max-seconds=600 --autoplay $@"
 #alias autoplay="youtube-viewer -A -n --min-seconds=60 --max-seconds=480 --autoplay $@"
 
 #alias music="straw-viewer -A -n -s --res=audio --min-seconds=60 --max-seconds=480 $@"
@@ -278,6 +307,8 @@ alias any_to_3gp="perl $WER/../Converters/any_to_3gp.pl"
 alias unidec_renamer="perl $WER/../Decoders/unidec_renamer.pl"
 alias fdf="perl $WER/../Finders/fdf"
 alias fsfn="perl $WER/../Finders/fsfn.pl"
+alias num2expr="perl $WER/number2expression.pl"
+alias dnscrypt-stats="sudo perl $WER/../Visualisators/dnscrypt_stats.pl"
 #alias pview="perl $WER/../Visualisators/pview"
 alias pview="pl2term"
 alias disk-stats="perl $WER/../Visualisators/disk-stats.pl"
@@ -290,7 +321,7 @@ alias make_filenames_safe="sidef $WES/../File/make_filenames_safe.sf"
 alias wave-cmp="perl $WER/../Audio/wave-cmp.pl"
 alias canly="perl $WER/../Analyzers/perl_code_analyzer.pl"
 alias img-autocrop="perl $WER/../Image/img-autocrop.pl"
-alias yafu="rlwrap yafu $@"
+#alias yafu="rlwrap yafu $@"
 alias poem-from-poem="perl $WER/../Lingua/poetry_from_poetry.pl"
 alias rand-poem="perl $WER/../Lingua/poetry_from_poetry_with_variations.pl"
 alias oeis="torify perl $PROG/experimental-projects/oeis-autoload/oeis.pl $@"
@@ -303,6 +334,11 @@ alias img-optimize="perl $WER/../Image/optimize_images.pl $@"
 alias png2jpg="perl $WER/../Image/gd_png2jpg.pl $@"
 alias webp2png="perl $WER/../Image/webp2png.pl $@"
 alias collage="perl $WER/../Image/collage.pl $@"
+alias img2png="perl $WER/../Image/img2png.pl $@"
+alias html2text="perl $WER/../Converters/html2text.pl $@"
+alias ass2srt="perl $WER/../Converters/ass2srt.pl $@"
+alias plage="perl $WER/../Encryption/plage.pl $@"
+alias outguess-png="perl $WER/../Image/outguess-png-3x.pl $@"
 
 # Support colors in less
 export LESS_TERMCAP_mb=$'\E[01;33m'
@@ -376,8 +412,8 @@ confirm_wrapper() {
     confirm "${runcommand}" "$@"
 }
 
-poweroff() { confirm_wrapper --root $0 "$@"; }
-reboot() { confirm_wrapper --root $0 "$@"; }
-hibernate() { confirm_wrapper --root $0 "$@"; }
+#poweroff() { confirm_wrapper --root $0 "$@"; }
+#reboot() { confirm_wrapper --root $0 "$@"; }
+#hibernate() { confirm_wrapper --root $0 "$@"; }
 
 #[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx

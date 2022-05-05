@@ -32,9 +32,10 @@ our $SCHEMA = [
     #           COMMAND         LABEL           ICON
     {item => ['thunar',    'File Manager', 'system-file-manager']},
     {item => ['tilix', 'Terminal',     'utilities-terminal']},
-    {item => ['firefox',   'Firefox',     'firefox']},
-    {item => ['/usr/bin/apulse /usr/bin/tor-browser',   'Tor Browser',     'tor-browser']},
     {item => ['/usr/bin/librewolf',   'LibreWolf',     'librewolf']},
+    {item => ['/usr/bin/apulse /usr/bin/tor-browser',   'Tor Browser',     'tor-browser']},
+    {item => ["$ENV{HOME}/Downloads/LBRY_0.53.3.AppImage --no-sandbox",   'LBRY Desktop',     'lbry']},
+    #{item => ['/usr/bin/firefox',   'Firefox',     'firefox']},
 
     #{item => ['vivaldi-preview',               'Vivaldi',       'vivaldi']},
 

@@ -1,4 +1,0 @@
-[default]
-vo=libgl,xv,directfb
-ao=alsa
-subfont-text-scale=3

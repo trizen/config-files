@@ -1,0 +1,27 @@
+[user]
+    name = trizen
+    email = trizen@protonmail.com
+    signingkey = ABB8BBAA2E279767774149B7D0A443C703A3A056
+[credential]
+    helper = cache --timeout=28800
+[core]
+    pager = diff-so-fancy | less --tabs=4 -RFX
+[color]
+    ui = true
+[color "diff-highlight"]
+    oldNormal = red bold
+    oldHighlight = red bold 52
+    newNormal = green bold
+    newHighlight = green bold 22
+[color "diff"]
+    meta = yellow
+    frag = magenta bold
+    commit = yellow bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
+[commit]
+    gpgSign = true
+[tag]
+    gpgSign = true
+    forceSignAnnotated = true
