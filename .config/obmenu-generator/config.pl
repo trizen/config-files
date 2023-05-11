@@ -80,6 +80,11 @@ our $CONFIG = {
                                                             re => qr|^/usr/bin/tor-browser|,
                                                             value => "/usr/bin/apulse /usr/bin/tor-browser",
                                                           },
+                                                          {
+                                                            key => "Exec",
+                                                            re => qr|^subl\b|,
+                                                            value => "proxychains /opt/sublime_text/sublime_text",
+                                                          },
                                                         ],
                              terminalization_format  => "%s -e '%s'",
                              terminalize             => 1,
@@ -88,5 +93,5 @@ our $CONFIG = {
   "locale_support"      => 0,
   "missing_icon"        => "gtk-missing-image",
   "terminal"            => "tilix",
-  "VERSION"             => "0.90",
+  "VERSION"             => 0.91,
 }

@@ -5,7 +5,9 @@
 [credential]
     helper = cache --timeout=28800
 [core]
-    pager = diff-so-fancy | less --tabs=4 -RFX
+#    pager = diff-so-fancy | less --tabs=4 -RFX
+    pager = delta
+    autocrlf = false
 [color]
     ui = true
 [color "diff-highlight"]
@@ -25,3 +27,24 @@
 [tag]
     gpgSign = true
     forceSignAnnotated = true
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true
+    light = false
+    side-by-side = false
+    line-numbers = true
+    features = unobtrusive-line-numbers decorations
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process

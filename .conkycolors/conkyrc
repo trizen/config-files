@@ -90,9 +90,9 @@ ${execpi 60 perl /usr/share/conkycolors/bin/conkyHD2}
 ${voffset -4}${font Liberation Sans:style=Bold:size=8}NETWORK $stippled_hr${font}
 # |--ETH0
 ${if_up enp2s0}
-${voffset -5}${color0}${font ConkyColors:size=17}v${font}${color}${goto 32}${voffset -5}Up: ${font Ubuntu:style=Bold:size=8}${color1}${upspeed enp2s0}${color}${font} ${alignr}${color2}${upspeedgraph enp2s0 8,60 FFFFFF}${color}
+${voffset -5}${color0}${font ConkyColors:size=17}v${font}${color}${goto 32}${voffset -5}Up: ${font Ubuntu:style=Bold:size=8}${color1}${upspeed enp2s0}${color}${font} ${alignr}${color2}${upspeedgraph enp2s0 8,60 ADFFE9 FFFFFF}${color}
 ${goto 32}Total: ${font Ubuntu:style=Bold:size=8}${color2}${totalup enp2s0}${color}${font}
-${voffset 2}${color0}${font ConkyColors:size=17}u${font}${color}${goto 32}${voffset -5}Down: ${font Ubuntu:style=Bold:size=8}${color1}${downspeed enp2s0}${color}${font} ${alignr}${color2}${downspeedgraph enp2s0 8,60 FFFFFF}${color}
+${voffset 2}${color0}${font ConkyColors:size=17}u${font}${color}${goto 32}${voffset -5}Down: ${font Ubuntu:style=Bold:size=8}${color1}${downspeed enp2s0}${color}${font} ${alignr}${color2}${downspeedgraph enp2s0 8,60 ADFFE9 FFFFFF}${color}
 ${goto 32}Total: ${font Ubuntu:style=Bold:size=8}${color2}${totaldown enp2s0}${color}${font}
 ${voffset 2}${color0}${font ConkyColors:size=16}j${font}${color}${goto 32}${voffset -4}Local IP: ${alignr}${color2}${addr enp2s0}${color}
 ${downspeedgraph enp2s0 25,182 ADFFE9 FF972E} ${upspeedgraph enp2s0 25,182 ADFFE9 FF972E}
@@ -100,9 +100,9 @@ Down: ${downspeed enp2s0}/s $alignr Up: ${upspeed enp2s0}/s
 #${goto 32}Public IP: ${alignr}${color2}${execi 10800 curl ifconfig.me}${color}
 # |--PPP0
 ${else}${if_up ppp0}
-${voffset -5}${color0}${font ConkyColors:size=17}v${font}${color}${goto 32}${voffset -5}Up: ${font Ubuntu:style=Bold:size=8}${color1}${upspeed ppp0}${color}${font} ${alignr}${color2}${upspeedgraph ppp0 8,60 FFFFFF}${color}
+${voffset -5}${color0}${font ConkyColors:size=17}v${font}${color}${goto 32}${voffset -5}Up: ${font Ubuntu:style=Bold:size=8}${color1}${upspeed ppp0}${color}${font} ${alignr}${color2}${upspeedgraph ppp0 8,60 ADFFE9 FFFFFF}${color}
 ${goto 32}Total: ${font Ubuntu:style=Bold:size=8}${color2}${totalup ppp0}${color}${font}
-${voffset 2}${color0}${font ConkyColors:size=17}u${font}${color}${goto 32}${voffset -5}Down: ${font Ubuntu:style=Bold:size=8}${color1}${downspeed ppp0}${color}${font} ${alignr}${color2}${downspeedgraph ppp0 8,60 FFFFFF}${color}
+${voffset 2}${color0}${font ConkyColors:size=17}u${font}${color}${goto 32}${voffset -5}Down: ${font Ubuntu:style=Bold:size=8}${color1}${downspeed ppp0}${color}${font} ${alignr}${color2}${downspeedgraph ppp0 8,60 ADFFE9 FFFFFF}${color}
 ${goto 32}Total: ${font Ubuntu:style=Bold:size=8}${color2}${totaldown ppp0}${color}${font}
 
 ${voffset 2}${color0}${font ConkyColors:size=16}j${font}${color}${goto 32}${voffset -4}Local IP: ${alignr}${color2}${addr ppp0}${color}

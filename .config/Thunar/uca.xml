@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+    <icon>utilities-terminal</icon>
+    <name>Open Terminal Here</name>
+    <submenu></submenu>
+    <unique-id>1470939515443154-1</unique-id>
+    <command>tilix --new-process %f</command>
+    <description>Example for a custom action</description>
+    <range></range>
+    <patterns>*</patterns>
+    <startup-notify/>
+    <directories/>
+</action>
+<action>
+    <icon>aplication-x-executable</icon>
+    <name>Execute Sidef script</name>
+    <submenu></submenu>
+    <unique-id>1682689536732110-1</unique-id>
+    <command>tilix --new-process -e perl -E &apos;system(&quot;/home/swampyx/Other/Programare/sidef/bin/sidef&quot;, join(&quot;&quot;, @ARGV)); system(&quot;zsh&quot;)&apos; %n</command>
+    <description></description>
+    <range></range>
+    <patterns>*.sf</patterns>
+    <other-files/>
+    <text-files/>
+</action>
+<action>
+    <icon>aplication-x-executable</icon>
+    <name>Execute Perl script</name>
+    <submenu></submenu>
+    <unique-id>1682690423622204-1</unique-id>
+    <command>tilix --new-process -e perl -E &apos;system($^X, join(&quot;&quot;, @ARGV)); system(&quot;zsh&quot;)&apos; %n</command>
+    <description></description>
+    <range></range>
+    <patterns>*.pl;*.PL</patterns>
+    <other-files/>
+    <text-files/>
+</action>
+<action>
+    <icon>search</icon>
+    <name>Search with catfish</name>
+    <submenu></submenu>
+    <unique-id>1595249095847391-1</unique-id>
+    <command>catfish %f</command>
+    <description>search</description>
+    <range></range>
+    <patterns>*</patterns>
+    <directories/>
+</action>
+<action>
+    <icon>appimagetool</icon>
+    <name>Convert to JPEG</name>
+    <submenu></submenu>
+    <unique-id>1609760107407838-1</unique-id>
+    <command>perl /home/swampyx/Other/Programare/perl-scripts/Math/../Image/gd_png2jpg.pl %n</command>
+    <description></description>
+    <range></range>
+    <patterns>*.png</patterns>
+    <image-files/>
+</action>
+<action>
+    <icon>meld</icon>
+    <name>Compare selected files/directories</name>
+    <submenu></submenu>
+    <unique-id>1609760352636254-2</unique-id>
+    <command>meld %F</command>
+    <description></description>
+    <range></range>
+    <patterns>*</patterns>
+    <directories/>
+    <other-files/>
+    <text-files/>
+</action>
+<action>
+    <icon>search-log</icon>
+    <name>Run outguess</name>
+    <submenu></submenu>
+    <unique-id>1640487230877300-1</unique-id>
+    <command>outguess -r %f %f.bin</command>
+    <description></description>
+    <range></range>
+    <patterns>*.jpg;*.JPG</patterns>
+    <image-files/>
+</action>
+<action>
+    <icon>image-optimizer</icon>
+    <name>Optimize PNG</name>
+    <submenu></submenu>
+    <unique-id>1609760490262915-3</unique-id>
+    <command>opt-png %f</command>
+    <description></description>
+    <range></range>
+    <patterns>*.png;*.PNG</patterns>
+    <image-files/>
+</action>
+<action>
+    <icon>image-optimizer</icon>
+    <name>Optimize JPEG</name>
+    <submenu></submenu>
+    <unique-id>1609760555595577-4</unique-id>
+    <command>opt-jpg %f</command>
+    <description></description>
+    <range></range>
+    <patterns>*.jpg;*.JPG;*.jpeg;*.JPEG</patterns>
+    <image-files/>
+</action>
+<action>
+    <icon>kipi-dngconverter</icon>
+    <name>Convert to PNG</name>
+    <submenu></submenu>
+    <unique-id>1640364949959356-1</unique-id>
+    <command>perl /home/swampyx/Other/Programare/perl-scripts/Math/../Image/webp2png.pl %n</command>
+    <description></description>
+    <range></range>
+    <patterns>*.webp</patterns>
+    <image-files/>
+</action>
+</actions>

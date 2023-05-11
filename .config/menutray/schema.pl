@@ -28,6 +28,7 @@ our $SCHEMA = [
     #{item => ['vivaldi-preview',             'Vivaldi',             'vivaldi']},
     #{item => ['luakit',             'Luakit Browser',             'luakit']},
     {item => ["tilix --working-directory=/tmp", "Open terminal", "terminal"]},
+    {item => ["tilix -e gtk-lbry-viewer", "GTK LBRY Viewer", 'gtk-lbry-viewer']},
     {item => ["tilix -e gtk-youtube-viewer", "GTK Youtube Viewer", 'gtk-youtube-viewer']},
 
     {sep => undef},

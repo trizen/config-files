@@ -296,10 +296,10 @@
     </keybind>
     <keybind key="A-x">
       <action name="Execute">
-        <command>geany /tmp/x.pl</command>
+        <command>geany /tmp/x.sf</command>
         <startupnotify>
           <enabled>yes</enabled>
-          <name>A perl script</name>
+          <name>A Sidef script</name>
         </startupnotify>
       </action>
     </keybind>

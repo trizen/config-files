@@ -25,7 +25,7 @@
 
 || ICON SETTINGS
     | gtk_version         : The version of the Gtk library used for resolving the icon paths. (default: 3)
-    | gtk_rc_filename     : Absolute path to the GTK configuration file.
+    | gtk_rc_filename     : Absolute path to the Gtk configuration file.
     | missing_icon        : Use this icon for missing icons (default: gtk-missing-image)
     | icon_size           : Preferred size for icons. (default: 32)
     | generic_fallback    : Try to shorten icon name at '-' characters before looking at inherited themes. (default: 0)
@@ -72,5 +72,5 @@ our $CONFIG = {
   "menu_title"          => "Fluxbox",
   "missing_icon"        => "gtk-missing-image",
   "terminal"            => "tilix",
-  "VERSION"             => 0.86,
+  "VERSION"             => 0.87,
 }

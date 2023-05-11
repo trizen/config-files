@@ -34,7 +34,8 @@ our $SCHEMA = [
     {item => ['tilix', 'Terminal',     'utilities-terminal']},
     {item => ['/usr/bin/librewolf',   'LibreWolf',     'librewolf']},
     {item => ['/usr/bin/apulse /usr/bin/tor-browser',   'Tor Browser',     'tor-browser']},
-    {item => ["$ENV{HOME}/Downloads/LBRY_0.53.3.AppImage --no-sandbox",   'LBRY Desktop',     'lbry']},
+    {item => ["$ENV{HOME}/Downloads/LBRY_0.53.4.AppImage --no-sandbox",   'LBRY Desktop',     'lbry']},
+    #{item => ["$ENV{HOME}/Downloads/ipfs-desktop-0.22.0-linux-x86_64.AppImage --no-sandbox",   'IPFS Desktop',     'ipfs']},
     #{item => ['/usr/bin/firefox',   'Firefox',     'firefox']},
 
     #{item => ['vivaldi-preview',               'Vivaldi',       'vivaldi']},

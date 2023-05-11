@@ -46,7 +46,7 @@ our $CONFIG = {
   terminal          => "tilix --working-directory",
   terminal_icon     => "utilities-terminal",
   terminal_label    => "Terminal here...",
-  VERSION           => 0.14,
+  VERSION           => 0.15,
   with_icons        => 1,
   with_terminal     => 1,
 }

@@ -10,6 +10,7 @@ ZSH="/usr/share/oh-my-zsh"
 # Interesting themes: agnoster duellj candy rgm gnzh xiong-chiamiov-plus terminalparty
 ZSH_THEME="terminalparty"
 
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -76,9 +77,12 @@ export ARCHFLAGS="-arch x86_64"
 
 # Lines configured by zsh-newuser-install
 export HISTFILE=~/.histfile
-export HISTSIZE=100000
+export HISTSIZE=100000000
 export SAVEHIST=$HISTSIZE
 #export LC_ALL=C
+setopt appendhistory
+setopt INC_APPEND_HISTORY
+setopt SHARE_HISTORY
 
 setopt hist_ignore_all_dups
 setopt autocd
@@ -90,6 +94,7 @@ export CFLAGS="-march=native -O3 -pipe -fno-plt -fexceptions -Wp,-D_FORTIFY_SOUR
 export CXXFLAGS="-march=native -O3 -pipe -fno-plt -fexceptions -Wp,-D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fstack-clash-protection -fcf-protection"
 export LDFLAGS="-Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now"
 export MAKEFLAGS="-j2"
+export DISPLAY=:0
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -162,7 +167,7 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 
 #------------------------------
 export XDG_CONFIG_HOME="$HOME/.config"
 export USE_CCACHE=1
-export EDITOR='joe'
+export EDITOR='nano'
 export BROWSER='librewolf'
 export WEBBROWSER='librewolf'
 export GOROOT=/usr/lib/go
@@ -185,7 +190,7 @@ export PATH="$PATH:/opt/android-ndk/toolchains/llvm/prebuilt/linux-x86_64/bin:/o
 #export PS1="%B%n%b[%~]: "
 export PROG="$HOME/Other/Programare"
 #export PZN="$PROG/Personal projects"
-export SIDEF="$PROG/Sidef"
+export SIDEF="$PROG/sidef"
 #export JOHANA="$PROG/Johana"
 #export VEGA="$PROG/Vega"
 export CORVINUS="$PROG/corvinus2"
@@ -220,6 +225,10 @@ export NDK_LIBS="$NDK/prebuilt/prebuilt/$NDK_HOSTARCH/lib"
 export NDK_SYSROOT="$NDK/toolchains/llvm/prebuilt/$NDK_HOSTARCH/sysroot"
 export NDK_INCLUDES="-I$NDK_SYSROOT/usr/include -I$NDK/sysroot/usr/include/$NDK_TARGETARCH"
 
+## ffsend options
+export FFSEND_HOST='https://upload.nolog.cz/'
+export FFSEND_DOWNLOAD_LIMIT='20'
+
 #------------------------------
 # Alias stuff
 #------------------------------
@@ -250,7 +259,7 @@ alias chown='chown -c'
 ## Alias Color Commands
 alias dir='ls --color=auto --format=vertical'
 alias vdir='ls --color=auto --format=long'
-alias grep='grep --color=auto'
+alias grep='rg'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 #alias ls='ls --color=auto --human-readable --group-directories-first --classify'
@@ -258,12 +267,12 @@ alias ls='exa --group-directories-first --classify'
 alias less='less -g -r'
 
 ## Other aliases
-alias p='rlwrap perl6 --optimize=3 $@'
+alias p='perl6 --optimize=3 $@'
 alias mpu='perl -Mntheory=:all -E $@'
 alias perltidy='perltidy -utf8 -l=127 -f -kbl=1 -bbb -bbc -bbs -b -ple -bt=2 -pt=2 -sbt=2 -bvt=0 -sbvt=1 -cti=1 -bar -lp -anl'
 
-alias music="youtube-viewer -A -n -s --res=audio --min-seconds=60 --max-seconds=600 --category=music $@"
-alias rmusic="youtube-viewer -A -n -s --res=audio --min-seconds=60 --max-seconds=600 -rv $@"
+alias music="youtube-viewer -A -n -s --min-seconds=60 --max-seconds=600 --category=music $@"
+alias rmusic="youtube-viewer -A -n -s --min-seconds=60 --max-seconds=600 -rv $@"
 alias favmusic="youtube-viewer -A -n -s --pid=PLa3dbzLYmJouCDsxBYhmETqzW6l7tXQSq --page \$1"
 alias autoplay="youtube-viewer -A -n --min-seconds=60 --max-seconds=600 --autoplay $@"
 #alias autoplay="youtube-viewer -A -n --min-seconds=60 --max-seconds=480 --autoplay $@"
@@ -285,7 +294,7 @@ alias sidef="$SIDEF/bin/sidef"
 #alias vega="$VEGA/bin/vega"
 #alias johana="$JOHANA/bin/johana"
 #alias jh="$JOHANA/bin/johana"
-alias sf="$SIDEF/bin/sidef"
+alias sf="$SIDEF/bin/sidef -N 'USE_YAFU=1; USE_FACTORDB=0; USE_PRIMECOUNT=1'"
 alias corvin="$CORVINUS/bin/corvin"
 alias rusmusic="perl -MList::Util=shuffle -E 'system(q{mpv}, q{--no-video}, shuffle(glob(q{~/Music/Rusa\ net/Converted/*}), glob(q{~/Music/{Altele,Rusa,Recenta\ rusa,Rusa\ Noua}/*}), glob(q{~/Music/*.{mp4,mp3,webm}})))'"
 alias dirmusic="perl -E 'for(glob(\"\*\")){push@songs,\$_ if -f\$_;}system(qw(mpv --shuffle --no-video),@songs)'"
@@ -299,8 +308,8 @@ alias plspellcheck="perl $WER/../Analyzers/perl_code_spellcheck.pl --scan=all $@
 alias merge-images="perl $WER/../Image/gd_star_trails.pl"
 alias mmerge-images="perl $WER/../Image/magick_star_trails.pl"
 alias similar-imgs="perl $WER/../Image/gd_similar_images.pl"
-alias img2html="perl $WER/../Image/img2html.pl"
-alias img2ascii="perl $WER/../Image/img2ascii.pl"
+alias image2html="perl $WER/../Image/image2html.pl"
+alias image2ascii="perl $WER/../Image/image2ascii.pl"
 alias scgrep="perl $WER/../Greppers/scgrep"
 alias unigrep="perl $WER/../Greppers/unigrep.pl"
 alias any_to_3gp="perl $WER/../Converters/any_to_3gp.pl"
@@ -317,7 +326,15 @@ alias locatepm="perl $WER/../Finders/locatepm -i -b"
 alias img-rewrite="perl $WER/../Image/img_rewrite.pl"
 alias any2mp3="sidef $WES/../Converters/any2mp3.sf"
 alias any2audio="sidef $WES/../Converters/any2audio.sf"
+alias markdown2pdf="perl $WER/../Converters/markdown2pdf.pl"
+alias pod2pdf="perl $WER/../Converters/pod2pdf.pl"
+alias html2pdf="perl $WER/../Converters/html2pdf.pl"
+alias gitbook2pdf="perl $WER/../Converters/gitbook2pdf.pl"
+alias code2pdf="perl $WER/../Converters/code2pdf.pl"
 alias make_filenames_safe="sidef $WES/../File/make_filenames_safe.sf"
+alias file-diff="sidef $WES/../File/file_difference.sf"
+alias file-and="sidef $WES/../File/file_intersection.sf"
+alias file-xor="sidef $WES/../File/file_exclusive_union.sf"
 alias wave-cmp="perl $WER/../Audio/wave-cmp.pl"
 alias canly="perl $WER/../Analyzers/perl_code_analyzer.pl"
 alias img-autocrop="perl $WER/../Image/img-autocrop.pl"
@@ -327,18 +344,21 @@ alias rand-poem="perl $WER/../Lingua/poetry_from_poetry_with_variations.pl"
 alias oeis="torify perl $PROG/experimental-projects/oeis-autoload/oeis.pl $@"
 alias oeisf="torify sidef $PROG/experimental-projects/oeis-autoload/oeis.sf $@"
 alias siqs="perl $WER/../Math/siqs_factorization.pl $@"
+alias siqs2="sidef $WES/../Math/siqs_factorization.sf $@"
 alias dbf="perl ~/Other/Programare/experimental-projects/factordb/factordb.pl $@"
+alias fdb-report="perl ~/Other/Programare/experimental-projects/factordb/report_factors_2.pl $@"
+alias fdb-factor="sidef ~/Other/Programare/experimental-projects/factordb/special_factors.sf $@"
 alias factordb="perl ~/Other/Programare/experimental-projects/factordb/get_factordb.pl $@"
 alias img-strip="perl $WER/../Image/remove_sensitive_exif_tags.pl $@"
 alias img-optimize="perl $WER/../Image/optimize_images.pl $@"
 alias png2jpg="perl $WER/../Image/gd_png2jpg.pl $@"
 alias webp2png="perl $WER/../Image/webp2png.pl $@"
 alias collage="perl $WER/../Image/collage.pl $@"
-alias img2png="perl $WER/../Image/img2png.pl $@"
+alias image2png="perl $WER/../Image/image2png.pl $@"
 alias html2text="perl $WER/../Converters/html2text.pl $@"
 alias ass2srt="perl $WER/../Converters/ass2srt.pl $@"
 alias plage="perl $WER/../Encryption/plage.pl $@"
-alias outguess-png="perl $WER/../Image/outguess-png-3x.pl $@"
+alias outguess-png="perl $WER/../Image/outguess-png-imager.pl $@"
 
 # Support colors in less
 export LESS_TERMCAP_mb=$'\E[01;33m'
