@@ -263,13 +263,13 @@ alias grep='rg'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 #alias ls='ls --color=auto --human-readable --group-directories-first --classify'
-alias ls='exa --group-directories-first --classify'
+alias ls='eza --group-directories-first --classify'
 alias less='less -g -r'
 
 ## Other aliases
 alias p='perl6 --optimize=3 $@'
 alias mpu='perl -Mntheory=:all -E $@'
-alias perltidy='perltidy -utf8 -l=127 -f -kbl=1 -bbb -bbc -bbs -b -ple -bt=2 -pt=2 -sbt=2 -bvt=0 -sbvt=1 -cti=1 -bar -lp -anl'
+alias perltidy='perltidy -utf8 -l=160 -f -kbl=1 -bbb -bbc -bbs -b -ple -bt=2 -pt=2 -sbt=2 -bvt=0 -sbvt=1 -cti=1 -bar -lp -anl'
 
 alias music="youtube-viewer -A -n -s --min-seconds=60 --max-seconds=600 --category=music $@"
 alias rmusic="youtube-viewer -A -n -s --min-seconds=60 --max-seconds=600 -rv $@"
@@ -287,14 +287,15 @@ alias yv="pipe-viewer"
 #alias inxi="inxi -F -x -f -o -p"
 alias url2pdf="wkhtmltopdf --use-xserver --enable-javascript --enable-smart-shrinking --images --enable-external-links --load-error-handling ignore --javascript-delay 3500 $@"
 alias locatepm="locatepm -b"
-alias install-perl="perlbrew install --ld --64all -Doptimize='-march=native -O3 -pipe -fno-plt' -j 2 --noman --notest --thread --multi $@"
+#alias install-perl="perlbrew install -Dusequadmath -Doptimize='-march=native -O3 -pipe -fno-plt' -j 2 --noman --notest --thread --multi $@"
+alias install-perl="perlbrew install -Dusequadmath --64all -Doptimize='-march=native -O3 -pipe -fno-plt' -j 2 --noman --notest --thread --multi $@"
 alias plint="perl -MO=Lint,all $@"
-alias roxy="$SIDEF/bin/sidef /home/swampyx/Other/Programare/MYPKGS/smart-units/smart-units.sf"
+alias roxy="$SIDEF/bin/sidef $PROG/smart-units/smart-units.sf"
 alias sidef="$SIDEF/bin/sidef"
 #alias vega="$VEGA/bin/vega"
 #alias johana="$JOHANA/bin/johana"
 #alias jh="$JOHANA/bin/johana"
-alias sf="$SIDEF/bin/sidef -N 'USE_YAFU=1; USE_FACTORDB=0; USE_PRIMECOUNT=1'"
+alias sf="$SIDEF/bin/sidef -N 'USE_YAFU=1; USE_PARI_GP=1; USE_FACTORDB=0; USE_PRIMECOUNT=1; USE_PRIMESUM=1'"
 alias corvin="$CORVINUS/bin/corvin"
 alias rusmusic="perl -MList::Util=shuffle -E 'system(q{mpv}, q{--no-video}, shuffle(glob(q{~/Music/Rusa\ net/Converted/*}), glob(q{~/Music/{Altele,Rusa,Recenta\ rusa,Rusa\ Noua}/*}), glob(q{~/Music/*.{mp4,mp3,webm}})))'"
 alias dirmusic="perl -E 'for(glob(\"\*\")){push@songs,\$_ if -f\$_;}system(qw(mpv --shuffle --no-video),@songs)'"
@@ -341,24 +342,26 @@ alias img-autocrop="perl $WER/../Image/img-autocrop.pl"
 #alias yafu="rlwrap yafu $@"
 alias poem-from-poem="perl $WER/../Lingua/poetry_from_poetry.pl"
 alias rand-poem="perl $WER/../Lingua/poetry_from_poetry_with_variations.pl"
-alias oeis="torify perl $PROG/experimental-projects/oeis-autoload/oeis.pl $@"
-alias oeisf="torify sidef $PROG/experimental-projects/oeis-autoload/oeis.sf $@"
+alias oeis="torify perl $PROG/oeis-autoload/oeis.pl $@"
+alias oeisf="torify sidef $PROG/oeis-autoload/oeis.sf $@"
 alias siqs="perl $WER/../Math/siqs_factorization.pl $@"
 alias siqs2="sidef $WES/../Math/siqs_factorization.sf $@"
-alias dbf="perl ~/Other/Programare/experimental-projects/factordb/factordb.pl $@"
-alias fdb-report="perl ~/Other/Programare/experimental-projects/factordb/report_factors_2.pl $@"
-alias fdb-factor="sidef ~/Other/Programare/experimental-projects/factordb/special_factors.sf $@"
-alias factordb="perl ~/Other/Programare/experimental-projects/factordb/get_factordb.pl $@"
+alias dbf="perl $PROG/experimental-projects/factordb/factordb.pl $@"
+alias fdb-report="perl $PROG/experimental-projects/factordb/report_factors_2.pl $@"
+alias fdb-factor="sidef $PROG/experimental-projects/factordb/special_factors.sf $@"
+alias factordb="perl $PROG/experimental-projects/factordb/get_factordb.pl $@"
 alias img-strip="perl $WER/../Image/remove_sensitive_exif_tags.pl $@"
 alias img-optimize="perl $WER/../Image/optimize_images.pl $@"
 alias png2jpg="perl $WER/../Image/gd_png2jpg.pl $@"
 alias webp2png="perl $WER/../Image/webp2png.pl $@"
 alias collage="perl $WER/../Image/collage.pl $@"
 alias image2png="perl $WER/../Image/image2png.pl $@"
+alias recompress-images="perl $WER/../Image/recompress_images.pl $@"
 alias html2text="perl $WER/../Converters/html2text.pl $@"
 alias ass2srt="perl $WER/../Converters/ass2srt.pl $@"
 alias plage="perl $WER/../Encryption/plage.pl $@"
 alias outguess-png="perl $WER/../Image/outguess-png-imager.pl $@"
+alias recompress-audio-track="perl $WER/../Converters/recompress_audio_track.pl $@"
 
 # Support colors in less
 export LESS_TERMCAP_mb=$'\E[01;33m'
