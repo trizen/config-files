@@ -72,5 +72,5 @@ our $CONFIG = {
   "menu_title"          => "Fluxbox",
   "missing_icon"        => "gtk-missing-image",
   "terminal"            => "tilix",
-  "VERSION"             => 0.87,
+  "VERSION"             => 0.88,
 }

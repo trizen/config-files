@@ -10,7 +10,6 @@ ZSH="/usr/share/oh-my-zsh"
 # Interesting themes: agnoster duellj candy rgm gnzh xiong-chiamiov-plus terminalparty
 ZSH_THEME="terminalparty"
 
-
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -71,6 +70,9 @@ export LANG=en_US.UTF-8
 
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
+
+export XDG_DATA_HOME=$HOME/.local/share
+export XDG_CACHE_HOME=$HOME/.cache
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
@@ -200,6 +202,8 @@ export FUN="$PROG/Fun scripts"
 export CWTCH_HOME="$HOME/.cwtch"
 #export TARGETARCH="llvm"
 
+export SIDEF_INC="$PROG/oeis-autoload:$PROG/experimental-projects/factordb:$PROG/bacovia/lib"
+
 export NDK="/opt/android-ndk"
 
 # NDK Version
@@ -232,12 +236,12 @@ export FFSEND_DOWNLOAD_LIMIT='20'
 #------------------------------
 # Alias stuff
 #------------------------------
-alias zef='proxychains4 zef'
-alias cpan='proxychains4 cpan'
-alias cpan-outdated='proxychains4 cpan-outdated'
-alias cpanm='proxychains4 cpanm -M https://cpan.metacpan.org --verify --lwp'
-alias cpanm-reporter='proxychains4 cpanm-reporter'
-alias git='torify git'
+alias zef='zef'
+alias cpan='cpan'
+alias cpan-outdated='cpan-outdated'
+alias cpanm='cpanm -M https://cpan.metacpan.org --verify --lwp'
+alias cpanm-reporter='cpanm-reporter'
+alias git='git'
 alias nano='nano --indicator'               # nano with scrollbar
 alias df='df -hT'                           # human readable, print filetype
 alias du='du -d1 -h'                        # max depth, human readable
@@ -260,6 +264,7 @@ alias chown='chown -c'
 alias dir='ls --color=auto --format=vertical'
 alias vdir='ls --color=auto --format=long'
 alias grep='rg'
+alias ack='ag'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 #alias ls='ls --color=auto --human-readable --group-directories-first --classify'
@@ -271,10 +276,10 @@ alias p='perl6 --optimize=3 $@'
 alias mpu='perl -Mntheory=:all -E $@'
 alias perltidy='perltidy -utf8 -l=160 -f -kbl=1 -bbb -bbc -bbs -b -ple -bt=2 -pt=2 -sbt=2 -bvt=0 -sbvt=1 -cti=1 -bar -lp -anl'
 
-alias music="youtube-viewer -A -n -s --min-seconds=60 --max-seconds=600 --category=music $@"
-alias rmusic="youtube-viewer -A -n -s --min-seconds=60 --max-seconds=600 -rv $@"
-alias favmusic="youtube-viewer -A -n -s --pid=PLa3dbzLYmJouCDsxBYhmETqzW6l7tXQSq --page \$1"
-alias autoplay="youtube-viewer -A -n --min-seconds=60 --max-seconds=600 --autoplay $@"
+alias music="youtube-viewer -A -n -s --audio-quality=high --min-seconds=60 --category=music $@"
+alias rmusic="pipe-viewer -A -n -s --audio-quality=high --min-seconds=60 -rv $@"
+alias favmusic="youtube-viewer -A -n -s --audio-quality=high --pid=PLa3dbzLYmJouCDsxBYhmETqzW6l7tXQSq --page \$1"
+alias autoplay="youtube-viewer -A -n --audio-quality=high --min-seconds=60 --autoplay $@"
 #alias autoplay="youtube-viewer -A -n --min-seconds=60 --max-seconds=480 --autoplay $@"
 
 #alias music="straw-viewer -A -n -s --res=audio --min-seconds=60 --max-seconds=480 $@"
@@ -286,7 +291,7 @@ alias randalias="$SIDEF/bin/sidef -E 'say(%F<#{ENV{:HOME}}/youtube-viewer.txt>.o
 alias yv="pipe-viewer"
 #alias inxi="inxi -F -x -f -o -p"
 alias url2pdf="wkhtmltopdf --use-xserver --enable-javascript --enable-smart-shrinking --images --enable-external-links --load-error-handling ignore --javascript-delay 3500 $@"
-alias locatepm="locatepm -b"
+#alias locatepm="locatepm -b"
 #alias install-perl="perlbrew install -Dusequadmath -Doptimize='-march=native -O3 -pipe -fno-plt' -j 2 --noman --notest --thread --multi $@"
 alias install-perl="perlbrew install -Dusequadmath --64all -Doptimize='-march=native -O3 -pipe -fno-plt' -j 2 --noman --notest --thread --multi $@"
 alias plint="perl -MO=Lint,all $@"
@@ -295,21 +300,22 @@ alias sidef="$SIDEF/bin/sidef"
 #alias vega="$VEGA/bin/vega"
 #alias johana="$JOHANA/bin/johana"
 #alias jh="$JOHANA/bin/johana"
-alias sf="$SIDEF/bin/sidef -N 'USE_YAFU=1; USE_PARI_GP=1; USE_FACTORDB=0; USE_PRIMECOUNT=1; USE_PRIMESUM=1'"
+alias sf="$SIDEF/bin/sidef -N 'USE_YAFU=1; USE_PARI_GP=1; USE_PFGW=1; USE_FACTORDB=0; USE_PRIMECOUNT=1; USE_PRIMESUM=1'"
 alias corvin="$CORVINUS/bin/corvin"
 alias rusmusic="perl -MList::Util=shuffle -E 'system(q{mpv}, q{--no-video}, shuffle(glob(q{~/Music/Rusa\ net/Converted/*}), glob(q{~/Music/{Altele,Rusa,Recenta\ rusa,Rusa\ Noua}/*}), glob(q{~/Music/*.{mp4,mp3,webm}})))'"
 alias dirmusic="perl -E 'for(glob(\"\*\")){push@songs,\$_ if -f\$_;}system(qw(mpv --shuffle --no-video),@songs)'"
 #alias rusmusic="perl -MList::Util=shuffle -E 'system q{mpv}, q{--no-video}, shuffle(glob(q{~/Videos/Rusa/*}))'"
 #alias dkms_nvidia="dkms install -m nvidia -v $(perl -E'say`pacman -Qi nvidia-dkms`=~/^Version\h*:\h*([^-]+)/m') -k $@"
 #alias percritic='perlcritic --statistics'
-#alias mkpm='h2xs -A -a -b 5.10.1 -X --skip-exporter --skip-warnings --skip-ppport --skip-autoloader -n $@'
+alias mkpm='h2xs -A -a -b 5.10.1 -X --skip-exporter --skip-warnings --skip-ppport --skip-autoloader -n $@'
 alias plspellcheck="perl $WER/../Analyzers/perl_code_spellcheck.pl --scan=all $@"
 
 # Local scripts
 alias merge-images="perl $WER/../Image/gd_star_trails.pl"
 alias mmerge-images="perl $WER/../Image/magick_star_trails.pl"
-alias similar-imgs="perl $WER/../Image/gd_similar_images.pl"
+alias similar-images="perl $WER/../Image/gd_similar_images.pl"
 alias image2html="perl $WER/../Image/image2html.pl"
+alias image2audio="perl $WER/../Image/image2audio.pl"
 alias image2ascii="perl $WER/../Image/image2ascii.pl"
 alias scgrep="perl $WER/../Greppers/scgrep"
 alias unigrep="perl $WER/../Greppers/unigrep.pl"
@@ -327,8 +333,11 @@ alias locatepm="perl $WER/../Finders/locatepm -i -b"
 alias img-rewrite="perl $WER/../Image/img_rewrite.pl"
 alias any2mp3="sidef $WES/../Converters/any2mp3.sf"
 alias any2audio="sidef $WES/../Converters/any2audio.sf"
+alias extract-audio="sidef $WES/../Converters/extract_audio.sf"
 alias markdown2pdf="perl $WER/../Converters/markdown2pdf.pl"
+alias markdown2text="perl $WER/../Converters/markdown2text.pl"
 alias pod2pdf="perl $WER/../Converters/pod2pdf.pl"
+alias pod2text="perl $WER/../Converters/pod2text.pl"
 alias html2pdf="perl $WER/../Converters/html2pdf.pl"
 alias gitbook2pdf="perl $WER/../Converters/gitbook2pdf.pl"
 alias code2pdf="perl $WER/../Converters/code2pdf.pl"
@@ -337,13 +346,15 @@ alias file-diff="sidef $WES/../File/file_difference.sf"
 alias file-and="sidef $WES/../File/file_intersection.sf"
 alias file-xor="sidef $WES/../File/file_exclusive_union.sf"
 alias wave-cmp="perl $WER/../Audio/wave-cmp.pl"
+alias md5rename="perl $WER/../File\ Workers/md5_rename.pl"
+alias arxiv-rename="perl $WER/../File\ Workers/arxiv_pdf_renamer.pl"
 alias canly="perl $WER/../Analyzers/perl_code_analyzer.pl"
 alias img-autocrop="perl $WER/../Image/img-autocrop.pl"
 #alias yafu="rlwrap yafu $@"
 alias poem-from-poem="perl $WER/../Lingua/poetry_from_poetry.pl"
 alias rand-poem="perl $WER/../Lingua/poetry_from_poetry_with_variations.pl"
-alias oeis="torify perl $PROG/oeis-autoload/oeis.pl $@"
-alias oeisf="torify sidef $PROG/oeis-autoload/oeis.sf $@"
+alias oeis="perl $PROG/oeis-autoload/oeis.pl $@"
+alias oeisf="sidef $PROG/oeis-autoload/oeis.sf $@"
 alias siqs="perl $WER/../Math/siqs_factorization.pl $@"
 alias siqs2="sidef $WES/../Math/siqs_factorization.sf $@"
 alias dbf="perl $PROG/experimental-projects/factordb/factordb.pl $@"
@@ -357,11 +368,15 @@ alias webp2png="perl $WER/../Image/webp2png.pl $@"
 alias collage="perl $WER/../Image/collage.pl $@"
 alias image2png="perl $WER/../Image/image2png.pl $@"
 alias recompress-images="perl $WER/../Image/recompress_images.pl $@"
+alias resize-images="perl $WER/../Image/resize_images.pl $@"
 alias html2text="perl $WER/../Converters/html2text.pl $@"
+alias zip2tar="perl $WER/../Converters/zip2tar_fast.pl $@"
 alias ass2srt="perl $WER/../Converters/ass2srt.pl $@"
 alias plage="perl $WER/../Encryption/plage.pl $@"
 alias outguess-png="perl $WER/../Image/outguess-png-imager.pl $@"
-alias recompress-audio-track="perl $WER/../Converters/recompress_audio_track.pl $@"
+alias recompress-audio-track="perl $WER/../Audio/recompress_audio_track.pl $@"
+alias mkv-audio-to-opus="perl $WER/../Audio/mkv_audio_to_opus.pl $@"
+alias exec-perl="perl $WER/../Shell/execute_perl_scripts.pl $@"
 
 # Support colors in less
 export LESS_TERMCAP_mb=$'\E[01;33m'

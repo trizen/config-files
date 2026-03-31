@@ -14,18 +14,22 @@
 
 # If you want to use XFCE config tools...
 #
-/usr/bin/obmenu-generator -i -s
 /usr/bin/numlockx on
-/usr/bin/setxkbmap ro &
 /usr/bin/picom &
 /usr/bin/conky &
 #nvidia-settings &
-/usr/bin/feh --bg-scale ~/Other/wallpaper_2.jpg
+#/usr/bin/feh --bg-scale ~/Other/wallpaper_1.jpg
+#/usr/bin/feh --bg-scale ~/Other/wallpaper_2.jpg
+#/usr/bin/feh --bg-scale ~/Other/wallpaper_3.jpg
+/usr/bin/feh --bg-scale ~/Other/wallpaper_4.jpg
 /usr/bin/tilix --working-directory=/tmp &
 /usr/bin/tint2 &
 #/usr/bin/qbittorrent &
-#/usr/bin/transmission-gtk &
+/usr/bin/transmission-gtk &
 #/usr/bin/fbrowse-tray -m dnd ~/Videos &
 #/usr/bin/fbrowse-tray /tmp &
 /usr/bin/menutray -i &
 /usr/bin/perl ~/.config/openbox/kill_fat_perls.pl &
+/usr/bin/obmenu-generator -i -s -c
+/usr/bin/perl ~/.config/openbox/multiple_backups.pl ~/.histfile -d ~
+/usr/bin/setxkbmap ro

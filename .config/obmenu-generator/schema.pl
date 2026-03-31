@@ -6,6 +6,7 @@
 
     item:      add an item inside the menu               {item => ["command", "label", "icon"]},
     cat:       add a category inside the menu             {cat => ["name", "label", "icon"]},
+    subcats:   add a category with subcategories          {cat => ["name", "label", "icon"]},
     sep:       horizontal line separator                  {sep => undef}, {sep => "label"},
     pipe:      a pipe menu entry                         {pipe => ["command", "label", "icon"]},
     file:      include the content of an XML file        {file => "/path/to/file.xml"},
@@ -32,9 +33,9 @@ our $SCHEMA = [
     #           COMMAND         LABEL           ICON
     {item => ['thunar',    'File Manager', 'system-file-manager']},
     {item => ['tilix', 'Terminal',     'utilities-terminal']},
-    {item => ['/usr/bin/librewolf',   'LibreWolf',     'librewolf']},
+    {item => ['/usr/bin/apulse /usr/bin/librewolf',   'LibreWolf',     'librewolf']},
     {item => ['/usr/bin/apulse /usr/bin/tor-browser',   'Tor Browser',     'tor-browser']},
-    {item => ["$ENV{HOME}/Downloads/LBRY_0.53.4.AppImage --no-sandbox",   'LBRY Desktop',     'lbry']},
+    #{item => ["$ENV{HOME}/Downloads/LBRY_0.53.4.AppImage --no-sandbox",   'LBRY Desktop',     'lbry']},
     #{item => ["$ENV{HOME}/Downloads/ipfs-desktop-0.22.0-linux-x86_64.AppImage --no-sandbox",   'IPFS Desktop',     'ipfs']},
     #{item => ['/usr/bin/firefox',   'Firefox',     'firefox']},
 

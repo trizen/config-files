@@ -67,8 +67,12 @@ our $CONFIG = {
                                                             re  => qr/^(?:Avahi|Qt4?\b|Hardware Locality|File Manager|HDSP|Echomixer|Envy24 |HDAJack|FFADO Mixer|Hwmixvol|Joe's)/,
                                                           },
                                                           { key => "OnlyShowIn", re => qr/XFCE/ },
+                                                          {
+                                                            key => "TryExec",
+                                                            re  => qr/^(.*)\z(??{`which \Q$1\E`; $? == 0 ? qr{(?!)} : qr{}})/,
+                                                          },
                                                         ],
-                             skip_filename_re        => qr/^(?:exo-|xfce4-about|Terminal|avahi|b(?:ssh|vnc)|dconf|ffadomixer|gconf|mplayer|tilix|compton|picom|conky|tint2)/,
+                             skip_filename_re        => qr/^(?:exo-|xfce4-about|Terminal|avahi|b(?:ssh|vnc)|dconf|ffadomixer|gconf|mplayer|tilix|compton|picom|conky|tint2|xdot|xdvi)/,
                              substitutions           => [
                                                           {
                                                             key => "Name",
@@ -82,7 +86,7 @@ our $CONFIG = {
                                                           },
                                                           {
                                                             key => "Exec",
-                                                            re => qr|^subl\b|,
+                                                            re => qr/^subl\b/,
                                                             value => "proxychains /opt/sublime_text/sublime_text",
                                                           },
                                                         ],
@@ -93,5 +97,5 @@ our $CONFIG = {
   "locale_support"      => 0,
   "missing_icon"        => "gtk-missing-image",
   "terminal"            => "tilix",
-  "VERSION"             => 0.91,
+  "VERSION"             => 0.93,
 }

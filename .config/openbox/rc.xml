@@ -206,6 +206,11 @@
     <keybind key="C-A-Right">
       <action name="GoToDesktop"/>
     </keybind>
+<keybind key="C-Escape">
+  <action name="Execute">
+    <command>jgmenu_run</command>
+  </action>
+</keybind>
     <keybind key="C-A-Up">
       <action name="GoToDesktop"/>
     </keybind>
@@ -278,7 +283,7 @@
     </keybind>
     <keybind key="A-g">
       <action name="Execute">
-        <command>librewolf</command>
+        <command>/usr/bin/apulse /usr/bin/librewolf</command>
         <startupnotify>
           <enabled>yes</enabled>
           <name>Web browser</name>
@@ -287,7 +292,7 @@
     </keybind>
     <keybind key="A-s">
       <action name="Execute">
-        <command>lxtask</command>
+        <command>/usr/bin/lxtask</command>
         <startupnotify>
           <enabled>yes</enabled>
           <name>System Monitor</name>
@@ -305,7 +310,7 @@
     </keybind>
     <keybind key="A-F2">
       <action name="Execute">
-        <command>gmrun</command>
+        <command>/usr/bin/gmrun</command>
         <startupnotify>
           <enabled>yes</enabled>
           <name>Command runner</name>
@@ -314,7 +319,7 @@
     </keybind>
     <keybind key="A-F3">
       <action name="Execute">
-        <command>thunar</command>
+        <command>/usr/bin/thunar</command>
         <startupnotify>
           <enabled>yes</enabled>
           <name>File manager</name>
@@ -323,7 +328,7 @@
     </keybind>
     <keybind key="A-F1">
       <action name="Execute">
-        <command>tilix --working-directory=/tmp</command>
+        <command>/usr/bin/tilix --working-directory=/tmp</command>
         <startupnotify>
           <enabled>yes</enabled>
           <name>Terminal</name>
@@ -332,7 +337,7 @@
     </keybind>
     <keybind key="A-y">
       <action name="Execute">
-        <command>tilix -e gtk-youtube-viewer</command>
+        <command>/usr/bin/tilix -e /usr/bin/gtk-youtube-viewer</command>
         <startupnotify>
           <enabled>yes</enabled>
           <name>Youtube Viewer</name>

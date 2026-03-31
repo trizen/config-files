@@ -1,7 +1,7 @@
 [user]
     name = trizen
-    email = trizen@protonmail.com
-    signingkey = ABB8BBAA2E279767774149B7D0A443C703A3A056
+    email = trizenx@tutanota.com
+    signingkey = 89CD05032EDAE45FCB946F1FBD8E555F4A7E19D1
 [credential]
     helper = cache --timeout=28800
 [core]
@@ -44,7 +44,9 @@
 [diff]
     colorMoved = default
 [filter "lfs"]
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
+    required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+[init]
+    defaultBranch = master

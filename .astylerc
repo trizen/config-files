@@ -33,7 +33,7 @@
 --style=java
 
 # When used with --style=java, --style=kr, --style=stroustrup, --style=linux, or --style=1tbs, this breaks closing headers (e.g. 'else', 'catch', ...) from their immediately preceding closing brackets. Closing header brackets are always broken with the other styles.
---break-closing-brackets
+#--break-closing-brackets
 
 # Attach brackets to a namespace statement. This is done regardless of the bracket style being used.
 --attach-namespaces
@@ -60,7 +60,7 @@
 --indent-col1-comments
 
 # Set the  maximum of # spaces to indent a continuation line. The # indicates a number of columns and must not be greater than 120. If no # is set, the default value of 40 will be used. A maximum of less than two indent lengths will be ignored. This option will prevent continuation lines from extending too far to the right. Setting a larger value will allow the code to be extended further to the right.
---max-instatement-indent=120
+#--max-code-length=160
 
 # Attach a pointer or reference operator (*, &, or ^) to either the variable type (left) or variable name (right), or place it between the type and name (middle). The spacing between the type and name will be preserved, if possible. This option is for C/C++, C++/CLI, and C# files. To format references separately use the following align-reference option.
 --align-pointer=name
