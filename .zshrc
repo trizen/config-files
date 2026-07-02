@@ -90,13 +90,13 @@ setopt hist_ignore_all_dups
 setopt autocd
 #setopt correctall
 
-export PERL_MM_OPT='OPTIMIZE="-march=native -O3 -pipe -fno-plt -fstack-clash-protection -fcf-protection"'
+export PERL_MM_OPT='OPTIMIZE="-std=c99 -march=native -O3 -pipe -fno-plt -fstack-clash-protection -fcf-protection"'
 export CCFLAGS="-march=native -O3 -pipe -fno-plt -fexceptions -Wp,-D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fstack-clash-protection -fcf-protection"
 export CFLAGS="-march=native -O3 -pipe -fno-plt -fexceptions -Wp,-D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fstack-clash-protection -fcf-protection"
 export CXXFLAGS="-march=native -O3 -pipe -fno-plt -fexceptions -Wp,-D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -fstack-clash-protection -fcf-protection"
 export LDFLAGS="-Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now"
-export MAKEFLAGS="-j2"
-export DISPLAY=:0
+export MAKEFLAGS="-j8"
+#export DISPLAY=:0
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -292,8 +292,8 @@ alias yv="pipe-viewer"
 #alias inxi="inxi -F -x -f -o -p"
 alias url2pdf="wkhtmltopdf --use-xserver --enable-javascript --enable-smart-shrinking --images --enable-external-links --load-error-handling ignore --javascript-delay 3500 $@"
 #alias locatepm="locatepm -b"
-#alias install-perl="perlbrew install -Dusequadmath -Doptimize='-march=native -O3 -pipe -fno-plt' -j 2 --noman --notest --thread --multi $@"
-alias install-perl="perlbrew install -Dusequadmath --64all -Doptimize='-march=native -O3 -pipe -fno-plt' -j 2 --noman --notest --thread --multi $@"
+#alias install-perl="perlbrew install -Dusequadmath -Doptimize='-march=native -O3 -pipe -fno-plt' -j 8 --noman --notest --thread --multi $@"
+alias install-perl="perlbrew install -Dusequadmath --64all -Doptimize='-march=native -O3 -pipe -fno-plt' -j 8 --noman --notest --thread --multi $@"
 alias plint="perl -MO=Lint,all $@"
 alias roxy="$SIDEF/bin/sidef $PROG/smart-units/smart-units.sf"
 alias sidef="$SIDEF/bin/sidef"
@@ -388,6 +388,9 @@ export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 export TEMP=/tmp
 
+export GDK_BACKEND=x11
+export XDG_DATA_DIRS=/usr/share:/usr/local/share
+export XDG_CURRENT_DESKTOP=GNOME
 
 # report about cpu-/system-/user-time of command if running longer than
 # 5 seconds
